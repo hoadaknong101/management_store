@@ -29,35 +29,25 @@ namespace management_store
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.rdbAdmin = new System.Windows.Forms.RadioButton();
+            this.rdbNhanVien = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(300, -5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -70,21 +60,21 @@ namespace management_store
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
-            // textBox1
+            // txtTenTaiKhoan
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.textBox1.Location = new System.Drawing.Point(13, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 23);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Tên tài khoản";
+            this.txtTenTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTaiKhoan.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 12);
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(219, 23);
+            this.txtTenTaiKhoan.TabIndex = 3;
+            this.txtTenTaiKhoan.Text = "Tên tài khoản";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtTenTaiKhoan);
             this.panel1.Location = new System.Drawing.Point(66, 175);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(235, 49);
@@ -93,23 +83,34 @@ namespace management_store
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Location = new System.Drawing.Point(66, 254);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(235, 49);
             this.panel2.TabIndex = 4;
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.textBox2.Location = new System.Drawing.Point(13, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(219, 23);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "   Mật khẩu";
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhau.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
+            this.txtMatKhau.Location = new System.Drawing.Point(13, 13);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(219, 23);
+            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Text = "   Mật khẩu";
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
+            this.btnDangNhap.Location = new System.Drawing.Point(66, 346);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(235, 49);
+            this.btnDangNhap.TabIndex = 7;
+            this.btnDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -141,16 +142,47 @@ namespace management_store
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnPower
             // 
-            this.button2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.button2.Location = new System.Drawing.Point(66, 324);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 49);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "ĐĂNG NHẬP";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPower.FlatAppearance.BorderSize = 0;
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.ForeColor = System.Drawing.Color.White;
+            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPower.Location = new System.Drawing.Point(301, -3);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPower.Size = new System.Drawing.Size(44, 45);
+            this.btnPower.TabIndex = 0;
+            this.btnPower.Text = "X";
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            // 
+            // rdbAdmin
+            // 
+            this.rdbAdmin.AutoSize = true;
+            this.rdbAdmin.Font = new System.Drawing.Font("SVN-Avo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbAdmin.ForeColor = System.Drawing.Color.White;
+            this.rdbAdmin.Location = new System.Drawing.Point(85, 313);
+            this.rdbAdmin.Name = "rdbAdmin";
+            this.rdbAdmin.Size = new System.Drawing.Size(70, 23);
+            this.rdbAdmin.TabIndex = 8;
+            this.rdbAdmin.TabStop = true;
+            this.rdbAdmin.Text = "Admin";
+            this.rdbAdmin.UseVisualStyleBackColor = true;
+            // 
+            // rdbNhanVien
+            // 
+            this.rdbNhanVien.AutoSize = true;
+            this.rdbNhanVien.Font = new System.Drawing.Font("SVN-Avo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNhanVien.ForeColor = System.Drawing.Color.White;
+            this.rdbNhanVien.Location = new System.Drawing.Point(195, 313);
+            this.rdbNhanVien.Name = "rdbNhanVien";
+            this.rdbNhanVien.Size = new System.Drawing.Size(92, 23);
+            this.rdbNhanVien.TabIndex = 8;
+            this.rdbNhanVien.TabStop = true;
+            this.rdbNhanVien.Text = "Nhân viên";
+            this.rdbNhanVien.UseVisualStyleBackColor = true;
             // 
             // frmDangNhap
             // 
@@ -159,17 +191,21 @@ namespace management_store
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(342, 497);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.rdbNhanVien);
+            this.Controls.Add(this.rdbAdmin);
+            this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPower);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -184,16 +220,18 @@ namespace management_store
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPower;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.RadioButton rdbAdmin;
+        private System.Windows.Forms.RadioButton rdbNhanVien;
     }
 }
 
