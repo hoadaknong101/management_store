@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BussinessAccessLayer;
 
 namespace management_store
 {
-    public partial class MainForm : Form
+    public partial class frmDangNhap : Form
     {
-        public MainForm()
+        public frmDangNhap()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            dgvNhanVien.DataSource = BLL.DanhSachNhanVien();
         }
     }
 }
