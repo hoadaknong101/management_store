@@ -43,5 +43,57 @@ namespace management_store
         {
             Application.Exit();
         }
+
+        private void txtTenTaiKhoan_Click(object sender, EventArgs e)
+        {
+            if(txtTenTaiKhoan.Text.Trim() == "Tên tài khoản")
+            {
+                txtTenTaiKhoan.Clear();
+            }
+
+        }
+
+        private void txtMatKhau_Click(object sender, EventArgs e)
+        {
+            if(txtMatKhau.Text.Trim() == "password")
+            {
+                txtMatKhau.Clear();
+            }
+        }
+
+        private void txtMatKhau_Leave(object sender, EventArgs e)
+        {
+            if (txtMatKhau.Text.Trim() == "")
+            {
+                txtMatKhau.Text = "password";
+            }
+        }
+
+        private void txtTenTaiKhoan_Leave(object sender, EventArgs e)
+        {
+            if (txtTenTaiKhoan.Text.Trim() == "")
+            {
+                txtTenTaiKhoan.Text = "Tên tài khoản";
+            }
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (txtTenTaiKhoan.Text.Trim() == "Tên tài khoản" || txtTenTaiKhoan.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản!");
+                return;
+            }
+            if (txtMatKhau.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!");
+                return;
+            }
+            if (rdbAdmin.Checked == false && rdbNhanVien.Checked == false)
+            {
+                MessageBox.Show("Vui lòng chọn quyền đăng nhập!");
+                return;
+            }
+        }
     }
 }

@@ -70,6 +70,8 @@ namespace management_store
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(219, 23);
             this.txtTenTaiKhoan.TabIndex = 3;
             this.txtTenTaiKhoan.Text = "Tên tài khoản";
+            this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
+            this.txtTenTaiKhoan.Leave += new System.EventHandler(this.txtTenTaiKhoan_Leave);
             // 
             // panel1
             // 
@@ -99,7 +101,9 @@ namespace management_store
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(219, 23);
             this.txtMatKhau.TabIndex = 3;
-            this.txtMatKhau.Text = "   Mật khẩu";
+            this.txtMatKhau.Text = "password";
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
+            this.txtMatKhau.Leave += new System.EventHandler(this.txtMatKhau_Leave);
             // 
             // btnDangNhap
             // 
@@ -111,6 +115,7 @@ namespace management_store
             this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // pictureBox3
             // 
