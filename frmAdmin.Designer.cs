@@ -31,16 +31,16 @@ namespace management_store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.pnlTab = new System.Windows.Forms.Panel();
-            this.pnlBar = new System.Windows.Forms.Panel();
-            this.btnPower = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnlBar = new System.Windows.Forms.Panel();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTab.SuspendLayout();
             this.pnlBar.SuspendLayout();
             this.SuspendLayout();
@@ -59,37 +59,15 @@ namespace management_store
             this.pnlTab.Size = new System.Drawing.Size(219, 704);
             this.pnlTab.TabIndex = 0;
             // 
-            // pnlBar
+            // label1
             // 
-            this.pnlBar.Controls.Add(this.btnPower);
-            this.pnlBar.Location = new System.Drawing.Point(223, 0);
-            this.pnlBar.Name = "pnlBar";
-            this.pnlBar.Size = new System.Drawing.Size(1090, 53);
-            this.pnlBar.TabIndex = 1;
-            this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
-            // 
-            // btnPower
-            // 
-            this.btnPower.FlatAppearance.BorderSize = 0;
-            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPower.ForeColor = System.Drawing.Color.White;
-            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPower.Location = new System.Drawing.Point(1027, 2);
-            this.btnPower.Name = "btnPower";
-            this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPower.Size = new System.Drawing.Size(63, 48);
-            this.btnPower.TabIndex = 1;
-            this.btnPower.Text = "X";
-            this.btnPower.UseVisualStyleBackColor = true;
-            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(223, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 648);
-            this.panel1.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(88, 648);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "v1.0";
             // 
             // button5
             // 
@@ -189,22 +167,44 @@ namespace management_store
             this.btnTrangChu.Text = "DASHBOARD";
             this.btnTrangChu.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // pnlBar
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(88, 648);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "v1.0";
+            this.pnlBar.Controls.Add(this.btnPower);
+            this.pnlBar.Location = new System.Drawing.Point(223, 0);
+            this.pnlBar.Name = "pnlBar";
+            this.pnlBar.Size = new System.Drawing.Size(1100, 53);
+            this.pnlBar.TabIndex = 1;
+            this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
+            // 
+            // btnPower
+            // 
+            this.btnPower.FlatAppearance.BorderSize = 0;
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.ForeColor = System.Drawing.Color.White;
+            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPower.Location = new System.Drawing.Point(1036, 2);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPower.Size = new System.Drawing.Size(63, 48);
+            this.btnPower.TabIndex = 1;
+            this.btnPower.Text = "X";
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(223, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1100, 650);
+            this.panel1.TabIndex = 2;
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(1314, 706);
+            this.ClientSize = new System.Drawing.Size(1324, 708);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlTab);
