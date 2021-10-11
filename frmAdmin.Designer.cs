@@ -32,31 +32,32 @@ namespace management_store
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.pnlTab = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTabDangXuat = new System.Windows.Forms.Button();
+            this.btnTabNhanVien = new System.Windows.Forms.Button();
+            this.btnTabDoanhThu = new System.Windows.Forms.Button();
+            this.btnTabSanPham = new System.Windows.Forms.Button();
+            this.btnTabHoaDon = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.pnlBar = new System.Windows.Forms.Panel();
             this.btnPower = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTab.SuspendLayout();
             this.pnlBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTab
             // 
+            this.pnlTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(108)))), ((int)(((byte)(72)))));
             this.pnlTab.Controls.Add(this.label1);
-            this.pnlTab.Controls.Add(this.button5);
-            this.pnlTab.Controls.Add(this.button4);
-            this.pnlTab.Controls.Add(this.button3);
-            this.pnlTab.Controls.Add(this.button2);
-            this.pnlTab.Controls.Add(this.button1);
+            this.pnlTab.Controls.Add(this.btnTabDangXuat);
+            this.pnlTab.Controls.Add(this.btnTabNhanVien);
+            this.pnlTab.Controls.Add(this.btnTabDoanhThu);
+            this.pnlTab.Controls.Add(this.btnTabSanPham);
+            this.pnlTab.Controls.Add(this.btnTabHoaDon);
             this.pnlTab.Controls.Add(this.btnTrangChu);
-            this.pnlTab.Location = new System.Drawing.Point(1, 0);
+            this.pnlTab.Location = new System.Drawing.Point(-1, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(219, 704);
+            this.pnlTab.Size = new System.Drawing.Size(221, 712);
             this.pnlTab.TabIndex = 0;
             // 
             // label1
@@ -69,87 +70,88 @@ namespace management_store
             this.label1.TabIndex = 2;
             this.label1.Text = "v1.0";
             // 
-            // button5
+            // btnTabDangXuat
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::management_store.Properties.Resources._155491;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 509);
-            this.button5.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(216, 69);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "ĐĂNG XUẤT";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnTabDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnTabDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDangXuat.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnTabDangXuat.Image = global::management_store.Properties.Resources._155491;
+            this.btnTabDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabDangXuat.Location = new System.Drawing.Point(0, 509);
+            this.btnTabDangXuat.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnTabDangXuat.Name = "btnTabDangXuat";
+            this.btnTabDangXuat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabDangXuat.Size = new System.Drawing.Size(216, 69);
+            this.btnTabDangXuat.TabIndex = 1;
+            this.btnTabDangXuat.Text = "ĐĂNG XUẤT";
+            this.btnTabDangXuat.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnTabNhanVien
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::management_store.Properties.Resources.staff_icon_61;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 434);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(216, 69);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "NHÂN VIÊN";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTabNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnTabNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabNhanVien.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnTabNhanVien.Image = global::management_store.Properties.Resources.staff_icon_61;
+            this.btnTabNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabNhanVien.Location = new System.Drawing.Point(0, 434);
+            this.btnTabNhanVien.Name = "btnTabNhanVien";
+            this.btnTabNhanVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabNhanVien.Size = new System.Drawing.Size(216, 69);
+            this.btnTabNhanVien.TabIndex = 1;
+            this.btnTabNhanVien.Text = "NHÂN VIÊN";
+            this.btnTabNhanVien.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnTabDoanhThu
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::management_store.Properties.Resources.analytics_pngrepo_com;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 359);
-            this.button3.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(216, 69);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "DOANH THU";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDoanhThu.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabDoanhThu.ForeColor = System.Drawing.Color.White;
+            this.btnTabDoanhThu.Image = global::management_store.Properties.Resources.analytics_pngrepo_com;
+            this.btnTabDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 359);
+            this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnTabDoanhThu.Name = "btnTabDoanhThu";
+            this.btnTabDoanhThu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabDoanhThu.Size = new System.Drawing.Size(216, 69);
+            this.btnTabDoanhThu.TabIndex = 1;
+            this.btnTabDoanhThu.Text = "DOANH THU";
+            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnTabSanPham
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::management_store.Properties.Resources.storage_product_pngrepo_com;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 284);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(216, 69);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "SẢN PHẨM";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTabSanPham.FlatAppearance.BorderSize = 0;
+            this.btnTabSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabSanPham.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnTabSanPham.Image = global::management_store.Properties.Resources.storage_product_pngrepo_com;
+            this.btnTabSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabSanPham.Location = new System.Drawing.Point(0, 284);
+            this.btnTabSanPham.Name = "btnTabSanPham";
+            this.btnTabSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabSanPham.Size = new System.Drawing.Size(216, 69);
+            this.btnTabSanPham.TabIndex = 1;
+            this.btnTabSanPham.Text = "SẢN PHẨM";
+            this.btnTabSanPham.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnTabHoaDon
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::management_store.Properties.Resources.img_95795;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 209);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(216, 69);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "HÓA ĐƠN";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTabHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnTabHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabHoaDon.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnTabHoaDon.Image = global::management_store.Properties.Resources.img_95795;
+            this.btnTabHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabHoaDon.Location = new System.Drawing.Point(0, 209);
+            this.btnTabHoaDon.Name = "btnTabHoaDon";
+            this.btnTabHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabHoaDon.Size = new System.Drawing.Size(216, 69);
+            this.btnTabHoaDon.TabIndex = 1;
+            this.btnTabHoaDon.Text = "HÓA ĐƠN";
+            this.btnTabHoaDon.UseVisualStyleBackColor = true;
+            this.btnTabHoaDon.Click += new System.EventHandler(this.btnTabHoaDon_Click);
             // 
             // btnTrangChu
             // 
@@ -166,13 +168,15 @@ namespace management_store
             this.btnTrangChu.TabIndex = 1;
             this.btnTrangChu.Text = "DASHBOARD";
             this.btnTrangChu.UseVisualStyleBackColor = true;
+            this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
             // pnlBar
             // 
+            this.pnlBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(108)))), ((int)(((byte)(72)))));
             this.pnlBar.Controls.Add(this.btnPower);
-            this.pnlBar.Location = new System.Drawing.Point(223, 0);
+            this.pnlBar.Location = new System.Drawing.Point(219, 0);
             this.pnlBar.Name = "pnlBar";
-            this.pnlBar.Size = new System.Drawing.Size(1100, 53);
+            this.pnlBar.Size = new System.Drawing.Size(1110, 53);
             this.pnlBar.TabIndex = 1;
             this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
             // 
@@ -183,7 +187,7 @@ namespace management_store
             this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.ForeColor = System.Drawing.Color.White;
             this.btnPower.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPower.Location = new System.Drawing.Point(1036, 2);
+            this.btnPower.Location = new System.Drawing.Point(1041, 1);
             this.btnPower.Name = "btnPower";
             this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPower.Size = new System.Drawing.Size(63, 48);
@@ -192,12 +196,13 @@ namespace management_store
             this.btnPower.UseVisualStyleBackColor = true;
             this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
             // 
-            // panel1
+            // pnlMain
             // 
-            this.panel1.Location = new System.Drawing.Point(223, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 650);
-            this.panel1.TabIndex = 2;
+            this.pnlMain.AutoSize = true;
+            this.pnlMain.Location = new System.Drawing.Point(221, 52);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1100, 655);
+            this.pnlMain.TabIndex = 2;
             // 
             // frmAdmin
             // 
@@ -205,7 +210,7 @@ namespace management_store
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1324, 708);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlTab);
             this.Font = new System.Drawing.Font("SVN-Avo", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,21 +223,22 @@ namespace management_store
             this.pnlTab.PerformLayout();
             this.pnlBar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel pnlTab;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTabDangXuat;
+        private System.Windows.Forms.Button btnTabNhanVien;
+        private System.Windows.Forms.Button btnTabDoanhThu;
+        private System.Windows.Forms.Button btnTabSanPham;
+        private System.Windows.Forms.Button btnTabHoaDon;
         private System.Windows.Forms.Panel pnlBar;
         private System.Windows.Forms.Button btnPower;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnTrangChu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel pnlMain;
     }
 }

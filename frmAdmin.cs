@@ -38,5 +38,21 @@ namespace management_store
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            UCDashboard tab = new UCDashboard();
+            tab.Location = new Point(0, 0);
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(tab);
+        }
+
+        private void btnTabHoaDon_Click(object sender, EventArgs e)
+        {
+            UCHoaDon tab = new UCHoaDon();
+            tab.Location = new Point(0, 0);
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(tab);
+        }
     }
 }
