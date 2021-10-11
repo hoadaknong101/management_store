@@ -12,61 +12,48 @@ namespace management_store
 {
     public partial class UCSanPhamBar : UserControl
     {
-        public UCHoaDon.TinhTongTien tinhTongTien;
-        public UCHoaDon.XoaItem xoa;
-        public UCHoaDon.CapNhatTongTien capNhat;
-        
+        public UCHoaDon.delCapNhatTongTien capNhatTongTien;
+        public UCHoaDon.delXoaSanPham xoaSanPham;
         public int MaSP { get; set; }
         public Image HinhAnh { get; set; }
         public string TenSP { get; set; }
         public int SoLuong { get; set; }
-        public float TongGia { get; set; }
+        public float ThanhTien { get; set; }
         public float DonGia { get; set; }
-        public UCSanPhamBar(int maSP, Image hinhAnh, string tenSP, float donGia,int soLuong, UCHoaDon.TinhTongTien a, UCHoaDon.XoaItem xoa, UCHoaDon.CapNhatTongTien capNhat)
+        public UCSanPhamBar(int maSP, Image hinhAnh, string tenSP, 
+            float donGia,int soLuong, UCHoaDon.delCapNhatTongTien capNhatTongTien, UCHoaDon.delXoaSanPham xoaSanPham)
         {
             InitializeComponent();
-            MaSP = maSP;
-            HinhAnh = hinhAnh;
-            DonGia = donGia;
-            TenSP = tenSP;
-            SoLuong = soLuong;
+
+            this.MaSP = maSP;
+            this.HinhAnh = hinhAnh;
+            this.DonGia = donGia;
+            this.TenSP = tenSP;
+            this.SoLuong = soLuong;
+            this.ThanhTien = DonGia * SoLuong;
+            this.xoaSanPham = xoaSanPham;
+            this.capNhatTongTien = capNhatTongTien;
 
             lblMaSP.Text = maSP + "";
             lblTenSP.Text = tenSP;
             ptbImage.Image = hinhAnh;
             lblDonGia.Text = donGia + "";
-            TongGia = DonGia * SoLuong;
-            txtSoLuong.Text = 1 + "";
-            tinhTongTien = a;
-            this.xoa = xoa;
-            this.capNhat = capNhat;
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            txtSoLuong.Text = SoLuong + "";
+            lblThanhTien.Text = ThanhTien + "";
         }
 
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            tinhTongTien.Invoke();
-            xoa.Invoke(this);
-            capNhat.Invoke();
+            this.xoaSanPham.Invoke(this);
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                TongGia = DonGia * int.Parse(txtSoLuong.Text.Trim());
-                this.SoLuong = int.Parse(txtSoLuong.Text.Trim());
-                capNhat.Invoke(TongGia);
+                this.ThanhTien = this.DonGia * int.Parse(txtSoLuong.Text.Trim());
+                this.capNhatTongTien.Invoke();
+                lblThanhTien.Text = ThanhTien + "";
             }
             catch
             {

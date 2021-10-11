@@ -73,6 +73,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Icon_PNG_715x715 {
+            get {
+                object obj = ResourceManager.GetObject("Add-Icon-PNG-715x715", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap analytics_pngrepo_com {
             get {
                 object obj = ResourceManager.GetObject("analytics-pngrepo-com", resourceCulture);

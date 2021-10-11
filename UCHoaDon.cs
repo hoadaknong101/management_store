@@ -12,57 +12,59 @@ namespace management_store
 {
     public partial class UCHoaDon : UserControl
     {
-        public delegate void TinhTongTien();
-        public delegate void XoaItem(UCSanPhamBar a);
-        public delegate void CapNhatTongTien();
+        public delegate void delCapNhatTongTien();
+        public delegate void delXoaSanPham(UCSanPhamBar sanPham);
 
-        private List<UCSanPhamBar> lstSanPham;
-        private float tongTien = 0;
+
+        public List<UCSanPhamBar> lstSanPham;
+        public float tongTien = 0;
         public UCHoaDon()
         {
             InitializeComponent();
             lstSanPham = new List<UCSanPhamBar>();
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
 
-            lstSanPham.Add(new UCSanPhamBar(1, null, "Dep to ong", 1000,1, TinhTongTienHoaDon, XoaListItem,CapNhatTongTienHD));
-            lstSanPham.Add(new UCSanPhamBar(2, null, "But bi", 1000,1, TinhTongTienHoaDon, XoaListItem, CapNhatTongTienHD));
-            lstSanPham.Add(new UCSanPhamBar(3, null, "Dep lao", 1000,1, TinhTongTienHoaDon, XoaListItem, CapNhatTongTienHD));
-            lstSanPham.Add(new UCSanPhamBar(7, null, "Laptop", 1000,1, TinhTongTienHoaDon, XoaListItem, CapNhatTongTienHD));
-            lstSanPham.Add(new UCSanPhamBar(8, null, "Dien Thoai",1, 1000, TinhTongTienHoaDon, XoaListItem, CapNhatTongTienHD));
-            lstSanPham.Add(new UCSanPhamBar(9, null, "Iphone", 1000,1, TinhTongTienHoaDon, XoaListItem, CapNhatTongTienHD));
+            lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 1000,3, CapNhatTongTienHoaDon,XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(2, null, "Bút bi", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(3, null, "Dép lào", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(7, null, "Laptop", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(8, null, "Điện thoại",1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(9, null, "Iphone", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
 
             ThemSanPham();
-            TinhTongTienHoaDon();
+            CapNhatTongTienHoaDon();
         }
-        private void TinhTongTienHoaDon()
+        public void CapNhatTongTienHoaDon()
         {
             tongTien = 0;
-            foreach (UCSanPhamBar a in lstSanPham)
+            foreach (UCSanPhamBar sp in lstSanPham)
             {
-                tongTien += a.DonGia;
+                tongTien += sp.ThanhTien;
             }
-            lblTongTien.Text = "Tổng tiền : " + tongTien + "VNĐ";
+            lblTongTien.Text = "Tổng tiền : " + tongTien + " VNĐ";
         }
-        private void XoaListItem(UCSanPhamBar a)
+
+        private void XoaSanPham(UCSanPhamBar sanPham)
         {
-            lstSanPham.Remove(a);
-            TinhTongTienHoaDon();
+            lstSanPham.Remove(sanPham);
+            fpnlSanPham.Controls.Clear();
+            foreach (UCSanPhamBar sp in lstSanPham)
+            {
+                fpnlSanPham.Controls.Add(sp);
+            }
+            CapNhatTongTienHoaDon();
         }
         private void ThemSanPham()
         {
-            foreach(UCSanPhamBar a in lstSanPham)
+            foreach(UCSanPhamBar sp in lstSanPham)
             {
-                fpnlSanPham.Controls.Add(a);
+                fpnlSanPham.Controls.Add(sp);
             }
         }
-        private void CapNhatTongTienHD()
+
+        private void UCHoaDon_Load(object sender, EventArgs e)
         {
-            tongTien = 0;
-            foreach (UCSanPhamBar a in lstSanPham)
-            {
-                tongTien += a.DonGia;
-            }
-            lblTongTien.Text = "Tổng tiền : " + tongTien + "VNĐ";
+
         }
     }
 }

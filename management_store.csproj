@@ -161,5 +161,8 @@
   <ItemGroup>
     <None Include="Resources\output-pngrepo-com.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Icon-PNG-715x715.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

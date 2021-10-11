@@ -190,7 +190,7 @@ namespace management_store
             this.btnPower.Location = new System.Drawing.Point(1041, 1);
             this.btnPower.Name = "btnPower";
             this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPower.Size = new System.Drawing.Size(63, 48);
+            this.btnPower.Size = new System.Drawing.Size(63, 52);
             this.btnPower.TabIndex = 1;
             this.btnPower.Text = "X";
             this.btnPower.UseVisualStyleBackColor = true;
@@ -198,6 +198,7 @@ namespace management_store
             // 
             // pnlMain
             // 
+            this.pnlMain.AutoScroll = true;
             this.pnlMain.AutoSize = true;
             this.pnlMain.Location = new System.Drawing.Point(221, 52);
             this.pnlMain.Name = "pnlMain";
