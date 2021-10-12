@@ -117,12 +117,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BussinessAccessLayer\BusinessLogicLayer.csproj">
-      <Project>{2333e738-c1af-412a-b88f-9716edd02399}</Project>
-      <Name>BusinessLogicLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\user %281%29.png" />
   </ItemGroup>
   <ItemGroup>
