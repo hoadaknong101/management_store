@@ -44,20 +44,22 @@ namespace management_store
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -67,6 +69,7 @@ namespace management_store
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
@@ -76,8 +79,6 @@ namespace management_store
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,6 +88,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -96,6 +98,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -105,7 +108,6 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,7 +115,7 @@ namespace management_store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(454, 15);
+            this.label1.Location = new System.Drawing.Point(457, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 39);
             this.label1.TabIndex = 0;
@@ -293,39 +295,6 @@ namespace management_store
             this.label10.TabIndex = 0;
             this.label10.Text = "Cửa hàng văn phòng phẩm";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(44, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(321, 23);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Số 1 Võ Văn Ngân Quận Thủ Đức TH HCM";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(16, 110);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 31);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "LIÊN HỆ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(49, 155);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(232, 23);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "484 Lê Văn Việt, Q. 9, TP. HCM";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -348,6 +317,39 @@ namespace management_store
             this.label15.TabIndex = 0;
             this.label15.Text = "Số 1 Võ Văn Ngân Quận Thủ Đức TH HCM";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(49, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(232, 23);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "484 Lê Văn Việt, Q. 9, TP. HCM";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(16, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 31);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "LIÊN HỆ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(44, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(321, 23);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Số 1 Võ Văn Ngân Quận Thủ Đức TH HCM";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(133)))));
@@ -363,6 +365,18 @@ namespace management_store
             this.panel6.Size = new System.Drawing.Size(494, 355);
             this.panel6.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(19, 295);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(207, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Chỉnh sửa";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -374,27 +388,16 @@ namespace management_store
             this.label16.TabIndex = 0;
             this.label16.Text = "Thông tin nhân viên";
             // 
-            // label21
+            // label19
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(16, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(204, 27);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Mã nhân viên : 12345";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(16, 116);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 27);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Họ và tên : Kim Jisoo";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(16, 159);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(129, 27);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Giới tính : nữ";
             // 
             // label18
             // 
@@ -407,16 +410,27 @@ namespace management_store
             this.label18.TabIndex = 0;
             this.label18.Text = "Liên hệ : 0384 485 486";
             // 
-            // label19
+            // label17
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(16, 159);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(129, 27);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Giới tính : nữ";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(16, 116);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(193, 27);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Họ và tên : Kim Jisoo";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(16, 73);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(204, 27);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Mã nhân viên : 12345";
             // 
             // pictureBox10
             // 
@@ -447,6 +461,16 @@ namespace management_store
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 1;
             this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::management_store.Properties.Resources.icons8_bar_chart_321;
+            this.pictureBox23.Location = new System.Drawing.Point(397, 15);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(54, 39);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 1;
+            this.pictureBox23.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -538,6 +562,16 @@ namespace management_store
             this.pictureBox20.TabIndex = 1;
             this.pictureBox20.TabStop = false;
             // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::management_store.Properties.Resources.location_filled_100px;
+            this.pictureBox22.Location = new System.Drawing.Point(19, 75);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(26, 20);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 1;
+            this.pictureBox22.TabStop = false;
+            // 
             // pictureBox14
             // 
             this.pictureBox14.Image = global::management_store.Properties.Resources.location_filled_100px;
@@ -628,33 +662,12 @@ namespace management_store
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::management_store.Properties.Resources.location_filled_100px;
-            this.pictureBox22.Location = new System.Drawing.Point(19, 75);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(26, 20);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 1;
-            this.pictureBox22.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(19, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Chỉnh sửa";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // UCDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
@@ -678,6 +691,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -687,6 +701,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
@@ -696,7 +711,6 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,5 +767,6 @@ namespace management_store
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox23;
     }
 }

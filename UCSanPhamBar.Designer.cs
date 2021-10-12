@@ -163,11 +163,12 @@ namespace management_store
             this.lblThanhTien.AutoSize = true;
             this.lblThanhTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblThanhTien.ForeColor = System.Drawing.Color.White;
-            this.lblThanhTien.Location = new System.Drawing.Point(27, 20);
+            this.lblThanhTien.Location = new System.Drawing.Point(60, 20);
             this.lblThanhTien.Name = "lblThanhTien";
             this.lblThanhTien.Size = new System.Drawing.Size(56, 21);
             this.lblThanhTien.TabIndex = 3;
             this.lblThanhTien.Text = "TOTAL";
+            this.lblThanhTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptbImage
             // 

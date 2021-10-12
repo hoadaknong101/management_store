@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,6 @@ namespace management_store
             lstSanPham.Add(new UCSanPhamBar(7, null, "Laptop", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
             lstSanPham.Add(new UCSanPhamBar(8, null, "Điện thoại",1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
             lstSanPham.Add(new UCSanPhamBar(9, null, "Iphone", 1000,1, CapNhatTongTienHoaDon, XoaSanPham));
-
             ThemSanPham();
             CapNhatTongTienHoaDon();
         }
@@ -53,7 +53,8 @@ namespace management_store
             {
                 tongTien += sp.ThanhTien;
             }
-            lblTongTien.Text = "Tổng tiền : " + tongTien + " VNĐ";
+            CultureInfo ci = new CultureInfo("en-us");
+            lblTongTien.Text = "Tổng tiền : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ";
         }
 
         private void XoaSanPham(UCSanPhamBar sanPham)

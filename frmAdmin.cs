@@ -23,6 +23,14 @@ namespace management_store
         public frmAdmin()
         {
             InitializeComponent();
+            if (!pnlMain.Controls.Contains(UCDashboard.Instance))
+            {
+                pnlMain.Controls.Add(UCDashboard.Instance);
+            }
+            else
+            {
+                UCDashboard.Instance.BringToFront();
+            }
         }
 
         private void btnPower_Click(object sender, EventArgs e)
@@ -61,6 +69,16 @@ namespace management_store
             {
                 UCHoaDon.Instance.BringToFront();
             }
+        }
+
+        private void timerDigitalClock_Tick(object sender, EventArgs e)
+        {
+            lblDigitalClock.Text = DateTime.Now.ToString("T");
+        }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            timerDigitalClock.Start();
         }
     }
 }

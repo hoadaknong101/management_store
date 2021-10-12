@@ -181,6 +181,12 @@
     <Compile Include="UCSanPhamBar.Designer.cs">
       <DependentUpon>UCSanPhamBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTitleBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTitleBar.Designer.cs">
+      <DependentUpon>UCTitleBar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSanPhamBar.resx">
       <DependentUpon>UCSanPhamBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTitleBar.resx">
+      <DependentUpon>UCTitleBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -345,6 +354,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\241226920_238900838242096_6805208429780291552_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_receipt_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Post-secondary-education-scaled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bar_chart_321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

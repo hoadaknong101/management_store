@@ -203,6 +203,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bar_chart_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_bar_chart_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancel_2_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cancel_2_48", resourceCulture);
@@ -323,6 +333,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_receipt_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_receipt_641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_statistics_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_statistics_48", resourceCulture);
@@ -406,6 +426,16 @@ namespace management_store.Properties {
         internal static System.Drawing.Bitmap pinterest_52px {
             get {
                 object obj = ResourceManager.GetObject("pinterest_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Post_secondary_education_scaled {
+            get {
+                object obj = ResourceManager.GetObject("Post-secondary-education-scaled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

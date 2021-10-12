@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,9 +38,9 @@ namespace management_store
             lblMaSP.Text = maSP + "";
             lblTenSP.Text = tenSP;
             ptbImage.Image = hinhAnh;
-            lblDonGia.Text = donGia + "";
+            lblDonGia.Text = donGia.ToString("N", CultureInfo.InvariantCulture);
             txtSoLuong.Text = SoLuong + "";
-            lblThanhTien.Text = ThanhTien + "";
+            lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);
         }
 
         private void btnXoaSP_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace management_store
             {
                 this.ThanhTien = this.DonGia * int.Parse(txtSoLuong.Text.Trim());
                 this.capNhatTongTien.Invoke();
-                lblThanhTien.Text = ThanhTien + "";
+                lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);
             }
             catch
             {
