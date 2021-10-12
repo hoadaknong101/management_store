@@ -103,6 +103,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_chart_48px {
+            get {
+                object obj = ResourceManager.GetObject("bar_chart_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Book_Shelf_100px {
             get {
                 object obj = ResourceManager.GetObject("Book Shelf_100px", resourceCulture);
@@ -143,9 +153,29 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bullish_filled_100px {
+            get {
+                object obj = ResourceManager.GetObject("bullish_filled_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel {
             get {
                 object obj = ResourceManager.GetObject("Cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checked_truck_128px {
+            get {
+                object obj = ResourceManager.GetObject("checked_truck_128px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

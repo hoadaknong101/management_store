@@ -80,5 +80,17 @@ namespace management_store
         {
             timerDigitalClock.Start();
         }
+
+        private void btnTabSanPham_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(UCSanPham.Instance))
+            {
+                pnlMain.Controls.Add(UCSanPham.Instance);
+            }
+            else
+            {
+                UCSanPham.Instance.BringToFront();
+            }
+        }
     }
 }

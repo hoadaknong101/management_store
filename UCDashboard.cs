@@ -28,5 +28,27 @@ namespace management_store
         {
             InitializeComponent();
         }
+
+        private void picFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/hoaffffff/");
+
+        }
+
+        private void picInstagram_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/hoaffffffffff/");
+            
+        }
+
+        private void picYoutube_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/quochoaeditor");
+        }
+
+        private void picPinterest_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.pinterest.com/hoadaknong101/");
+        }
     }
 }

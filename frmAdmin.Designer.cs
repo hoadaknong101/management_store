@@ -35,6 +35,8 @@ namespace management_store
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBar = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.timerDigitalClock = new System.Windows.Forms.Timer(this.components);
+            this.lblDigitalClock = new System.Windows.Forms.Label();
             this.btnPower = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTabDangXuat = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@ namespace management_store
             this.btnTabSanPham = new System.Windows.Forms.Button();
             this.btnTabHoaDon = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
-            this.timerDigitalClock = new System.Windows.Forms.Timer(this.components);
-            this.lblDigitalClock = new System.Windows.Forms.Label();
             this.pnlTab.SuspendLayout();
             this.pnlBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,6 +97,23 @@ namespace management_store
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1104, 660);
             this.pnlMain.TabIndex = 2;
+            // 
+            // timerDigitalClock
+            // 
+            this.timerDigitalClock.Enabled = true;
+            this.timerDigitalClock.Interval = 1000;
+            this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
+            // 
+            // lblDigitalClock
+            // 
+            this.lblDigitalClock.AutoSize = true;
+            this.lblDigitalClock.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDigitalClock.ForeColor = System.Drawing.Color.White;
+            this.lblDigitalClock.Location = new System.Drawing.Point(53, 623);
+            this.lblDigitalClock.Name = "lblDigitalClock";
+            this.lblDigitalClock.Size = new System.Drawing.Size(121, 28);
+            this.lblDigitalClock.TabIndex = 2;
+            this.lblDigitalClock.Text = "00:00:00 PM";
             // 
             // btnPower
             // 
@@ -191,6 +208,7 @@ namespace management_store
             this.btnTabSanPham.TabIndex = 1;
             this.btnTabSanPham.Text = "         SẢN PHẨM";
             this.btnTabSanPham.UseVisualStyleBackColor = true;
+            this.btnTabSanPham.Click += new System.EventHandler(this.btnTabSanPham_Click);
             // 
             // btnTabHoaDon
             // 
@@ -226,23 +244,6 @@ namespace management_store
             this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTrangChu.UseVisualStyleBackColor = true;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
-            // 
-            // timerDigitalClock
-            // 
-            this.timerDigitalClock.Enabled = true;
-            this.timerDigitalClock.Interval = 1000;
-            this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
-            // 
-            // lblDigitalClock
-            // 
-            this.lblDigitalClock.AutoSize = true;
-            this.lblDigitalClock.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDigitalClock.ForeColor = System.Drawing.Color.White;
-            this.lblDigitalClock.Location = new System.Drawing.Point(53, 623);
-            this.lblDigitalClock.Name = "lblDigitalClock";
-            this.lblDigitalClock.Size = new System.Drawing.Size(121, 28);
-            this.lblDigitalClock.TabIndex = 2;
-            this.lblDigitalClock.Text = "00:00:00 PM";
             // 
             // frmAdmin
             // 

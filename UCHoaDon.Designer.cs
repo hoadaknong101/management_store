@@ -43,10 +43,10 @@ namespace management_store
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.ucTitleBar1 = new management_store.UCTitleBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHuyHoaDon = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,7 +58,7 @@ namespace management_store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(478, 10);
+            this.label1.Location = new System.Drawing.Point(509, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 39);
             this.label1.TabIndex = 1;
@@ -203,6 +203,16 @@ namespace management_store
             this.ucTitleBar1.Size = new System.Drawing.Size(1017, 40);
             this.ucTitleBar1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_receipt_641;
+            this.pictureBox1.Location = new System.Drawing.Point(442, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnHuyHoaDon
             // 
             this.btnHuyHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -256,16 +266,6 @@ namespace management_store
             this.btnXuatHoaDon.Text = "  Xuất HĐ";
             this.btnXuatHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXuatHoaDon.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_receipt_641;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // UCHoaDon
             // 
