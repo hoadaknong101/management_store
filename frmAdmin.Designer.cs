@@ -238,7 +238,7 @@ namespace management_store
             this.lblDigitalClock.AutoSize = true;
             this.lblDigitalClock.Font = new System.Drawing.Font("SVN-Avo", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDigitalClock.ForeColor = System.Drawing.Color.White;
-            this.lblDigitalClock.Location = new System.Drawing.Point(53, 626);
+            this.lblDigitalClock.Location = new System.Drawing.Point(53, 623);
             this.lblDigitalClock.Name = "lblDigitalClock";
             this.lblDigitalClock.Size = new System.Drawing.Size(121, 28);
             this.lblDigitalClock.TabIndex = 2;
