@@ -31,20 +31,20 @@ namespace management_store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.pnlTab = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlBar = new System.Windows.Forms.Panel();
-            this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnPower = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnTabDangXuat = new System.Windows.Forms.Button();
             this.btnTabNhanVien = new System.Windows.Forms.Button();
             this.btnTabDoanhThu = new System.Windows.Forms.Button();
             this.btnTabSanPham = new System.Windows.Forms.Button();
             this.btnTabHoaDon = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
+            this.pnlBar = new System.Windows.Forms.Panel();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTab.SuspendLayout();
-            this.pnlBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -64,52 +64,6 @@ namespace management_store
             this.pnlTab.Size = new System.Drawing.Size(221, 708);
             this.pnlTab.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(96, 648);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "v1.0";
-            // 
-            // pnlBar
-            // 
-            this.pnlBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlBar.Controls.Add(this.btnPower);
-            this.pnlBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBar.Location = new System.Drawing.Point(221, 0);
-            this.pnlBar.Name = "pnlBar";
-            this.pnlBar.Size = new System.Drawing.Size(1103, 49);
-            this.pnlBar.TabIndex = 1;
-            this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.AutoScroll = true;
-            this.pnlMain.AutoSize = true;
-            this.pnlMain.BackColor = System.Drawing.Color.White;
-            this.pnlMain.Location = new System.Drawing.Point(221, 47);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1104, 660);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // btnPower
-            // 
-            this.btnPower.FlatAppearance.BorderSize = 0;
-            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPower.ForeColor = System.Drawing.Color.White;
-            this.btnPower.Image = global::management_store.Properties.Resources.icons8_delete_sign_filled_32;
-            this.btnPower.Location = new System.Drawing.Point(1044, 1);
-            this.btnPower.Name = "btnPower";
-            this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPower.Size = new System.Drawing.Size(59, 45);
-            this.btnPower.TabIndex = 1;
-            this.btnPower.UseVisualStyleBackColor = true;
-            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::management_store.Properties.Resources.book_shelf_96px;
@@ -119,6 +73,16 @@ namespace management_store
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(96, 648);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "v1.0";
             // 
             // btnTabDangXuat
             // 
@@ -224,6 +188,41 @@ namespace management_store
             this.btnTrangChu.UseVisualStyleBackColor = true;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
+            // pnlBar
+            // 
+            this.pnlBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlBar.Controls.Add(this.btnPower);
+            this.pnlBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBar.Location = new System.Drawing.Point(221, 0);
+            this.pnlBar.Name = "pnlBar";
+            this.pnlBar.Size = new System.Drawing.Size(1103, 49);
+            this.pnlBar.TabIndex = 1;
+            this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
+            // 
+            // btnPower
+            // 
+            this.btnPower.FlatAppearance.BorderSize = 0;
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.ForeColor = System.Drawing.Color.White;
+            this.btnPower.Image = global::management_store.Properties.Resources.icons8_delete_sign_filled_32;
+            this.btnPower.Location = new System.Drawing.Point(1044, 1);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPower.Size = new System.Drawing.Size(59, 45);
+            this.btnPower.TabIndex = 1;
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.AutoSize = true;
+            this.pnlMain.BackColor = System.Drawing.Color.White;
+            this.pnlMain.Location = new System.Drawing.Point(221, 47);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1104, 660);
+            this.pnlMain.TabIndex = 2;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -241,8 +240,8 @@ namespace management_store
             this.Text = "Quản trị viên";
             this.pnlTab.ResumeLayout(false);
             this.pnlTab.PerformLayout();
-            this.pnlBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
