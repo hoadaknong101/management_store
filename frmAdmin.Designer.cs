@@ -259,6 +259,7 @@ namespace management_store
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản trị viên";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.pnlTab.ResumeLayout(false);

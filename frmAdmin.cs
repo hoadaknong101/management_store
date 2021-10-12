@@ -52,6 +52,7 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCDashboard.Instance))
             {
                 pnlMain.Controls.Add(UCDashboard.Instance);
+                UCDashboard.Instance.BringToFront();
             }
             else
             {
@@ -64,6 +65,7 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCHoaDon.Instance))
             {
                 pnlMain.Controls.Add(UCHoaDon.Instance);
+                UCHoaDon.Instance.BringToFront();
             }
             else
             {
@@ -86,6 +88,7 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCSanPham.Instance))
             {
                 pnlMain.Controls.Add(UCSanPham.Instance);
+                UCSanPham.Instance.BringToFront();
             }
             else
             {
