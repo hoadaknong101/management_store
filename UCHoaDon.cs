@@ -18,6 +18,18 @@ namespace management_store
 
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
+        static UCHoaDon _obj;
+        public static UCHoaDon Instance
+        {
+            get
+            {
+                if(_obj == null)
+                {
+                    _obj = new UCHoaDon();
+                }
+                return _obj;
+            }
+        }
         public UCHoaDon()
         {
             InitializeComponent();

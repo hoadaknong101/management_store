@@ -12,6 +12,18 @@ namespace management_store
 {
     public partial class UCDashboard : UserControl
     {
+        static UCDashboard _obj;
+        public static UCDashboard Instance
+        {
+            get
+            {
+                if(_obj == null)
+                {
+                    _obj = new UCDashboard();
+                }
+                return _obj;
+            }
+        }
         public UCDashboard()
         {
             InitializeComponent();

@@ -41,18 +41,26 @@ namespace management_store
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            UCDashboard tab = new UCDashboard();
-            tab.Location = new Point(0, 0);
-            pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(tab);
+            if (!pnlMain.Controls.Contains(UCDashboard.Instance))
+            {
+                pnlMain.Controls.Add(UCDashboard.Instance);
+            }
+            else
+            {
+                UCDashboard.Instance.BringToFront();
+            }
         }
 
         private void btnTabHoaDon_Click(object sender, EventArgs e)
         {
-            UCHoaDon tab = new UCHoaDon();
-            tab.Location = new Point(0, 0);
-            pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(tab);
+            if (!pnlMain.Controls.Contains(UCHoaDon.Instance))
+            {
+                pnlMain.Controls.Add(UCHoaDon.Instance);
+            }
+            else
+            {
+                UCHoaDon.Instance.BringToFront();
+            }
         }
     }
 }

@@ -36,15 +36,15 @@ namespace management_store
             this.fpnlSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnHuyHoaDon = new System.Windows.Forms.Button();
-            this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.btnHuyHoaDon = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -101,9 +101,9 @@ namespace management_store
             this.fpnlSanPham.AutoScroll = true;
             this.fpnlSanPham.BackColor = System.Drawing.Color.Silver;
             this.fpnlSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.fpnlSanPham.Location = new System.Drawing.Point(48, 170);
+            this.fpnlSanPham.Location = new System.Drawing.Point(45, 170);
             this.fpnlSanPham.Name = "fpnlSanPham";
-            this.fpnlSanPham.Size = new System.Drawing.Size(1010, 316);
+            this.fpnlSanPham.Size = new System.Drawing.Size(1017, 316);
             this.fpnlSanPham.TabIndex = 6;
             // 
             // label4
@@ -128,63 +128,12 @@ namespace management_store
             this.lblTongTien.TabIndex = 5;
             this.lblTongTien.Text = "Tổng tiền :";
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Image = global::management_store.Properties.Resources.Add_Icon_PNG_715x715;
-            this.button1.Location = new System.Drawing.Point(883, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 88);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thêm sản phẩm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnHuyHoaDon
-            // 
-            this.btnHuyHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHuyHoaDon.FlatAppearance.BorderSize = 3;
-            this.btnHuyHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuyHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnHuyHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHuyHoaDon.Image = global::management_store.Properties.Resources.Cancel;
-            this.btnHuyHoaDon.Location = new System.Drawing.Point(845, 492);
-            this.btnHuyHoaDon.Name = "btnHuyHoaDon";
-            this.btnHuyHoaDon.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnHuyHoaDon.Size = new System.Drawing.Size(212, 64);
-            this.btnHuyHoaDon.TabIndex = 7;
-            this.btnHuyHoaDon.Text = "  Hủy HĐ";
-            this.btnHuyHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHuyHoaDon.UseVisualStyleBackColor = true;
-            // 
-            // btnXuatHoaDon
-            // 
-            this.btnXuatHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnXuatHoaDon.FlatAppearance.BorderSize = 3;
-            this.btnXuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuatHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXuatHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnXuatHoaDon.Image = global::management_store.Properties.Resources.output_pngrepo_com;
-            this.btnXuatHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(845, 562);
-            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
-            this.btnXuatHoaDon.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnXuatHoaDon.Size = new System.Drawing.Size(213, 63);
-            this.btnXuatHoaDon.TabIndex = 7;
-            this.btnXuatHoaDon.Text = "  Xuất HĐ";
-            this.btnXuatHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXuatHoaDon.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(616, 65);
+            this.label3.Location = new System.Drawing.Point(529, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 31);
             this.label3.TabIndex = 2;
@@ -224,9 +173,9 @@ namespace management_store
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txtGhiChu);
-            this.panel4.Location = new System.Drawing.Point(727, 62);
+            this.panel4.Location = new System.Drawing.Point(640, 62);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(150, 88);
+            this.panel4.Size = new System.Drawing.Size(189, 88);
             this.panel4.TabIndex = 8;
             // 
             // txtGhiChu
@@ -239,13 +188,63 @@ namespace management_store
             this.txtGhiChu.Location = new System.Drawing.Point(3, 4);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(142, 79);
+            this.txtGhiChu.Size = new System.Drawing.Size(181, 79);
             this.txtGhiChu.TabIndex = 3;
+            // 
+            // btnHuyHoaDon
+            // 
+            this.btnHuyHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHuyHoaDon.FlatAppearance.BorderSize = 3;
+            this.btnHuyHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnHuyHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHuyHoaDon.Image = global::management_store.Properties.Resources.icons8_cancel_2_48;
+            this.btnHuyHoaDon.Location = new System.Drawing.Point(845, 492);
+            this.btnHuyHoaDon.Name = "btnHuyHoaDon";
+            this.btnHuyHoaDon.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnHuyHoaDon.Size = new System.Drawing.Size(212, 64);
+            this.btnHuyHoaDon.TabIndex = 7;
+            this.btnHuyHoaDon.Text = "  Hủy HĐ";
+            this.btnHuyHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuyHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Image = global::management_store.Properties.Resources.icons8_plus_48;
+            this.button1.Location = new System.Drawing.Point(845, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 88);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Thêm sản phẩm";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnXuatHoaDon
+            // 
+            this.btnXuatHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnXuatHoaDon.FlatAppearance.BorderSize = 3;
+            this.btnXuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXuatHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnXuatHoaDon.Image = global::management_store.Properties.Resources.icons8_ok_48;
+            this.btnXuatHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(845, 562);
+            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
+            this.btnXuatHoaDon.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.btnXuatHoaDon.Size = new System.Drawing.Size(213, 63);
+            this.btnXuatHoaDon.TabIndex = 7;
+            this.btnXuatHoaDon.Text = "  Xuất HĐ";
+            this.btnXuatHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXuatHoaDon.UseVisualStyleBackColor = true;
             // 
             // UCHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel3);
