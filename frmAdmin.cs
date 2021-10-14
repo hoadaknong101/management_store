@@ -52,6 +52,7 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCDashboard.Instance))
             {
                 pnlMain.Controls.Add(UCDashboard.Instance);
+                UCDashboard.Instance.BringToFront();
             }
             else
             {
@@ -64,6 +65,7 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCHoaDon.Instance))
             {
                 pnlMain.Controls.Add(UCHoaDon.Instance);
+                UCHoaDon.Instance.BringToFront();
             }
             else
             {
@@ -79,6 +81,19 @@ namespace management_store
         private void frmAdmin_Load(object sender, EventArgs e)
         {
             timerDigitalClock.Start();
+        }
+
+        private void btnTabSanPham_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(UCSanPham.Instance))
+            {
+                pnlMain.Controls.Add(UCSanPham.Instance);
+                UCSanPham.Instance.BringToFront();
+            }
+            else
+            {
+                UCSanPham.Instance.BringToFront();
+            }
         }
     }
 }

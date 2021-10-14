@@ -169,11 +169,23 @@
     <Compile Include="UCDashboard.Designer.cs">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDoanhThu.Designer.cs">
+      <DependentUpon>UCDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCHoaDon.Designer.cs">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSanPham.Designer.cs">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="UCSanPhamBar.cs">
       <SubType>UserControl</SubType>
@@ -193,6 +205,7 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,8 +219,14 @@
     <EmbeddedResource Include="UCDashboard.resx">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCDoanhThu.resx">
+      <DependentUpon>UCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCHoaDon.resx">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSanPham.resx">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSanPhamBar.resx">
       <DependentUpon>UCSanPhamBar.cs</DependentUpon>
@@ -357,6 +376,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_bar_chart_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_truck_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullish_filled_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar_chart_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

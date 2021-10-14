@@ -71,10 +71,10 @@ namespace management_store
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.picPinterest = new System.Windows.Forms.PictureBox();
+            this.picYoutube = new System.Windows.Forms.PictureBox();
+            this.picInstagram = new System.Windows.Forms.PictureBox();
+            this.picFacebook = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -100,10 +100,10 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPinterest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYoutube)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInstagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -115,7 +115,7 @@ namespace management_store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(457, 15);
+            this.label1.Location = new System.Drawing.Point(494, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 39);
             this.label1.TabIndex = 0;
@@ -268,10 +268,10 @@ namespace management_store
             this.panel5.Controls.Add(this.pictureBox20);
             this.panel5.Controls.Add(this.pictureBox22);
             this.panel5.Controls.Add(this.pictureBox14);
-            this.panel5.Controls.Add(this.pictureBox19);
-            this.panel5.Controls.Add(this.pictureBox18);
-            this.panel5.Controls.Add(this.pictureBox17);
-            this.panel5.Controls.Add(this.pictureBox16);
+            this.panel5.Controls.Add(this.picPinterest);
+            this.panel5.Controls.Add(this.picYoutube);
+            this.panel5.Controls.Add(this.picInstagram);
+            this.panel5.Controls.Add(this.picFacebook);
             this.panel5.Controls.Add(this.pictureBox13);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label14);
@@ -287,13 +287,13 @@ namespace management_store
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("SVN-Caprica Script", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Open Sans Condensed ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(13, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(338, 33);
+            this.label10.Size = new System.Drawing.Size(350, 39);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Cửa hàng văn phòng phẩm";
+            this.label10.Text = "CỬA HÀNG VĂN PHÒNG PHẨM";
             // 
             // label14
             // 
@@ -380,13 +380,13 @@ namespace management_store
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("SVN-Caprica Script", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Open Sans Condensed ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(13, 20);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(254, 33);
+            this.label16.Size = new System.Drawing.Size(270, 39);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Thông tin nhân viên";
+            this.label16.Text = "THÔNG TIN NHÂN VIÊN";
             // 
             // label19
             // 
@@ -465,7 +465,7 @@ namespace management_store
             // pictureBox23
             // 
             this.pictureBox23.Image = global::management_store.Properties.Resources.icons8_bar_chart_321;
-            this.pictureBox23.Location = new System.Drawing.Point(397, 15);
+            this.pictureBox23.Location = new System.Drawing.Point(434, 15);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(54, 39);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -582,45 +582,53 @@ namespace management_store
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
             // 
-            // pictureBox19
+            // picPinterest
             // 
-            this.pictureBox19.Image = global::management_store.Properties.Resources.pinterest_52px;
-            this.pictureBox19.Location = new System.Drawing.Point(241, 276);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 1;
-            this.pictureBox19.TabStop = false;
+            this.picPinterest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPinterest.Image = global::management_store.Properties.Resources.pinterest_52px;
+            this.picPinterest.Location = new System.Drawing.Point(241, 276);
+            this.picPinterest.Name = "picPinterest";
+            this.picPinterest.Size = new System.Drawing.Size(50, 41);
+            this.picPinterest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPinterest.TabIndex = 1;
+            this.picPinterest.TabStop = false;
+            this.picPinterest.Click += new System.EventHandler(this.picPinterest_Click);
             // 
-            // pictureBox18
+            // picYoutube
             // 
-            this.pictureBox18.Image = global::management_store.Properties.Resources.youtube_play_60px;
-            this.pictureBox18.Location = new System.Drawing.Point(168, 276);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 1;
-            this.pictureBox18.TabStop = false;
+            this.picYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picYoutube.Image = global::management_store.Properties.Resources.youtube_play_60px;
+            this.picYoutube.Location = new System.Drawing.Point(168, 276);
+            this.picYoutube.Name = "picYoutube";
+            this.picYoutube.Size = new System.Drawing.Size(50, 41);
+            this.picYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picYoutube.TabIndex = 1;
+            this.picYoutube.TabStop = false;
+            this.picYoutube.Click += new System.EventHandler(this.picYoutube_Click);
             // 
-            // pictureBox17
+            // picInstagram
             // 
-            this.pictureBox17.Image = global::management_store.Properties.Resources.instagram_new_64px;
-            this.pictureBox17.Location = new System.Drawing.Point(95, 276);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 1;
-            this.pictureBox17.TabStop = false;
+            this.picInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picInstagram.Image = global::management_store.Properties.Resources.instagram_new_64px;
+            this.picInstagram.Location = new System.Drawing.Point(95, 276);
+            this.picInstagram.Name = "picInstagram";
+            this.picInstagram.Size = new System.Drawing.Size(50, 41);
+            this.picInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInstagram.TabIndex = 1;
+            this.picInstagram.TabStop = false;
+            this.picInstagram.Click += new System.EventHandler(this.picInstagram_Click);
             // 
-            // pictureBox16
+            // picFacebook
             // 
-            this.pictureBox16.Image = global::management_store.Properties.Resources.Facebook_48px;
-            this.pictureBox16.Location = new System.Drawing.Point(22, 276);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 1;
-            this.pictureBox16.TabStop = false;
+            this.picFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picFacebook.Image = global::management_store.Properties.Resources.Facebook_48px;
+            this.picFacebook.Location = new System.Drawing.Point(22, 276);
+            this.picFacebook.Name = "picFacebook";
+            this.picFacebook.Size = new System.Drawing.Size(50, 41);
+            this.picFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFacebook.TabIndex = 1;
+            this.picFacebook.TabStop = false;
+            this.picFacebook.Click += new System.EventHandler(this.picFacebook_Click);
             // 
             // pictureBox13
             // 
@@ -703,10 +711,10 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPinterest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYoutube)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInstagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -752,10 +760,10 @@ namespace management_store
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox picFacebook;
+        private System.Windows.Forms.PictureBox picInstagram;
+        private System.Windows.Forms.PictureBox picYoutube;
+        private System.Windows.Forms.PictureBox picPinterest;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel6;
