@@ -93,7 +93,7 @@ namespace management_store
             this.lblNgayTao.AutoSize = true;
             this.lblNgayTao.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblNgayTao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNgayTao.Location = new System.Drawing.Point(42, 510);
+            this.lblNgayTao.Location = new System.Drawing.Point(39, 577);
             this.lblNgayTao.Name = "lblNgayTao";
             this.lblNgayTao.Size = new System.Drawing.Size(114, 31);
             this.lblNgayTao.TabIndex = 5;
@@ -106,7 +106,7 @@ namespace management_store
             this.fpnlSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fpnlSanPham.Location = new System.Drawing.Point(45, 218);
             this.fpnlSanPham.Name = "fpnlSanPham";
-            this.fpnlSanPham.Size = new System.Drawing.Size(1017, 281);
+            this.fpnlSanPham.Size = new System.Drawing.Size(1017, 353);
             this.fpnlSanPham.TabIndex = 6;
             // 
             // label4
@@ -125,7 +125,7 @@ namespace management_store
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTongTien.Location = new System.Drawing.Point(42, 549);
+            this.lblTongTien.Location = new System.Drawing.Point(39, 613);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(119, 31);
             this.lblTongTien.TabIndex = 5;
@@ -222,7 +222,7 @@ namespace management_store
             this.btnHuyHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnHuyHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnHuyHoaDon.Image = global::management_store.Properties.Resources.icons8_cancel_2_48;
-            this.btnHuyHoaDon.Location = new System.Drawing.Point(845, 508);
+            this.btnHuyHoaDon.Location = new System.Drawing.Point(617, 580);
             this.btnHuyHoaDon.Name = "btnHuyHoaDon";
             this.btnHuyHoaDon.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnHuyHoaDon.Size = new System.Drawing.Size(212, 64);
@@ -259,7 +259,7 @@ namespace management_store
             this.btnXuatHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnXuatHoaDon.Image = global::management_store.Properties.Resources.icons8_ok_48;
             this.btnXuatHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(845, 578);
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(845, 581);
             this.btnXuatHoaDon.Name = "btnXuatHoaDon";
             this.btnXuatHoaDon.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.btnXuatHoaDon.Size = new System.Drawing.Size(213, 63);

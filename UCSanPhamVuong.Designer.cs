@@ -33,9 +33,9 @@ namespace management_store
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lblTenSanPham = new System.Windows.Forms.Label();
             this.lblGia = new System.Windows.Forms.Label();
-            this.picHinhAnh = new System.Windows.Forms.PictureBox();
-            this.btnThem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblMaSP = new System.Windows.Forms.Label();
+            this.btnThem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.picHinhAnh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +43,7 @@ namespace management_store
             // 
             this.lblTenSanPham.AutoSize = true;
             this.lblTenSanPham.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSanPham.Location = new System.Drawing.Point(22, 130);
+            this.lblTenSanPham.Location = new System.Drawing.Point(29, 130);
             this.lblTenSanPham.Name = "lblTenSanPham";
             this.lblTenSanPham.Size = new System.Drawing.Size(49, 23);
             this.lblTenSanPham.TabIndex = 1;
@@ -53,20 +53,21 @@ namespace management_store
             // 
             this.lblGia.AutoSize = true;
             this.lblGia.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.Location = new System.Drawing.Point(23, 158);
+            this.lblGia.Location = new System.Drawing.Point(30, 158);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(30, 23);
             this.lblGia.TabIndex = 1;
             this.lblGia.Text = "Gia";
             // 
-            // picHinhAnh
+            // lblMaSP
             // 
-            this.picHinhAnh.Location = new System.Drawing.Point(26, 16);
-            this.picHinhAnh.Name = "picHinhAnh";
-            this.picHinhAnh.Size = new System.Drawing.Size(135, 84);
-            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHinhAnh.TabIndex = 0;
-            this.picHinhAnh.TabStop = false;
+            this.lblMaSP.AutoSize = true;
+            this.lblMaSP.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSP.Location = new System.Drawing.Point(30, 102);
+            this.lblMaSP.Name = "lblMaSP";
+            this.lblMaSP.Size = new System.Drawing.Size(47, 23);
+            this.lblMaSP.TabIndex = 1;
+            this.lblMaSP.Text = "Ma SP";
             // 
             // btnThem
             // 
@@ -117,7 +118,7 @@ namespace management_store
             this.btnThem.IdleIconLeftImage = null;
             this.btnThem.IdleIconRightImage = null;
             this.btnThem.IndicateFocus = false;
-            this.btnThem.Location = new System.Drawing.Point(39, 187);
+            this.btnThem.Location = new System.Drawing.Point(33, 184);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThem.OnDisabledState.BorderRadius = 1;
@@ -151,7 +152,7 @@ namespace management_store
             this.btnThem.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnThem.OnPressedState.IconLeftImage = null;
             this.btnThem.OnPressedState.IconRightImage = null;
-            this.btnThem.Size = new System.Drawing.Size(111, 33);
+            this.btnThem.Size = new System.Drawing.Size(97, 33);
             this.btnThem.TabIndex = 2;
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThem.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -160,15 +161,14 @@ namespace management_store
             this.btnThem.UseDefaultRadiusAndThickness = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // lblMaSP
+            // picHinhAnh
             // 
-            this.lblMaSP.AutoSize = true;
-            this.lblMaSP.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSP.Location = new System.Drawing.Point(23, 102);
-            this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(47, 23);
-            this.lblMaSP.TabIndex = 1;
-            this.lblMaSP.Text = "Ma SP";
+            this.picHinhAnh.Location = new System.Drawing.Point(33, 16);
+            this.picHinhAnh.Name = "picHinhAnh";
+            this.picHinhAnh.Size = new System.Drawing.Size(97, 84);
+            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinhAnh.TabIndex = 0;
+            this.picHinhAnh.TabStop = false;
             // 
             // UCSanPhamVuong
             // 
@@ -181,7 +181,7 @@ namespace management_store
             this.Controls.Add(this.picHinhAnh);
             this.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UCSanPhamVuong";
-            this.Size = new System.Drawing.Size(186, 234);
+            this.Size = new System.Drawing.Size(159, 234);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

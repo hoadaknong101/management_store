@@ -43,8 +43,9 @@ namespace management_store
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)
         {
             lstSanPham.Add(new UCSanPhamBar(maSP, hinhAnh, tenSP, donGia, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            ThemSanPham();
+            CapNhatTongTienHoaDon();
         }
-
         public void CapNhatTongTienHoaDon()
         {
             tongTien = 0;
@@ -68,13 +69,7 @@ namespace management_store
         }
         private void ThemSanPham()
         {
-            lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 1000, 3, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(2, null, "Bút bi", 1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(3, null, "Dép lào", 1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(7, null, "Laptop", 1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(8, null, "Điện thoại", 1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(9, null, "Iphone", 1000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-
+            fpnlSanPham.Controls.Clear();
             foreach (UCSanPhamBar sp in lstSanPham)
             {
                 fpnlSanPham.Controls.Add(sp);
@@ -88,8 +83,8 @@ namespace management_store
 
         private void btnThemSp_Click(object sender, EventArgs e)
         {
-            frmTimSanPham form = new frmTimSanPham();
-            form.Show();
+            frmTimSP themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
+            themSP.Show();
         }
     }
 }

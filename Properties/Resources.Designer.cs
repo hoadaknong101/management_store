@@ -253,6 +253,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancewl_2_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cancewl_2_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Compass_Eye_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Compass_Eye_32", resourceCulture);
@@ -373,6 +383,26 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_statistics_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_statistics_48", resourceCulture);
@@ -466,6 +496,16 @@ namespace management_store.Properties {
         internal static System.Drawing.Bitmap Post_secondary_education_scaled {
             get {
                 object obj = ResourceManager.GetObject("Post-secondary-education-scaled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_96px {
+            get {
+                object obj = ResourceManager.GetObject("search_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -149,6 +149,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTimSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimSP.Designer.cs">
+      <DependentUpon>frmTimSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,12 +167,7 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTimSanPham.Designer.cs">
-      <DependentUpon>frmTimSanPham.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UCDashboard.cs">
@@ -211,14 +212,14 @@
     <Compile Include="UCTitleBar.Designer.cs">
       <DependentUpon>UCTitleBar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmTimSP.resx">
+      <DependentUpon>frmTimSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTimSanPham.resx">
-      <DependentUpon>frmTimSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -403,6 +404,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bar_chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancewl_2_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_481.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
