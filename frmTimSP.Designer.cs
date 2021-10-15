@@ -40,8 +40,10 @@ namespace management_store
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtTimKiem = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picTim = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTim)).BeginInit();
             this.SuspendLayout();
             // 
             // fpnlMain
@@ -177,12 +179,25 @@ namespace management_store
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // picTim
+            // 
+            this.picTim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picTim.Image = global::management_store.Properties.Resources.search_96px;
+            this.picTim.Location = new System.Drawing.Point(852, 69);
+            this.picTim.Name = "picTim";
+            this.picTim.Size = new System.Drawing.Size(44, 39);
+            this.picTim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTim.TabIndex = 1;
+            this.picTim.TabStop = false;
+            this.picTim.Click += new System.EventHandler(this.picTim_Click);
+            // 
             // frmTimSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1066, 606);
+            this.Controls.Add(this.picTim);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.fpnlMain);
             this.Controls.Add(this.txtTimKiem);
@@ -195,6 +210,7 @@ namespace management_store
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTim)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +222,6 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.PictureBox picTim;
     }
 }

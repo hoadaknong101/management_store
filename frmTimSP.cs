@@ -83,7 +83,18 @@ namespace management_store
 
         private void txtTimKiem_TextChange(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE '" + txtTimKiem.Text.Trim() + "%'";
+            if(txtTimKiem.Text.Trim() == "")
+            {
+                string sql = "SELECT * FROM SanPham";
+                dtSP = func.GetDataToDataTable(sql);
+                fpnlMain.Controls.Clear();
+                LoadSP();
+            }
+        }
+
+        private void picTim_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE '%" + txtTimKiem.Text.Trim() + "%'";
             dtSP = func.GetDataToDataTable(sql);
             fpnlMain.Controls.Clear();
             LoadSP();
