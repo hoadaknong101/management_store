@@ -12,6 +12,18 @@ namespace management_store
 {
     public partial class UCDoanhThu : UserControl
     {
+        static UCDoanhThu _obj;
+        public static UCDoanhThu Instance
+        {
+            get
+            {
+                if(_obj == null)
+                {
+                    _obj = new UCDoanhThu();
+                }
+                return _obj;
+            }
+        }
         public UCDoanhThu()
         {
             InitializeComponent();

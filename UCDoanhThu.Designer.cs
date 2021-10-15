@@ -168,9 +168,9 @@ namespace management_store
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(13, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 39);
+            this.label9.Size = new System.Drawing.Size(32, 39);
             this.label9.TabIndex = 0;
-            this.label9.Text = "1023";
+            this.label9.Text = "5";
             // 
             // panel3
             // 

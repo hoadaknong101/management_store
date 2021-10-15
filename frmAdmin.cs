@@ -95,5 +95,18 @@ namespace management_store
                 UCSanPham.Instance.BringToFront();
             }
         }
+
+        private void btnTabDoanhThu_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(UCDoanhThu.Instance))
+            {
+                pnlMain.Controls.Add(UCDoanhThu.Instance);
+                UCDoanhThu.Instance.BringToFront();
+            }
+            else
+            {
+                UCDoanhThu.Instance.BringToFront();
+            }
+        }
     }
 }
