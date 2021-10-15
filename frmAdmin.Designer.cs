@@ -243,6 +243,7 @@ namespace management_store
             // 
             this.timerDigitalClock.Enabled = true;
             this.timerDigitalClock.Interval = 1000;
+            this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
             // 
             // frmAdmin
             // 

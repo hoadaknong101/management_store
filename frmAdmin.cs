@@ -23,6 +23,8 @@ namespace management_store
         public frmAdmin()
         {
             InitializeComponent();
+            timerDigitalClock.Enabled = true;
+            timerDigitalClock.Start();
         }
 
         private void btnPower_Click(object sender, EventArgs e)
@@ -73,6 +75,11 @@ namespace management_store
             {
                 UCSanPham.Instance.BringToFront();
             }
+        }
+
+        private void timerDigitalClock_Tick(object sender, EventArgs e)
+        {
+            lblDigitalClock.Text = DateTime.Now.ToString("T");
         }
     }
 }
