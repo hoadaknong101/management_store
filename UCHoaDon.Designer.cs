@@ -45,7 +45,7 @@ namespace management_store
             this.ucTitleBar1 = new management_store.UCTitleBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHuyHoaDon = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThemSp = new System.Windows.Forms.Button();
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -231,22 +231,23 @@ namespace management_store
             this.btnHuyHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuyHoaDon.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnThemSp
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(120)))), ((int)(((byte)(165)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::management_store.Properties.Resources.icons8_plus_48;
-            this.button1.Location = new System.Drawing.Point(845, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 88);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thêm sản phẩm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnThemSp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(120)))), ((int)(((byte)(165)))));
+            this.btnThemSp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThemSp.FlatAppearance.BorderSize = 0;
+            this.btnThemSp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemSp.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnThemSp.ForeColor = System.Drawing.Color.White;
+            this.btnThemSp.Image = global::management_store.Properties.Resources.icons8_plus_48;
+            this.btnThemSp.Location = new System.Drawing.Point(845, 73);
+            this.btnThemSp.Name = "btnThemSp";
+            this.btnThemSp.Size = new System.Drawing.Size(213, 88);
+            this.btnThemSp.TabIndex = 7;
+            this.btnThemSp.Text = "Thêm sản phẩm";
+            this.btnThemSp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemSp.UseVisualStyleBackColor = false;
+            this.btnThemSp.Click += new System.EventHandler(this.btnThemSp_Click);
             // 
             // btnXuatHoaDon
             // 
@@ -279,7 +280,7 @@ namespace management_store
             this.Controls.Add(this.btnHuyHoaDon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThemSp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnXuatHoaDon);
@@ -316,7 +317,7 @@ namespace management_store
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Button btnHuyHoaDon;
         private System.Windows.Forms.Button btnXuatHoaDon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThemSp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMaNV;
