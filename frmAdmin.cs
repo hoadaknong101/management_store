@@ -23,14 +23,6 @@ namespace management_store
         public frmAdmin()
         {
             InitializeComponent();
-            if (!pnlMain.Controls.Contains(UCDashboard.Instance))
-            {
-                pnlMain.Controls.Add(UCDashboard.Instance);
-            }
-            else
-            {
-                UCDashboard.Instance.BringToFront();
-            }
         }
 
         private void btnPower_Click(object sender, EventArgs e)
@@ -52,7 +44,6 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCDashboard.Instance))
             {
                 pnlMain.Controls.Add(UCDashboard.Instance);
-                UCDashboard.Instance.BringToFront();
             }
             else
             {
@@ -65,22 +56,11 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCHoaDon.Instance))
             {
                 pnlMain.Controls.Add(UCHoaDon.Instance);
-                UCHoaDon.Instance.BringToFront();
             }
             else
             {
                 UCHoaDon.Instance.BringToFront();
             }
-        }
-
-        private void timerDigitalClock_Tick(object sender, EventArgs e)
-        {
-            lblDigitalClock.Text = DateTime.Now.ToString("T");
-        }
-
-        private void frmAdmin_Load(object sender, EventArgs e)
-        {
-            timerDigitalClock.Start();
         }
 
         private void btnTabSanPham_Click(object sender, EventArgs e)
@@ -88,24 +68,10 @@ namespace management_store
             if (!pnlMain.Controls.Contains(UCSanPham.Instance))
             {
                 pnlMain.Controls.Add(UCSanPham.Instance);
-                UCSanPham.Instance.BringToFront();
             }
             else
             {
                 UCSanPham.Instance.BringToFront();
-            }
-        }
-
-        private void btnTabDoanhThu_Click(object sender, EventArgs e)
-        {
-            if (!pnlMain.Controls.Contains(UCDoanhThu.Instance))
-            {
-                pnlMain.Controls.Add(UCDoanhThu.Instance);
-                UCDoanhThu.Instance.BringToFront();
-            }
-            else
-            {
-                UCDoanhThu.Instance.BringToFront();
             }
         }
     }

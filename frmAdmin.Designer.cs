@@ -151,7 +151,6 @@ namespace management_store
             this.btnTabDoanhThu.Text = "    DOANH THU";
             this.btnTabDoanhThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabDoanhThu.UseVisualStyleBackColor = true;
-            this.btnTabDoanhThu.Click += new System.EventHandler(this.btnTabDoanhThu_Click);
             // 
             // btnTabSanPham
             // 
@@ -244,7 +243,6 @@ namespace management_store
             // 
             this.timerDigitalClock.Enabled = true;
             this.timerDigitalClock.Interval = 1000;
-            this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
             // 
             // frmAdmin
             // 
@@ -262,7 +260,6 @@ namespace management_store
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản trị viên";
-            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.pnlTab.ResumeLayout(false);
             this.pnlTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
