@@ -171,6 +171,7 @@ namespace management_store
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(231, 28);
             this.txtMaNV.TabIndex = 3;
+            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
             // 
             // panel4
             // 
@@ -230,6 +231,7 @@ namespace management_store
             this.btnHuyHoaDon.Text = "  Hủy HĐ";
             this.btnHuyHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuyHoaDon.UseVisualStyleBackColor = false;
+            this.btnHuyHoaDon.Click += new System.EventHandler(this.btnHuyHoaDon_Click);
             // 
             // btnThemSp
             // 

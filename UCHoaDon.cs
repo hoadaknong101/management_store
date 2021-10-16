@@ -78,13 +78,23 @@ namespace management_store
 
         private void UCHoaDon_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnThemSp_Click(object sender, EventArgs e)
         {
             frmTimSP themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
             themSP.Show();
+        }
+
+        private void btnHuyHoaDon_Click(object sender, EventArgs e)
+        {
+            fpnlSanPham.Controls.Clear();
+            lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
+        }
+
+        private void txtMaNV_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,8 +51,8 @@ namespace management_store
             {
                 maSP = int.Parse(dtSP.Rows[i][0].ToString());
                 tenSP = dtSP.Rows[i][1].ToString();
-                donGia = float.Parse(dtSP.Rows[i][2].ToString());
-                hinhAnh = ByteArrayToImage((byte[])dtSP.Rows[i][6]);
+                donGia = float.Parse(dtSP.Rows[i][3].ToString());
+                hinhAnh = ByteArrayToImage((byte[])dtSP.Rows[i][4]);
                 fpnlMain.Controls.Add(new UCSanPhamVuong(maSP, tenSP, donGia, hinhAnh, them));
             }
         }
@@ -94,10 +94,20 @@ namespace management_store
 
         private void picTim_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE '%" + txtTimKiem.Text.Trim() + "%'";
+            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE N'%" + txtTimKiem.Text.Trim() + "%'";
             dtSP = func.GetDataToDataTable(sql);
             fpnlMain.Controls.Clear();
             LoadSP();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fpnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

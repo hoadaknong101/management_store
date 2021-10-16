@@ -70,24 +70,6 @@ namespace management_store
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblSanPhamDaBan = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblSanPhamHienCo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblSoNhaCungCap = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.btnThemSanPham = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnLuuSP = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -99,20 +81,10 @@ namespace management_store
             this.txtMaNSX = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSoLuong = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtLoaiSP = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -175,16 +147,17 @@ namespace management_store
             this.dgvSanPham.EnableHeadersVisualStyles = false;
             this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvSanPham.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            //this.dgvSanPham.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvSanPham.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvSanPham.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvSanPham.Location = new System.Drawing.Point(539, 240);
+            this.dgvSanPham.Location = new System.Drawing.Point(25, 186);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersVisible = false;
             this.dgvSanPham.RowTemplate.Height = 40;
             this.dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSanPham.Size = new System.Drawing.Size(547, 407);
+            this.dgvSanPham.Size = new System.Drawing.Size(734, 407);
             this.dgvSanPham.TabIndex = 4;
             this.dgvSanPham.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick_1);
             // 
             // bunifuLabel1
             // 
@@ -193,7 +166,7 @@ namespace management_store
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(17, 248);
+            this.bunifuLabel1.Location = new System.Drawing.Point(29, 83);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(54, 23);
@@ -208,7 +181,7 @@ namespace management_store
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(17, 315);
+            this.bunifuLabel2.Location = new System.Drawing.Point(258, 86);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(59, 23);
@@ -223,7 +196,7 @@ namespace management_store
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(17, 382);
+            this.bunifuLabel3.Location = new System.Drawing.Point(537, 85);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(66, 23);
@@ -238,7 +211,7 @@ namespace management_store
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(17, 449);
+            this.bunifuLabel4.Location = new System.Drawing.Point(537, 144);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(61, 23);
@@ -253,7 +226,7 @@ namespace management_store
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.Location = new System.Drawing.Point(285, 315);
+            this.bunifuLabel5.Location = new System.Drawing.Point(258, 143);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(62, 23);
@@ -268,7 +241,7 @@ namespace management_store
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.Location = new System.Drawing.Point(285, 248);
+            this.bunifuLabel6.Location = new System.Drawing.Point(29, 141);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(75, 23);
@@ -283,7 +256,7 @@ namespace management_store
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(285, 382);
+            this.bunifuLabel7.Location = new System.Drawing.Point(803, 538);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(111, 23);
@@ -291,201 +264,6 @@ namespace management_store
             this.bunifuLabel7.Text = "Chọn hình ảnh";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblSanPhamDaBan);
-            this.panel1.Location = new System.Drawing.Point(159, 74);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 138);
-            this.panel1.TabIndex = 8;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::management_store.Properties.Resources.line_chart_100px;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 69);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 61);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_64;
-            this.pictureBox2.Location = new System.Drawing.Point(145, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 61);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Sản phẩm đã bán";
-            // 
-            // lblSanPhamDaBan
-            // 
-            this.lblSanPhamDaBan.AutoSize = true;
-            this.lblSanPhamDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSanPhamDaBan.ForeColor = System.Drawing.Color.White;
-            this.lblSanPhamDaBan.Location = new System.Drawing.Point(13, 4);
-            this.lblSanPhamDaBan.Name = "lblSanPhamDaBan";
-            this.lblSanPhamDaBan.Size = new System.Drawing.Size(62, 39);
-            this.lblSanPhamDaBan.TabIndex = 0;
-            this.lblSanPhamDaBan.Text = "600";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(159)))), ((int)(((byte)(200)))));
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.lblSanPhamHienCo);
-            this.panel2.Location = new System.Drawing.Point(438, 74);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 138);
-            this.panel2.TabIndex = 8;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::management_store.Properties.Resources.line_chart_100px;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 69);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(77, 61);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::management_store.Properties.Resources.Book_Shelf_100px;
-            this.pictureBox5.Location = new System.Drawing.Point(148, 69);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 61);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox6.Location = new System.Drawing.Point(180, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(16, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Sản phẩm hiện có";
-            // 
-            // lblSanPhamHienCo
-            // 
-            this.lblSanPhamHienCo.AutoSize = true;
-            this.lblSanPhamHienCo.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSanPhamHienCo.ForeColor = System.Drawing.Color.White;
-            this.lblSanPhamHienCo.Location = new System.Drawing.Point(13, 4);
-            this.lblSanPhamHienCo.Name = "lblSanPhamHienCo";
-            this.lblSanPhamHienCo.Size = new System.Drawing.Size(77, 39);
-            this.lblSanPhamHienCo.TabIndex = 0;
-            this.lblSanPhamHienCo.Text = "1023";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.lblSoNhaCungCap);
-            this.panel3.Location = new System.Drawing.Point(720, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 138);
-            this.panel3.TabIndex = 8;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::management_store.Properties.Resources.line_chart_100px;
-            this.pictureBox7.Location = new System.Drawing.Point(13, 69);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(77, 61);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::management_store.Properties.Resources.checked_truck_128px;
-            this.pictureBox8.Location = new System.Drawing.Point(148, 69);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(65, 61);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox9.Location = new System.Drawing.Point(180, 11);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(16, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Số nhà cung cấp";
-            // 
-            // lblSoNhaCungCap
-            // 
-            this.lblSoNhaCungCap.AutoSize = true;
-            this.lblSoNhaCungCap.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoNhaCungCap.ForeColor = System.Drawing.Color.White;
-            this.lblSoNhaCungCap.Location = new System.Drawing.Point(13, 4);
-            this.lblSoNhaCungCap.Name = "lblSoNhaCungCap";
-            this.lblSoNhaCungCap.Size = new System.Drawing.Size(32, 39);
-            this.lblSoNhaCungCap.TabIndex = 0;
-            this.lblSoNhaCungCap.Text = "5";
             // 
             // pictureBox23
             // 
@@ -546,7 +324,7 @@ namespace management_store
             this.btnThemSanPham.IdleIconLeftImage = null;
             this.btnThemSanPham.IdleIconRightImage = null;
             this.btnThemSanPham.IndicateFocus = false;
-            this.btnThemSanPham.Location = new System.Drawing.Point(17, 502);
+            this.btnThemSanPham.Location = new System.Drawing.Point(71, 599);
             this.btnThemSanPham.Name = "btnThemSanPham";
             this.btnThemSanPham.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThemSanPham.OnDisabledState.BorderRadius = 1;
@@ -637,7 +415,7 @@ namespace management_store
             this.btnLuuSP.IdleIconLeftImage = null;
             this.btnLuuSP.IdleIconRightImage = null;
             this.btnLuuSP.IndicateFocus = false;
-            this.btnLuuSP.Location = new System.Drawing.Point(194, 502);
+            this.btnLuuSP.Location = new System.Drawing.Point(260, 599);
             this.btnLuuSP.Name = "btnLuuSP";
             this.btnLuuSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuuSP.OnDisabledState.BorderRadius = 1;
@@ -728,7 +506,7 @@ namespace management_store
             this.btnXoaSP.IdleIconLeftImage = null;
             this.btnXoaSP.IdleIconRightImage = null;
             this.btnXoaSP.IndicateFocus = false;
-            this.btnXoaSP.Location = new System.Drawing.Point(371, 502);
+            this.btnXoaSP.Location = new System.Drawing.Point(449, 599);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoaSP.OnDisabledState.BorderRadius = 1;
@@ -819,7 +597,7 @@ namespace management_store
             this.btnChonSP.IdleIconLeftImage = null;
             this.btnChonSP.IdleIconRightImage = null;
             this.btnChonSP.IndicateFocus = false;
-            this.btnChonSP.Location = new System.Drawing.Point(402, 374);
+            this.btnChonSP.Location = new System.Drawing.Point(931, 532);
             this.btnChonSP.Name = "btnChonSP";
             this.btnChonSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnChonSP.OnDisabledState.BorderRadius = 1;
@@ -889,7 +667,7 @@ namespace management_store
             this.txtMaSP.IconRight = null;
             this.txtMaSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSP.Lines = new string[0];
-            this.txtMaSP.Location = new System.Drawing.Point(97, 240);
+            this.txtMaSP.Location = new System.Drawing.Point(109, 77);
             this.txtMaSP.MaxLength = 32767;
             this.txtMaSP.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMaSP.Modified = false;
@@ -925,7 +703,7 @@ namespace management_store
             this.txtMaSP.SelectionLength = 0;
             this.txtMaSP.SelectionStart = 0;
             this.txtMaSP.ShortcutsEnabled = true;
-            this.txtMaSP.Size = new System.Drawing.Size(173, 39);
+            this.txtMaSP.Size = new System.Drawing.Size(108, 39);
             this.txtMaSP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMaSP.TabIndex = 10;
             this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -964,7 +742,7 @@ namespace management_store
             this.txtTenSanPham.IconRight = null;
             this.txtTenSanPham.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenSanPham.Lines = new string[0];
-            this.txtTenSanPham.Location = new System.Drawing.Point(97, 306);
+            this.txtTenSanPham.Location = new System.Drawing.Point(323, 77);
             this.txtTenSanPham.MaxLength = 32767;
             this.txtTenSanPham.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTenSanPham.Modified = false;
@@ -1039,7 +817,7 @@ namespace management_store
             this.txtDonGia.IconRight = null;
             this.txtDonGia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDonGia.Lines = new string[0];
-            this.txtDonGia.Location = new System.Drawing.Point(97, 374);
+            this.txtDonGia.Location = new System.Drawing.Point(609, 77);
             this.txtDonGia.MaxLength = 32767;
             this.txtDonGia.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDonGia.Modified = false;
@@ -1075,7 +853,7 @@ namespace management_store
             this.txtDonGia.SelectionLength = 0;
             this.txtDonGia.SelectionStart = 0;
             this.txtDonGia.ShortcutsEnabled = true;
-            this.txtDonGia.Size = new System.Drawing.Size(173, 39);
+            this.txtDonGia.Size = new System.Drawing.Size(150, 39);
             this.txtDonGia.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDonGia.TabIndex = 10;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1114,7 +892,7 @@ namespace management_store
             this.txtMaNSX.IconRight = null;
             this.txtMaNSX.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaNSX.Lines = new string[0];
-            this.txtMaNSX.Location = new System.Drawing.Point(97, 439);
+            this.txtMaNSX.Location = new System.Drawing.Point(609, 134);
             this.txtMaNSX.MaxLength = 32767;
             this.txtMaNSX.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMaNSX.Modified = false;
@@ -1150,7 +928,7 @@ namespace management_store
             this.txtMaNSX.SelectionLength = 0;
             this.txtMaNSX.SelectionStart = 0;
             this.txtMaNSX.ShortcutsEnabled = true;
-            this.txtMaNSX.Size = new System.Drawing.Size(173, 39);
+            this.txtMaNSX.Size = new System.Drawing.Size(150, 39);
             this.txtMaNSX.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMaNSX.TabIndex = 10;
             this.txtMaNSX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1189,7 +967,7 @@ namespace management_store
             this.txtSoLuong.IconRight = null;
             this.txtSoLuong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoLuong.Lines = new string[0];
-            this.txtSoLuong.Location = new System.Drawing.Point(371, 240);
+            this.txtSoLuong.Location = new System.Drawing.Point(109, 134);
             this.txtSoLuong.MaxLength = 32767;
             this.txtSoLuong.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSoLuong.Modified = false;
@@ -1225,7 +1003,7 @@ namespace management_store
             this.txtSoLuong.SelectionLength = 0;
             this.txtSoLuong.SelectionStart = 0;
             this.txtSoLuong.ShortcutsEnabled = true;
-            this.txtSoLuong.Size = new System.Drawing.Size(150, 39);
+            this.txtSoLuong.Size = new System.Drawing.Size(108, 39);
             this.txtSoLuong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSoLuong.TabIndex = 10;
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1264,7 +1042,7 @@ namespace management_store
             this.txtLoaiSP.IconRight = null;
             this.txtLoaiSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLoaiSP.Lines = new string[0];
-            this.txtLoaiSP.Location = new System.Drawing.Point(371, 306);
+            this.txtLoaiSP.Location = new System.Drawing.Point(323, 134);
             this.txtLoaiSP.MaxLength = 32767;
             this.txtLoaiSP.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLoaiSP.Modified = false;
@@ -1300,7 +1078,7 @@ namespace management_store
             this.txtLoaiSP.SelectionLength = 0;
             this.txtLoaiSP.SelectionStart = 0;
             this.txtLoaiSP.ShortcutsEnabled = true;
-            this.txtLoaiSP.Size = new System.Drawing.Size(150, 39);
+            this.txtLoaiSP.Size = new System.Drawing.Size(173, 39);
             this.txtLoaiSP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtLoaiSP.TabIndex = 10;
             this.txtLoaiSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1311,10 +1089,21 @@ namespace management_store
             this.txtLoaiSP.UseSystemPasswordChar = false;
             this.txtLoaiSP.WordWrap = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(833, 239);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 252);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // UCSanPham
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtMaNSX);
             this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.txtTenSanPham);
@@ -1325,9 +1114,6 @@ namespace management_store
             this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.btnLuuSP);
             this.Controls.Add(this.btnThemSanPham);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel5);
@@ -1342,22 +1128,8 @@ namespace management_store
             this.Name = "UCSanPham";
             this.Size = new System.Drawing.Size(1104, 660);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1375,24 +1147,6 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblSanPhamDaBan;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSanPhamHienCo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblSoNhaCungCap;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnThemSanPham;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLuuSP;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnXoaSP;
@@ -1403,5 +1157,6 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuTextBox txtMaNSX;
         private Bunifu.UI.WinForms.BunifuTextBox txtSoLuong;
         private Bunifu.UI.WinForms.BunifuTextBox txtLoaiSP;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

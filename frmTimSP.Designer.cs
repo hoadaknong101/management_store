@@ -36,10 +36,10 @@ namespace management_store
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.fpnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtTimKiem = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picTim = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +54,7 @@ namespace management_store
             this.fpnlMain.Name = "fpnlMain";
             this.fpnlMain.Size = new System.Drawing.Size(834, 480);
             this.fpnlMain.TabIndex = 7;
+            this.fpnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.fpnlMain_Paint);
             // 
             // panel1
             // 
@@ -65,7 +66,18 @@ namespace management_store
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1066, 45);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::management_store.Properties.Resources.search_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(414, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -168,16 +180,6 @@ namespace management_store
             this.txtTimKiem.UseSystemPasswordChar = false;
             this.txtTimKiem.WordWrap = true;
             this.txtTimKiem.TextChange += new System.EventHandler(this.txtTimKiem_TextChange);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.search_96px;
-            this.pictureBox1.Location = new System.Drawing.Point(414, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // picTim
             // 
