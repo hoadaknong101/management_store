@@ -30,7 +30,7 @@ namespace management_store
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSanPhamVuong));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lblTenSanPham = new System.Windows.Forms.Label();
             this.lblGia = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@ namespace management_store
             // 
             this.lblTenSanPham.AutoSize = true;
             this.lblTenSanPham.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSanPham.Location = new System.Drawing.Point(29, 130);
+            this.lblTenSanPham.Location = new System.Drawing.Point(18, 130);
             this.lblTenSanPham.Name = "lblTenSanPham";
             this.lblTenSanPham.Size = new System.Drawing.Size(49, 23);
             this.lblTenSanPham.TabIndex = 1;
@@ -53,7 +53,7 @@ namespace management_store
             // 
             this.lblGia.AutoSize = true;
             this.lblGia.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.Location = new System.Drawing.Point(30, 158);
+            this.lblGia.Location = new System.Drawing.Point(19, 158);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(30, 23);
             this.lblGia.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace management_store
             // 
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSP.Location = new System.Drawing.Point(30, 102);
+            this.lblMaSP.Location = new System.Drawing.Point(19, 102);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(47, 23);
             this.lblMaSP.TabIndex = 1;
@@ -88,11 +88,11 @@ namespace management_store
             this.btnThem.ColorContrastOnClick = 45;
             this.btnThem.ColorContrastOnHover = 45;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnThem.CustomizableEdges = borderEdges1;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnThem.CustomizableEdges = borderEdges4;
             this.btnThem.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnThem.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThem.DisabledFillColor = System.Drawing.Color.Empty;
@@ -118,7 +118,7 @@ namespace management_store
             this.btnThem.IdleIconLeftImage = null;
             this.btnThem.IdleIconRightImage = null;
             this.btnThem.IndicateFocus = false;
-            this.btnThem.Location = new System.Drawing.Point(33, 184);
+            this.btnThem.Location = new System.Drawing.Point(54, 184);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThem.OnDisabledState.BorderRadius = 1;
@@ -163,9 +163,9 @@ namespace management_store
             // 
             // picHinhAnh
             // 
-            this.picHinhAnh.Location = new System.Drawing.Point(33, 16);
+            this.picHinhAnh.Location = new System.Drawing.Point(3, 3);
             this.picHinhAnh.Name = "picHinhAnh";
-            this.picHinhAnh.Size = new System.Drawing.Size(97, 84);
+            this.picHinhAnh.Size = new System.Drawing.Size(190, 96);
             this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinhAnh.TabIndex = 0;
             this.picHinhAnh.TabStop = false;
@@ -181,7 +181,7 @@ namespace management_store
             this.Controls.Add(this.picHinhAnh);
             this.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UCSanPhamVuong";
-            this.Size = new System.Drawing.Size(159, 234);
+            this.Size = new System.Drawing.Size(196, 234);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -45,9 +45,11 @@ namespace management_store
             this.btnPower = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.timerDigitalClock = new System.Windows.Forms.Timer(this.components);
+            this.ucSanPham1 = new management_store.UCSanPham();
             this.pnlTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBar.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -234,9 +236,10 @@ namespace management_store
             // 
             this.pnlMain.AutoSize = true;
             this.pnlMain.BackColor = System.Drawing.Color.White;
+            this.pnlMain.Controls.Add(this.ucSanPham1);
             this.pnlMain.Location = new System.Drawing.Point(221, 47);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1104, 660);
+            this.pnlMain.Size = new System.Drawing.Size(1110, 666);
             this.pnlMain.TabIndex = 2;
             // 
             // timerDigitalClock
@@ -244,6 +247,15 @@ namespace management_store
             this.timerDigitalClock.Enabled = true;
             this.timerDigitalClock.Interval = 1000;
             this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
+            // 
+            // ucSanPham1
+            // 
+            this.ucSanPham1.BackColor = System.Drawing.Color.White;
+            this.ucSanPham1.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucSanPham1.Location = new System.Drawing.Point(3, 3);
+            this.ucSanPham1.Name = "ucSanPham1";
+            this.ucSanPham1.Size = new System.Drawing.Size(1104, 660);
+            this.ucSanPham1.TabIndex = 0;
             // 
             // frmAdmin
             // 
@@ -265,6 +277,7 @@ namespace management_store
             this.pnlTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBar.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +299,6 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timerDigitalClock;
         private System.Windows.Forms.Label lblDigitalClock;
+        private UCSanPham ucSanPham1;
     }
 }
