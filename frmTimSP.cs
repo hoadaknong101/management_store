@@ -28,10 +28,10 @@ namespace management_store
         Function func = new Function();
         DataTable dtSP;
 
-        int maSP;
-        string tenSP;
-        float donGia ;
-        Image hinhAnh;
+        private int maSP;
+        private string tenSP;
+        private float donGia ;
+        private Image hinhAnh;
 
         public frmTimSP(UCHoaDon.delThemSanPhamVaoHoaDon them)
         {
