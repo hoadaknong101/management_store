@@ -29,6 +29,7 @@ namespace management_store
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCHoaDon));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoTenKH = new System.Windows.Forms.TextBox();
@@ -47,6 +48,8 @@ namespace management_store
             this.btnHuyHoaDon = new System.Windows.Forms.Button();
             this.btnThemSp = new System.Windows.Forms.Button();
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
+            this.printBill = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialogBill = new System.Windows.Forms.PrintPreviewDialog();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -269,6 +272,22 @@ namespace management_store
             this.btnXuatHoaDon.Text = "  Xuất HĐ";
             this.btnXuatHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXuatHoaDon.UseVisualStyleBackColor = false;
+            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
+            // 
+            // printBill
+            // 
+            this.printBill.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printBill_PrintPage);
+            // 
+            // printPreviewDialogBill
+            // 
+            this.printPreviewDialogBill.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialogBill.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialogBill.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialogBill.Document = this.printBill;
+            this.printPreviewDialogBill.Enabled = true;
+            this.printPreviewDialogBill.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogBill.Icon")));
+            this.printPreviewDialogBill.Name = "printPreviewDialogBill";
+            this.printPreviewDialogBill.Visible = false;
             // 
             // UCHoaDon
             // 
@@ -328,5 +347,7 @@ namespace management_store
         private System.Windows.Forms.Panel panel2;
         private UCTitleBar ucTitleBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Drawing.Printing.PrintDocument printBill;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialogBill;
     }
 }

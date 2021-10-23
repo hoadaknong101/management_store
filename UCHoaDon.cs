@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -95,6 +96,43 @@ namespace management_store
         private void txtMaNV_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            printPreviewDialogBill.ShowDialog();
+        }
+
+        private void printBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            for (int i = 0; i < printBill.PrinterSettings.PaperSizes.Count; i++)
+            {
+                if (printBill.PrinterSettings.PaperSizes[i].RawKind == 11)
+                {
+                    printBill.DefaultPageSettings.PaperSize = printBill.PrinterSettings.PaperSizes[i];
+                }
+            }
+            int stt = 1;
+            int pos = 0;
+            int theLastPos =0 ;
+            e.Graphics.DrawString("BILL", new Font("Arial", 15, FontStyle.Bold),
+                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width/2)+110, 20));
+            e.Graphics.DrawString("No." + "\t" + "Name" + "\t\t" + "\tQuantity\t"
+                     + "\tTotal", new Font("Arial", 13, FontStyle.Regular),
+                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2)-130, 60));
+            foreach (UCSanPhamBar x in lstSanPham)
+            {
+                e.Graphics.DrawString(stt + "\t" + x.TenSP + "\t\t" + x.SoLuong
+                    + "\t\t" + x.ThanhTien, new Font("Arial", 9, FontStyle.Regular),
+                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2)-130, 100 + pos));
+                theLastPos = pos + 100;
+                pos += 40;
+                stt++;
+            }
+            e.Graphics.DrawString("==============================================", new Font("Arial", 9, FontStyle.Regular),
+                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2) -130, theLastPos + 40));
+            e.Graphics.DrawString("Total : " + tongTien + " VND", new Font("Arial", 9, FontStyle.Regular),
+                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2) + 200, theLastPos + 80));
         }
     }
 }
