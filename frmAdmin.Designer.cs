@@ -45,7 +45,7 @@ namespace management_store
             this.btnPower = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.timerDigitalClock = new System.Windows.Forms.Timer(this.components);
-            this.ucSanPham1 = new management_store.UCSanPham();
+            this.ucHoaDon1 = new management_store.UCHoaDon();
             this.pnlTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBar.SuspendLayout();
@@ -236,7 +236,7 @@ namespace management_store
             // 
             this.pnlMain.AutoSize = true;
             this.pnlMain.BackColor = System.Drawing.Color.White;
-            this.pnlMain.Controls.Add(this.ucSanPham1);
+            this.pnlMain.Controls.Add(this.ucHoaDon1);
             this.pnlMain.Location = new System.Drawing.Point(221, 47);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1110, 666);
@@ -248,14 +248,17 @@ namespace management_store
             this.timerDigitalClock.Interval = 1000;
             this.timerDigitalClock.Tick += new System.EventHandler(this.timerDigitalClock_Tick);
             // 
-            // ucSanPham1
+            // ucHoaDon1
             // 
-            this.ucSanPham1.BackColor = System.Drawing.Color.White;
-            this.ucSanPham1.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucSanPham1.Location = new System.Drawing.Point(3, 3);
-            this.ucSanPham1.Name = "ucSanPham1";
-            this.ucSanPham1.Size = new System.Drawing.Size(1104, 660);
-            this.ucSanPham1.TabIndex = 0;
+            this.ucHoaDon1.AutoSize = true;
+            this.ucHoaDon1.BackColor = System.Drawing.Color.White;
+            this.ucHoaDon1.Location = new System.Drawing.Point(0, 0);
+            this.ucHoaDon1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucHoaDon1.MaximumSize = new System.Drawing.Size(1100, 655);
+            this.ucHoaDon1.MinimumSize = new System.Drawing.Size(1100, 655);
+            this.ucHoaDon1.Name = "ucHoaDon1";
+            this.ucHoaDon1.Size = new System.Drawing.Size(1100, 655);
+            this.ucHoaDon1.TabIndex = 0;
             // 
             // frmAdmin
             // 
@@ -278,6 +281,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBar.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +303,6 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timerDigitalClock;
         private System.Windows.Forms.Label lblDigitalClock;
-        private UCSanPham ucSanPham1;
+        private UCHoaDon ucHoaDon1;
     }
 }
