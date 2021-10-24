@@ -22,13 +22,17 @@ namespace management_store
         public static extern bool ReleaseCapture();
 
 
-        
+
 
         public frmAdmin()
         {
             InitializeComponent();
             timerDigitalClock.Enabled = true;
             timerDigitalClock.Start();
+            pnlMain.Controls.Add(UCDashboard.Instance);
+            pnlMain.Controls.Add(UCHoaDon.Instance);
+            pnlMain.Controls.Add(UCSanPham.Instance);
+            UCDashboard.Instance.BringToFront();
         }
 
         private void btnPower_Click(object sender, EventArgs e)
@@ -47,38 +51,21 @@ namespace management_store
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            if (!pnlMain.Controls.Contains(UCDashboard.Instance))
-            {
-                pnlMain.Controls.Add(UCDashboard.Instance);
-            }
-            else
-            {
-                UCDashboard.Instance.BringToFront();
-            }
+
+            UCDashboard.Instance.BringToFront();
+
         }
 
         private void btnTabHoaDon_Click(object sender, EventArgs e)
         {
-            if (!pnlMain.Controls.Contains(UCHoaDon.Instance))
-            {
-                pnlMain.Controls.Add(UCHoaDon.Instance);
-            }
-            else
-            {
-                UCHoaDon.Instance.BringToFront();
-            }
+            UCHoaDon.Instance.BringToFront();
+
         }
 
         private void btnTabSanPham_Click(object sender, EventArgs e)
         {
-            if (!pnlMain.Controls.Contains(UCSanPham.Instance))
-            {
-                pnlMain.Controls.Add(UCSanPham.Instance);
-            }
-            else
-            {
-                UCSanPham.Instance.BringToFront();
-            }
+
+            UCSanPham.Instance.BringToFront();
         }
 
         private void timerDigitalClock_Tick(object sender, EventArgs e)

@@ -45,6 +45,25 @@ namespace management_store
             func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham));
         }
+
+        public void ThemChiTietHoaDon(int maHoaDon, int maSanPham, int soLuong, float chietKhau)
+        {
+            string sql = "sp_ThemChiTietHoaDon";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaHoaDon", maHoaDon),
+                new SqlParameter("@MaSanPham", maSanPham),
+                new SqlParameter("@SoLuong", soLuong),
+                new SqlParameter("@ChietKhau", chietKhau));
+        }
+        public void ThemHoaDon(int maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
+        {
+            string sql = "sp_ThemHoaDon";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, 
+                new SqlParameter("@MaHoaDon", maHoaDon),
+                new SqlParameter("@NgayTao", ngayTao),
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@TongTien",tongTien));
+        }
         private byte[] ImageToByteArray(Image img)
         {
             MemoryStream ms = new MemoryStream();

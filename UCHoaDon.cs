@@ -18,10 +18,15 @@ namespace management_store
         public delegate void delXoaSanPham(UCSanPhamBar sanPham);
         public delegate void delThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh);
 
+        BLL func;
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
         static UCHoaDon _obj;
         frmTimSP themSP;
+        DateTime now = DateTime.Now;
+
+
+
         public static UCHoaDon Instance
         {
             get
@@ -34,18 +39,18 @@ namespace management_store
             }
         }
         public UCHoaDon()
-        {
-            themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
+        {            
             InitializeComponent();
             lstSanPham = new List<UCSanPhamBar>();
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
-            lstSanPham.Add(new UCSanPhamBar(1, null, "x", 200, 5, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(2, null, "x", 300, 5, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(3, null, "x", 400, 5, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(4, null, "x", 500, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 40000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(2, null, "Dép lào", 15000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(3, null, "Dép tông", 20000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(4, null, "Bút bi", 5000, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
             ThemSanPham();
             CapNhatTongTienHoaDon();
-            
+            func = new BLL();
         }
 
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)
@@ -61,7 +66,6 @@ namespace management_store
             {
                 tongTien += sp.ThanhTien;
             }
-            CultureInfo ci = new CultureInfo("en-us");
             lblTongTien.Text = "Tổng tiền : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ";
         }
 
@@ -107,6 +111,15 @@ namespace management_store
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
+            //251020211205
+            int maHoaDon = (now.Day * 100000000 + now.Month + now.Year + now.Hour + now.Minute + now.Second);
+
+            func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
+            foreach(UCSanPhamBar x in lstSanPham)
+            {
+                func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, 5.8f);
+            }
+            
             printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 100);
             printPreviewDialogBill.ShowDialog();
         }
@@ -116,7 +129,7 @@ namespace management_store
             Font fontTieuDe = new Font("Arial", 3, FontStyle.Bold);
             Font fontNoiDung = new Font("Arial", 3, FontStyle.Regular);
             
-            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 100);
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 70);
 
             int stt = 1;
             int pos = 0;
@@ -138,7 +151,7 @@ namespace management_store
             {
                 e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 1, topMargin+ 10 + pos));
                 e.Graphics.DrawString(x.TenSP + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 10, topMargin +  10 + pos));
-                e.Graphics.DrawString(x.SoLuong + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 50, topMargin +  10 + pos));
+                e.Graphics.DrawString(x.SoLuong + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 56, topMargin +  10 + pos));
                 e.Graphics.DrawString(x.ThanhTien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 85, topMargin +  10 + pos));
 
                 theLastPos = topMargin + 10 + pos;
