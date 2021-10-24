@@ -43,13 +43,13 @@ namespace management_store
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.ucTitleBar1 = new management_store.UCTitleBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHuyHoaDon = new System.Windows.Forms.Button();
             this.btnThemSp = new System.Windows.Forms.Button();
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.printBill = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialogBill = new System.Windows.Forms.PrintPreviewDialog();
+            this.ucTitleBar1 = new management_store.UCTitleBar();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -199,14 +199,6 @@ namespace management_store
             this.txtGhiChu.TabIndex = 3;
             this.txtGhiChu.Text = "đơn vị tiền VNĐ";
             // 
-            // ucTitleBar1
-            // 
-            this.ucTitleBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTitleBar1.Location = new System.Drawing.Point(45, 172);
-            this.ucTitleBar1.Name = "ucTitleBar1";
-            this.ucTitleBar1.Size = new System.Drawing.Size(1017, 40);
-            this.ucTitleBar1.TabIndex = 9;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_receipt_641;
@@ -288,6 +280,14 @@ namespace management_store
             this.printPreviewDialogBill.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogBill.Icon")));
             this.printPreviewDialogBill.Name = "printPreviewDialogBill";
             this.printPreviewDialogBill.Visible = false;
+            // 
+            // ucTitleBar1
+            // 
+            this.ucTitleBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTitleBar1.Location = new System.Drawing.Point(45, 172);
+            this.ucTitleBar1.Name = "ucTitleBar1";
+            this.ucTitleBar1.Size = new System.Drawing.Size(1017, 40);
+            this.ucTitleBar1.TabIndex = 9;
             // 
             // UCHoaDon
             // 

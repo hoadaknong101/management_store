@@ -21,6 +21,7 @@ namespace management_store
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
         static UCHoaDon _obj;
+        frmTimSP themSP;
         public static UCHoaDon Instance
         {
             get
@@ -34,11 +35,17 @@ namespace management_store
         }
         public UCHoaDon()
         {
+            themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
             InitializeComponent();
             lstSanPham = new List<UCSanPhamBar>();
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
+            lstSanPham.Add(new UCSanPhamBar(1, null, "x", 200, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(2, null, "x", 300, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(3, null, "x", 400, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            lstSanPham.Add(new UCSanPhamBar(4, null, "x", 500, 5, CapNhatTongTienHoaDon, XoaSanPham));
             ThemSanPham();
             CapNhatTongTienHoaDon();
+            
         }
 
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)
@@ -83,7 +90,7 @@ namespace management_store
 
         private void btnThemSp_Click(object sender, EventArgs e)
         {
-            frmTimSP themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
+            
             themSP.Show();
         }
 
@@ -100,39 +107,49 @@ namespace management_store
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 100);
             printPreviewDialogBill.ShowDialog();
         }
 
         private void printBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            for (int i = 0; i < printBill.PrinterSettings.PaperSizes.Count; i++)
-            {
-                if (printBill.PrinterSettings.PaperSizes[i].RawKind == 11)
-                {
-                    printBill.DefaultPageSettings.PaperSize = printBill.PrinterSettings.PaperSizes[i];
-                }
-            }
+            Font fontTieuDe = new Font("Arial", 3, FontStyle.Bold);
+            Font fontNoiDung = new Font("Arial", 3, FontStyle.Regular);
+            
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 100);
+
             int stt = 1;
             int pos = 0;
-            int theLastPos =0 ;
-            e.Graphics.DrawString("BILL", new Font("Arial", 15, FontStyle.Bold),
-                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width/2)+110, 20));
-            e.Graphics.DrawString("No." + "\t" + "Name" + "\t\t" + "\tQuantity\t"
-                     + "\tTotal", new Font("Arial", 13, FontStyle.Regular),
-                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2)-130, 60));
+            int theLastPos = 0;
+            int leftMargin = 21;
+            int topMargin = 20;
+            int halfWidthPage = printBill.DefaultPageSettings.PaperSize.Width / 2;
+
+            e.Graphics.DrawString("HÓA ĐƠN", new Font("Arial", 3, FontStyle.Bold), Brushes.Black, new Point(halfWidthPage-8, 10));
+
+            //In phần tiêu đề hóa đơn
+            e.Graphics.DrawString("STT", fontTieuDe, Brushes.Black, new Point(leftMargin, topMargin));
+            e.Graphics.DrawString("Sản phẩm", fontTieuDe, Brushes.Black, new Point(leftMargin + 10, topMargin));
+            e.Graphics.DrawString("Số lượng", fontTieuDe, Brushes.Black, new Point(leftMargin + 50, topMargin));
+            e.Graphics.DrawString("Thành tiền", fontTieuDe, Brushes.Black, new Point(leftMargin + 85, topMargin));
+
+            //In chi tiết trong hóa đơn
             foreach (UCSanPhamBar x in lstSanPham)
             {
-                e.Graphics.DrawString(stt + "\t" + x.TenSP + "\t\t" + x.SoLuong
-                    + "\t\t" + x.ThanhTien, new Font("Arial", 9, FontStyle.Regular),
-                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2)-130, 100 + pos));
-                theLastPos = pos + 100;
-                pos += 40;
+                e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 1, topMargin+ 10 + pos));
+                e.Graphics.DrawString(x.TenSP + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 10, topMargin +  10 + pos));
+                e.Graphics.DrawString(x.SoLuong + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 50, topMargin +  10 + pos));
+                e.Graphics.DrawString(x.ThanhTien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 85, topMargin +  10 + pos));
+
+                theLastPos = topMargin + 10 + pos;
+                pos += 10;
                 stt++;
             }
-            e.Graphics.DrawString("==============================================", new Font("Arial", 9, FontStyle.Regular),
-                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2) -130, theLastPos + 40));
-            e.Graphics.DrawString("Total : " + tongTien + " VND", new Font("Arial", 9, FontStyle.Regular),
-                    Brushes.Black, new Point((printBill.DefaultPageSettings.PaperSize.Width / 2) + 200, theLastPos + 80));
+
+            e.Graphics.DrawString("==========================================", fontNoiDung,
+                    Brushes.Black, new Point(leftMargin, theLastPos + 10));
+            e.Graphics.DrawString("Total : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ", fontTieuDe, Brushes.Black, new Point(leftMargin, theLastPos + 20));
+            e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black, new Point(leftMargin + 21, theLastPos + 50));
         }
     }
 }
