@@ -67,7 +67,8 @@ namespace management_store
         public void CapNhatTongTienHoaDon()
         {
             tongTien = 0;
-            foreach (UCSanPhamBar sp in lstSanPham)
+            var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
+            foreach (UCSanPhamBar sp in distinct)
             {
                 tongTien += sp.ThanhTien;
             }
@@ -119,7 +120,7 @@ namespace management_store
                 {
                     func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
                 }
-                printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 100);
+                printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, distinct.ToList().Count * 10 + 100);
                 printPreviewDialogBill.ShowDialog();
             }
             else
@@ -163,10 +164,11 @@ namespace management_store
         }
         private void printBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
             Font fontTieuDe = new Font("Arial", 3, FontStyle.Bold);
             Font fontNoiDung = new Font("Arial", 3, FontStyle.Regular);
             
-            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 70);
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, distinct.ToList().Count * 10 + 70);
 
             int stt = 1;
             int pos = 0;
@@ -184,7 +186,7 @@ namespace management_store
             e.Graphics.DrawString("Thành tiền", fontTieuDe, Brushes.Black, new Point(leftMargin + 85, topMargin));
 
             //In chi tiết trong hóa đơn
-            foreach (UCSanPhamBar x in lstSanPham)
+            foreach (UCSanPhamBar x in distinct)
             {
                 e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 1, topMargin+ 10 + pos));
                 e.Graphics.DrawString(x.TenSP + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 10, topMargin +  10 + pos));
