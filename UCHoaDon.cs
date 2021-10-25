@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace management_store
@@ -86,8 +87,9 @@ namespace management_store
 
         private void ThemSanPham()
         {
+            var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
             fpnlSanPham.Controls.Clear();
-            foreach (UCSanPhamBar sp in lstSanPham)
+            foreach (UCSanPhamBar sp in distinct)
             {
                 fpnlSanPham.Controls.Add(sp);
             }
