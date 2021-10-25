@@ -110,7 +110,8 @@ namespace management_store
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
             //251020211205
-            int maHoaDon = (now.Day * 100000000 + now.Month + now.Year + now.Hour + now.Minute + now.Second);
+            DateTime now = DateTime.Now;
+            long maHoaDon = TaoMaHoaDon(now);
 
             func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
             float chietKhau = 5.8f;
@@ -123,7 +124,40 @@ namespace management_store
             printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 100);
             printPreviewDialogBill.ShowDialog();
         }
+        private bool KiemTraXuatHoaDon()
+        {
+            if (txtHoTenKH.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập họ tên khác hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoTenKH.Focus();
+                return false;
+            }
+            if (txtMaNV.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã nhân viên!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaNV.Focus();
+                return false;
+            }
+            if (lstSanPham.Count == 0)
+            {
+                MessageBox.Show("Chưa có sản phẩm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnThemSp.Focus();
+                return false;
+            }
+            return true;
+        }
 
+        private long TaoMaHoaDon(DateTime now)
+        {
+            long maNgay = 1000000000000 * now.Day;
+            long maThang = 10000000000 * now.Month;
+            long maNam = 1000000 * now.Year;
+            long maGio = 10000 * now.Hour;
+            long maPhut = 100 * now.Minute;
+            long maGiay = now.Second;
+            long maHoaDon = maNgay + maThang + maNam + maGio + maPhut + maGiay;
+            return maHoaDon;
+        }
         private void printBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Font fontTieuDe = new Font("Arial", 3, FontStyle.Bold);

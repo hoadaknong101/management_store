@@ -10,7 +10,7 @@ namespace management_store
 {
     class Function
     {
-        private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        private string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
         public SqlConnection connection;
         public SqlCommand cmd;
 
