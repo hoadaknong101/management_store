@@ -149,6 +149,7 @@ namespace management_store
             this.dgvSanPham.EnableHeadersVisualStyles = false;
             this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvSanPham.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvSanPham.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvSanPham.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(25, 186);
             this.dgvSanPham.Name = "dgvSanPham";
@@ -366,6 +367,7 @@ namespace management_store
             this.btnThemSanPham.TextMarginLeft = 0;
             this.btnThemSanPham.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnThemSanPham.UseDefaultRadiusAndThickness = true;
+            this.btnThemSanPham.EnabledChanged += new System.EventHandler(this.btnThemSanPham_EnabledChanged);
             this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
             // 
             // btnLuuSP
@@ -396,6 +398,7 @@ namespace management_store
             this.btnLuuSP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuuSP.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnLuuSP.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnLuuSP.Enabled = false;
             this.btnLuuSP.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnLuuSP.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuSP.ForeColor = System.Drawing.Color.White;
@@ -488,6 +491,7 @@ namespace management_store
             this.btnXoaSP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoaSP.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnXoaSP.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnXoaSP.Enabled = false;
             this.btnXoaSP.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnXoaSP.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaSP.ForeColor = System.Drawing.Color.White;
@@ -1132,6 +1136,7 @@ namespace management_store
             this.btnHuy.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHuy.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnHuy.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnHuy.Enabled = false;
             this.btnHuy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnHuy.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;

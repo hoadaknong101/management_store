@@ -10,7 +10,7 @@ namespace management_store
 {
     class Function
     {
-        public string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
         public SqlConnection connection;
         public SqlCommand cmd;
 
@@ -32,6 +32,7 @@ namespace management_store
             }
         }
 
+
         public DataTable GetDataToDataTable(string sql)
         {
             DataTable table = new DataTable();
@@ -39,6 +40,7 @@ namespace management_store
             dataAdapter.Fill(table);
             return table;
         }
+
         public int? KiemTraThongTinDangNhap(string sql, CommandType type)
         {
             int? result = 0;
@@ -54,13 +56,7 @@ namespace management_store
             }
             return result;
         }
-        public DataTable GetDataToDataTable(string sqlExpess, CommandType type)
-        {
-            DataTable table = new DataTable();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlExpess, connection);
-            dataAdapter.Fill(table);
-            return table;
-        }
+
         public void ExcuteNonQuery(string sqlExpess, CommandType type, params SqlParameter[] pm)
         {
             cmd = connection.CreateCommand();

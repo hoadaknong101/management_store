@@ -71,15 +71,15 @@ namespace management_store
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblInfor = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -581,7 +581,7 @@ namespace management_store
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.pictureBox21);
-            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.lblInfor);
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.label17);
@@ -590,6 +590,17 @@ namespace management_store
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(494, 355);
             this.panel6.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(16, 199);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(192, 27);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Chức vụ : Nhân Viên";
             // 
             // button1
             // 
@@ -613,17 +624,16 @@ namespace management_store
             this.pictureBox21.TabIndex = 1;
             this.pictureBox21.TabStop = false;
             // 
-            // label16
+            // lblInfor
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Open Sans Condensed ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(13, 20);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(326, 39);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "THÔNG TIN NGUỜI SỬ DỤNG";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.lblInfor.AutoSize = true;
+            this.lblInfor.Font = new System.Drawing.Font("Open Sans Condensed ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblInfor.ForeColor = System.Drawing.Color.White;
+            this.lblInfor.Location = new System.Drawing.Point(13, 20);
+            this.lblInfor.Name = "lblInfor";
+            this.lblInfor.Size = new System.Drawing.Size(326, 39);
+            this.lblInfor.TabIndex = 0;
+            this.lblInfor.Text = "THÔNG TIN NGUỜI SỬ DỤNG";
             // 
             // label19
             // 
@@ -678,17 +688,6 @@ namespace management_store
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox23.TabIndex = 1;
             this.pictureBox23.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(16, 199);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(192, 27);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Chức vụ : Nhân Viên";
             // 
             // UCDashboard
             // 
@@ -788,7 +787,7 @@ namespace management_store
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblInfor;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;

@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
 {
     public partial class UCSanPhamVuong : UserControl
     {
+        #region Properties
         UCHoaDon.delThemSanPhamVaoHoaDon them;
         private int maSP;
         private string tenSP;
         private float donGia;
         private Image hinhAnh;
+        #endregion
+
         public UCSanPhamVuong()
         {
             InitializeComponent();
         }
+
         public UCSanPhamVuong(int maSP, string tenSP, float donGia, Image hinhAnh, UCHoaDon.delThemSanPhamVaoHoaDon sender)
         {
             InitializeComponent();
@@ -37,7 +35,7 @@ namespace management_store
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            them.Invoke(this.maSP, this.tenSP, this.donGia, this.hinhAnh);
+            them.Invoke(maSP, tenSP, donGia, hinhAnh);
         }
     }
 }

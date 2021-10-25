@@ -32,74 +32,76 @@ namespace management_store
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlTaiKhoan = new System.Windows.Forms.Panel();
+            this.pnlMatKhau = new System.Windows.Forms.Panel();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxLogin = new System.Windows.Forms.PictureBox();
+            this.picBoxPassword = new System.Windows.Forms.PictureBox();
+            this.picBoxUsername = new System.Windows.Forms.PictureBox();
             this.btnPower = new System.Windows.Forms.Button();
             this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.rdbNhanVien = new System.Windows.Forms.RadioButton();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlRoles = new System.Windows.Forms.Panel();
+            this.pnlTaiKhoan.SuspendLayout();
+            this.pnlMatKhau.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
+            this.pnlRoles.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(102, 111);
+            this.label1.Location = new System.Drawing.Point(102, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 30);
+            this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTenTaiKhoan.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 12);
+            this.txtTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 15);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(219, 23);
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(219, 19);
             this.txtTenTaiKhoan.TabIndex = 3;
             this.txtTenTaiKhoan.Text = "Tên tài khoản";
             this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
             this.txtTenTaiKhoan.Leave += new System.EventHandler(this.txtTenTaiKhoan_Leave);
             // 
-            // panel1
+            // pnlTaiKhoan
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtTenTaiKhoan);
-            this.panel1.Location = new System.Drawing.Point(66, 175);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 49);
-            this.panel1.TabIndex = 4;
+            this.pnlTaiKhoan.BackColor = System.Drawing.Color.White;
+            this.pnlTaiKhoan.Controls.Add(this.txtTenTaiKhoan);
+            this.pnlTaiKhoan.Location = new System.Drawing.Point(66, 180);
+            this.pnlTaiKhoan.Name = "pnlTaiKhoan";
+            this.pnlTaiKhoan.Size = new System.Drawing.Size(264, 37);
+            this.pnlTaiKhoan.TabIndex = 4;
             // 
-            // panel2
+            // pnlMatKhau
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtMatKhau);
-            this.panel2.Location = new System.Drawing.Point(66, 254);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 49);
-            this.panel2.TabIndex = 4;
+            this.pnlMatKhau.BackColor = System.Drawing.Color.White;
+            this.pnlMatKhau.Controls.Add(this.txtMatKhau);
+            this.pnlMatKhau.Location = new System.Drawing.Point(66, 254);
+            this.pnlMatKhau.Name = "pnlMatKhau";
+            this.pnlMatKhau.Size = new System.Drawing.Size(264, 37);
+            this.pnlMatKhau.TabIndex = 4;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhau.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMatKhau.Location = new System.Drawing.Point(13, 13);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(219, 23);
+            this.txtMatKhau.Size = new System.Drawing.Size(219, 19);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.Text = "password";
             this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
@@ -107,51 +109,52 @@ namespace management_store
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.btnDangNhap.Location = new System.Drawing.Point(66, 346);
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDangNhap.Location = new System.Drawing.Point(66, 389);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(235, 49);
+            this.btnDangNhap.Size = new System.Drawing.Size(235, 40);
             this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // pictureBox3
+            // picBoxLogin
             // 
-            this.pictureBox3.Image = global::management_store.Properties.Resources.staff_icon_6;
-            this.pictureBox3.Location = new System.Drawing.Point(92, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(158, 67);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.picBoxLogin.Image = global::management_store.Properties.Resources.staff_icon_6;
+            this.picBoxLogin.Location = new System.Drawing.Point(98, 41);
+            this.picBoxLogin.Name = "picBoxLogin";
+            this.picBoxLogin.Size = new System.Drawing.Size(158, 67);
+            this.picBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxLogin.TabIndex = 6;
+            this.picBoxLogin.TabStop = false;
             // 
-            // pictureBox2
+            // picBoxPassword
             // 
-            this.pictureBox2.Image = global::management_store.Properties.Resources.key__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 259);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.picBoxPassword.Image = global::management_store.Properties.Resources.key__1_;
+            this.picBoxPassword.Location = new System.Drawing.Point(12, 254);
+            this.picBoxPassword.Name = "picBoxPassword";
+            this.picBoxPassword.Size = new System.Drawing.Size(33, 37);
+            this.picBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxPassword.TabIndex = 5;
+            this.picBoxPassword.TabStop = false;
             // 
-            // pictureBox1
+            // picBoxUsername
             // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 181);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.picBoxUsername.Image = global::management_store.Properties.Resources.user__1_;
+            this.picBoxUsername.Location = new System.Drawing.Point(12, 180);
+            this.picBoxUsername.Name = "picBoxUsername";
+            this.picBoxUsername.Size = new System.Drawing.Size(42, 37);
+            this.picBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxUsername.TabIndex = 5;
+            this.picBoxUsername.TabStop = false;
             // 
             // btnPower
             // 
+            this.btnPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPower.FlatAppearance.BorderSize = 0;
             this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.ForeColor = System.Drawing.Color.White;
             this.btnPower.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPower.Location = new System.Drawing.Point(301, -3);
@@ -160,17 +163,18 @@ namespace management_store
             this.btnPower.Size = new System.Drawing.Size(44, 45);
             this.btnPower.TabIndex = 0;
             this.btnPower.Text = "X";
-            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.UseVisualStyleBackColor = false;
             this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
             // 
             // rdbAdmin
             // 
             this.rdbAdmin.AutoSize = true;
-            this.rdbAdmin.Font = new System.Drawing.Font("SVN-Avo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbAdmin.Checked = true;
+            this.rdbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAdmin.ForeColor = System.Drawing.Color.White;
-            this.rdbAdmin.Location = new System.Drawing.Point(85, 313);
+            this.rdbAdmin.Location = new System.Drawing.Point(54, 3);
             this.rdbAdmin.Name = "rdbAdmin";
-            this.rdbAdmin.Size = new System.Drawing.Size(70, 23);
+            this.rdbAdmin.Size = new System.Drawing.Size(64, 20);
             this.rdbAdmin.TabIndex = 8;
             this.rdbAdmin.TabStop = true;
             this.rdbAdmin.Text = "Admin";
@@ -179,31 +183,38 @@ namespace management_store
             // rdbNhanVien
             // 
             this.rdbNhanVien.AutoSize = true;
-            this.rdbNhanVien.Font = new System.Drawing.Font("SVN-Avo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbNhanVien.ForeColor = System.Drawing.Color.White;
-            this.rdbNhanVien.Location = new System.Drawing.Point(195, 313);
+            this.rdbNhanVien.Location = new System.Drawing.Point(203, 3);
             this.rdbNhanVien.Name = "rdbNhanVien";
-            this.rdbNhanVien.Size = new System.Drawing.Size(92, 23);
+            this.rdbNhanVien.Size = new System.Drawing.Size(86, 20);
             this.rdbNhanVien.TabIndex = 8;
-            this.rdbNhanVien.TabStop = true;
             this.rdbNhanVien.Text = "Nhân viên";
             this.rdbNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // pnlRoles
+            // 
+            this.pnlRoles.Controls.Add(this.rdbAdmin);
+            this.pnlRoles.Controls.Add(this.rdbNhanVien);
+            this.pnlRoles.Location = new System.Drawing.Point(12, 325);
+            this.pnlRoles.Name = "pnlRoles";
+            this.pnlRoles.Size = new System.Drawing.Size(318, 38);
+            this.pnlRoles.TabIndex = 9;
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(342, 497);
-            this.Controls.Add(this.rdbNhanVien);
-            this.Controls.Add(this.rdbAdmin);
+            this.Controls.Add(this.pnlRoles);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.picBoxLogin);
+            this.Controls.Add(this.picBoxPassword);
+            this.Controls.Add(this.pnlMatKhau);
+            this.Controls.Add(this.picBoxUsername);
+            this.Controls.Add(this.pnlTaiKhoan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPower);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,13 +222,15 @@ namespace management_store
             this.Name = "frmDangNhap";
             this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseDown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlTaiKhoan.ResumeLayout(false);
+            this.pnlTaiKhoan.PerformLayout();
+            this.pnlMatKhau.ResumeLayout(false);
+            this.pnlMatKhau.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).EndInit();
+            this.pnlRoles.ResumeLayout(false);
+            this.pnlRoles.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,15 +241,16 @@ namespace management_store
         private System.Windows.Forms.Button btnPower;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlTaiKhoan;
+        private System.Windows.Forms.PictureBox picBoxUsername;
+        private System.Windows.Forms.Panel pnlMatKhau;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picBoxPassword;
+        private System.Windows.Forms.PictureBox picBoxLogin;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.RadioButton rdbAdmin;
         private System.Windows.Forms.RadioButton rdbNhanVien;
+        private System.Windows.Forms.Panel pnlRoles;
     }
 }
 

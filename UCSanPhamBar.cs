@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
 {
     public partial class UCSanPhamBar : UserControl
     {
+        #region Properties
         public UCHoaDon.delCapNhatTongTien capNhatTongTien;
         public UCHoaDon.delXoaSanPham xoaSanPham;
         public int MaSP { get; set; }
@@ -21,6 +16,8 @@ namespace management_store
         public int SoLuong { get; set; }
         public float ThanhTien { get; set; }
         public float DonGia { get; set; }
+        #endregion
+
         public UCSanPhamBar(int maSP, Image hinhAnh, string tenSP, 
             float donGia,int soLuong, UCHoaDon.delCapNhatTongTien capNhatTongTien, UCHoaDon.delXoaSanPham xoaSanPham)
         {
@@ -38,7 +35,7 @@ namespace management_store
             lblMaSP.Text = maSP + "";
             lblTenSP.Text = tenSP;
             ptbImage.Image = hinhAnh;
-            lblDonGia.Text = donGia.ToString("N", CultureInfo.InvariantCulture);
+            lblDonGia.Text = donGia.ToString("N", CultureInfo.InvariantCulture); // comment?
             txtSoLuong.Text = SoLuong + "";
             lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);
         }

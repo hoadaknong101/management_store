@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
@@ -18,14 +13,17 @@ namespace management_store
         public delegate void delXoaSanPham(UCSanPhamBar sanPham);
         public delegate void delThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh);
 
-        BLL func;
+        #region Properties
+        BLL func; //query
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
+
         static UCHoaDon _obj;
+
         frmTimSP themSP;
         DateTime now = DateTime.Now;
-
-
+        int width_bill = 148;
+        #endregion
 
         public static UCHoaDon Instance
         {
@@ -38,16 +36,21 @@ namespace management_store
                 return _obj;
             }
         }
+
         public UCHoaDon()
         {            
             InitializeComponent();
+            themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
+
             lstSanPham = new List<UCSanPhamBar>();
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
+            
+            // Dữ liệu mẫu
             lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 40000, 1, CapNhatTongTienHoaDon, XoaSanPham));
             lstSanPham.Add(new UCSanPhamBar(2, null, "Dép lào", 15000, 1, CapNhatTongTienHoaDon, XoaSanPham));
             lstSanPham.Add(new UCSanPhamBar(3, null, "Dép tông", 20000, 1, CapNhatTongTienHoaDon, XoaSanPham));
             lstSanPham.Add(new UCSanPhamBar(4, null, "Bút bi", 5000, 5, CapNhatTongTienHoaDon, XoaSanPham));
-            themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
+
             ThemSanPham();
             CapNhatTongTienHoaDon();
             func = new BLL();
@@ -59,6 +62,7 @@ namespace management_store
             ThemSanPham();
             CapNhatTongTienHoaDon();
         }
+
         public void CapNhatTongTienHoaDon()
         {
             tongTien = 0;
@@ -79,6 +83,7 @@ namespace management_store
             }
             CapNhatTongTienHoaDon();
         }
+
         private void ThemSanPham()
         {
             fpnlSanPham.Controls.Clear();
@@ -88,25 +93,16 @@ namespace management_store
             }
         }
 
-        private void UCHoaDon_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnThemSp_Click(object sender, EventArgs e)
         {
-            
             themSP.Show();
         }
 
         private void btnHuyHoaDon_Click(object sender, EventArgs e)
         {
             fpnlSanPham.Controls.Clear();
+            lstSanPham.Clear();
             lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
-        }
-
-        private void txtMaNV_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
@@ -115,12 +111,14 @@ namespace management_store
             int maHoaDon = (now.Day * 100000000 + now.Month + now.Year + now.Hour + now.Minute + now.Second);
 
             func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
+            float chietKhau = 5.8f;
             foreach(UCSanPhamBar x in lstSanPham)
             {
-                func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, 5.8f);
+                func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, chietKhau);
             }
             
-            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 100);
+            // Tạo hóa đơn
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 100);
             printPreviewDialogBill.ShowDialog();
         }
 
@@ -129,7 +127,7 @@ namespace management_store
             Font fontTieuDe = new Font("Arial", 3, FontStyle.Bold);
             Font fontNoiDung = new Font("Arial", 3, FontStyle.Regular);
             
-            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", 148, lstSanPham.Count * 10 + 70);
+            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 70);
 
             int stt = 1;
             int pos = 0;
@@ -159,10 +157,12 @@ namespace management_store
                 stt++;
             }
 
-            e.Graphics.DrawString("==========================================", fontNoiDung,
-                    Brushes.Black, new Point(leftMargin, theLastPos + 10));
-            e.Graphics.DrawString("Total : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ", fontTieuDe, Brushes.Black, new Point(leftMargin, theLastPos + 20));
-            e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black, new Point(leftMargin + 21, theLastPos + 50));
+            e.Graphics.DrawString("==========================================", fontNoiDung, 
+                Brushes.Black, new Point(leftMargin, theLastPos + 10));
+            e.Graphics.DrawString("Total : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ", fontTieuDe, 
+                Brushes.Black, new Point(leftMargin, theLastPos + 20));
+            e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
+                new Point(leftMargin + 21, theLastPos + 50));
         }
     }
 }

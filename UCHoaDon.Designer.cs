@@ -174,7 +174,6 @@ namespace management_store
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(231, 28);
             this.txtMaNV.TabIndex = 3;
-            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
             // 
             // panel4
             // 
@@ -314,7 +313,6 @@ namespace management_store
             this.MinimumSize = new System.Drawing.Size(1100, 655);
             this.Name = "UCHoaDon";
             this.Size = new System.Drawing.Size(1100, 655);
-            this.Load += new System.EventHandler(this.UCHoaDon_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

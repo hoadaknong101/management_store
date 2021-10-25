@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
@@ -36,15 +31,11 @@ namespace management_store
         public frmTimSP(UCHoaDon.delThemSanPhamVaoHoaDon them)
         {
             InitializeComponent();
-            dtSP = func.GetDataToDataTable("Select * from SanPham");
+            dtSP = func.GetDataToDataTable("select * from SanPham");
             this.them = them;
             LoadSP();
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
         private void LoadSP()
         {
             for (int i = 0; i < dtSP.Rows.Count; i++)
@@ -55,10 +46,6 @@ namespace management_store
                 hinhAnh = ByteArrayToImage((byte[])dtSP.Rows[i][4]);
                 fpnlMain.Controls.Add(new UCSanPhamVuong(maSP, tenSP, donGia, hinhAnh, them));
             }
-        }
-        private void frmTimSP_Load(object sender, EventArgs e)
-        {
-            
         }
         private Image ByteArrayToImage(byte[] b)
         {
@@ -98,16 +85,6 @@ namespace management_store
             dtSP = func.GetDataToDataTable(sql);
             fpnlMain.Controls.Clear();
             LoadSP();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void fpnlMain_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -1,20 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace management_store
 {
-    class BLL
+    public class BLL
     {
         Function func = new Function();
+
         public BLL()
         {
 
+        }
+
+        #region SanPham
+        public DataTable ThongTinSanPham(string sql)
+        {
+            return func.GetDataToDataTable(sql);
         }
         public void ThemSanPham(string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
@@ -45,7 +49,9 @@ namespace management_store
             func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham));
         }
+        #endregion
 
+        #region HoaDon
         public void ThemChiTietHoaDon(int maHoaDon, int maSanPham, int soLuong, float chietKhau)
         {
             string sql = "sp_ThemChiTietHoaDon";
@@ -64,11 +70,35 @@ namespace management_store
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@TongTien",tongTien));
         }
+        #endregion
+
+        #region PhieuThu
+        public void ThemChiTietPhieuThu(int maPhieuThu, int maSanPham, int soLuong)
+        {
+            string sql = "sp_ThemChiTietPhieuThu";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@maPhieuThu", maPhieuThu),
+                new SqlParameter("@MaSanPham", maSanPham),
+                new SqlParameter("@SoLuong", soLuong));
+        }
+        public void ThemPhieuThu(int maPhieuThu, DateTime ngayTao, int maNhanVien, float tongTien)
+        {
+            string sql = "sp_ThemPhieuThu";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@maPhieuThu", maPhieuThu),
+                new SqlParameter("@NgayTao", ngayTao),
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@TongTien", tongTien));
+        }
+        #endregion
+
+        #region Convert_Image
         private byte[] ImageToByteArray(Image img)
         {
             MemoryStream ms = new MemoryStream();
             img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             return ms.ToArray();
         }
+        #endregion
     }
 }
