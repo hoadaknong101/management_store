@@ -10,7 +10,7 @@
 - GUI: windows form
 - IDE: Microsoft Visual Studio 2019
 - CSDL: Microsoft SQL Server
-- Công nghệ: ADO.NET (Three Layers: GUI - BUS - (DTO) - DAL)
+- Công nghệ: ADO.NET (Three Layers: GUI - BLL - Function)
 
 # Link đính kèm:
 - đặc tả: https://docs.google.com/document/d/1z8bZIy-XBpOBuq6BouTABAZHublsBtUz7zYVs2BbiQc/edit
