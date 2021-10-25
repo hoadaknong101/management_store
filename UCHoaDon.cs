@@ -109,20 +109,23 @@ namespace management_store
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
-            //251020211205
             DateTime now = DateTime.Now;
             long maHoaDon = TaoMaHoaDon(now);
-
-            func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
-            float chietKhau = 5.8f;
-            foreach(UCSanPhamBar x in lstSanPham)
+            if (KiemTraXuatHoaDon())
             {
-                func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, chietKhau);
+                func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
+                var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
+                foreach (UCSanPhamBar x in distinct)
+                {
+                    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
+                }
+                printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 100);
+                printPreviewDialogBill.ShowDialog();
             }
-            
-            // Tạo hóa đơn
-            printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, lstSanPham.Count * 10 + 100);
-            printPreviewDialogBill.ShowDialog();
+            else
+            {
+                return;
+            }
         }
         private bool KiemTraXuatHoaDon()
         {
