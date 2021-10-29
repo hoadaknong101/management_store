@@ -73,7 +73,7 @@ namespace management_store
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(43, 70);
+            this.label2.Location = new System.Drawing.Point(43, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 31);
             this.label2.TabIndex = 2;
@@ -118,11 +118,11 @@ namespace management_store
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(43, 124);
+            this.label4.Location = new System.Drawing.Point(43, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 31);
+            this.label4.Size = new System.Drawing.Size(165, 31);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Mã nhân viên :";
+            this.label4.Text = "Tên nhân viên :";
             // 
             // lblTongTien
             // 
@@ -150,7 +150,7 @@ namespace management_store
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtHoTenKH);
-            this.panel2.Location = new System.Drawing.Point(208, 67);
+            this.panel2.Location = new System.Drawing.Point(215, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 39);
             this.panel2.TabIndex = 8;
@@ -159,7 +159,7 @@ namespace management_store
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtMaNV);
-            this.panel3.Location = new System.Drawing.Point(208, 116);
+            this.panel3.Location = new System.Drawing.Point(215, 116);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(239, 39);
             this.panel3.TabIndex = 8;

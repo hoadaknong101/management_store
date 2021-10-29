@@ -11,7 +11,7 @@ namespace management_store
     {
         private Image hinhAnh;
         private BLL bll = new BLL();
-        private DataTable ds = new DataTable();
+        private DataTable ds;
         static UCDashboard _obj;
         private int ID_NhanVien;
         public static UCDashboard Instance
@@ -30,7 +30,7 @@ namespace management_store
         public UCDashboard()
         {
             InitializeComponent();
-
+            
 
         }
 
@@ -92,38 +92,33 @@ namespace management_store
 
         private void UCDashboard_Load(object sender, EventArgs e)
         {
+            ds = bll.ThongTinNhanVien(IDNhanVien);
+            MessageBox.Show("Mã Nhân Viên : " + ds.Rows[0][0] + "\nHọ Và Tên : " + ds.Rows[0][1]);
             try
             {
-                ds = bll.ThongTinNhanVien(IDNhanVien);
-            }
-            catch
-            {
-            }
-
-            lblMaNhanVien.Text = "Mã Nhân Viên : " + ds.Rows[0][0].ToString();
-            lblHoTenNhanVien.Text = "Họ Và Tên : " + ds.Rows[0][1].ToString();
-            lblGioiTinh.Text = "Giới Tính : " + ds.Rows[0][5].ToString();
-            lblChucVu.Text = "Chức Vụ : " + ds.Rows[0][8].ToString();
-            lblLienHe.Text = "Liên Hệ : " + ds.Rows[0][2].ToString();
-            pic1.Image = null;
-            try
-            {
-                hinhAnh = ByteArrayToImage((byte[]) ds.Rows[0][4]);
+                pic1.Image = null;
+                lblMaNhanVien.Text = "Mã Nhân Viên : " + ds.Rows[0][0].ToString();
+                lblHoTenNhanVien.Text = "Họ Và Tên : " + ds.Rows[0][1].ToString();
+                lblGioiTinh.Text = "Giới Tính : " + ds.Rows[0][5].ToString();
+                lblChucVu.Text = "Chức Vụ : " + ds.Rows[0][8].ToString();
+                lblLienHe.Text = "Liên Hệ : " + ds.Rows[0][2].ToString();
+                hinhAnh = ByteArrayToImage((byte[])ds.Rows[0][4]);
                 pic1.Image = hinhAnh;
             }
-
             catch
             {
 
             }
-
-
-
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

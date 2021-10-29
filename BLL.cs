@@ -15,6 +15,26 @@ namespace management_store
 
         }
 
+        public bool KiemTraThongTinDangNhap(int taiKhoan, string matKhau, string chucVu)
+        {
+            bool flag = false;
+
+            try
+            {
+                string sql = "SELECT * FROM NhanVien WHERE MaNhanVien = " + taiKhoan + " AND MatKhau = N'" + matKhau + "' AND ChucVu = N'" + chucVu + "'";
+                DataTable dt = func.GetDataToDataTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    flag = true;
+                }
+            }
+            catch
+            {
+                flag = false;
+            }
+            return flag;
+        }
+
         #region SanPham
         public DataTable ThongTinSanPham(string sql)
         {
@@ -71,19 +91,10 @@ namespace management_store
                 new SqlParameter("@TongTien",tongTien));
         }
 
-        public DataTable KiemTraDangNhap(int maNhanVien, string matKhau, string chucVu)
-        {
-            string sql = "sp_KiemTraDangNhap";
-            return (func.ExecuteQueryDataTable(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@MaNhanVien", maNhanVien),
-                new SqlParameter("@MatKhau", matKhau),
-                new SqlParameter("@ChucVu", chucVu)));
-        }
         public DataTable ThongTinNhanVien(int maNhanVien)
         {
-            string sql = "sp_ThongTinNhanVien";
-            return (func.ExecuteQueryDataTable(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@MaNhanVien", maNhanVien)));
+            string sql = "dbo.sp_ThongTinNhanVien";
+            return func.ExecuteQueryDataTable(sql, CommandType.StoredProcedure,new SqlParameter("@MaNhanVien", maNhanVien));
         }
 
         #endregion

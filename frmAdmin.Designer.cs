@@ -277,7 +277,6 @@ namespace management_store
 
         private System.Windows.Forms.Panel pnlTab;
         private System.Windows.Forms.Button btnTabDangXuat;
-        private System.Windows.Forms.Button btnTabNhanVien;
         private System.Windows.Forms.Button btnTabDoanhThu;
         private System.Windows.Forms.Button btnTabSanPham;
         private System.Windows.Forms.Button btnTabHoaDon;
@@ -289,5 +288,6 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timerDigitalClock;
         private System.Windows.Forms.Label lblDigitalClock;
+        public System.Windows.Forms.Button btnTabNhanVien;
     }
 }

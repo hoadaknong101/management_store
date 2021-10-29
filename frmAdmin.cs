@@ -17,9 +17,9 @@ namespace management_store
 
         public frmAdmin(int ID_NhanVien)
         {
+            InitializeComponent();
             UCDashboard.Instance.IDNhanVien = ID_NhanVien;
             UCHoaDon.Instance.IDNhanVien = ID_NhanVien;
-            InitializeComponent();
             timerDigitalClock.Enabled = true;
             timerDigitalClock.Start();
             pnlMain.Controls.Add(UCDashboard.Instance);
@@ -33,7 +33,6 @@ namespace management_store
         private void btnPower_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
         }
 
         private void pnlBar_MouseDown(object sender, MouseEventArgs e)
@@ -76,13 +75,10 @@ namespace management_store
 
         private void btnTabDangXuat_Click(object sender, EventArgs e)
         {
-            
-            frmDangNhap form = new frmDangNhap();
-
-            form.Show();
-            this.Close();
-
-
+            if(MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }            
         }
 
         private void btnTabNhanVien_Click(object sender, EventArgs e)

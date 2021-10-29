@@ -29,6 +29,7 @@ namespace management_store
         }
         private void LoadData()
         {
+
         }
 
         private void frmDangNhap_MouseDown(object sender, MouseEventArgs e)
@@ -42,7 +43,10 @@ namespace management_store
 
         private void btnPower_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }            
         }
 
         private void txtTenTaiKhoan_Click(object sender, EventArgs e)
@@ -80,71 +84,65 @@ namespace management_store
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            string vaiTro = "";
+            if(rdbAdmin.Checked == true)
+            {
+                vaiTro = "Admin";
+            }
+            if(rdbNhanVien.Checked == true)
+            {
+                vaiTro = "Nhân Viên";
+            }
+            if (KiemTraThongTinDauVao())
+            {
+                if (bll.KiemTraThongTinDangNhap(int.Parse(txtTenTaiKhoan.Text.Trim()), txtMatKhau.Text, vaiTro) == true)
+                {
+                    if (vaiTro == "Admin")
+                    {
+                        frmAdmin form = new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim()));
+                        this.Hide();
+                        form.ShowDialog();
+                        txtTenTaiKhoan.Clear();
+                        txtMatKhau.Clear();
+                        this.Show();
+                    }
+                    else
+                    {
+                        frmAdmin form = new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim()));
+                        form.btnTabNhanVien.Enabled = false;
+                        this.Hide();
+                        form.ShowDialog();
+                        txtTenTaiKhoan.Clear();
+                        txtMatKhau.Clear();
+                        this.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại!", "Lỗi ", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }                
+            }
+        }
+
+        private bool KiemTraThongTinDauVao()
+        {
             if (txtTenTaiKhoan.Text.Trim() == "Tên tài khoản" || txtTenTaiKhoan.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản!");
-                return;
+                return false;
             }
             if (txtMatKhau.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu!");
-                return;
+                return false;
             }
             if (rdbAdmin.Checked == false && rdbNhanVien.Checked == false)
             {
                 MessageBox.Show("Vui lòng chọn quyền đăng nhập!");
-                return;
+                return false;
             }
-            if (rdbNhanVien.Checked == true)
-            {
-
-                ds = bll.KiemTraDangNhap(int.Parse(txtTenTaiKhoan.Text),
-                        txtMatKhau.Text,
-                        "Nhân Viên");
-                
-
-                if (ds.Rows.Count > 0)
-                {
-                    int ID_NhanVien = int.Parse(txtTenTaiKhoan.Text.ToString()); 
-                    frmAdmin f = new frmAdmin(ID_NhanVien); 
-                    f.Show();
-
-
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Bạn đã nhập sai tài khoản hoặc mật khẩu xin vui lòng thử lại", "ERROR",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-            }
-            else if(rdbAdmin.Checked == true)
-            {
-
-                    
-                    ds = bll.KiemTraDangNhap(int.Parse(txtTenTaiKhoan.Text.ToString()), txtMatKhau.Text,
-                        "Admin");
-
-                {
-
-                }
-
-                if (ds.Rows.Count > 0)
-                {
-                    int ID_NhanVien = int.Parse(txtTenTaiKhoan.Text.ToString());
-                    frmAdmin f = new frmAdmin(ID_NhanVien);
-
-                    f.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Bạn đã nhập sai tài khoản hoặc mật khẩu xin vui lòng thử lại", "ERROR",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            return true;
         }
 
         private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace management_store
     class Function
     {
         private string connectionString =
-            "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+            "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         public SqlConnection connection;
         public SqlCommand cmd;
@@ -44,23 +44,6 @@ namespace management_store
             return table;
         }
 
-        public int? KiemTraThongTinDangNhap(string sql, CommandType type)
-        {
-            int? result = 0;
-            cmd.CommandType = type;
-            cmd.CommandText = sql;
-            try
-            {
-                result = (int?) cmd.ExecuteScalar();
-            }
-            catch (SqlException)
-            {
-
-            }
-
-            return result;
-        }
-
         public void ExcuteNonQuery(string sqlExpess, CommandType type, params SqlParameter[] pm)
         {
             cmd = connection.CreateCommand();
@@ -79,6 +62,7 @@ namespace management_store
         {
             cmd.CommandText = strSql;
             cmd.CommandType = ct;
+            cmd.Parameters.Clear();
             foreach (SqlParameter p in param)
                 cmd.Parameters.Add(p);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);

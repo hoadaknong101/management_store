@@ -45,26 +45,16 @@ namespace management_store
         {            
             InitializeComponent();
             themSP = new frmTimSP(ThemSanPhamVaoHoaDon);
-
             lstSanPham = new List<UCSanPhamBar>();
-            lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
-            
-            //// Dữ liệu mẫu
-            //lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 40000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            //lstSanPham.Add(new UCSanPhamBar(2, null, "Dép lào", 15000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            //lstSanPham.Add(new UCSanPhamBar(3, null, "Dép tông", 20000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            //lstSanPham.Add(new UCSanPhamBar(4, null, "Bút bi", 5000, 5, CapNhatTongTienHoaDon, XoaSanPham));
-            
+            lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");            
             ThemSanPham();
             CapNhatTongTienHoaDon();
             func = new BLL();
         }
         public int IDNhanVien
         {
-
             get { return ID_NhanVien; }
             set { ID_NhanVien = value; }
-
         }
 
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)

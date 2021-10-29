@@ -56,7 +56,7 @@ namespace management_store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(102, 121);
+            this.label1.Location = new System.Drawing.Point(105, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 1;
@@ -65,11 +65,11 @@ namespace management_store
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTaiKhoan.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 15);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 5);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(219, 19);
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(222, 29);
             this.txtTenTaiKhoan.TabIndex = 3;
             this.txtTenTaiKhoan.Text = "Tên tài khoản";
             this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
@@ -82,7 +82,7 @@ namespace management_store
             this.pnlTaiKhoan.Controls.Add(this.txtTenTaiKhoan);
             this.pnlTaiKhoan.Location = new System.Drawing.Point(66, 180);
             this.pnlTaiKhoan.Name = "pnlTaiKhoan";
-            this.pnlTaiKhoan.Size = new System.Drawing.Size(264, 37);
+            this.pnlTaiKhoan.Size = new System.Drawing.Size(243, 37);
             this.pnlTaiKhoan.TabIndex = 4;
             // 
             // pnlMatKhau
@@ -91,18 +91,18 @@ namespace management_store
             this.pnlMatKhau.Controls.Add(this.txtMatKhau);
             this.pnlMatKhau.Location = new System.Drawing.Point(66, 254);
             this.pnlMatKhau.Name = "pnlMatKhau";
-            this.pnlMatKhau.Size = new System.Drawing.Size(264, 37);
+            this.pnlMatKhau.Size = new System.Drawing.Size(243, 37);
             this.pnlMatKhau.TabIndex = 4;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Font = new System.Drawing.Font("Open Sans", 15.75F);
             this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMatKhau.Location = new System.Drawing.Point(13, 13);
+            this.txtMatKhau.Location = new System.Drawing.Point(13, 5);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(219, 19);
+            this.txtMatKhau.Size = new System.Drawing.Size(222, 29);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.Text = "password";
             this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
@@ -123,7 +123,7 @@ namespace management_store
             // picBoxLogin
             // 
             this.picBoxLogin.Image = global::management_store.Properties.Resources.staff_icon_6;
-            this.picBoxLogin.Location = new System.Drawing.Point(98, 41);
+            this.picBoxLogin.Location = new System.Drawing.Point(95, 41);
             this.picBoxLogin.Name = "picBoxLogin";
             this.picBoxLogin.Size = new System.Drawing.Size(158, 67);
             this.picBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +133,7 @@ namespace management_store
             // picBoxPassword
             // 
             this.picBoxPassword.Image = global::management_store.Properties.Resources.key__1_;
-            this.picBoxPassword.Location = new System.Drawing.Point(12, 254);
+            this.picBoxPassword.Location = new System.Drawing.Point(19, 254);
             this.picBoxPassword.Name = "picBoxPassword";
             this.picBoxPassword.Size = new System.Drawing.Size(33, 37);
             this.picBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +143,7 @@ namespace management_store
             // picBoxUsername
             // 
             this.picBoxUsername.Image = global::management_store.Properties.Resources.user__1_;
-            this.picBoxUsername.Location = new System.Drawing.Point(12, 180);
+            this.picBoxUsername.Location = new System.Drawing.Point(19, 180);
             this.picBoxUsername.Name = "picBoxUsername";
             this.picBoxUsername.Size = new System.Drawing.Size(42, 37);
             this.picBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,26 +170,26 @@ namespace management_store
             // rdbAdmin
             // 
             this.rdbAdmin.AutoSize = true;
-            this.rdbAdmin.Checked = true;
             this.rdbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAdmin.ForeColor = System.Drawing.Color.White;
-            this.rdbAdmin.Location = new System.Drawing.Point(54, 3);
+            this.rdbAdmin.Location = new System.Drawing.Point(154, 9);
             this.rdbAdmin.Name = "rdbAdmin";
             this.rdbAdmin.Size = new System.Drawing.Size(64, 20);
             this.rdbAdmin.TabIndex = 8;
-            this.rdbAdmin.TabStop = true;
             this.rdbAdmin.Text = "Admin";
             this.rdbAdmin.UseVisualStyleBackColor = true;
             // 
             // rdbNhanVien
             // 
             this.rdbNhanVien.AutoSize = true;
+            this.rdbNhanVien.Checked = true;
             this.rdbNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbNhanVien.ForeColor = System.Drawing.Color.White;
-            this.rdbNhanVien.Location = new System.Drawing.Point(203, 3);
+            this.rdbNhanVien.Location = new System.Drawing.Point(32, 9);
             this.rdbNhanVien.Name = "rdbNhanVien";
             this.rdbNhanVien.Size = new System.Drawing.Size(86, 20);
             this.rdbNhanVien.TabIndex = 8;
+            this.rdbNhanVien.TabStop = true;
             this.rdbNhanVien.Text = "Nhân viên";
             this.rdbNhanVien.UseVisualStyleBackColor = true;
             // 
@@ -197,9 +197,9 @@ namespace management_store
             // 
             this.pnlRoles.Controls.Add(this.rdbAdmin);
             this.pnlRoles.Controls.Add(this.rdbNhanVien);
-            this.pnlRoles.Location = new System.Drawing.Point(12, 325);
+            this.pnlRoles.Location = new System.Drawing.Point(66, 325);
             this.pnlRoles.Name = "pnlRoles";
-            this.pnlRoles.Size = new System.Drawing.Size(318, 38);
+            this.pnlRoles.Size = new System.Drawing.Size(243, 38);
             this.pnlRoles.TabIndex = 9;
             // 
             // frmDangNhap
@@ -221,6 +221,7 @@ namespace management_store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseDown);
