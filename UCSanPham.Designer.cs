@@ -84,6 +84,7 @@ namespace management_store
             this.txtLoaiSP = new Bunifu.UI.WinForms.BunifuTextBox();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.btnHuy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
@@ -326,7 +327,7 @@ namespace management_store
             this.btnThemSanPham.IdleIconLeftImage = null;
             this.btnThemSanPham.IdleIconRightImage = null;
             this.btnThemSanPham.IndicateFocus = false;
-            this.btnThemSanPham.Location = new System.Drawing.Point(71, 604);
+            this.btnThemSanPham.Location = new System.Drawing.Point(69, 604);
             this.btnThemSanPham.Name = "btnThemSanPham";
             this.btnThemSanPham.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThemSanPham.OnDisabledState.BorderRadius = 1;
@@ -420,7 +421,7 @@ namespace management_store
             this.btnLuuSP.IdleIconLeftImage = null;
             this.btnLuuSP.IdleIconRightImage = null;
             this.btnLuuSP.IndicateFocus = false;
-            this.btnLuuSP.Location = new System.Drawing.Point(243, 604);
+            this.btnLuuSP.Location = new System.Drawing.Point(241, 604);
             this.btnLuuSP.Name = "btnLuuSP";
             this.btnLuuSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuuSP.OnDisabledState.BorderRadius = 1;
@@ -513,7 +514,7 @@ namespace management_store
             this.btnXoaSP.IdleIconLeftImage = null;
             this.btnXoaSP.IdleIconRightImage = null;
             this.btnXoaSP.IndicateFocus = false;
-            this.btnXoaSP.Location = new System.Drawing.Point(587, 604);
+            this.btnXoaSP.Location = new System.Drawing.Point(585, 604);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoaSP.OnDisabledState.BorderRadius = 1;
@@ -1158,7 +1159,7 @@ namespace management_store
             this.btnHuy.IdleIconLeftImage = null;
             this.btnHuy.IdleIconRightImage = null;
             this.btnHuy.IndicateFocus = false;
-            this.btnHuy.Location = new System.Drawing.Point(415, 604);
+            this.btnHuy.Location = new System.Drawing.Point(413, 604);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHuy.OnDisabledState.BorderRadius = 1;
@@ -1201,6 +1202,21 @@ namespace management_store
             this.btnHuy.UseDefaultRadiusAndThickness = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel8.Location = new System.Drawing.Point(901, 210);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(69, 23);
+            this.bunifuLabel8.TabIndex = 7;
+            this.bunifuLabel8.Text = "Hình ảnh";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UCSanPham
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1220,6 +1236,7 @@ namespace management_store
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel5);
+            this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
@@ -1262,5 +1279,6 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuTextBox txtLoaiSP;
         private System.Windows.Forms.PictureBox picImage;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHuy;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
     }
 }

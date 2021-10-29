@@ -114,12 +114,12 @@ namespace management_store
             long maHoaDon = TaoMaHoaDon(now);
             if (KiemTraXuatHoaDon())
             {
-                func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
+                //func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
                 var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
-                foreach (UCSanPhamBar x in distinct)
-                {
-                    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
-                }
+                //foreach (UCSanPhamBar x in distinct)
+                //{
+                //    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
+                //}
                 printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, distinct.ToList().Count * 10 + 100);
                 printPreviewDialogBill.ShowDialog();
             }
@@ -173,11 +173,12 @@ namespace management_store
             int stt = 1;
             int pos = 0;
             int theLastPos = 0;
-            int leftMargin = 21;
-            int topMargin = 20;
+            int leftMargin = 22;
+            int topMargin = 30;
             int halfWidthPage = printBill.DefaultPageSettings.PaperSize.Width / 2;
 
-            e.Graphics.DrawString("HÓA ĐƠN", new Font("Arial", 3, FontStyle.Bold), Brushes.Black, new Point(halfWidthPage-8, 10));
+            e.Graphics.DrawString("HÓA ĐƠN BÁN LẺ", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(halfWidthPage-30, 10));
+            e.Graphics.DrawString("Người mua hàng : " + txtHoTenKH.Text , new Font("Arial", 3, FontStyle.Bold), Brushes.Black, new Point(leftMargin, 23));
 
             //In phần tiêu đề hóa đơn
             e.Graphics.DrawString("STT", fontTieuDe, Brushes.Black, new Point(leftMargin, topMargin));
@@ -202,8 +203,12 @@ namespace management_store
                 Brushes.Black, new Point(leftMargin, theLastPos + 10));
             e.Graphics.DrawString("Total : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ", fontTieuDe, 
                 Brushes.Black, new Point(leftMargin, theLastPos + 20));
+            e.Graphics.DrawString("Ngày bán : " + DateTime.Now.ToString("dd-MM-yyyy"), fontTieuDe,
+                Brushes.Black, new Point(leftMargin, theLastPos + 30));
+            e.Graphics.DrawString("Người bán hàng : Phẹm Dzeng Théng", fontTieuDe, 
+                Brushes.Black, new Point(leftMargin, theLastPos + 40));
             e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
-                new Point(leftMargin + 21, theLastPos + 50));
+                new Point(leftMargin + 21, theLastPos + 60));
         }
     }
 }
