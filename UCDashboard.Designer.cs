@@ -71,14 +71,14 @@ namespace management_store
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblChucVu = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.lblInfor = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblGioiTinh = new System.Windows.Forms.Label();
+            this.lblLienHe = new System.Windows.Forms.Label();
+            this.lblHoTenNhanVien = new System.Windows.Forms.Label();
+            this.lblMaNhanVien = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -107,7 +107,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
@@ -578,29 +578,30 @@ namespace management_store
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(133)))));
-            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.lblChucVu);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.pictureBox21);
+            this.panel6.Controls.Add(this.pic1);
             this.panel6.Controls.Add(this.lblInfor);
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.lblGioiTinh);
+            this.panel6.Controls.Add(this.lblLienHe);
+            this.panel6.Controls.Add(this.lblHoTenNhanVien);
+            this.panel6.Controls.Add(this.lblMaNhanVien);
             this.panel6.Location = new System.Drawing.Point(577, 266);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(494, 355);
             this.panel6.TabIndex = 1;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // label20
+            // lblChucVu
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(16, 199);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(192, 27);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Chức vụ : Nhân Viên";
+            this.lblChucVu.AutoSize = true;
+            this.lblChucVu.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.lblChucVu.ForeColor = System.Drawing.Color.White;
+            this.lblChucVu.Location = new System.Drawing.Point(16, 199);
+            this.lblChucVu.Name = "lblChucVu";
+            this.lblChucVu.Size = new System.Drawing.Size(192, 27);
+            this.lblChucVu.TabIndex = 3;
+            this.lblChucVu.Text = "Chức vụ : Nhân Viên";
             // 
             // button1
             // 
@@ -614,15 +615,15 @@ namespace management_store
             this.button1.Text = "Chỉnh sửa";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox21
+            // pic1
             // 
-            this.pictureBox21.Image = global::management_store.Properties.Resources._241226920_238900838242096_6805208429780291552_n;
-            this.pictureBox21.Location = new System.Drawing.Point(277, 62);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(206, 255);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 1;
-            this.pictureBox21.TabStop = false;
+            this.pic1.Image = global::management_store.Properties.Resources._241226920_238900838242096_6805208429780291552_n;
+            this.pic1.Location = new System.Drawing.Point(330, 51);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(146, 236);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic1.TabIndex = 1;
+            this.pic1.TabStop = false;
             // 
             // lblInfor
             // 
@@ -635,49 +636,49 @@ namespace management_store
             this.lblInfor.TabIndex = 0;
             this.lblInfor.Text = "THÔNG TIN NGUỜI SỬ DỤNG";
             // 
-            // label19
+            // lblGioiTinh
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(16, 157);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(129, 27);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Giới tính : nữ";
+            this.lblGioiTinh.AutoSize = true;
+            this.lblGioiTinh.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.lblGioiTinh.ForeColor = System.Drawing.Color.White;
+            this.lblGioiTinh.Location = new System.Drawing.Point(16, 157);
+            this.lblGioiTinh.Name = "lblGioiTinh";
+            this.lblGioiTinh.Size = new System.Drawing.Size(129, 27);
+            this.lblGioiTinh.TabIndex = 0;
+            this.lblGioiTinh.Text = "Giới tính : nữ";
             // 
-            // label18
+            // lblLienHe
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(16, 241);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(213, 27);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Liên hệ : 0384 485 486";
+            this.lblLienHe.AutoSize = true;
+            this.lblLienHe.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.lblLienHe.ForeColor = System.Drawing.Color.White;
+            this.lblLienHe.Location = new System.Drawing.Point(16, 241);
+            this.lblLienHe.Name = "lblLienHe";
+            this.lblLienHe.Size = new System.Drawing.Size(213, 27);
+            this.lblLienHe.TabIndex = 0;
+            this.lblLienHe.Text = "Liên hệ : 0384 485 486";
             // 
-            // label17
+            // lblHoTenNhanVien
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Open Sans", 14.25F);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(16, 115);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 27);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Họ và tên : Kim Jisoo";
+            this.lblHoTenNhanVien.AutoSize = true;
+            this.lblHoTenNhanVien.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.lblHoTenNhanVien.ForeColor = System.Drawing.Color.White;
+            this.lblHoTenNhanVien.Location = new System.Drawing.Point(16, 115);
+            this.lblHoTenNhanVien.Name = "lblHoTenNhanVien";
+            this.lblHoTenNhanVien.Size = new System.Drawing.Size(193, 27);
+            this.lblHoTenNhanVien.TabIndex = 0;
+            this.lblHoTenNhanVien.Text = "Họ và tên : Kim Jisoo";
             // 
-            // label21
+            // lblMaNhanVien
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(16, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 27);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Mã : 12345";
+            this.lblMaNhanVien.AutoSize = true;
+            this.lblMaNhanVien.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNhanVien.ForeColor = System.Drawing.Color.White;
+            this.lblMaNhanVien.Location = new System.Drawing.Point(16, 73);
+            this.lblMaNhanVien.Name = "lblMaNhanVien";
+            this.lblMaNhanVien.Size = new System.Drawing.Size(110, 27);
+            this.lblMaNhanVien.TabIndex = 0;
+            this.lblMaNhanVien.Text = "Mã : 12345";
             // 
             // pictureBox23
             // 
@@ -703,6 +704,7 @@ namespace management_store
             this.Controls.Add(this.label1);
             this.Name = "UCDashboard";
             this.Size = new System.Drawing.Size(1104, 660);
+            this.Load += new System.EventHandler(this.UCDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -736,7 +738,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -786,15 +788,15 @@ namespace management_store
         private System.Windows.Forms.PictureBox picLocation1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.Label lblInfor;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblGioiTinh;
+        private System.Windows.Forms.Label lblLienHe;
+        private System.Windows.Forms.Label lblHoTenNhanVien;
+        private System.Windows.Forms.Label lblMaNhanVien;
         private System.Windows.Forms.PictureBox picLocationTruong;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblChucVu;
     }
 }

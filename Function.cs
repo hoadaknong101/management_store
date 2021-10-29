@@ -10,7 +10,9 @@ namespace management_store
 {
     class Function
     {
-        private string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        private string connectionString =
+            "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+
         public SqlConnection connection;
         public SqlCommand cmd;
 
@@ -23,6 +25,7 @@ namespace management_store
                 {
                     connection.Close();
                 }
+
                 connection.Open();
                 cmd = connection.CreateCommand();
             }
@@ -48,12 +51,13 @@ namespace management_store
             cmd.CommandText = sql;
             try
             {
-                result = (int?)cmd.ExecuteScalar();
+                result = (int?) cmd.ExecuteScalar();
             }
             catch (SqlException)
             {
 
             }
+
             return result;
         }
 
@@ -67,7 +71,21 @@ namespace management_store
             {
                 cmd.Parameters.Add(a);
             }
+
             cmd.ExecuteNonQuery();
         }
-    }
+
+        public DataTable ExecuteQueryDataTable(string strSql, CommandType ct, params SqlParameter[] param)
+        {
+            cmd.CommandText = strSql;
+            cmd.CommandType = ct;
+            foreach (SqlParameter p in param)
+                cmd.Parameters.Add(p);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+            DataTable ds = new DataTable();
+            dataAdapter.Fill(ds);
+            return ds;
+        }
+
+}
 }

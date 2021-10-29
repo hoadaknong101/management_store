@@ -111,6 +111,7 @@ namespace management_store
             this.fpnlSanPham.Name = "fpnlSanPham";
             this.fpnlSanPham.Size = new System.Drawing.Size(1017, 353);
             this.fpnlSanPham.TabIndex = 6;
+            this.fpnlSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.fpnlSanPham_Paint);
             // 
             // label4
             // 
@@ -172,8 +173,10 @@ namespace management_store
             this.txtMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaNV.Location = new System.Drawing.Point(3, 4);
             this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
             this.txtMaNV.Size = new System.Drawing.Size(231, 28);
             this.txtMaNV.TabIndex = 3;
+            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
             // 
             // panel4
             // 
@@ -313,6 +316,7 @@ namespace management_store
             this.MinimumSize = new System.Drawing.Size(1100, 655);
             this.Name = "UCHoaDon";
             this.Size = new System.Drawing.Size(1100, 655);
+            this.Load += new System.EventHandler(this.UCHoaDon_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

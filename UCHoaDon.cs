@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
@@ -13,7 +14,9 @@ namespace management_store
         public delegate void delCapNhatTongTien();
         public delegate void delXoaSanPham(UCSanPhamBar sanPham);
         public delegate void delThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh);
-
+        private int ID_NhanVien;
+        private DataTable ds = new DataTable();
+        private BLL bll = new BLL();
         #region Properties
         BLL func; //query
         public List<UCSanPhamBar> lstSanPham;
@@ -46,15 +49,22 @@ namespace management_store
             lstSanPham = new List<UCSanPhamBar>();
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
             
-            // Dữ liệu mẫu
-            lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 40000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(2, null, "Dép lào", 15000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(3, null, "Dép tông", 20000, 1, CapNhatTongTienHoaDon, XoaSanPham));
-            lstSanPham.Add(new UCSanPhamBar(4, null, "Bút bi", 5000, 5, CapNhatTongTienHoaDon, XoaSanPham));
-
+            //// Dữ liệu mẫu
+            //lstSanPham.Add(new UCSanPhamBar(1, null, "Dép tổ ong", 40000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            //lstSanPham.Add(new UCSanPhamBar(2, null, "Dép lào", 15000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            //lstSanPham.Add(new UCSanPhamBar(3, null, "Dép tông", 20000, 1, CapNhatTongTienHoaDon, XoaSanPham));
+            //lstSanPham.Add(new UCSanPhamBar(4, null, "Bút bi", 5000, 5, CapNhatTongTienHoaDon, XoaSanPham));
+            
             ThemSanPham();
             CapNhatTongTienHoaDon();
             func = new BLL();
+        }
+        public int IDNhanVien
+        {
+
+            get { return ID_NhanVien; }
+            set { ID_NhanVien = value; }
+
         }
 
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)
@@ -114,14 +124,17 @@ namespace management_store
             long maHoaDon = TaoMaHoaDon(now);
             if (KiemTraXuatHoaDon())
             {
-                //func.ThemHoaDon(maHoaDon, now, int.Parse(txtMaNV.Text), tongTien);
+                func.ThemHoaDon(maHoaDon, now, IDNhanVien, tongTien);
                 var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
-                //foreach (UCSanPhamBar x in distinct)
-                //{
-                //    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
-                //}
+                foreach (UCSanPhamBar x in distinct)
+                {
+                    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
+                }
                 printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, distinct.ToList().Count * 10 + 100);
                 printPreviewDialogBill.ShowDialog();
+                fpnlSanPham.Controls.Clear();
+                lstSanPham.Clear();
+                lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
             }
             else
             {
@@ -205,10 +218,26 @@ namespace management_store
                 Brushes.Black, new Point(leftMargin, theLastPos + 20));
             e.Graphics.DrawString("Ngày bán : " + DateTime.Now.ToString("dd-MM-yyyy"), fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 30));
-            e.Graphics.DrawString("Người bán hàng : Phẹm Dzeng Théng", fontTieuDe, 
+            e.Graphics.DrawString("Người bán hàng : "+ds.Rows[0][1].ToString(), fontTieuDe, 
                 Brushes.Black, new Point(leftMargin, theLastPos + 40));
             e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
                 new Point(leftMargin + 21, theLastPos + 60));
+        }
+
+        private void fpnlSanPham_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UCHoaDon_Load(object sender, EventArgs e)
+        {
+            ds = bll.ThongTinNhanVien(IDNhanVien);
+            txtMaNV.Text = ds.Rows[0][1].ToString();
+        }
+
+        private void txtMaNV_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

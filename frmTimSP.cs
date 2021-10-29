@@ -86,5 +86,10 @@ namespace management_store
             fpnlMain.Controls.Clear();
             LoadSP();
         }
+
+        private void fpnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

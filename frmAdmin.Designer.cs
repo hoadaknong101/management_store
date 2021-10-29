@@ -95,7 +95,7 @@ namespace management_store
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(93, 672);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "v1.0";
             // 
@@ -116,6 +116,7 @@ namespace management_store
             this.btnTabDangXuat.Text = "    ĐĂNG XUẤT";
             this.btnTabDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabDangXuat.UseVisualStyleBackColor = true;
+            this.btnTabDangXuat.Click += new System.EventHandler(this.btnTabDangXuat_Click);
             // 
             // btnTabNhanVien
             // 
@@ -133,6 +134,7 @@ namespace management_store
             this.btnTabNhanVien.Text = "    NHÂN VIÊN";
             this.btnTabNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabNhanVien.UseVisualStyleBackColor = true;
+            this.btnTabNhanVien.Click += new System.EventHandler(this.btnTabNhanVien_Click);
             // 
             // btnTabDoanhThu
             // 
@@ -219,7 +221,7 @@ namespace management_store
             // 
             this.btnPower.FlatAppearance.BorderSize = 0;
             this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.ForeColor = System.Drawing.Color.White;
             this.btnPower.Image = global::management_store.Properties.Resources.icons8_delete_sign_filled_32;
             this.btnPower.Location = new System.Drawing.Point(1044, 1);
@@ -238,6 +240,7 @@ namespace management_store
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1110, 666);
             this.pnlMain.TabIndex = 2;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
             // timerDigitalClock
             // 
@@ -247,14 +250,14 @@ namespace management_store
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1324, 708);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlTab);
-            this.Font = new System.Drawing.Font("SVN-Avo", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

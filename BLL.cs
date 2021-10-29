@@ -52,14 +52,14 @@ namespace management_store
         #endregion
 
         #region HoaDon
-        public void ThemChiTietHoaDon(long maHoaDon, int maSanPham, int soLuong, float chietKhau)
+        public void ThemChiTietHoaDon(long maHoaDon, int maSanPham, int soLuong, float thanhTien)
         {
             string sql = "sp_ThemChiTietHoaDon";
             func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@MaSanPham", maSanPham),
                 new SqlParameter("@SoLuong", soLuong),
-                new SqlParameter("@ChietKhau", chietKhau));
+                new SqlParameter("@ThanhTien", thanhTien));
         }
         public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
         {
@@ -70,6 +70,22 @@ namespace management_store
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@TongTien",tongTien));
         }
+
+        public DataTable KiemTraDangNhap(int maNhanVien, string matKhau, string chucVu)
+        {
+            string sql = "sp_KiemTraDangNhap";
+            return (func.ExecuteQueryDataTable(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@MatKhau", matKhau),
+                new SqlParameter("@ChucVu", chucVu)));
+        }
+        public DataTable ThongTinNhanVien(int maNhanVien)
+        {
+            string sql = "sp_ThongTinNhanVien";
+            return (func.ExecuteQueryDataTable(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien)));
+        }
+
         #endregion
 
         #region PhieuThu
