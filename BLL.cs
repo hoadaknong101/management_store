@@ -21,7 +21,8 @@ namespace management_store
 
             try
             {
-                string sql = "SELECT * FROM NhanVien WHERE MaNhanVien = " + taiKhoan + " AND MatKhau = N'" + matKhau + "' AND ChucVu = N'" + chucVu + "'";
+                string sql = "SELECT * FROM NhanVien WHERE MaNhanVien = " + taiKhoan 
+                    + " AND MatKhau = N'" + matKhau + "' AND ChucVu = N'" + chucVu + "'";
                 DataTable dt = func.GetDataToDataTable(sql);
                 if (dt.Rows.Count > 0)
                 {
@@ -90,13 +91,35 @@ namespace management_store
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@TongTien",tongTien));
         }
+        #endregion
 
+        #region NhanVien
         public DataTable ThongTinNhanVien(int maNhanVien)
         {
             string sql = "dbo.sp_ThongTinNhanVien";
-            return func.ExecuteQueryDataTable(sql, CommandType.StoredProcedure,new SqlParameter("@MaNhanVien", maNhanVien));
+            return func.ExecuteQueryDataTable(sql, CommandType.StoredProcedure, new SqlParameter("@MaNhanVien", maNhanVien));
         }
-
+        public DataTable ThongTinToanBoNhanVien()
+        {
+            string sql = "select * from NhanVien";
+            return func.GetDataToDataTable(sql);
+        }
+        public void ThemNhanVien()
+        {
+            string sql = "sp_ThemNhanVien";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, null);
+        }
+        public void CapNhatNhanVien()
+        {
+            string sql = "sp_CapNhatNhanVien";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,null);
+        }
+        public void XoaNhanVien(int maNhanVien)
+        {
+            string sql = "sp_XoaNhanVien";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
+        }
         #endregion
 
         #region PhieuThu

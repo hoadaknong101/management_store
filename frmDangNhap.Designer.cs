@@ -73,7 +73,6 @@ namespace management_store
             this.txtTenTaiKhoan.TabIndex = 3;
             this.txtTenTaiKhoan.Text = "Tên tài khoản";
             this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
-            this.txtTenTaiKhoan.TextChanged += new System.EventHandler(this.txtTenTaiKhoan_TextChanged);
             this.txtTenTaiKhoan.Leave += new System.EventHandler(this.txtTenTaiKhoan_Leave);
             // 
             // pnlTaiKhoan
@@ -223,7 +222,6 @@ namespace management_store
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseDown);
             this.pnlTaiKhoan.ResumeLayout(false);
             this.pnlTaiKhoan.PerformLayout();

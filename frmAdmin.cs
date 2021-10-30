@@ -22,17 +22,16 @@ namespace management_store
             UCHoaDon.Instance.IDNhanVien = ID_NhanVien;
             timerDigitalClock.Enabled = true;
             timerDigitalClock.Start();
+            
+            // Add UserControl
             pnlMain.Controls.Add(UCDashboard.Instance);
             pnlMain.Controls.Add(UCHoaDon.Instance);
             pnlMain.Controls.Add(UCSanPham.Instance);
+            pnlMain.Controls.Add(UCDoanhThu.Instance);
             pnlMain.Controls.Add(UCNhanVien.Instance);
             UCDashboard.Instance.BringToFront();
-            this.ID_NhanVien = ID_NhanVien;
-        }
 
-        private void btnPower_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.ID_NhanVien = ID_NhanVien;
         }
 
         private void pnlBar_MouseDown(object sender, MouseEventArgs e)
@@ -44,35 +43,19 @@ namespace management_store
             }
         }
 
+        #region TabControl
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-
             UCDashboard.Instance.BringToFront();
-
-        }
-
+        }        
         private void btnTabHoaDon_Click(object sender, EventArgs e)
         {
             UCHoaDon.Instance.BringToFront();
-
         }
-
         private void btnTabSanPham_Click(object sender, EventArgs e)
         {
-
             UCSanPham.Instance.BringToFront();
         }
-
-        private void timerDigitalClock_Tick(object sender, EventArgs e)
-        {
-            lblDigitalClock.Text = DateTime.Now.ToString("T");
-        }
-
-        private void pnlMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnTabDangXuat_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -80,10 +63,19 @@ namespace management_store
                 this.Close();
             }            
         }
-
         private void btnTabNhanVien_Click(object sender, EventArgs e)
         {
             UCNhanVien.Instance.BringToFront();
+        }
+        private void btnTabDoanhThu_Click(object sender, EventArgs e)
+        {
+            UCDoanhThu.Instance.BringToFront();
+        }
+        #endregion
+
+        private void timerDigitalClock_Tick(object sender, EventArgs e)
+        {
+            lblDigitalClock.Text = DateTime.Now.ToString("T");
         }
     }
 }

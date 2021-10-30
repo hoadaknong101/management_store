@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace management_store
 {
     class Function
     {
         private string connectionString =
-            "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+            "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         public SqlConnection connection;
         public SqlCommand cmd;
@@ -35,7 +30,6 @@ namespace management_store
             }
         }
 
-
         public DataTable GetDataToDataTable(string sql)
         {
             DataTable table = new DataTable();
@@ -54,7 +48,6 @@ namespace management_store
             {
                 cmd.Parameters.Add(a);
             }
-
             cmd.ExecuteNonQuery();
         }
 
@@ -66,10 +59,9 @@ namespace management_store
             foreach (SqlParameter p in param)
                 cmd.Parameters.Add(p);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-            DataTable ds = new DataTable();
-            dataAdapter.Fill(ds);
-            return ds;
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
         }
-
-}
+    }
 }

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
@@ -15,7 +8,6 @@ namespace management_store
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-        DataTable ds = new DataTable();
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
@@ -32,6 +24,7 @@ namespace management_store
 
         }
 
+        #region Control_Form
         private void frmDangNhap_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -81,6 +74,7 @@ namespace management_store
                 txtTenTaiKhoan.Text = "Tên tài khoản";
             }
         }
+        #endregion
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
@@ -119,10 +113,11 @@ namespace management_store
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại!", "Lỗi ", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Đăng nhập thất bại!", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
-                }                
+                }
             }
+            else MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông báo", MessageBoxButtons.OK);
         }
 
         private bool KiemTraThongTinDauVao()
@@ -137,22 +132,7 @@ namespace management_store
                 MessageBox.Show("Vui lòng nhập mật khẩu!");
                 return false;
             }
-            if (rdbAdmin.Checked == false && rdbNhanVien.Checked == false)
-            {
-                MessageBox.Show("Vui lòng chọn quyền đăng nhập!");
-                return false;
-            }
             return true;
-        }
-
-        private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
