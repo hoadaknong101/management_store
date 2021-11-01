@@ -5,8 +5,17 @@ namespace management_store
 {
     class Function
     {
-        private string connectionString =
-            "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        // Hoa
+        //private string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
+
+        // Hao
+        //private string connectionString = "Data Source=;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
+
+        // Phi
+        private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+
+        // Thang
+        //private string connectionString = "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
 
         public SqlConnection connection;
         public SqlCommand cmd;
