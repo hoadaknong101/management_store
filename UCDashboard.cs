@@ -93,7 +93,6 @@ namespace management_store
         private void UCDashboard_Load(object sender, EventArgs e)
         {
             ds = bll.ThongTinNhanVien(IDNhanVien);
-            MessageBox.Show("Mã Nhân Viên : " + ds.Rows[0][0] + "\nHọ Và Tên : " + ds.Rows[0][1]);
             try
             {
                 pic1.Image = null;
@@ -117,8 +116,8 @@ namespace management_store
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            
+        { 
+            new frmDoiMatKhau(ID_NhanVien).ShowDialog();
         }
     }
 }

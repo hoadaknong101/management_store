@@ -31,6 +31,8 @@ namespace management_store
         {
             InitializeComponent();
             SettingSanPham();
+            txtMaSP.Enabled = false;
+            DisableOnControl();
         }
 
         #region Chuc_nang
@@ -70,7 +72,7 @@ namespace management_store
                 txtDonGia.Text.Trim().Equals("") ||
                 txtSoLuong.Text.Trim().Equals("") ||
                 txtLoaiSP.Text.Trim().Equals("") ||
-                txtMaSP.Text.Trim().Equals("") ||
+                txtMaNSX.Text.Trim().Equals("") ||
                 picImage.Image == null)
             {
                 return false;
@@ -97,6 +99,24 @@ namespace management_store
             return img;
         }
         #endregion
+        private void DisableOnControl()
+        {
+            txtTenSanPham.Enabled = false;
+            txtDonGia.Enabled = false;
+            txtSoLuong.Enabled = false;
+            txtLoaiSP.Enabled = false;
+            txtMaNSX.Enabled = false;
+            btnChonHinhAnh.Enabled = false;
+        }
+        private void EnabledOnControl()
+        {
+            txtTenSanPham.Enabled = true;
+            txtDonGia.Enabled = true;
+            txtSoLuong.Enabled = true;
+            txtLoaiSP.Enabled = true;
+            txtMaNSX.Enabled = true;
+            btnChonHinhAnh.Enabled = true;
+        }
 
         #region Control
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,15 +129,20 @@ namespace management_store
                 txtLoaiSP.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();
                 txtMaNSX.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
-                picImage.Image = ByteArrayToImage((byte[])dgvSanPham.CurrentRow.Cells[4].Value);
-                btnThemSanPham.Enabled = false;
-                btnLuuSP.Enabled = true;
-                btnXoaSP.Enabled = true;
-                btnHuy.Enabled = true;
+                picImage.Image = ByteArrayToImage((byte[]) dgvSanPham.CurrentRow.Cells[4].Value);
+                
             }
             catch
             {
                 return;
+            }
+            finally
+            {
+                btnThemSanPham.Enabled = false;
+                btnLuuSP.Enabled = true;
+                btnXoaSP.Enabled = true;
+                btnHuy.Enabled = true;
+                EnabledOnControl();
             }
         }
 
@@ -127,6 +152,7 @@ namespace management_store
             txtTenSanPham.Focus();
             btnLuuSP.Enabled = true;
             btnHuy.Enabled = true;
+            EnabledOnControl();
         }
 
         private void btnLuuSP_Click(object sender, EventArgs e)
@@ -159,6 +185,7 @@ namespace management_store
                     {
                         dgvSanPham.Controls.Clear();
                         SettingSanPham();
+                        DisableOnControl();
                     }
                 }
                 else
@@ -182,6 +209,7 @@ namespace management_store
                     {
                         dgvSanPham.Controls.Clear();
                         SettingSanPham();
+                        DisableOnControl();
                     }
                 }
 
@@ -216,6 +244,7 @@ namespace management_store
                 btnXoaSP.Enabled = false;
                 btnLuuSP.Enabled = false;
                 btnHuy.Enabled = false;
+                DisableOnControl();
             }
         }
 
@@ -226,6 +255,7 @@ namespace management_store
             btnXoaSP.Enabled = false;
             btnLuuSP.Enabled = false;
             btnHuy.Enabled = false;
+            DisableOnControl();
         }
 
         private void btnChonHinhAnh_Click(object sender, EventArgs e)

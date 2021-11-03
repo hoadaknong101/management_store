@@ -104,15 +104,28 @@ namespace management_store
             string sql = "select * from NhanVien";
             return func.GetDataToDataTable(sql);
         }
-        public void ThemNhanVien()
+        public void ThemNhanVien(string hoTen,string lienHe,string diaChi,Image hinhAnh,string gioiTinh,string cccd)
         {
             string sql = "sp_ThemNhanVien";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, null);
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@HoTen", hoTen),
+                new SqlParameter("@LienHe", lienHe),
+                new SqlParameter("@DiaChi", diaChi),
+                new SqlParameter("@HinhAnh", ImageToByteArray(hinhAnh)),
+                new SqlParameter("@GioiTinh", gioiTinh),
+                new SqlParameter("@CCCD", cccd));
         }
-        public void CapNhatNhanVien()
+        public void CapNhatNhanVien(int maNhanVien,string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
         {
             string sql = "sp_CapNhatNhanVien";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,null);
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@HoTen", hoTen),
+                new SqlParameter("@LienHe", lienHe),
+                new SqlParameter("@DiaChi", diaChi),
+                new SqlParameter("@HinhAnh", ImageToByteArray(hinhAnh)),
+                new SqlParameter("@GioiTinh", gioiTinh),
+                new SqlParameter("@CCCD", cccd));
         }
         public void XoaNhanVien(int maNhanVien)
         {
@@ -139,6 +152,14 @@ namespace management_store
                 new SqlParameter("@NgayTao", ngayTao),
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@TongTien", tongTien));
+        }
+
+        public void DoiMatKhau(int maNhanVien,string MatKhau)
+        {
+            string sql = "sp_DoiMatKhau";
+            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@MatKhau", MatKhau));
         }
         #endregion
 

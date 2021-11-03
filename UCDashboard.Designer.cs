@@ -118,7 +118,7 @@ namespace management_store
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(494, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 39);
+            this.label1.Size = new System.Drawing.Size(223, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "TRANG CHỦ";
             // 
@@ -172,7 +172,7 @@ namespace management_store
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 23);
+            this.label3.Size = new System.Drawing.Size(173, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "Sản phẩm đã bán";
             // 
@@ -183,7 +183,7 @@ namespace management_store
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(13, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 39);
+            this.label2.Size = new System.Drawing.Size(98, 49);
             this.label2.TabIndex = 0;
             this.label2.Text = "1023";
             // 
@@ -237,7 +237,7 @@ namespace management_store
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(16, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 23);
+            this.label4.Size = new System.Drawing.Size(200, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sản phẩm trong kho";
             // 
@@ -248,7 +248,7 @@ namespace management_store
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(13, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 39);
+            this.label5.Size = new System.Drawing.Size(98, 49);
             this.label5.TabIndex = 0;
             this.label5.Text = "1023";
             // 
@@ -302,7 +302,7 @@ namespace management_store
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(16, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 23);
+            this.label6.Size = new System.Drawing.Size(91, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Hóa đơn";
             // 
@@ -313,7 +313,7 @@ namespace management_store
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(13, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 39);
+            this.label7.Size = new System.Drawing.Size(98, 49);
             this.label7.TabIndex = 0;
             this.label7.Text = "1023";
             // 
@@ -367,7 +367,7 @@ namespace management_store
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(16, 48);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 23);
+            this.label8.Size = new System.Drawing.Size(105, 28);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nhân viên";
             // 
@@ -378,7 +378,7 @@ namespace management_store
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(13, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 39);
+            this.label9.Size = new System.Drawing.Size(98, 49);
             this.label9.TabIndex = 0;
             this.label9.Text = "1023";
             // 
@@ -516,7 +516,7 @@ namespace management_store
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(13, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(350, 39);
+            this.label10.Size = new System.Drawing.Size(439, 49);
             this.label10.TabIndex = 0;
             this.label10.Text = "CỬA HÀNG VĂN PHÒNG PHẨM";
             // 
@@ -527,7 +527,7 @@ namespace management_store
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(340, 155);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(108, 23);
+            this.label14.Size = new System.Drawing.Size(132, 28);
             this.label14.TabIndex = 0;
             this.label14.Text = "0388 891 635";
             // 
@@ -538,7 +538,7 @@ namespace management_store
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(49, 202);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(321, 23);
+            this.label15.Size = new System.Drawing.Size(395, 28);
             this.label15.TabIndex = 0;
             this.label15.Text = "Số 1 Võ Văn Ngân Quận Thủ Đức TH HCM";
             // 
@@ -549,7 +549,7 @@ namespace management_store
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(49, 155);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(232, 23);
+            this.label13.Size = new System.Drawing.Size(287, 28);
             this.label13.TabIndex = 0;
             this.label13.Text = "484 Lê Văn Việt, Q. 9, TP. HCM";
             // 
@@ -560,7 +560,7 @@ namespace management_store
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(16, 110);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 31);
+            this.label12.Size = new System.Drawing.Size(121, 39);
             this.label12.TabIndex = 0;
             this.label12.Text = "LIÊN HỆ";
             // 
@@ -571,7 +571,7 @@ namespace management_store
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(49, 73);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(321, 23);
+            this.label11.Size = new System.Drawing.Size(395, 28);
             this.label11.TabIndex = 0;
             this.label11.Text = "Số 1 Võ Văn Ngân Quận Thủ Đức TH HCM";
             // 
@@ -599,7 +599,7 @@ namespace management_store
             this.lblChucVu.ForeColor = System.Drawing.Color.White;
             this.lblChucVu.Location = new System.Drawing.Point(16, 199);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(192, 27);
+            this.lblChucVu.Size = new System.Drawing.Size(238, 35);
             this.lblChucVu.TabIndex = 3;
             this.lblChucVu.Text = "Chức vụ : Nhân Viên";
             // 
@@ -612,7 +612,7 @@ namespace management_store
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 40);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Chỉnh sửa";
+            this.button1.Text = "Đổi mật khẩu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -633,7 +633,7 @@ namespace management_store
             this.lblInfor.ForeColor = System.Drawing.Color.White;
             this.lblInfor.Location = new System.Drawing.Point(13, 20);
             this.lblInfor.Name = "lblInfor";
-            this.lblInfor.Size = new System.Drawing.Size(326, 39);
+            this.lblInfor.Size = new System.Drawing.Size(409, 49);
             this.lblInfor.TabIndex = 0;
             this.lblInfor.Text = "THÔNG TIN NGUỜI SỬ DỤNG";
             // 
@@ -644,7 +644,7 @@ namespace management_store
             this.lblGioiTinh.ForeColor = System.Drawing.Color.White;
             this.lblGioiTinh.Location = new System.Drawing.Point(16, 157);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(129, 27);
+            this.lblGioiTinh.Size = new System.Drawing.Size(159, 35);
             this.lblGioiTinh.TabIndex = 0;
             this.lblGioiTinh.Text = "Giới tính : nữ";
             // 
@@ -655,7 +655,7 @@ namespace management_store
             this.lblLienHe.ForeColor = System.Drawing.Color.White;
             this.lblLienHe.Location = new System.Drawing.Point(16, 241);
             this.lblLienHe.Name = "lblLienHe";
-            this.lblLienHe.Size = new System.Drawing.Size(213, 27);
+            this.lblLienHe.Size = new System.Drawing.Size(266, 35);
             this.lblLienHe.TabIndex = 0;
             this.lblLienHe.Text = "Liên hệ : 0384 485 486";
             // 
@@ -666,7 +666,7 @@ namespace management_store
             this.lblHoTenNhanVien.ForeColor = System.Drawing.Color.White;
             this.lblHoTenNhanVien.Location = new System.Drawing.Point(16, 115);
             this.lblHoTenNhanVien.Name = "lblHoTenNhanVien";
-            this.lblHoTenNhanVien.Size = new System.Drawing.Size(193, 27);
+            this.lblHoTenNhanVien.Size = new System.Drawing.Size(239, 35);
             this.lblHoTenNhanVien.TabIndex = 0;
             this.lblHoTenNhanVien.Text = "Họ và tên : Kim Jisoo";
             // 
@@ -677,7 +677,7 @@ namespace management_store
             this.lblMaNhanVien.ForeColor = System.Drawing.Color.White;
             this.lblMaNhanVien.Location = new System.Drawing.Point(16, 73);
             this.lblMaNhanVien.Name = "lblMaNhanVien";
-            this.lblMaNhanVien.Size = new System.Drawing.Size(110, 27);
+            this.lblMaNhanVien.Size = new System.Drawing.Size(138, 35);
             this.lblMaNhanVien.TabIndex = 0;
             this.lblMaNhanVien.Text = "Mã : 12345";
             // 
