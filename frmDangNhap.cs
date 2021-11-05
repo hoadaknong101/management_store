@@ -79,23 +79,22 @@ namespace management_store
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string vaiTro = "";
-            if(rdbAdmin.Checked == true)
+            if(rdbAdmin.Checked)
             {
                 vaiTro = "Admin";
             }
-            if(rdbNhanVien.Checked == true)
+            if(rdbNhanVien.Checked)
             {
                 vaiTro = "Nhân Viên";
             }
             if (KiemTraThongTinDauVao())
             {
-                if (bll.KiemTraThongTinDangNhap(int.Parse(txtTenTaiKhoan.Text.Trim()), txtMatKhau.Text, vaiTro) == true)
+                if (bll.KiemTraThongTinDangNhap(int.Parse(txtTenTaiKhoan.Text.Trim()), txtMatKhau.Text, vaiTro))
                 {
                     if (vaiTro == "Admin")
                     {
-                        frmAdmin form = new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim()));
                         this.Hide();
-                        form.ShowDialog();
+                        new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim())).ShowDialog();
                         txtTenTaiKhoan.Clear();
                         txtMatKhau.Clear();
                         this.Show();

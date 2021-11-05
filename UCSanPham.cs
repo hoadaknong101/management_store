@@ -12,8 +12,7 @@ namespace management_store
         private DataTable dtb;
         static UCSanPham _obj;
         BLL func = new BLL();
-        #endregion
-
+        
         public static UCSanPham Instance
         {
             get
@@ -26,6 +25,7 @@ namespace management_store
                 return _obj;
             }
         }
+        #endregion
 
         public UCSanPham()
         {
@@ -38,7 +38,7 @@ namespace management_store
         #region Chuc_nang
         private void SettingSanPham()
         {
-            dtb = func.ThongTinSanPham("SELECT * FROM SanPham");
+            dtb = func.ThongTinSanPham();
             dgvSanPham.DataSource = dtb;
 
             dgvSanPham.Columns[4].Visible = false;
@@ -79,6 +79,24 @@ namespace management_store
             }
             return true;
         }
+        private void DisableOnControl()
+        {
+            txtTenSanPham.Enabled = false;
+            txtDonGia.Enabled = false;
+            txtSoLuong.Enabled = false;
+            txtLoaiSP.Enabled = false;
+            txtMaNSX.Enabled = false;
+            btnChonHinhAnh.Enabled = false;
+        }
+        private void EnabledOnControl()
+        {
+            txtTenSanPham.Enabled = true;
+            txtDonGia.Enabled = true;
+            txtSoLuong.Enabled = true;
+            txtLoaiSP.Enabled = true;
+            txtMaNSX.Enabled = true;
+            btnChonHinhAnh.Enabled = true;
+        }
         #endregion
 
         #region Convert_Image
@@ -99,24 +117,6 @@ namespace management_store
             return img;
         }
         #endregion
-        private void DisableOnControl()
-        {
-            txtTenSanPham.Enabled = false;
-            txtDonGia.Enabled = false;
-            txtSoLuong.Enabled = false;
-            txtLoaiSP.Enabled = false;
-            txtMaNSX.Enabled = false;
-            btnChonHinhAnh.Enabled = false;
-        }
-        private void EnabledOnControl()
-        {
-            txtTenSanPham.Enabled = true;
-            txtDonGia.Enabled = true;
-            txtSoLuong.Enabled = true;
-            txtLoaiSP.Enabled = true;
-            txtMaNSX.Enabled = true;
-            btnChonHinhAnh.Enabled = true;
-        }
 
         #region Control
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -193,12 +193,8 @@ namespace management_store
                     //Thêm sản phẩm
                     try
                     {
-                        func.ThemSanPham(txtTenSanPham.Text,
-                            txtLoaiSP.Text,
-                            float.Parse(txtDonGia.Text),
-                            picImage.Image,
-                            int.Parse(txtMaNSX.Text),
-                            int.Parse(txtSoLuong.Text));
+                        func.ThemSanPham(txtTenSanPham.Text, txtLoaiSP.Text, float.Parse(txtDonGia.Text), 
+                            picImage.Image, int.Parse(txtMaNSX.Text), int.Parse(txtSoLuong.Text));
                     }
                     catch
                     {
@@ -212,7 +208,6 @@ namespace management_store
                         DisableOnControl();
                     }
                 }
-
                 ClearContent();
                 btnThemSanPham.Enabled = true;
                 btnXoaSP.Enabled = false;

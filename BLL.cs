@@ -8,7 +8,7 @@ namespace management_store
 {
     public class BLL
     {
-        Function func = new Function();
+        DataAccessLayer dal = new DataAccessLayer();
 
         public BLL()
         {
@@ -18,12 +18,13 @@ namespace management_store
         public bool KiemTraThongTinDangNhap(int taiKhoan, string matKhau, string chucVu)
         {
             bool flag = false;
-
             try
             {
-                string sql = "SELECT * FROM NhanVien WHERE MaNhanVien = " + taiKhoan 
-                    + " AND MatKhau = N'" + matKhau + "' AND ChucVu = N'" + chucVu + "'";
-                DataTable dt = func.GetDataToDataTable(sql);
+                DataTable dt = dal.ExecuteQueryDataTable("sp_KiemTraDangNhap", 
+                    CommandType.StoredProcedure, 
+                    new SqlParameter("@MaNhanVien", taiKhoan),
+                    new SqlParameter("@MatKhau", matKhau),
+                    new SqlParameter("@ChucVu", chucVu));
                 if (dt.Rows.Count > 0)
                 {
                     flag = true;
@@ -37,14 +38,14 @@ namespace management_store
         }
 
         #region SanPham
-        public DataTable ThongTinSanPham(string sql)
+        public DataTable ThongTinSanPham()
         {
-            return func.GetDataToDataTable(sql);
+            return dal.GetDataToDataTable("SELECT * FROM SanPham");
         }
+
         public void ThemSanPham(string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
-            string sql = "sp_ThemSanPham";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, 
+            dal.ExcuteNonQuery("sp_ThemSanPham", System.Data.CommandType.StoredProcedure, 
                 new SqlParameter("@TenSanPham", tenSanPham),
                 new SqlParameter("@LoaiSanPham", loaiSanPham),
                 new SqlParameter("@DonGia",donGia),
@@ -54,8 +55,7 @@ namespace management_store
         }
         public void CapNhatSanPham(int maSanPham,string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
-            string sql = "sp_CapNhatSanPham";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_CapNhatSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham),
                 new SqlParameter("@TenSanPham", tenSanPham),
                 new SqlParameter("@LoaiSanPham", loaiSanPham),
@@ -66,8 +66,7 @@ namespace management_store
         }
         public void XoaSanPham(int maSanPham)
         {
-            string sql = "sp_XoaSanPham";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_XoaSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham));
         }
         #endregion
@@ -76,7 +75,7 @@ namespace management_store
         public void ThemChiTietHoaDon(long maHoaDon, int maSanPham, int soLuong, float thanhTien)
         {
             string sql = "sp_ThemChiTietHoaDon";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@MaSanPham", maSanPham),
                 new SqlParameter("@SoLuong", soLuong),
@@ -85,29 +84,31 @@ namespace management_store
         public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
         {
             string sql = "sp_ThemHoaDon";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, 
+            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, 
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@NgayTao", ngayTao),
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@TongTien",tongTien));
+        }
+        public DataTable ThongTinToanBoHoaDon()
+        {
+            return dal.ExecuteQueryDataTable("select * from HoaDon", CommandType.Text, null);
         }
         #endregion
 
         #region NhanVien
         public DataTable ThongTinNhanVien(int maNhanVien)
         {
-            string sql = "dbo.sp_ThongTinNhanVien";
-            return func.ExecuteQueryDataTable(sql, CommandType.StoredProcedure, new SqlParameter("@MaNhanVien", maNhanVien));
+            return dal.ExecuteQueryDataTable("dbo.sp_ThongTinNhanVien", CommandType.StoredProcedure, 
+                new SqlParameter("@MaNhanVien", maNhanVien));
         }
         public DataTable ThongTinToanBoNhanVien()
         {
-            string sql = "select * from NhanVien";
-            return func.GetDataToDataTable(sql);
+            return dal.GetDataToDataTable("select * from NhanVien");
         }
         public void ThemNhanVien(string hoTen,string lienHe,string diaChi,Image hinhAnh,string gioiTinh,string cccd)
         {
-            string sql = "sp_ThemNhanVien";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_ThemNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),
                 new SqlParameter("@DiaChi", diaChi),
@@ -117,8 +118,7 @@ namespace management_store
         }
         public void CapNhatNhanVien(int maNhanVien,string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
         {
-            string sql = "sp_CapNhatNhanVien";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_CapNhatNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),
@@ -129,37 +129,37 @@ namespace management_store
         }
         public void XoaNhanVien(int maNhanVien)
         {
-            string sql = "sp_XoaNhanVien";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_XoaNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
+        }
+        public void DoiMatKhau(int maNhanVien, string MatKhau)
+        {
+            dal.ExcuteNonQuery("sp_DoiMatKhau", System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@MatKhau", MatKhau));
         }
         #endregion
 
-        #region PhieuThu
-        public void ThemChiTietPhieuThu(int maPhieuThu, int maSanPham, int soLuong)
+        #region PhieuNhapHang
+        public void ThemChiTietPhieuNhapHang(int maPhieuNhapHang, int maSanPham, float donGia, int soLuong)
         {
-            string sql = "sp_ThemChiTietPhieuThu";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@maPhieuThu", maPhieuThu),
+            dal.ExcuteNonQuery("sp_ThemChiTietPhieuNhapHang", System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@maPhieuNhapHang", maPhieuNhapHang),
                 new SqlParameter("@MaSanPham", maSanPham),
+                new SqlParameter("@DonGia", donGia),
                 new SqlParameter("@SoLuong", soLuong));
         }
-        public void ThemPhieuThu(int maPhieuThu, DateTime ngayTao, int maNhanVien, float tongTien)
+        public void ThemPhieuNhapHang(int maPhieuNhapHang, DateTime ngayTao, int maNhanVien, float tongTien)
         {
-            string sql = "sp_ThemPhieuThu";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@maPhieuThu", maPhieuThu),
-                new SqlParameter("@NgayTao", ngayTao),
+            dal.ExcuteNonQuery("sp_ThemPhieuNhapHang", System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@maPhieuNhapHang", maPhieuNhapHang),
                 new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@NgayTao", ngayTao),
                 new SqlParameter("@TongTien", tongTien));
         }
-
-        public void DoiMatKhau(int maNhanVien,string MatKhau)
+        public DataTable ThongTinToanBoPhieuNhap()
         {
-            string sql = "sp_DoiMatKhau";
-            func.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@MaNhanVien", maNhanVien),
-                new SqlParameter("@MatKhau", MatKhau));
+            return dal.ExecuteQueryDataTable("select * from PhieuNhapHang", CommandType.Text, null);
         }
         #endregion
 

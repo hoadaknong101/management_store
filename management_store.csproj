@@ -174,7 +174,7 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Function.cs" />
+    <Compile Include="DataAccessLayer.cs" />
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

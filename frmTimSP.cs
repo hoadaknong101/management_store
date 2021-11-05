@@ -20,7 +20,7 @@ namespace management_store
 
         UCHoaDon.delThemSanPhamVaoHoaDon them;
 
-        Function func = new Function();
+        DataAccessLayer func = new DataAccessLayer();
         DataTable dtSP;
 
         private int maSP;

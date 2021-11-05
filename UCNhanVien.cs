@@ -8,7 +8,7 @@ namespace management_store
 {
     public partial class UCNhanVien : UserControl
     {
-        DataTable dtb = new DataTable();
+        public DataTable dtb = new DataTable();
         BLL bll = new BLL();
         private static UCNhanVien _obj;
         public static UCNhanVien Instance
@@ -31,17 +31,6 @@ namespace management_store
             DisableOnControl();
         }
 
-        private void ClearContent()
-        {
-            txtMaNV.Clear();
-            txtHoTen.Clear();
-            txtLienHe.Clear();
-            txtDiaChi.Clear();
-            txtGioiTinh.Clear();
-            txtCCCD.Clear();
-            picImage.Image = null;
-        }
-
         #region ChucNang
         private void SettingData()
         {
@@ -56,6 +45,16 @@ namespace management_store
             dgvNhanVien.Columns[3].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[5].HeaderText = "Giới tính";
             dgvNhanVien.Columns[6].HeaderText = "CCCD";
+        }
+        private void ClearContent()
+        {
+            txtMaNV.Clear();
+            txtHoTen.Clear();
+            txtLienHe.Clear();
+            txtDiaChi.Clear();
+            txtGioiTinh.Clear();
+            txtCCCD.Clear();
+            picImage.Image = null;
         }
         #endregion
 
@@ -89,28 +88,25 @@ namespace management_store
                 picImage.Image = Image.FromFile(pathImage);
             }
         }
-
-
         #endregion
+
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
-
                 txtMaNV.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
                 txtHoTen.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString();
                 txtLienHe.Text = dgvNhanVien.CurrentRow.Cells[2].Value.ToString();
                 txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
                 txtGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
                 txtCCCD.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-                picImage.Image = null;
-                picImage.Image = ByteArrayToImage((byte[]) dgvNhanVien.CurrentRow.Cells[4].Value);
 
+                picImage.Image = (ByteArrayToImage((byte[]) dgvNhanVien.CurrentRow.Cells[4].Value) != null) ?
+                    ByteArrayToImage((byte[])dgvNhanVien.CurrentRow.Cells[4].Value) : null;
             }
             catch
             {
-
+                MessageBox.Show("Không thể tải dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -120,7 +116,6 @@ namespace management_store
                 btnXoaNhanVien.Enabled = true;
                 btnHuy.Enabled = true;
             }
-           
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
@@ -179,7 +174,6 @@ namespace management_store
                         DisableOnControl();
                     }
                 }
-
                 ClearContent();
                 btnThemNhanVien.Enabled = true;
                 btnXoaNhanVien.Enabled = false;
@@ -197,6 +191,7 @@ namespace management_store
             txtLienHe.Enabled = false;
             btnChonHinhAnh.Enabled = false;
         }
+
         private void EnabledOnControl()
         {
             txtHoTen.Enabled = true;
@@ -219,13 +214,12 @@ namespace management_store
 
         private bool KiemTraDauVao()
         {
-            if (txtHoTen.Text.Trim() == "" || txtCCCD.Text.Trim() == "" || txtDiaChi.Text.Trim() == "" ||
-                txtGioiTinh.Text.Trim() == "" ||
+            if (txtHoTen.Text.Trim() == "" || txtCCCD.Text.Trim() == "" || 
+                txtDiaChi.Text.Trim() == "" || txtGioiTinh.Text.Trim() == "" ||
                 txtLienHe.Text.Trim() == "" || picImage.Image == null)
             {
                 return false;
             }
-
             return true;
         }
         private void btnXoaNhanVien_Click(object sender, EventArgs e)
