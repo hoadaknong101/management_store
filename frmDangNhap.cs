@@ -12,7 +12,7 @@ namespace management_store
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        BLL bll = new BLL();
+        BusinessLogicLayer bll = new BusinessLogicLayer();
 
         public frmDangNhap()
         {
@@ -78,12 +78,13 @@ namespace management_store
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+
             string vaiTro = "";
-            if(rdbAdmin.Checked)
+            if (rdbAdmin.Checked)
             {
                 vaiTro = "Admin";
             }
-            if(rdbNhanVien.Checked)
+            if (rdbNhanVien.Checked)
             {
                 vaiTro = "Nhân Viên";
             }

@@ -35,25 +35,25 @@ namespace management_store
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSoLuongSanPhamDaBan = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSoLuongSanPhamTrongKho = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblSoLuongHoaDon = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblSoLuongNhanVien = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.picLocation1 = new System.Windows.Forms.PictureBox();
@@ -130,7 +130,7 @@ namespace management_store
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblSoLuongSanPhamDaBan);
             this.panel1.Location = new System.Drawing.Point(41, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 152);
@@ -177,16 +177,16 @@ namespace management_store
             this.label3.TabIndex = 0;
             this.label3.Text = "Sản phẩm đã bán";
             // 
-            // label2
+            // lblSoLuongSanPhamDaBan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 39);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "1023";
+            this.lblSoLuongSanPhamDaBan.AutoSize = true;
+            this.lblSoLuongSanPhamDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuongSanPhamDaBan.ForeColor = System.Drawing.Color.White;
+            this.lblSoLuongSanPhamDaBan.Location = new System.Drawing.Point(13, 9);
+            this.lblSoLuongSanPhamDaBan.Name = "lblSoLuongSanPhamDaBan";
+            this.lblSoLuongSanPhamDaBan.Size = new System.Drawing.Size(77, 39);
+            this.lblSoLuongSanPhamDaBan.TabIndex = 0;
+            this.lblSoLuongSanPhamDaBan.Text = "1023";
             // 
             // panel2
             // 
@@ -195,7 +195,7 @@ namespace management_store
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblSoLuongSanPhamTrongKho);
             this.panel2.Location = new System.Drawing.Point(309, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 152);
@@ -242,16 +242,16 @@ namespace management_store
             this.label4.TabIndex = 0;
             this.label4.Text = "Sản phẩm trong kho";
             // 
-            // label5
+            // lblSoLuongSanPhamTrongKho
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 39);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1023";
+            this.lblSoLuongSanPhamTrongKho.AutoSize = true;
+            this.lblSoLuongSanPhamTrongKho.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuongSanPhamTrongKho.ForeColor = System.Drawing.Color.White;
+            this.lblSoLuongSanPhamTrongKho.Location = new System.Drawing.Point(13, 9);
+            this.lblSoLuongSanPhamTrongKho.Name = "lblSoLuongSanPhamTrongKho";
+            this.lblSoLuongSanPhamTrongKho.Size = new System.Drawing.Size(77, 39);
+            this.lblSoLuongSanPhamTrongKho.TabIndex = 0;
+            this.lblSoLuongSanPhamTrongKho.Text = "1023";
             // 
             // panel3
             // 
@@ -260,7 +260,7 @@ namespace management_store
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.lblSoLuongHoaDon);
             this.panel3.Location = new System.Drawing.Point(577, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(226, 152);
@@ -307,16 +307,16 @@ namespace management_store
             this.label6.TabIndex = 0;
             this.label6.Text = "Hóa đơn";
             // 
-            // label7
+            // lblSoLuongHoaDon
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(13, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 39);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "1023";
+            this.lblSoLuongHoaDon.AutoSize = true;
+            this.lblSoLuongHoaDon.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuongHoaDon.ForeColor = System.Drawing.Color.White;
+            this.lblSoLuongHoaDon.Location = new System.Drawing.Point(13, 9);
+            this.lblSoLuongHoaDon.Name = "lblSoLuongHoaDon";
+            this.lblSoLuongHoaDon.Size = new System.Drawing.Size(77, 39);
+            this.lblSoLuongHoaDon.TabIndex = 0;
+            this.lblSoLuongHoaDon.Text = "1023";
             // 
             // panel4
             // 
@@ -325,7 +325,7 @@ namespace management_store
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.pictureBox12);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.lblSoLuongNhanVien);
             this.panel4.Location = new System.Drawing.Point(845, 73);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(226, 152);
@@ -372,16 +372,16 @@ namespace management_store
             this.label8.TabIndex = 0;
             this.label8.Text = "Nhân viên";
             // 
-            // label9
+            // lblSoLuongNhanVien
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(13, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 39);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "1023";
+            this.lblSoLuongNhanVien.AutoSize = true;
+            this.lblSoLuongNhanVien.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuongNhanVien.ForeColor = System.Drawing.Color.White;
+            this.lblSoLuongNhanVien.Location = new System.Drawing.Point(13, 9);
+            this.lblSoLuongNhanVien.Name = "lblSoLuongNhanVien";
+            this.lblSoLuongNhanVien.Size = new System.Drawing.Size(77, 39);
+            this.lblSoLuongNhanVien.TabIndex = 0;
+            this.lblSoLuongNhanVien.Text = "1023";
             // 
             // panel5
             // 
@@ -766,7 +766,7 @@ namespace management_store
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSoLuongSanPhamDaBan;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
@@ -774,19 +774,19 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSoLuongSanPhamTrongKho;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSoLuongHoaDon;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSoLuongNhanVien;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label10;

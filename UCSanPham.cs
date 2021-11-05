@@ -11,7 +11,7 @@ namespace management_store
         #region Properties
         private DataTable dtb;
         static UCSanPham _obj;
-        BLL func = new BLL();
+        BusinessLogicLayer func = new BusinessLogicLayer();
         
         public static UCSanPham Instance
         {

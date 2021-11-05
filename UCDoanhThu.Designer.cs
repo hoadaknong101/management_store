@@ -42,31 +42,31 @@ namespace management_store
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_spTrongKho = new System.Windows.Forms.Label();
             this.pnlTongHop = new System.Windows.Forms.Panel();
+            this.pnlInfor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picVisible = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_spDaBan = new System.Windows.Forms.Label();
+            this.picVisible = new System.Windows.Forms.PictureBox();
             this.pnlHoaDon = new System.Windows.Forms.Panel();
-            this.pnlPhieuNhap = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.lblThuNhap = new System.Windows.Forms.Label();
-            this.lblChiTieu = new System.Windows.Forms.Label();
+            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlPhieuNhap = new System.Windows.Forms.Panel();
             this.dgvPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.pnlInfor = new System.Windows.Forms.Panel();
+            this.lblChiTieu = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlTongHop.SuspendLayout();
+            this.pnlInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVisible)).BeginInit();
             this.pnlHoaDon.SuspendLayout();
-            this.pnlPhieuNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            this.pnlPhieuNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
-            this.pnlInfor.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -114,11 +114,11 @@ namespace management_store
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(9, 362);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 23);
+            this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nhân viên";
             // 
@@ -146,11 +146,11 @@ namespace management_store
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(11, 241);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 23);
+            this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Hóa đơn";
             // 
@@ -178,11 +178,11 @@ namespace management_store
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(11, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 23);
+            this.label4.Size = new System.Drawing.Size(171, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sản phẩm trong kho";
             // 
@@ -207,129 +207,6 @@ namespace management_store
             this.pnlTongHop.Size = new System.Drawing.Size(226, 526);
             this.pnlTongHop.TabIndex = 7;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_64;
-            this.pictureBox2.Location = new System.Drawing.Point(151, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // picVisible
-            // 
-            this.picVisible.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.picVisible.Location = new System.Drawing.Point(180, 16);
-            this.picVisible.Name = "picVisible";
-            this.picVisible.Size = new System.Drawing.Size(28, 21);
-            this.picVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picVisible.TabIndex = 1;
-            this.picVisible.TabStop = false;
-            this.picVisible.Click += new System.EventHandler(this.picVisible_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Sản phẩm đã bán";
-            // 
-            // lbl_spDaBan
-            // 
-            this.lbl_spDaBan.AutoSize = true;
-            this.lbl_spDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_spDaBan.ForeColor = System.Drawing.Color.White;
-            this.lbl_spDaBan.Location = new System.Drawing.Point(6, 52);
-            this.lbl_spDaBan.Name = "lbl_spDaBan";
-            this.lbl_spDaBan.Size = new System.Drawing.Size(77, 39);
-            this.lbl_spDaBan.TabIndex = 0;
-            this.lbl_spDaBan.Text = "1023";
-            // 
-            // pnlHoaDon
-            // 
-            this.pnlHoaDon.Controls.Add(this.lblThuNhap);
-            this.pnlHoaDon.Controls.Add(this.dgvHoaDon);
-            this.pnlHoaDon.Controls.Add(this.label11);
-            this.pnlHoaDon.Location = new System.Drawing.Point(312, 57);
-            this.pnlHoaDon.Name = "pnlHoaDon";
-            this.pnlHoaDon.Size = new System.Drawing.Size(366, 584);
-            this.pnlHoaDon.TabIndex = 8;
-            // 
-            // pnlPhieuNhap
-            // 
-            this.pnlPhieuNhap.Controls.Add(this.dgvPhieuNhap);
-            this.pnlPhieuNhap.Controls.Add(this.lblChiTieu);
-            this.pnlPhieuNhap.Controls.Add(this.label12);
-            this.pnlPhieuNhap.Location = new System.Drawing.Point(706, 57);
-            this.pnlPhieuNhap.Name = "pnlPhieuNhap";
-            this.pnlPhieuNhap.Size = new System.Drawing.Size(366, 584);
-            this.pnlPhieuNhap.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(3, 13);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(284, 31);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Danh sách hóa đơn bán lẻ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(3, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(305, 31);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Danh sách phiếu nhập hàng";
-            // 
-            // dgvHoaDon
-            // 
-            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(3, 58);
-            this.dgvHoaDon.Name = "dgvHoaDon";
-            this.dgvHoaDon.Size = new System.Drawing.Size(360, 473);
-            this.dgvHoaDon.TabIndex = 11;
-            // 
-            // lblThuNhap
-            // 
-            this.lblThuNhap.AutoSize = true;
-            this.lblThuNhap.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThuNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblThuNhap.Location = new System.Drawing.Point(3, 543);
-            this.lblThuNhap.Name = "lblThuNhap";
-            this.lblThuNhap.Size = new System.Drawing.Size(177, 31);
-            this.lblThuNhap.TabIndex = 12;
-            this.lblThuNhap.Text = "Tổng thu nhập: ";
-            // 
-            // lblChiTieu
-            // 
-            this.lblChiTieu.AutoSize = true;
-            this.lblChiTieu.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChiTieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblChiTieu.Location = new System.Drawing.Point(3, 543);
-            this.lblChiTieu.Name = "lblChiTieu";
-            this.lblChiTieu.Size = new System.Drawing.Size(158, 31);
-            this.lblChiTieu.TabIndex = 13;
-            this.lblChiTieu.Text = "Tông chi tiêu: ";
-            // 
-            // dgvPhieuNhap
-            // 
-            this.dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuNhap.Location = new System.Drawing.Point(3, 58);
-            this.dgvPhieuNhap.Name = "dgvPhieuNhap";
-            this.dgvPhieuNhap.Size = new System.Drawing.Size(360, 473);
-            this.dgvPhieuNhap.TabIndex = 13;
-            // 
             // pnlInfor
             // 
             this.pnlInfor.Controls.Add(this.pictureBox11);
@@ -349,6 +226,129 @@ namespace management_store
             this.pnlInfor.Size = new System.Drawing.Size(225, 471);
             this.pnlInfor.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_64;
+            this.pictureBox2.Location = new System.Drawing.Point(151, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Sản phẩm đã bán";
+            // 
+            // lbl_spDaBan
+            // 
+            this.lbl_spDaBan.AutoSize = true;
+            this.lbl_spDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_spDaBan.ForeColor = System.Drawing.Color.White;
+            this.lbl_spDaBan.Location = new System.Drawing.Point(6, 52);
+            this.lbl_spDaBan.Name = "lbl_spDaBan";
+            this.lbl_spDaBan.Size = new System.Drawing.Size(77, 39);
+            this.lbl_spDaBan.TabIndex = 0;
+            this.lbl_spDaBan.Text = "1023";
+            // 
+            // picVisible
+            // 
+            this.picVisible.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
+            this.picVisible.Location = new System.Drawing.Point(180, 16);
+            this.picVisible.Name = "picVisible";
+            this.picVisible.Size = new System.Drawing.Size(28, 21);
+            this.picVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVisible.TabIndex = 1;
+            this.picVisible.TabStop = false;
+            this.picVisible.Click += new System.EventHandler(this.picVisible_Click);
+            // 
+            // pnlHoaDon
+            // 
+            this.pnlHoaDon.Controls.Add(this.lblThuNhap);
+            this.pnlHoaDon.Controls.Add(this.dgvHoaDon);
+            this.pnlHoaDon.Controls.Add(this.label11);
+            this.pnlHoaDon.Location = new System.Drawing.Point(312, 57);
+            this.pnlHoaDon.Name = "pnlHoaDon";
+            this.pnlHoaDon.Size = new System.Drawing.Size(366, 584);
+            this.pnlHoaDon.TabIndex = 8;
+            // 
+            // lblThuNhap
+            // 
+            this.lblThuNhap.AutoSize = true;
+            this.lblThuNhap.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThuNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblThuNhap.Location = new System.Drawing.Point(3, 543);
+            this.lblThuNhap.Name = "lblThuNhap";
+            this.lblThuNhap.Size = new System.Drawing.Size(177, 31);
+            this.lblThuNhap.TabIndex = 12;
+            this.lblThuNhap.Text = "Tổng thu nhập: ";
+            // 
+            // dgvHoaDon
+            // 
+            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Location = new System.Drawing.Point(3, 58);
+            this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.Size = new System.Drawing.Size(360, 473);
+            this.dgvHoaDon.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(3, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(284, 31);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Danh sách hóa đơn bán lẻ";
+            // 
+            // pnlPhieuNhap
+            // 
+            this.pnlPhieuNhap.Controls.Add(this.dgvPhieuNhap);
+            this.pnlPhieuNhap.Controls.Add(this.lblChiTieu);
+            this.pnlPhieuNhap.Controls.Add(this.label12);
+            this.pnlPhieuNhap.Location = new System.Drawing.Point(706, 57);
+            this.pnlPhieuNhap.Name = "pnlPhieuNhap";
+            this.pnlPhieuNhap.Size = new System.Drawing.Size(366, 584);
+            this.pnlPhieuNhap.TabIndex = 9;
+            // 
+            // dgvPhieuNhap
+            // 
+            this.dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuNhap.Location = new System.Drawing.Point(3, 58);
+            this.dgvPhieuNhap.Name = "dgvPhieuNhap";
+            this.dgvPhieuNhap.Size = new System.Drawing.Size(360, 473);
+            this.dgvPhieuNhap.TabIndex = 13;
+            // 
+            // lblChiTieu
+            // 
+            this.lblChiTieu.AutoSize = true;
+            this.lblChiTieu.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiTieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblChiTieu.Location = new System.Drawing.Point(3, 543);
+            this.lblChiTieu.Name = "lblChiTieu";
+            this.lblChiTieu.Size = new System.Drawing.Size(158, 31);
+            this.lblChiTieu.TabIndex = 13;
+            this.lblChiTieu.Text = "Tổng chi tiêu: ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(3, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(305, 31);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Danh sách phiếu nhập hàng";
+            // 
             // UCDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -366,16 +366,16 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlTongHop.ResumeLayout(false);
+            this.pnlInfor.ResumeLayout(false);
+            this.pnlInfor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVisible)).EndInit();
             this.pnlHoaDon.ResumeLayout(false);
             this.pnlHoaDon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.pnlPhieuNhap.ResumeLayout(false);
             this.pnlPhieuNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
-            this.pnlInfor.ResumeLayout(false);
-            this.pnlInfor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace management_store
@@ -7,7 +8,7 @@ namespace management_store
     public partial class UCDoanhThu : UserControl
     {
         static UCDoanhThu _obj;
-        private BLL func = new BLL();
+        private BusinessLogicLayer func = new BusinessLogicLayer();
 
         public static UCDoanhThu Instance
         {
@@ -30,11 +31,11 @@ namespace management_store
         public void TakeInfor()
         {
             lblNhanVien.Text = UCNhanVien.Instance.dtb.Rows.Count.ToString();
-            lblHoaDon.Text = dgvHoaDon.Rows.Count.ToString();
-            //lblChiTieu.Text = "";
-            //lblThuNhap.Text = "";
-            //lbl_spDaBan.Text = "";
-            //lbl_spTrongKho.Text = "";
+            lblHoaDon.Text = (dgvHoaDon.Rows.Count - 1) + "" ;
+            lblChiTieu.Text = "Tổng chi tiêu : " + func.TongChiTieu().ToString("N", CultureInfo.InvariantCulture);
+            lblThuNhap.Text = "Tổng thu nhập : " + func.TongThuNhap().ToString("N", CultureInfo.InvariantCulture);
+            lbl_spDaBan.Text = "";
+            lbl_spTrongKho.Text = "";
         }
 
         public void LoadData()

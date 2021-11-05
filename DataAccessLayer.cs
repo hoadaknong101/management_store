@@ -6,13 +6,13 @@ namespace management_store
     class DataAccessLayer
     {
         // Hoa
-        //private string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
+        private string connectionString = "Data Source=QHPSER\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         // Hao
         //private string connectionString = "Data Source=;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
 
         // Phi
-        private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        //private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         //Thang
         //private string connectionString = "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
@@ -74,6 +74,21 @@ namespace management_store
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
             return dt;
+        }
+        public string ExecuteScalarToGetNumber(string sql, CommandType type)
+        {
+            string result = "";
+            cmd.CommandType = type;
+            cmd.CommandText = sql;
+            try
+            {
+                result = cmd.ExecuteScalar().ToString();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return result;
         }
     }
 }

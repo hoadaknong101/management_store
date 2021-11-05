@@ -16,9 +16,9 @@ namespace management_store
         public delegate void delThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh);
         private int ID_NhanVien;
         private DataTable ds = new DataTable();
-        private BLL bll = new BLL();
+        private BusinessLogicLayer bll = new BusinessLogicLayer();
         #region Properties
-        BLL func; //query
+        BusinessLogicLayer func; //query
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
 
@@ -49,7 +49,7 @@ namespace management_store
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");            
             ThemSanPham();
             CapNhatTongTienHoaDon();
-            func = new BLL();
+            func = new BusinessLogicLayer();
         }
         public int IDNhanVien
         {

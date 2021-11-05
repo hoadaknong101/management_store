@@ -10,7 +10,7 @@ namespace management_store
     {
         #region Properties
         private Image hinhAnh = null;
-        private BLL bll = new BLL();
+        private BusinessLogicLayer bll = new BusinessLogicLayer();
         private DataTable dt;
         static UCDashboard _obj;
         private int ID_NhanVien;
@@ -90,6 +90,7 @@ namespace management_store
         private void UCDashboard_Load(object sender, EventArgs e)
         {
             dt = bll.ThongTinNhanVien(IDNhanVien);
+            lblSoLuongHoaDon.Text = bll.SoLuongHoaDon() + "";
             try
             {
                 lblMaNhanVien.Text = "Mã Nhân Viên : " + dt.Rows[0][0].ToString();

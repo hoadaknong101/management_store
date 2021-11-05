@@ -3,14 +3,15 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace management_store
 {
-    public class BLL
+    public class BusinessLogicLayer
     {
         DataAccessLayer dal = new DataAccessLayer();
 
-        public BLL()
+        public BusinessLogicLayer()
         {
 
         }
@@ -36,6 +37,57 @@ namespace management_store
             }
             return flag;
         }
+
+        #region Chung
+        public int SoLuongHoaDon()
+        {
+            string sql = "SELECT * FROM HoaDon";
+            return dal.GetDataToDataTable(sql).Rows.Count;
+        }
+
+        public int SoLuongNhanVien()
+        {
+            string sql = "SELECT dbo.func_SoLuongNhanVien()";
+            return int.Parse(dal.ExecuteScalarToGetNumber(sql,CommandType.Text));
+        }
+        public int SoLuongSanPhamDaBan()
+        {
+            string sql = "SELECT dbo.func_SoLuongSanPhamDaBan()";
+            return int.Parse(dal.ExecuteScalarToGetNumber(sql, CommandType.Text));
+        }
+        public int SoLuongSanPhamTrongKho()
+        {
+            string sql = "SELECT dbo.func_SoLuongSanPhamTrongKho()";
+            return int.Parse(dal.ExecuteScalarToGetNumber(sql, CommandType.Text));
+        }
+        public float TongChiTieu()
+        {
+            string sql = "SELECT dbo.func_TongChiTieu()";
+            float value = 0;
+            try
+            {
+                value = float.Parse(dal.ExecuteScalarToGetNumber(sql, CommandType.Text));
+            }
+            catch
+            {
+
+            }
+            return value;
+        }
+        public float TongThuNhap()
+        {
+            string sql = "SELECT dbo.func_TongThuNhap()";
+            float value = 0;
+            try
+            {
+                value = float.Parse(dal.ExecuteScalarToGetNumber(sql, CommandType.Text));
+            }
+            catch
+            {
+            }
+            return value;
+        }
+        #endregion
 
         #region SanPham
         public DataTable ThongTinSanPham()

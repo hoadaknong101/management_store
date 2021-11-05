@@ -7,7 +7,7 @@ namespace management_store
     public partial class frmDoiMatKhau : Form
     {
         #region Properties
-        private BLL bll = new BLL();
+        private BusinessLogicLayer bll = new BusinessLogicLayer();
         private DataTable dt = new DataTable();
         private int ID_NhanVien;
         #endregion

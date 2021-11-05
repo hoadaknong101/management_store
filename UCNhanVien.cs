@@ -9,7 +9,7 @@ namespace management_store
     public partial class UCNhanVien : UserControl
     {
         public DataTable dtb = new DataTable();
-        BLL bll = new BLL();
+        BusinessLogicLayer bll = new BusinessLogicLayer();
         private static UCNhanVien _obj;
         public static UCNhanVien Instance
         {

@@ -58,6 +58,7 @@ namespace management_store
         }
         private void btnTabDangXuat_Click(object sender, EventArgs e)
         {
+           
             if(MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
