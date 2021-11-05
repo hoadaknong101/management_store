@@ -150,92 +150,92 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer.cs" />
-    <Compile Include="frmDoiMatKhau.cs">
+    <Compile Include="Form\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoiMatKhau.Designer.cs">
+    <Compile Include="Form\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimSP.cs">
+    <Compile Include="Form\frmTimSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTimSP.Designer.cs">
+    <Compile Include="Form\frmTimSP.Designer.cs">
       <DependentUpon>frmTimSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdmin.cs">
+    <Compile Include="Form\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdmin.Designer.cs">
+    <Compile Include="Form\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDangNhap.cs">
+    <Compile Include="Form\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDangNhap.Designer.cs">
+    <Compile Include="Form\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCDashboard.cs">
+    <Compile Include="Usercontrol\UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDashboard.Designer.cs">
+    <Compile Include="Usercontrol\UCDashboard.Designer.cs">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCDoanhThu.cs">
+    <Compile Include="Usercontrol\UCDoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDoanhThu.Designer.cs">
+    <Compile Include="Usercontrol\UCDoanhThu.Designer.cs">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCHoaDon.cs">
+    <Compile Include="Usercontrol\UCHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCHoaDon.Designer.cs">
+    <Compile Include="Usercontrol\UCHoaDon.Designer.cs">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCNhanVien.cs">
+    <Compile Include="Usercontrol\UCNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCNhanVien.Designer.cs">
+    <Compile Include="Usercontrol\UCNhanVien.Designer.cs">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCSanPham.cs">
+    <Compile Include="Usercontrol\UCSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSanPham.Designer.cs">
+    <Compile Include="Usercontrol\UCSanPham.Designer.cs">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCSanPhamBar.cs">
+    <Compile Include="Usercontrol\UCSanPhamBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSanPhamBar.Designer.cs">
+    <Compile Include="Usercontrol\UCSanPhamBar.Designer.cs">
       <DependentUpon>UCSanPhamBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCSanPhamVuong.cs">
+    <Compile Include="Usercontrol\UCSanPhamVuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSanPhamVuong.Designer.cs">
+    <Compile Include="Usercontrol\UCSanPhamVuong.Designer.cs">
       <DependentUpon>UCSanPhamVuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTitleBar.cs">
+    <Compile Include="Usercontrol\UCTitleBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTitleBar.Designer.cs">
+    <Compile Include="Usercontrol\UCTitleBar.Designer.cs">
       <DependentUpon>UCTitleBar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmDoiMatKhau.resx">
+    <EmbeddedResource Include="Form\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTimSP.resx">
+    <EmbeddedResource Include="Form\frmTimSP.resx">
       <DependentUpon>frmTimSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdmin.resx">
+    <EmbeddedResource Include="Form\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDangNhap.resx">
+    <EmbeddedResource Include="Form\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -249,28 +249,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UCDashboard.resx">
+    <EmbeddedResource Include="Usercontrol\UCDashboard.resx">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCDoanhThu.resx">
+    <EmbeddedResource Include="Usercontrol\UCDoanhThu.resx">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCHoaDon.resx">
+    <EmbeddedResource Include="Usercontrol\UCHoaDon.resx">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCNhanVien.resx">
+    <EmbeddedResource Include="Usercontrol\UCNhanVien.resx">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSanPham.resx">
+    <EmbeddedResource Include="Usercontrol\UCSanPham.resx">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSanPhamBar.resx">
+    <EmbeddedResource Include="Usercontrol\UCSanPhamBar.resx">
       <DependentUpon>UCSanPhamBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSanPhamVuong.resx">
+    <EmbeddedResource Include="Usercontrol\UCSanPhamVuong.resx">
       <DependentUpon>UCSanPhamVuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTitleBar.resx">
+    <EmbeddedResource Include="Usercontrol\UCTitleBar.resx">
       <DependentUpon>UCTitleBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
