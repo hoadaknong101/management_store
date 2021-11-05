@@ -70,7 +70,7 @@ namespace management_store
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(13, 5);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(222, 29);
-            this.txtTenTaiKhoan.TabIndex = 3;
+            this.txtTenTaiKhoan.TabIndex = 1;
             this.txtTenTaiKhoan.Text = "Tên tài khoản";
             this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
             this.txtTenTaiKhoan.Leave += new System.EventHandler(this.txtTenTaiKhoan_Leave);
@@ -82,7 +82,7 @@ namespace management_store
             this.pnlTaiKhoan.Location = new System.Drawing.Point(66, 180);
             this.pnlTaiKhoan.Name = "pnlTaiKhoan";
             this.pnlTaiKhoan.Size = new System.Drawing.Size(243, 37);
-            this.pnlTaiKhoan.TabIndex = 4;
+            this.pnlTaiKhoan.TabIndex = 0;
             // 
             // pnlMatKhau
             // 
@@ -91,7 +91,7 @@ namespace management_store
             this.pnlMatKhau.Location = new System.Drawing.Point(66, 254);
             this.pnlMatKhau.Name = "pnlMatKhau";
             this.pnlMatKhau.Size = new System.Drawing.Size(243, 37);
-            this.pnlMatKhau.TabIndex = 4;
+            this.pnlMatKhau.TabIndex = 0;
             // 
             // txtMatKhau
             // 
@@ -102,7 +102,7 @@ namespace management_store
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(222, 29);
-            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.Text = "password";
             this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
             this.txtMatKhau.Leave += new System.EventHandler(this.txtMatKhau_Leave);
@@ -114,7 +114,7 @@ namespace management_store
             this.btnDangNhap.Location = new System.Drawing.Point(66, 389);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(235, 40);
-            this.btnDangNhap.TabIndex = 7;
+            this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -174,7 +174,7 @@ namespace management_store
             this.rdbAdmin.Location = new System.Drawing.Point(154, 9);
             this.rdbAdmin.Name = "rdbAdmin";
             this.rdbAdmin.Size = new System.Drawing.Size(64, 20);
-            this.rdbAdmin.TabIndex = 8;
+            this.rdbAdmin.TabIndex = 4;
             this.rdbAdmin.Text = "Admin";
             this.rdbAdmin.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +187,7 @@ namespace management_store
             this.rdbNhanVien.Location = new System.Drawing.Point(32, 9);
             this.rdbNhanVien.Name = "rdbNhanVien";
             this.rdbNhanVien.Size = new System.Drawing.Size(86, 20);
-            this.rdbNhanVien.TabIndex = 8;
+            this.rdbNhanVien.TabIndex = 3;
             this.rdbNhanVien.TabStop = true;
             this.rdbNhanVien.Text = "Nhân viên";
             this.rdbNhanVien.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@ namespace management_store
             this.pnlRoles.Location = new System.Drawing.Point(66, 325);
             this.pnlRoles.Name = "pnlRoles";
             this.pnlRoles.Size = new System.Drawing.Size(243, 38);
-            this.pnlRoles.TabIndex = 9;
+            this.pnlRoles.TabIndex = 0;
             // 
             // frmDangNhap
             // 
@@ -221,7 +221,6 @@ namespace management_store
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseDown);
             this.pnlTaiKhoan.ResumeLayout(false);
             this.pnlTaiKhoan.PerformLayout();

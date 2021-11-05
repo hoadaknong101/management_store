@@ -30,28 +30,28 @@ namespace management_store
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl__SoLuongSPDaBan = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic__SoLuongSPDaBan = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblSoLuongSanPhamDaBan = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_SoLuongSPDaBan = new System.Windows.Forms.Label();
+            this.pnl_SoLuongSPTrongKho = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pic_SoLuongSPTrongKho = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblSoLuongSanPhamTrongKho = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_SoLuongSPTrongKho = new System.Windows.Forms.Label();
+            this.pnlSoLuongHoaDon = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.picSoLuongHoaDon = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSoLuongHoaDon = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlSoLuongNhanVien = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.picSoLuongNhanVien = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblSoLuongNhanVien = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -81,22 +81,22 @@ namespace management_store
             this.lblHoTenNhanVien = new System.Windows.Forms.Label();
             this.lblMaNhanVien = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.pnl__SoLuongSPDaBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic__SoLuongSPDaBan)).BeginInit();
+            this.pnl_SoLuongSPTrongKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SoLuongSPTrongKho)).BeginInit();
+            this.pnlSoLuongHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSoLuongHoaDon)).BeginInit();
+            this.pnlSoLuongNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSoLuongNhanVien)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLocation1)).BeginInit();
@@ -123,18 +123,18 @@ namespace management_store
             this.label1.TabIndex = 0;
             this.label1.Text = "TRANG CHỦ";
             // 
-            // panel1
+            // pnl__SoLuongSPDaBan
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblSoLuongSanPhamDaBan);
-            this.panel1.Location = new System.Drawing.Point(41, 73);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 152);
-            this.panel1.TabIndex = 1;
+            this.pnl__SoLuongSPDaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.pnl__SoLuongSPDaBan.Controls.Add(this.pictureBox3);
+            this.pnl__SoLuongSPDaBan.Controls.Add(this.pictureBox2);
+            this.pnl__SoLuongSPDaBan.Controls.Add(this.pic__SoLuongSPDaBan);
+            this.pnl__SoLuongSPDaBan.Controls.Add(this.label3);
+            this.pnl__SoLuongSPDaBan.Controls.Add(this.lbl_SoLuongSPDaBan);
+            this.pnl__SoLuongSPDaBan.Location = new System.Drawing.Point(41, 73);
+            this.pnl__SoLuongSPDaBan.Name = "pnl__SoLuongSPDaBan";
+            this.pnl__SoLuongSPDaBan.Size = new System.Drawing.Size(226, 152);
+            this.pnl__SoLuongSPDaBan.TabIndex = 1;
             // 
             // pictureBox3
             // 
@@ -156,15 +156,15 @@ namespace management_store
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // pic__SoLuongSPDaBan
             // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pic__SoLuongSPDaBan.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
+            this.pic__SoLuongSPDaBan.Location = new System.Drawing.Point(180, 16);
+            this.pic__SoLuongSPDaBan.Name = "pic__SoLuongSPDaBan";
+            this.pic__SoLuongSPDaBan.Size = new System.Drawing.Size(28, 21);
+            this.pic__SoLuongSPDaBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic__SoLuongSPDaBan.TabIndex = 1;
+            this.pic__SoLuongSPDaBan.TabStop = false;
             // 
             // label3
             // 
@@ -177,29 +177,29 @@ namespace management_store
             this.label3.TabIndex = 0;
             this.label3.Text = "Sản phẩm đã bán";
             // 
-            // lblSoLuongSanPhamDaBan
+            // lbl_SoLuongSPDaBan
             // 
-            this.lblSoLuongSanPhamDaBan.AutoSize = true;
-            this.lblSoLuongSanPhamDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuongSanPhamDaBan.ForeColor = System.Drawing.Color.White;
-            this.lblSoLuongSanPhamDaBan.Location = new System.Drawing.Point(13, 9);
-            this.lblSoLuongSanPhamDaBan.Name = "lblSoLuongSanPhamDaBan";
-            this.lblSoLuongSanPhamDaBan.Size = new System.Drawing.Size(77, 39);
-            this.lblSoLuongSanPhamDaBan.TabIndex = 0;
-            this.lblSoLuongSanPhamDaBan.Text = "1023";
+            this.lbl_SoLuongSPDaBan.AutoSize = true;
+            this.lbl_SoLuongSPDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SoLuongSPDaBan.ForeColor = System.Drawing.Color.White;
+            this.lbl_SoLuongSPDaBan.Location = new System.Drawing.Point(13, 9);
+            this.lbl_SoLuongSPDaBan.Name = "lbl_SoLuongSPDaBan";
+            this.lbl_SoLuongSPDaBan.Size = new System.Drawing.Size(77, 39);
+            this.lbl_SoLuongSPDaBan.TabIndex = 0;
+            this.lbl_SoLuongSPDaBan.Text = "1023";
             // 
-            // panel2
+            // pnl_SoLuongSPTrongKho
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(159)))), ((int)(((byte)(200)))));
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.lblSoLuongSanPhamTrongKho);
-            this.panel2.Location = new System.Drawing.Point(309, 73);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 152);
-            this.panel2.TabIndex = 1;
+            this.pnl_SoLuongSPTrongKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(159)))), ((int)(((byte)(200)))));
+            this.pnl_SoLuongSPTrongKho.Controls.Add(this.pictureBox4);
+            this.pnl_SoLuongSPTrongKho.Controls.Add(this.pictureBox5);
+            this.pnl_SoLuongSPTrongKho.Controls.Add(this.pic_SoLuongSPTrongKho);
+            this.pnl_SoLuongSPTrongKho.Controls.Add(this.label4);
+            this.pnl_SoLuongSPTrongKho.Controls.Add(this.lbl_SoLuongSPTrongKho);
+            this.pnl_SoLuongSPTrongKho.Location = new System.Drawing.Point(309, 73);
+            this.pnl_SoLuongSPTrongKho.Name = "pnl_SoLuongSPTrongKho";
+            this.pnl_SoLuongSPTrongKho.Size = new System.Drawing.Size(226, 152);
+            this.pnl_SoLuongSPTrongKho.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -221,15 +221,15 @@ namespace management_store
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox6
+            // pic_SoLuongSPTrongKho
             // 
-            this.pictureBox6.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox6.Location = new System.Drawing.Point(180, 16);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.pic_SoLuongSPTrongKho.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
+            this.pic_SoLuongSPTrongKho.Location = new System.Drawing.Point(180, 16);
+            this.pic_SoLuongSPTrongKho.Name = "pic_SoLuongSPTrongKho";
+            this.pic_SoLuongSPTrongKho.Size = new System.Drawing.Size(28, 21);
+            this.pic_SoLuongSPTrongKho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_SoLuongSPTrongKho.TabIndex = 1;
+            this.pic_SoLuongSPTrongKho.TabStop = false;
             // 
             // label4
             // 
@@ -242,29 +242,29 @@ namespace management_store
             this.label4.TabIndex = 0;
             this.label4.Text = "Sản phẩm trong kho";
             // 
-            // lblSoLuongSanPhamTrongKho
+            // lbl_SoLuongSPTrongKho
             // 
-            this.lblSoLuongSanPhamTrongKho.AutoSize = true;
-            this.lblSoLuongSanPhamTrongKho.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuongSanPhamTrongKho.ForeColor = System.Drawing.Color.White;
-            this.lblSoLuongSanPhamTrongKho.Location = new System.Drawing.Point(13, 9);
-            this.lblSoLuongSanPhamTrongKho.Name = "lblSoLuongSanPhamTrongKho";
-            this.lblSoLuongSanPhamTrongKho.Size = new System.Drawing.Size(77, 39);
-            this.lblSoLuongSanPhamTrongKho.TabIndex = 0;
-            this.lblSoLuongSanPhamTrongKho.Text = "1023";
+            this.lbl_SoLuongSPTrongKho.AutoSize = true;
+            this.lbl_SoLuongSPTrongKho.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SoLuongSPTrongKho.ForeColor = System.Drawing.Color.White;
+            this.lbl_SoLuongSPTrongKho.Location = new System.Drawing.Point(13, 9);
+            this.lbl_SoLuongSPTrongKho.Name = "lbl_SoLuongSPTrongKho";
+            this.lbl_SoLuongSPTrongKho.Size = new System.Drawing.Size(77, 39);
+            this.lbl_SoLuongSPTrongKho.TabIndex = 0;
+            this.lbl_SoLuongSPTrongKho.Text = "1023";
             // 
-            // panel3
+            // pnlSoLuongHoaDon
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(202)))), ((int)(((byte)(3)))));
-            this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.lblSoLuongHoaDon);
-            this.panel3.Location = new System.Drawing.Point(577, 73);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 152);
-            this.panel3.TabIndex = 1;
+            this.pnlSoLuongHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(202)))), ((int)(((byte)(3)))));
+            this.pnlSoLuongHoaDon.Controls.Add(this.pictureBox7);
+            this.pnlSoLuongHoaDon.Controls.Add(this.pictureBox8);
+            this.pnlSoLuongHoaDon.Controls.Add(this.picSoLuongHoaDon);
+            this.pnlSoLuongHoaDon.Controls.Add(this.label6);
+            this.pnlSoLuongHoaDon.Controls.Add(this.lblSoLuongHoaDon);
+            this.pnlSoLuongHoaDon.Location = new System.Drawing.Point(577, 73);
+            this.pnlSoLuongHoaDon.Name = "pnlSoLuongHoaDon";
+            this.pnlSoLuongHoaDon.Size = new System.Drawing.Size(226, 152);
+            this.pnlSoLuongHoaDon.TabIndex = 1;
             // 
             // pictureBox7
             // 
@@ -286,15 +286,15 @@ namespace management_store
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox9
+            // picSoLuongHoaDon
             // 
-            this.pictureBox9.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox9.Location = new System.Drawing.Point(180, 16);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
+            this.picSoLuongHoaDon.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
+            this.picSoLuongHoaDon.Location = new System.Drawing.Point(180, 16);
+            this.picSoLuongHoaDon.Name = "picSoLuongHoaDon";
+            this.picSoLuongHoaDon.Size = new System.Drawing.Size(28, 21);
+            this.picSoLuongHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSoLuongHoaDon.TabIndex = 1;
+            this.picSoLuongHoaDon.TabStop = false;
             // 
             // label6
             // 
@@ -318,18 +318,18 @@ namespace management_store
             this.lblSoLuongHoaDon.TabIndex = 0;
             this.lblSoLuongHoaDon.Text = "1023";
             // 
-            // panel4
+            // pnlSoLuongNhanVien
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(110)))), ((int)(((byte)(111)))));
-            this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Controls.Add(this.pictureBox11);
-            this.panel4.Controls.Add(this.pictureBox12);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.lblSoLuongNhanVien);
-            this.panel4.Location = new System.Drawing.Point(845, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(226, 152);
-            this.panel4.TabIndex = 1;
+            this.pnlSoLuongNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(110)))), ((int)(((byte)(111)))));
+            this.pnlSoLuongNhanVien.Controls.Add(this.pictureBox10);
+            this.pnlSoLuongNhanVien.Controls.Add(this.pictureBox11);
+            this.pnlSoLuongNhanVien.Controls.Add(this.picSoLuongNhanVien);
+            this.pnlSoLuongNhanVien.Controls.Add(this.label8);
+            this.pnlSoLuongNhanVien.Controls.Add(this.lblSoLuongNhanVien);
+            this.pnlSoLuongNhanVien.Location = new System.Drawing.Point(845, 73);
+            this.pnlSoLuongNhanVien.Name = "pnlSoLuongNhanVien";
+            this.pnlSoLuongNhanVien.Size = new System.Drawing.Size(226, 152);
+            this.pnlSoLuongNhanVien.TabIndex = 1;
             // 
             // pictureBox10
             // 
@@ -351,15 +351,15 @@ namespace management_store
             this.pictureBox11.TabIndex = 1;
             this.pictureBox11.TabStop = false;
             // 
-            // pictureBox12
+            // picSoLuongNhanVien
             // 
-            this.pictureBox12.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
-            this.pictureBox12.Location = new System.Drawing.Point(180, 16);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
+            this.picSoLuongNhanVien.Image = global::management_store.Properties.Resources.icons8_Compass_Eye_32;
+            this.picSoLuongNhanVien.Location = new System.Drawing.Point(180, 16);
+            this.picSoLuongNhanVien.Name = "picSoLuongNhanVien";
+            this.picSoLuongNhanVien.Size = new System.Drawing.Size(28, 21);
+            this.picSoLuongNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSoLuongNhanVien.TabIndex = 1;
+            this.picSoLuongNhanVien.TabStop = false;
             // 
             // label8
             // 
@@ -709,37 +709,37 @@ namespace management_store
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlSoLuongNhanVien);
             this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlSoLuongHoaDon);
+            this.Controls.Add(this.pnl_SoLuongSPTrongKho);
             this.Controls.Add(this.pnlThongTinNhanVien);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl__SoLuongSPDaBan);
             this.Controls.Add(this.label1);
             this.Name = "UCDashboard";
             this.Size = new System.Drawing.Size(1104, 660);
             this.Load += new System.EventHandler(this.UCDashboard_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl__SoLuongSPDaBan.ResumeLayout(false);
+            this.pnl__SoLuongSPDaBan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic__SoLuongSPDaBan)).EndInit();
+            this.pnl_SoLuongSPTrongKho.ResumeLayout(false);
+            this.pnl_SoLuongSPTrongKho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SoLuongSPTrongKho)).EndInit();
+            this.pnlSoLuongHoaDon.ResumeLayout(false);
+            this.pnlSoLuongHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSoLuongHoaDon)).EndInit();
+            this.pnlSoLuongNhanVien.ResumeLayout(false);
+            this.pnlSoLuongNhanVien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSoLuongNhanVien)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -763,28 +763,28 @@ namespace management_store
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnl__SoLuongSPDaBan;
+        private System.Windows.Forms.PictureBox pic__SoLuongSPDaBan;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblSoLuongSanPhamDaBan;
+        private System.Windows.Forms.Label lbl_SoLuongSPDaBan;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_SoLuongSPTrongKho;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pic_SoLuongSPTrongKho;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSoLuongSanPhamTrongKho;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbl_SoLuongSPTrongKho;
+        private System.Windows.Forms.Panel pnlSoLuongHoaDon;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox picSoLuongHoaDon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblSoLuongHoaDon;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlSoLuongNhanVien;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox picSoLuongNhanVien;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblSoLuongNhanVien;
         private System.Windows.Forms.Panel panel5;
