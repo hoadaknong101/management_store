@@ -16,6 +16,7 @@ namespace management_store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new frmDangNhap());
             Application.Run(new frmAdmin(3));
         }
     }

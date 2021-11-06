@@ -87,7 +87,7 @@ namespace management_store
             return img;
         }
 
-        private void UCDashboard_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             dt = bll.ThongTinNhanVien(IDNhanVien);
             lblSoLuongHoaDon.Text = bll.SoLuongHoaDon() + "";
@@ -105,6 +105,16 @@ namespace management_store
             {
                 MessageBox.Show("Không thể hiển thị thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            lblSoLuongNhanVien.Text = bll.SoLuongNhanVien().ToString();
+            lblSoLuongHoaDon.Text = bll.SoLuongHoaDon().ToString();
+            lbl_SoLuongSPDaBan.Text = bll.SoLuongSanPhamDaBan().ToString();
+            lbl_SoLuongSPTrongKho.Text = bll.SoLuongSanPhamTrongKho().ToString();
+        }
+
+        private void UCDashboard_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
@@ -114,7 +124,8 @@ namespace management_store
 
         private void btnSuaThongTin_Click(object sender, EventArgs e)
         {
-
+            new frmDoiThongTinCaNhan(ID_NhanVien).ShowDialog();
+            LoadData();
         }
     }
 }

@@ -175,6 +175,12 @@
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="Form\frmDoiThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDoiThongTinCaNhan.Designer.cs">
+      <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,6 +234,9 @@
     </Compile>
     <EmbeddedResource Include="Form\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDoiThongTinCaNhan.resx">
+      <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmTimSP.resx">
       <DependentUpon>frmTimSP.cs</DependentUpon>

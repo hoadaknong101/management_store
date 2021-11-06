@@ -32,6 +32,7 @@ namespace management_store
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,12 +64,12 @@ namespace management_store
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.gbThoiGian = new System.Windows.Forms.GroupBox();
-            this.radTuan = new System.Windows.Forms.RadioButton();
-            this.radThang = new System.Windows.Forms.RadioButton();
             this.radQuy = new System.Windows.Forms.RadioButton();
+            this.radThang = new System.Windows.Forms.RadioButton();
+            this.radTuan = new System.Windows.Forms.RadioButton();
             this.gbDuLieu = new System.Windows.Forms.GroupBox();
-            this.chbThuNhap = new System.Windows.Forms.CheckBox();
             this.chbChiTieu = new System.Windows.Forms.CheckBox();
+            this.chbThuNhap = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -376,9 +377,14 @@ namespace management_store
             this.chartThongKe.Location = new System.Drawing.Point(301, 384);
             this.chartThongKe.Name = "chartThongKe";
             series1.ChartArea = "ChartArea1";
+            series1.LabelForeColor = System.Drawing.Color.Red;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Thu nhập";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Chi tiêu";
             this.chartThongKe.Series.Add(series1);
+            this.chartThongKe.Series.Add(series2);
             this.chartThongKe.Size = new System.Drawing.Size(377, 257);
             this.chartThongKe.TabIndex = 10;
             this.chartThongKe.Text = "chart1";
@@ -402,6 +408,7 @@ namespace management_store
             this.btnThongKe.TabIndex = 12;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnBaoCao
             // 
@@ -428,17 +435,15 @@ namespace management_store
             this.gbThoiGian.TabStop = false;
             this.gbThoiGian.Text = "Thời gian";
             // 
-            // radTuan
+            // radQuy
             // 
-            this.radTuan.AutoSize = true;
-            this.radTuan.Checked = true;
-            this.radTuan.Location = new System.Drawing.Point(7, 35);
-            this.radTuan.Name = "radTuan";
-            this.radTuan.Size = new System.Drawing.Size(105, 27);
-            this.radTuan.TabIndex = 0;
-            this.radTuan.TabStop = true;
-            this.radTuan.Text = "theo Tuần";
-            this.radTuan.UseVisualStyleBackColor = true;
+            this.radQuy.AutoSize = true;
+            this.radQuy.Location = new System.Drawing.Point(6, 101);
+            this.radQuy.Name = "radQuy";
+            this.radQuy.Size = new System.Drawing.Size(97, 27);
+            this.radQuy.TabIndex = 2;
+            this.radQuy.Text = "theo Quý";
+            this.radQuy.UseVisualStyleBackColor = true;
             // 
             // radThang
             // 
@@ -450,15 +455,17 @@ namespace management_store
             this.radThang.Text = "theo Tháng";
             this.radThang.UseVisualStyleBackColor = true;
             // 
-            // radQuy
+            // radTuan
             // 
-            this.radQuy.AutoSize = true;
-            this.radQuy.Location = new System.Drawing.Point(6, 101);
-            this.radQuy.Name = "radQuy";
-            this.radQuy.Size = new System.Drawing.Size(97, 27);
-            this.radQuy.TabIndex = 2;
-            this.radQuy.Text = "theo Quý";
-            this.radQuy.UseVisualStyleBackColor = true;
+            this.radTuan.AutoSize = true;
+            this.radTuan.Checked = true;
+            this.radTuan.Location = new System.Drawing.Point(7, 35);
+            this.radTuan.Name = "radTuan";
+            this.radTuan.Size = new System.Drawing.Size(105, 27);
+            this.radTuan.TabIndex = 0;
+            this.radTuan.TabStop = true;
+            this.radTuan.Text = "theo Tuần";
+            this.radTuan.UseVisualStyleBackColor = true;
             // 
             // gbDuLieu
             // 
@@ -472,16 +479,6 @@ namespace management_store
             this.gbDuLieu.TabStop = false;
             this.gbDuLieu.Text = "Loại dữ liệu";
             // 
-            // chbThuNhap
-            // 
-            this.chbThuNhap.AutoSize = true;
-            this.chbThuNhap.Location = new System.Drawing.Point(6, 35);
-            this.chbThuNhap.Name = "chbThuNhap";
-            this.chbThuNhap.Size = new System.Drawing.Size(101, 27);
-            this.chbThuNhap.TabIndex = 0;
-            this.chbThuNhap.Text = "Thu nhập";
-            this.chbThuNhap.UseVisualStyleBackColor = true;
-            // 
             // chbChiTieu
             // 
             this.chbChiTieu.AutoSize = true;
@@ -491,6 +488,16 @@ namespace management_store
             this.chbChiTieu.TabIndex = 1;
             this.chbChiTieu.Text = "Chi tiêu";
             this.chbChiTieu.UseVisualStyleBackColor = true;
+            // 
+            // chbThuNhap
+            // 
+            this.chbThuNhap.AutoSize = true;
+            this.chbThuNhap.Location = new System.Drawing.Point(6, 35);
+            this.chbThuNhap.Name = "chbThuNhap";
+            this.chbThuNhap.Size = new System.Drawing.Size(101, 27);
+            this.chbThuNhap.TabIndex = 0;
+            this.chbThuNhap.Text = "Thu nhập";
+            this.chbThuNhap.UseVisualStyleBackColor = true;
             // 
             // UCDoanhThu
             // 

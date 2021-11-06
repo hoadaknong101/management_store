@@ -159,7 +159,7 @@ namespace management_store
         {
             if (!KiemTraDauVao())
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin\nhoặc chọn hình ảnh trước khi tiếp tục!", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -175,6 +175,7 @@ namespace management_store
                             picImage.Image,
                             int.Parse(txtMaNSX.Text),
                             int.Parse(txtSoLuong.Text));
+                        MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo");
                     }
                     catch
                     {
@@ -195,6 +196,7 @@ namespace management_store
                     {
                         func.ThemSanPham(txtTenSanPham.Text, txtLoaiSP.Text, float.Parse(txtDonGia.Text), 
                             picImage.Image, int.Parse(txtMaNSX.Text), int.Parse(txtSoLuong.Text));
+                        MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo");
                     }
                     catch
                     {
@@ -223,6 +225,7 @@ namespace management_store
                 if(MessageBox.Show("Bạn có muốn xóa sản phẩm\n" + txtTenSanPham.Text, "Xóa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     func.XoaSanPham(int.Parse(txtMaSP.Text));
+                    MessageBox.Show("Đã xóa thông tin sản phẩm!", "Thông báo");
                 }
             }
             catch

@@ -56,6 +56,34 @@ namespace management_store
             txtCCCD.Clear();
             picImage.Image = null;
         }
+        private void DisableOnControl()
+        {
+            txtHoTen.Enabled = false;
+            txtGioiTinh.Enabled = false;
+            txtCCCD.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtLienHe.Enabled = false;
+            btnChonHinhAnh.Enabled = false;
+        }
+        private void EnabledOnControl()
+        {
+            txtHoTen.Enabled = true;
+            txtGioiTinh.Enabled = true;
+            txtCCCD.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtLienHe.Enabled = true;
+            btnChonHinhAnh.Enabled = true;
+        }
+        private bool KiemTraDauVao()
+        {
+            if (txtHoTen.Text.Trim() == "" || txtCCCD.Text.Trim() == "" ||
+                txtDiaChi.Text.Trim() == "" || txtGioiTinh.Text.Trim() == "" ||
+                txtLienHe.Text.Trim() == "" || picImage.Image == null)
+            {
+                return false;
+            }
+            return true;
+        }
         #endregion
 
         #region Convert_Image
@@ -138,14 +166,15 @@ namespace management_store
             {
                 if (!btnThemNhanVien.Enabled)
                 {
-                    //Cập nhật sản phẩm
+                    //Cập nhật nhân viên
                     try
                     {
                         bll.CapNhatNhanVien(int.Parse(txtMaNV.Text),txtHoTen.Text,txtLienHe.Text,txtDiaChi.Text,picImage.Image,txtGioiTinh.Text,txtCCCD.Text);
+                        MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo");
                     }
                     catch
                     {
-                        MessageBox.Show("Không thể cập nhật sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Không thể cập nhật nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     finally
@@ -157,10 +186,11 @@ namespace management_store
                 }
                 else
                 {
-                    //Thêm sản phẩm
+                    //Thêm nhân viên
                     try
                     {
                         bll.ThemNhanVien(txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, picImage.Image, txtGioiTinh.Text, txtCCCD.Text);
+                        MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
                     }
                     catch
                     {
@@ -182,26 +212,6 @@ namespace management_store
             }
         }
 
-        private void DisableOnControl()
-        {
-            txtHoTen.Enabled = false;
-            txtGioiTinh.Enabled = false;
-            txtCCCD.Enabled = false;
-            txtDiaChi.Enabled = false;
-            txtLienHe.Enabled = false;
-            btnChonHinhAnh.Enabled = false;
-        }
-
-        private void EnabledOnControl()
-        {
-            txtHoTen.Enabled = true;
-            txtGioiTinh.Enabled = true;
-            txtCCCD.Enabled = true;
-            txtDiaChi.Enabled = true;
-            txtLienHe.Enabled = true;
-            btnChonHinhAnh.Enabled = true;
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             ClearContent();
@@ -212,16 +222,6 @@ namespace management_store
             DisableOnControl();
         }
 
-        private bool KiemTraDauVao()
-        {
-            if (txtHoTen.Text.Trim() == "" || txtCCCD.Text.Trim() == "" || 
-                txtDiaChi.Text.Trim() == "" || txtGioiTinh.Text.Trim() == "" ||
-                txtLienHe.Text.Trim() == "" || picImage.Image == null)
-            {
-                return false;
-            }
-            return true;
-        }
         private void btnXoaNhanVien_Click(object sender, EventArgs e)
         {
             try
@@ -229,6 +229,7 @@ namespace management_store
                 if (MessageBox.Show("Bạn có muốn xóa nhân viên\n" + txtHoTen.Text, "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     bll.XoaNhanVien(int.Parse(txtMaNV.Text));
+                    MessageBox.Show("Đã xóa thông tin nhân viên!", "Thông báo");
                     DisableOnControl();
                 }
             }
