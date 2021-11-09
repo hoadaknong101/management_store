@@ -131,7 +131,7 @@ namespace management_store
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@MaSanPham", maSanPham),
                 new SqlParameter("@SoLuong", soLuong),
-                new SqlParameter("@ThanhTien", thanhTien));
+                new SqlParameter("@thanhTien", thanhTien));
         }
         public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
         {

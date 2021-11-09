@@ -12,10 +12,10 @@ namespace management_store
         //private string connectionString = "Data Source=localhost\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
 
         // Phi
-        private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        //private string connectionString = "Data Source=PhiVo-Z1704;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         //Thang
-        //private string connectionString = "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        private string connectionString = "Data Source=DESKTOP-N0B1KM6\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         public SqlConnection connection;
         public SqlCommand cmd;

@@ -131,6 +131,12 @@ namespace management_store
                 return;
             }
         }
+
+        private void CapNhatSauKhiXuatHoaDon()
+        {
+            UCDashboard.
+        }
+
         private bool KiemTraXuatHoaDon()
         {
             if (txtHoTenKH.Text.Trim() == "")

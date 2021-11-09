@@ -128,13 +128,11 @@ namespace management_store
                 txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
                 txtGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
                 txtCCCD.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-
-                picImage.Image = (ByteArrayToImage((byte[]) dgvNhanVien.CurrentRow.Cells[4].Value) != null) ?
-                    ByteArrayToImage((byte[])dgvNhanVien.CurrentRow.Cells[4].Value) : null;
+                picImage.Image = null;
+                picImage.Image = (ByteArrayToImage((byte[]) dgvNhanVien.CurrentRow.Cells[4].Value));
             }
             catch
             {
-                MessageBox.Show("Không thể tải dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
