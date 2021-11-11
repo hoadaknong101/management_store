@@ -125,6 +125,7 @@ namespace management_store
                 fpnlSanPham.Controls.Clear();
                 lstSanPham.Clear();
                 lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
+                CapNhatSauKhiXuatHoaDon();
             }
             else
             {
@@ -134,7 +135,8 @@ namespace management_store
 
         private void CapNhatSauKhiXuatHoaDon()
         {
-            UCDashboard.
+            UCDashboard.Instance.LoadData();
+            UCDoanhThu.Instance.TakeInfor();
         }
 
         private bool KiemTraXuatHoaDon()

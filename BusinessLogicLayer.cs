@@ -94,7 +94,10 @@ namespace management_store
         {
             return dal.GetDataToDataTable("SELECT * FROM SanPham");
         }
-
+        public DataTable ThongTinSanPhamConHang()
+        {
+            return dal.GetDataToDataTable("SELECT * FROM SanPham WHERE ");
+        }
         public void ThemSanPham(string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
             dal.ExcuteNonQuery("sp_ThemSanPham", System.Data.CommandType.StoredProcedure, 

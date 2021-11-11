@@ -87,7 +87,7 @@ namespace management_store
             return img;
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             dt = bll.ThongTinNhanVien(IDNhanVien);
             lblSoLuongHoaDon.Text = bll.SoLuongHoaDon() + "";

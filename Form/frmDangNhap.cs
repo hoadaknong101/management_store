@@ -113,7 +113,7 @@ namespace management_store
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại!", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sai thông tin tài khoản \n hoặc mật khẩu!!", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }

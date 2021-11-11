@@ -79,11 +79,11 @@ namespace management_store
             // lblDigitalClock
             // 
             this.lblDigitalClock.AutoSize = true;
-            this.lblDigitalClock.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDigitalClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDigitalClock.ForeColor = System.Drawing.Color.White;
             this.lblDigitalClock.Location = new System.Drawing.Point(56, 623);
             this.lblDigitalClock.Name = "lblDigitalClock";
-            this.lblDigitalClock.Size = new System.Drawing.Size(123, 27);
+            this.lblDigitalClock.Size = new System.Drawing.Size(124, 24);
             this.lblDigitalClock.TabIndex = 2;
             this.lblDigitalClock.Text = "00:00:00 PM";
             // 
@@ -101,17 +101,17 @@ namespace management_store
             // 
             this.btnTabDangXuat.FlatAppearance.BorderSize = 0;
             this.btnTabDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDangXuat.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTabDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabDangXuat.ForeColor = System.Drawing.Color.White;
             this.btnTabDangXuat.Image = global::management_store.Properties.Resources.icons8_exit_48;
             this.btnTabDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTabDangXuat.Location = new System.Drawing.Point(0, 528);
             this.btnTabDangXuat.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnTabDangXuat.Name = "btnTabDangXuat";
-            this.btnTabDangXuat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabDangXuat.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnTabDangXuat.Size = new System.Drawing.Size(216, 69);
             this.btnTabDangXuat.TabIndex = 1;
-            this.btnTabDangXuat.Text = "    ĐĂNG XUẤT";
+            this.btnTabDangXuat.Text = "     ĐĂNG XUẤT";
             this.btnTabDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabDangXuat.UseVisualStyleBackColor = true;
             this.btnTabDangXuat.Click += new System.EventHandler(this.btnTabDangXuat_Click);
@@ -120,16 +120,16 @@ namespace management_store
             // 
             this.btnTabNhanVien.FlatAppearance.BorderSize = 0;
             this.btnTabNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabNhanVien.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTabNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnTabNhanVien.Image = global::management_store.Properties.Resources.icons8_group_48;
             this.btnTabNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTabNhanVien.Location = new System.Drawing.Point(0, 453);
             this.btnTabNhanVien.Name = "btnTabNhanVien";
-            this.btnTabNhanVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabNhanVien.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnTabNhanVien.Size = new System.Drawing.Size(221, 69);
             this.btnTabNhanVien.TabIndex = 1;
-            this.btnTabNhanVien.Text = "    NHÂN VIÊN";
+            this.btnTabNhanVien.Text = "     NHÂN VIÊN";
             this.btnTabNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabNhanVien.UseVisualStyleBackColor = true;
             this.btnTabNhanVien.Click += new System.EventHandler(this.btnTabNhanVien_Click);
@@ -138,17 +138,17 @@ namespace management_store
             // 
             this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDoanhThu.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTabDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabDoanhThu.ForeColor = System.Drawing.Color.White;
             this.btnTabDoanhThu.Image = global::management_store.Properties.Resources.icons8_statistics_48;
             this.btnTabDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 378);
             this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnTabDoanhThu.Name = "btnTabDoanhThu";
-            this.btnTabDoanhThu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabDoanhThu.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnTabDoanhThu.Size = new System.Drawing.Size(221, 69);
             this.btnTabDoanhThu.TabIndex = 1;
-            this.btnTabDoanhThu.Text = "    DOANH THU";
+            this.btnTabDoanhThu.Text = "     DOANH THU";
             this.btnTabDoanhThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTabDoanhThu.UseVisualStyleBackColor = true;
             this.btnTabDoanhThu.Click += new System.EventHandler(this.btnTabDoanhThu_Click);
@@ -157,16 +157,16 @@ namespace management_store
             // 
             this.btnTabSanPham.FlatAppearance.BorderSize = 0;
             this.btnTabSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabSanPham.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTabSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabSanPham.ForeColor = System.Drawing.Color.White;
             this.btnTabSanPham.Image = global::management_store.Properties.Resources.icons8_product_48;
             this.btnTabSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTabSanPham.Location = new System.Drawing.Point(0, 303);
             this.btnTabSanPham.Name = "btnTabSanPham";
-            this.btnTabSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabSanPham.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnTabSanPham.Size = new System.Drawing.Size(221, 69);
             this.btnTabSanPham.TabIndex = 1;
-            this.btnTabSanPham.Text = "         SẢN PHẨM";
+            this.btnTabSanPham.Text = "        SẢN PHẨM";
             this.btnTabSanPham.UseVisualStyleBackColor = true;
             this.btnTabSanPham.Click += new System.EventHandler(this.btnTabSanPham_Click);
             // 
@@ -174,16 +174,16 @@ namespace management_store
             // 
             this.btnTabHoaDon.FlatAppearance.BorderSize = 0;
             this.btnTabHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTabHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnTabHoaDon.Image = global::management_store.Properties.Resources.icons8_receipt_48;
             this.btnTabHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTabHoaDon.Location = new System.Drawing.Point(0, 228);
             this.btnTabHoaDon.Name = "btnTabHoaDon";
-            this.btnTabHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTabHoaDon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnTabHoaDon.Size = new System.Drawing.Size(221, 69);
             this.btnTabHoaDon.TabIndex = 1;
-            this.btnTabHoaDon.Text = "        HÓA ĐƠN";
+            this.btnTabHoaDon.Text = "      HÓA ĐƠN";
             this.btnTabHoaDon.UseVisualStyleBackColor = true;
             this.btnTabHoaDon.Click += new System.EventHandler(this.btnTabHoaDon_Click);
             // 
@@ -191,17 +191,19 @@ namespace management_store
             // 
             this.btnTrangChu.FlatAppearance.BorderSize = 0;
             this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangChu.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChu.ForeColor = System.Drawing.Color.White;
             this.btnTrangChu.Image = global::management_store.Properties.Resources.icons8_bar_chart_32;
             this.btnTrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrangChu.Location = new System.Drawing.Point(0, 153);
+            this.btnTrangChu.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.btnTrangChu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTrangChu.Size = new System.Drawing.Size(221, 69);
             this.btnTrangChu.TabIndex = 1;
-            this.btnTrangChu.Text = "     DASHBOARD";
+            this.btnTrangChu.Text = "       DASHBOARD";
             this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTrangChu.UseMnemonic = false;
             this.btnTrangChu.UseVisualStyleBackColor = true;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
@@ -221,7 +223,7 @@ namespace management_store
             this.pnlMain.BackColor = System.Drawing.Color.White;
             this.pnlMain.Location = new System.Drawing.Point(221, 47);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1110, 666);
+            this.pnlMain.Size = new System.Drawing.Size(1103, 661);
             this.pnlMain.TabIndex = 2;
             // 
             // timerDigitalClock
