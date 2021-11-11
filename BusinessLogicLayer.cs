@@ -147,7 +147,8 @@ namespace management_store
         }
         public DataTable ThongTinToanBoHoaDon()
         {
-            return dal.ExecuteQueryDataTable("select * from HoaDon", CommandType.Text, null);
+            string sql = "select MaHoaDon as N'Mã HĐ', NgayTao as N'Ngày tạo', TongTien as N'TT' from HoaDon";
+            return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
         }
         #endregion
 
@@ -214,7 +215,8 @@ namespace management_store
         }
         public DataTable ThongTinToanBoPhieuNhap()
         {
-            return dal.ExecuteQueryDataTable("select * from PhieuNhapHang", CommandType.Text, null);
+            string sql = "select MaPhieuNhapHang as N'Mã phiếu', NgayNhapHang as N'Ngày nhập', TongGiaTri as N'TT', MaNhanVien as N'Mã NV' from PhieuNhapHang";
+            return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
         }
         #endregion
 

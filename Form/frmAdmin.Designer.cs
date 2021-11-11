@@ -219,6 +219,7 @@ namespace management_store
             // 
             // pnlMain
             // 
+            this.pnlMain.AutoScroll = true;
             this.pnlMain.AutoSize = true;
             this.pnlMain.BackColor = System.Drawing.Color.White;
             this.pnlMain.Location = new System.Drawing.Point(221, 47);

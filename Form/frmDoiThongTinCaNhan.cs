@@ -73,7 +73,8 @@ namespace management_store
             {
                 bll.CapNhatNhanVien(int.Parse(txtMaNV.Text), txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, picImage.Image, txtGioiTinh.Text, txtCCCD.Text);
                 MessageBox.Show("Thay đổi thông tin thành công!", "Thông báo");
-                LoadData();
+                this.Hide();
+                UCDashboard.Instance.LoadData();
             }
             catch (SqlException)
             {
