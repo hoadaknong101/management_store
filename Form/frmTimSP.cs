@@ -31,7 +31,7 @@ namespace management_store
         public frmTimSP(UCHoaDon.delThemSanPhamVaoHoaDon them)
         {
             InitializeComponent();
-            dtSP = func.GetDataToDataTable("select * from SanPham");
+            dtSP = func.GetDataToDataTable("select * from SanPham where SoLuongTrongKho > 0");
             this.them = them;
             LoadSP();
         }
@@ -72,7 +72,7 @@ namespace management_store
         {
             if(txtTimKiem.Text.Trim() == "")
             {
-                string sql = "SELECT * FROM SanPham";
+                string sql = "SELECT * FROM SanPham where SoLuongTrongKho > 0";
                 dtSP = func.GetDataToDataTable(sql);
                 fpnlMain.Controls.Clear();
                 LoadSP();
@@ -81,7 +81,7 @@ namespace management_store
 
         private void picTim_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE N'%" + txtTimKiem.Text.Trim() + "%'";
+            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE N'%" + txtTimKiem.Text.Trim() + "%' and where SoLuongTrongKho > 0";
             dtSP = func.GetDataToDataTable(sql);
             fpnlMain.Controls.Clear();
             LoadSP();
