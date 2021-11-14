@@ -7,7 +7,7 @@ namespace management_store
     class DataAccessLayer
     {
         // Hoa
-       private string connectionString = "Data Source=desktop-m8qf5it\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
+        private string connectionString = "Data Source=desktop-m8qf5it\\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true";
 
         // Hao
         //private string connectionString = "Data Source=localhost\SQLEXPRESS;Initial Catalog=CNPM_PHONG_PHAM;Integrated Security=True;MultipleActiveResultSets=true"
@@ -30,7 +30,6 @@ namespace management_store
                 {
                     connection.Close();
                 }
-
                 connection.Open();
                 cmd = connection.CreateCommand();
             }
