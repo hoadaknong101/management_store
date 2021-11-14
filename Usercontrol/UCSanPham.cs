@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using static management_store.BusinessLogicLayer;
 
 namespace management_store
 {
@@ -33,6 +35,18 @@ namespace management_store
             SettingSanPham();
             txtMaSP.Enabled = false;
             DisableOnControl();
+            LoadComboBox();
+        }
+        private void LoadComboBox()
+        {
+            List<string> lstLoai = new List<string>();
+            DataTable dt = BusinessLogicLayer.Instance().DanhSachLoaiSanPhan();
+            lstLoai.Add("Tất cả");
+            for (int i =0;i< dt.Rows.Count;i++)
+            {
+                lstLoai.Add(dt.Rows[i][0].ToString());
+            }
+            cbbPhanLoai.DataSource = lstLoai;
         }
 
         #region Chuc_nang
@@ -40,15 +54,6 @@ namespace management_store
         {
             dtb = func.ThongTinSanPham();
             dgvSanPham.DataSource = dtb;
-
-            dgvSanPham.Columns[4].Visible = false;
-            dgvSanPham.Columns[0].HeaderText = "Mã";
-            dgvSanPham.Columns[1].HeaderText = "Tên Sản Phẩm";
-            dgvSanPham.Columns[2].HeaderText = "Loại Sản Phẩm";
-            dgvSanPham.Columns[3].HeaderText = "Đơn Giá";
-            dgvSanPham.Columns[5].HeaderText = "Mã NSX";
-            dgvSanPham.Columns[6].HeaderText = "Số Lượng";
-
             dgvSanPham.Columns[0].Width = 55;
             dgvSanPham.Columns[2].Width = 140;
             dgvSanPham.Columns[5].Width = 100;
@@ -283,6 +288,11 @@ namespace management_store
         {
             frmNhaSanXuat frm = new frmNhaSanXuat();
             frm.ShowDialog();
+        }
+
+        private void cbbPhanLoai_TextChanged(object sender, EventArgs e)
+        {
+            dgvSanPham.DataSource = BusinessLogicLayer.Instance().DanhSachSanPhamTheoLoai(cbbPhanLoai.Text.Trim());
         }
     }
 }

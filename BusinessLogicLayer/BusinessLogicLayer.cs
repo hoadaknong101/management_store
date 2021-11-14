@@ -101,11 +101,14 @@ namespace management_store
         #region SanPham
         public DataTable ThongTinSanPham()
         {
-            return dal.GetDataToDataTable("SELECT * FROM SanPham");
+            string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
+                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+            return dal.GetDataToDataTable(sql);
         }
         public DataTable ThongTinSanPhamConHang()
         {
-            return dal.GetDataToDataTable("SELECT * FROM SanPham WHERE ");
+            string sql = "SELECT * FROM SanPham WHERE SoLuongTrongKho > 1";
+            return dal.GetDataToDataTable(sql);
         }
         public void ThemSanPham(string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
@@ -132,6 +135,27 @@ namespace management_store
         {
             dal.ExcuteNonQuery("sp_XoaSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham));
+        }
+        public DataTable DanhSachSanPhamTheoLoai(string loai)
+        {
+            string sql;
+            if(loai == "Tất cả")
+            {
+                sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
+                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+            }
+            else
+            {
+                sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
+                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham where LoaiSanPham like " +
+                "N'%" + loai + "%'";
+            }
+            return dal.GetDataToDataTable(sql);
+        }
+        public DataTable DanhSachLoaiSanPhan()
+        {
+            string sql = "select distinct LoaiSanPham from SanPham";
+            return dal.GetDataToDataTable(sql);
         }
         #endregion
 
