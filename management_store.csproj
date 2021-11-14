@@ -150,7 +150,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer.cs" />
+    <Compile Include="BusinessLogicLayer\BusinessLogicLayer.cs" />
     <Compile Include="Forms\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,29 +175,35 @@
     <Compile Include="Forms\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="DataAccessLayer\DataAccessLayer.cs" />
     <Compile Include="Forms\frmDoiThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmDoiThongTinCaNhan.Designer.cs">
       <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapHang.cs">
+    <Compile Include="Forms\frmCapNhatNhaSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapHang.Designer.cs">
+    <Compile Include="Forms\frmCapNhatNhaSanXuat.Designer.cs">
+      <DependentUpon>frmCapNhatNhaSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhapHang.Designer.cs">
       <DependentUpon>frmNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhaSanXuat.cs">
+    <Compile Include="Forms\frmNhaSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhaSanXuat.Designer.cs">
+    <Compile Include="Forms\frmNhaSanXuat.Designer.cs">
       <DependentUpon>frmNhaSanXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemNhaSanXuat.cs">
+    <Compile Include="Forms\frmThemNhaSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemNhaSanXuat.Designer.cs">
+    <Compile Include="Forms\frmThemNhaSanXuat.Designer.cs">
       <DependentUpon>frmThemNhaSanXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemEqualityComparer.cs" />
@@ -266,13 +272,16 @@
     <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapHang.resx">
+    <EmbeddedResource Include="Forms\frmCapNhatNhaSanXuat.resx">
+      <DependentUpon>frmCapNhatNhaSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhapHang.resx">
       <DependentUpon>frmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhaSanXuat.resx">
+    <EmbeddedResource Include="Forms\frmNhaSanXuat.resx">
       <DependentUpon>frmNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemNhaSanXuat.resx">
+    <EmbeddedResource Include="Forms\frmThemNhaSanXuat.resx">
       <DependentUpon>frmThemNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

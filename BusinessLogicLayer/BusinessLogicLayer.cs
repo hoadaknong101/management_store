@@ -10,10 +10,10 @@ namespace management_store
     public class BusinessLogicLayer
     {
         DataAccessLayer dal = new DataAccessLayer();
-        private static  BusinessLogicLayer obj;
+        private static BusinessLogicLayer obj;
         public static BusinessLogicLayer Instance()
         {
-            if(obj == null)
+            if (obj == null)
             {
                 obj = new BusinessLogicLayer();
                 return obj;
@@ -30,8 +30,8 @@ namespace management_store
             bool flag = false;
             try
             {
-                DataTable dt = dal.ExecuteQueryDataTable("sp_KiemTraDangNhap", 
-                    CommandType.StoredProcedure, 
+                DataTable dt = dal.ExecuteQueryDataTable("sp_KiemTraDangNhap",
+                    CommandType.StoredProcedure,
                     new SqlParameter("@MaNhanVien", taiKhoan),
                     new SqlParameter("@MatKhau", matKhau),
                     new SqlParameter("@ChucVu", chucVu));
@@ -57,7 +57,7 @@ namespace management_store
         public int SoLuongNhanVien()
         {
             string sql = "SELECT dbo.func_SoLuongNhanVien()";
-            return int.Parse(dal.ExecuteScalarToGetNumber(sql,CommandType.Text));
+            return int.Parse(dal.ExecuteScalarToGetNumber(sql, CommandType.Text));
         }
         public int SoLuongSanPhamDaBan()
         {
@@ -109,15 +109,15 @@ namespace management_store
         }
         public void ThemSanPham(string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
-            dal.ExcuteNonQuery("sp_ThemSanPham", System.Data.CommandType.StoredProcedure, 
+            dal.ExcuteNonQuery("sp_ThemSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@TenSanPham", tenSanPham),
                 new SqlParameter("@LoaiSanPham", loaiSanPham),
-                new SqlParameter("@DonGia",donGia),
+                new SqlParameter("@DonGia", donGia),
                 new SqlParameter("@HinhAnh", ImageToByteArray(hinhAnh)),
-                new SqlParameter("@MaNhaSanXuat",maNSX),
-                new SqlParameter("@SoLuongTrongKho",soLuong));
+                new SqlParameter("@MaNhaSanXuat", maNSX),
+                new SqlParameter("@SoLuongTrongKho", soLuong));
         }
-        public void CapNhatSanPham(int maSanPham,string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
+        public void CapNhatSanPham(int maSanPham, string tenSanPham, string loaiSanPham, float donGia, Image hinhAnh, int maNSX, int soLuong)
         {
             dal.ExcuteNonQuery("sp_CapNhatSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham),
@@ -138,13 +138,53 @@ namespace management_store
         #region NhaSanXuat
         public DataTable DanhSachNhaSanXuat()
         {
-            return dal.GetDataToDataTable("SELECT * FROM NhaSanXuat");
+            return dal.GetDataToDataTable("SELECT MaNhaSanXuat as N'ID', TenNhaSanXuat as N'Tên NSX'," +
+                "DiaChi as N'Địa chỉ', LienHe as N'Liên hệ', Website, MaBuuChinh as N'Zip code'," +
+                "KhuVuc as N'Khu vực' FROM NhaSanXuat");
         }
 
-        public string LayGiaTriTrongBangNhaSanXuat(int maNhaSanXuat,int index)
+        public string LayGiaTriTrongBangNhaSanXuat(int maNhaSanXuat, int index)
         {
             DataTable dt = dal.GetDataToDataTable("SELECT * FROM NhaSanXuat WHERE MaNhaSanXuat = " + maNhaSanXuat);
             return dt.Rows[0][index].ToString();
+        }
+        public void ThemNhaSanXuat(string tenNhaSanXuat, string diaChi,
+            string lienHe, string website, string zipCode, string khuVuc)
+        {
+            string sql = "sp_ThemNhaSanXuat";
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
+                new SqlParameter("@TenNhaSanXuat", tenNhaSanXuat),
+                new SqlParameter("@DiaChi", diaChi),
+                new SqlParameter("@LienHe", lienHe),
+                new SqlParameter("@Website", website),
+                new SqlParameter("@MaBuuChinh", zipCode),
+                new SqlParameter("@KhuVuc", khuVuc));
+        }
+        public void CapNhatNhaSanXuat(int maNSX, string tenNhaSanXuat, string diaChi,
+            string lienHe, string website, string zipCode, string khuVuc)
+        {
+            string sql = "sp_CapNhatNhaSanXuat";
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
+                new SqlParameter("@MaNhaSanXuat", maNSX),
+                new SqlParameter("@TenNhaSanXuat", tenNhaSanXuat),
+                new SqlParameter("@DiaChi", diaChi),
+                new SqlParameter("@LienHe", lienHe),
+                new SqlParameter("@Website", website),
+                new SqlParameter("@MaBuuChinh", zipCode),
+                new SqlParameter("@KhuVuc", khuVuc));
+        }
+        public void XoaNhaSanXuat(int maNSX)
+        {
+            string sql = "sp_XoaNhaSanXuat";
+            try
+            {
+                dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
+                new SqlParameter("@MaNhaSanXuat", maNSX));
+            }
+            catch
+            {
+                throw new Exception();
+            }
         }
         #endregion
 
@@ -161,11 +201,11 @@ namespace management_store
         public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
         {
             string sql = "sp_ThemHoaDon";
-            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure, 
+            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@NgayTao", ngayTao),
                 new SqlParameter("@MaNhanVien", maNhanVien),
-                new SqlParameter("@TongTien",tongTien));
+                new SqlParameter("@TongTien", tongTien));
         }
         public DataTable ThongTinToanBoHoaDon()
         {
@@ -177,14 +217,14 @@ namespace management_store
         #region NhanVien
         public DataTable ThongTinNhanVien(int maNhanVien)
         {
-            return dal.ExecuteQueryDataTable("dbo.sp_ThongTinNhanVien", CommandType.StoredProcedure, 
+            return dal.ExecuteQueryDataTable("dbo.sp_ThongTinNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
         public DataTable ThongTinToanBoNhanVien()
         {
             return dal.GetDataToDataTable("select * from NhanVien");
         }
-        public void ThemNhanVien(string hoTen,string lienHe,string diaChi,Image hinhAnh,string gioiTinh,string cccd)
+        public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
         {
             dal.ExcuteNonQuery("sp_ThemNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@HoTen", hoTen),
@@ -194,7 +234,7 @@ namespace management_store
                 new SqlParameter("@GioiTinh", gioiTinh),
                 new SqlParameter("@CCCD", cccd));
         }
-        public void CapNhatNhanVien(int maNhanVien,string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
+        public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
         {
             dal.ExcuteNonQuery("sp_CapNhatNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),

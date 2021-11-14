@@ -130,7 +130,7 @@
     <value>#bunifu-label { padding: 0px; font-family: 'Open Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Open Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Open Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Open Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
@@ -243,13 +243,20 @@
   </data>
   <data name="btnNhapHang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAO0AAABOCAYAAADMxZHPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVHhe7dMxEYAwAMDAKqll8FcZ7AUEIIDc/fBT5ox5
-        7jXP+wYK9nqn/QrAX5kWYkwLMaaFGNNCjGkhxrQQY1qIMS3EmBZiTAsxpoUY00KMaSHGtBBjWogxLcSY
-        FmJMCzGmhRjTQoxpIca0EGNaiDEtxJgWYkwLMaaFGNNCjGkhxrQQY1qIMS3EmBZiTAsxpoUY00KMaSHG
-        tBBjWogxLcSYFmJMCzGmhRjTQoxpIca0EGNaiDEtxJgWYkwLMaaFGNNCjGkhxrQQY1qIMS3EmBZiTAsx
-        poUY00KMaSHGtBBjWogxLcSYFmJMCzGmhRjTQoxpIca0EGNaiDEtxJgWYkwLMaaFmDGPfX0F4IeOfT0+
-        HPsjwpo/4gAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAANMAAAAnCAYAAACVBH3WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVHhe7dOhEYAwAMBAJunKsB9j4FsYAMMR+eJVdLZx
+        zHMcawF/zPOZ6S0AX5kJImaCiJkgYiaImAkiZoKImSBiJoiYCSJmgoiZIGImiJgJImaCiJkgYiaImAki
+        ZoKImSBiJoiYCSJmgoiZIGImiJgJImaCiJkgYiaImAkiZoKImSBiJoiYCSJmgoiZIGImiGxjn9dbAD7Y
+        53UDkOPnchaCG6oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnNhaSanXuat.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANMAAAAnCAYAAACVBH3WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVHhe7dOhEYAwAMBAJunKsB9j4FsYAMMR+eJVdLZx
+        zHMcawF/zPOZ6S0AX5kJImaCiJkgYiaImAkiZoKImSBiJoiYCSJmgoiZIGImiJgJImaCiJkgYiaImAki
+        ZoKImSBiJoiYCSJmgoiZIGImiJgJImaCiJkgYiaImAkiZoKImSBiJoiYCSJmgoiZIGImiGxjn9dbAD7Y
+        53UDkOPnchaCG6oAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

@@ -278,5 +278,11 @@ namespace management_store
             frmNhapHang frm = new frmNhapHang();
             frm.ShowDialog();
         }
+
+        private void btnNhaSanXuat_Click(object sender, EventArgs e)
+        {
+            frmNhaSanXuat frm = new frmNhaSanXuat();
+            frm.ShowDialog();
+        }
     }
 }

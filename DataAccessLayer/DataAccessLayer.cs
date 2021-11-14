@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace management_store
@@ -57,7 +58,15 @@ namespace management_store
             {
                 cmd.Parameters.Add(a);
             }
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                throw new Exception();
+            }
+            
         }
 
         public DataTable ExecuteQueryDataTable(string strSql, CommandType ct, params SqlParameter[] param)
