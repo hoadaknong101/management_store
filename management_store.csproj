@@ -150,36 +150,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer.cs" />
-    <Compile Include="Form\frmDoiMatKhau.cs">
+    <Compile Include="Forms\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmDoiMatKhau.Designer.cs">
+    <Compile Include="Forms\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmTimSP.cs">
+    <Compile Include="Forms\frmTimSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmTimSP.Designer.cs">
+    <Compile Include="Forms\frmTimSP.Designer.cs">
       <DependentUpon>frmTimSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmAdmin.cs">
+    <Compile Include="Forms\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmAdmin.Designer.cs">
+    <Compile Include="Forms\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmDangNhap.cs">
+    <Compile Include="Forms\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmDangNhap.Designer.cs">
+    <Compile Include="Forms\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer.cs" />
-    <Compile Include="Form\frmDoiThongTinCaNhan.cs">
+    <Compile Include="Forms\frmDoiThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmDoiThongTinCaNhan.Designer.cs">
+    <Compile Include="Forms\frmDoiThongTinCaNhan.Designer.cs">
       <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
@@ -232,20 +238,23 @@
     <Compile Include="Usercontrol\UCTitleBar.Designer.cs">
       <DependentUpon>UCTitleBar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\frmDoiMatKhau.resx">
+    <EmbeddedResource Include="Forms\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmDoiThongTinCaNhan.resx">
+    <EmbeddedResource Include="Forms\frmDoiThongTinCaNhan.resx">
       <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmTimSP.resx">
+    <EmbeddedResource Include="Forms\frmTimSP.resx">
       <DependentUpon>frmTimSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmAdmin.resx">
+    <EmbeddedResource Include="Forms\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmDangNhap.resx">
+    <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -448,6 +457,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-difficult.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

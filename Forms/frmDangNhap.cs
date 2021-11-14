@@ -78,7 +78,8 @@ namespace management_store
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
+            loaderDangNhap.Enabled = true;
+            loaderDangNhap.Visible = true;
             string vaiTro = "";
             if (rdbAdmin.Checked)
             {
@@ -99,6 +100,8 @@ namespace management_store
                         txtTenTaiKhoan.Clear();
                         txtMatKhau.Clear();
                         this.Show();
+                        loaderDangNhap.Visible = false;
+                        loaderDangNhap.Enabled = false;
                     }
                     else
                     {
@@ -109,15 +112,21 @@ namespace management_store
                         txtTenTaiKhoan.Clear();
                         txtMatKhau.Clear();
                         this.Show();
+                        loaderDangNhap.Visible = false;
+                        loaderDangNhap.Enabled = false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Sai thông tin tài khoản \n hoặc mật khẩu!!", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    loaderDangNhap.Visible = false;
+                    loaderDangNhap.Enabled = false;
                     return;
                 }
             }
             else MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông báo", MessageBoxButtons.OK);
+            loaderDangNhap.Visible = false;
+            loaderDangNhap.Enabled = false;
         }
 
         private bool KiemTraThongTinDauVao()

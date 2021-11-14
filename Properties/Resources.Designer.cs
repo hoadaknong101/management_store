@@ -473,6 +473,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap personal_difficult {
+            get {
+                object obj = ResourceManager.GetObject("personal-difficult", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone_52px {
             get {
                 object obj = ResourceManager.GetObject("phone_52px", resourceCulture);
