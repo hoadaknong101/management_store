@@ -1021,7 +1021,7 @@ namespace management_store
             this.bunifuLabel6.Location = new System.Drawing.Point(308, 140);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(73, 28);
+            this.bunifuLabel6.Size = new System.Drawing.Size(59, 23);
             this.bunifuLabel6.TabIndex = 22;
             this.bunifuLabel6.Text = "Địa chỉ : ";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1036,7 +1036,7 @@ namespace management_store
             this.bunifuLabel5.Location = new System.Drawing.Point(39, 142);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(64, 28);
+            this.bunifuLabel5.Size = new System.Drawing.Size(50, 23);
             this.bunifuLabel5.TabIndex = 20;
             this.bunifuLabel5.Text = "CCCD : ";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1051,7 +1051,7 @@ namespace management_store
             this.bunifuLabel4.Location = new System.Drawing.Point(821, 142);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(76, 28);
+            this.bunifuLabel4.Size = new System.Drawing.Size(62, 23);
             this.bunifuLabel4.TabIndex = 18;
             this.bunifuLabel4.Text = "Liên hệ :";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1066,7 +1066,7 @@ namespace management_store
             this.bunifuLabel3.Location = new System.Drawing.Point(821, 83);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(88, 28);
+            this.bunifuLabel3.Size = new System.Drawing.Size(72, 23);
             this.bunifuLabel3.TabIndex = 17;
             this.bunifuLabel3.Text = "Giới tính : ";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1081,7 +1081,7 @@ namespace management_store
             this.bunifuLabel2.Location = new System.Drawing.Point(306, 85);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(72, 28);
+            this.bunifuLabel2.Size = new System.Drawing.Size(59, 23);
             this.bunifuLabel2.TabIndex = 16;
             this.bunifuLabel2.Text = "Họ tên : ";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1097,7 +1097,7 @@ namespace management_store
             this.bunifuLabel1.Location = new System.Drawing.Point(41, 82);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(71, 28);
+            this.bunifuLabel1.Size = new System.Drawing.Size(57, 23);
             this.bunifuLabel1.TabIndex = 15;
             this.bunifuLabel1.Text = "Mã NV : ";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1110,7 +1110,7 @@ namespace management_store
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvNhanVien.BackgroundColor = System.Drawing.Color.Teal;
             this.dgvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvNhanVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -1152,6 +1152,7 @@ namespace management_store
             this.dgvNhanVien.EnableHeadersVisualStyles = false;
             this.dgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvNhanVien.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvNhanVien.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvNhanVien.HeaderForeColor = System.Drawing.Color.White;
             this.dgvNhanVien.Location = new System.Drawing.Point(37, 185);
             this.dgvNhanVien.Name = "dgvNhanVien";
@@ -1171,7 +1172,7 @@ namespace management_store
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(513, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 49);
+            this.label1.Size = new System.Drawing.Size(172, 39);
             this.label1.TabIndex = 12;
             this.label1.Text = "NHÂN VIÊN";
             // 

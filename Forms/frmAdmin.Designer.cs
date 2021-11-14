@@ -213,7 +213,7 @@ namespace management_store
             this.pnlBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBar.Location = new System.Drawing.Point(221, 0);
             this.pnlBar.Name = "pnlBar";
-            this.pnlBar.Size = new System.Drawing.Size(1103, 49);
+            this.pnlBar.Size = new System.Drawing.Size(1079, 49);
             this.pnlBar.TabIndex = 1;
             this.pnlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBar_MouseDown);
             // 
@@ -238,7 +238,7 @@ namespace management_store
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(199)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(1324, 708);
+            this.ClientSize = new System.Drawing.Size(1300, 708);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlTab);

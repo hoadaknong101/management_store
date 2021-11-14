@@ -10,7 +10,16 @@ namespace management_store
     public class BusinessLogicLayer
     {
         DataAccessLayer dal = new DataAccessLayer();
-
+        private static  BusinessLogicLayer obj;
+        public static BusinessLogicLayer Instance()
+        {
+            if(obj == null)
+            {
+                obj = new BusinessLogicLayer();
+                return obj;
+            }
+            return obj;
+        }
         public BusinessLogicLayer()
         {
 
@@ -123,6 +132,19 @@ namespace management_store
         {
             dal.ExcuteNonQuery("sp_XoaSanPham", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaSanPham", maSanPham));
+        }
+        #endregion
+
+        #region NhaSanXuat
+        public DataTable DanhSachNhaSanXuat()
+        {
+            return dal.GetDataToDataTable("SELECT * FROM NhaSanXuat");
+        }
+
+        public string LayGiaTriTrongBangNhaSanXuat(int maNhaSanXuat,int index)
+        {
+            DataTable dt = dal.GetDataToDataTable("SELECT * FROM NhaSanXuat WHERE MaNhaSanXuat = " + maNhaSanXuat);
+            return dt.Rows[0][index].ToString();
         }
         #endregion
 

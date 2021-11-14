@@ -272,5 +272,11 @@ namespace management_store
         {
             btnLuuSP.Text = btnThemSanPham.Enabled ? "Lưu" : "Cập nhật";
         }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            frmNhapHang frm = new frmNhapHang();
+            frm.ShowDialog();
+        }
     }
 }

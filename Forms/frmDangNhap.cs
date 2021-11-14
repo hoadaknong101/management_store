@@ -13,7 +13,6 @@ namespace management_store
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
         BusinessLogicLayer bll = new BusinessLogicLayer();
-
         public frmDangNhap()
         {
             InitializeComponent();
@@ -96,12 +95,13 @@ namespace management_store
                     if (vaiTro == "Admin")
                     {
                         this.Hide();
-                        new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim())).ShowDialog();
+                        new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim())).ShowDialog();                       
                         txtTenTaiKhoan.Clear();
-                        txtMatKhau.Clear();
+                        txtMatKhau.Clear();                        
                         this.Show();
                         loaderDangNhap.Visible = false;
                         loaderDangNhap.Enabled = false;
+                        
                     }
                     else
                     {

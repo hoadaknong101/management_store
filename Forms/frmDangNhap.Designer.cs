@@ -30,20 +30,25 @@ namespace management_store
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnPower = new System.Windows.Forms.Button();
             this.pnlRoles = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rdbAdmin = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.rdbNhanVien = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.loaderDangNhap = new Bunifu.UI.WinForms.BunifuLoader();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtMatKhau = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTenTaiKhoan = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -51,11 +56,6 @@ namespace management_store
             this.picBoxLogin = new System.Windows.Forms.PictureBox();
             this.picBoxPassword = new System.Windows.Forms.PictureBox();
             this.picBoxUsername = new System.Windows.Forms.PictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.rdbNhanVien = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.rdbAdmin = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlRoles.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,64 @@ namespace management_store
             this.pnlRoles.Name = "pnlRoles";
             this.pnlRoles.Size = new System.Drawing.Size(367, 38);
             this.pnlRoles.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(246, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ADMIN";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(89, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "NHÂN VIÊN";
+            // 
+            // rdbAdmin
+            // 
+            this.rdbAdmin.AllowBindingControlLocation = false;
+            this.rdbAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.rdbAdmin.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.rdbAdmin.BorderThickness = 1;
+            this.rdbAdmin.Checked = false;
+            this.rdbAdmin.Location = new System.Drawing.Point(219, 8);
+            this.rdbAdmin.Name = "rdbAdmin";
+            this.rdbAdmin.OutlineColor = System.Drawing.Color.White;
+            this.rdbAdmin.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdbAdmin.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.rdbAdmin.RadioColor = System.Drawing.Color.White;
+            this.rdbAdmin.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdbAdmin.Size = new System.Drawing.Size(21, 21);
+            this.rdbAdmin.TabIndex = 11;
+            this.rdbAdmin.Text = null;
+            // 
+            // rdbNhanVien
+            // 
+            this.rdbNhanVien.AllowBindingControlLocation = false;
+            this.rdbNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.rdbNhanVien.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.rdbNhanVien.BorderThickness = 1;
+            this.rdbNhanVien.Checked = true;
+            this.rdbNhanVien.Location = new System.Drawing.Point(62, 8);
+            this.rdbNhanVien.Name = "rdbNhanVien";
+            this.rdbNhanVien.OutlineColor = System.Drawing.Color.White;
+            this.rdbNhanVien.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdbNhanVien.OutlineColorUnchecked = System.Drawing.Color.White;
+            this.rdbNhanVien.RadioColor = System.Drawing.Color.White;
+            this.rdbNhanVien.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdbNhanVien.Size = new System.Drawing.Size(21, 21);
+            this.rdbNhanVien.TabIndex = 11;
+            this.rdbNhanVien.Text = null;
             // 
             // loaderDangNhap
             // 
@@ -129,9 +187,26 @@ namespace management_store
             this.panel1.Size = new System.Drawing.Size(560, 476);
             this.panel1.TabIndex = 10;
             // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(36, 25);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(485, 35);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "QUẢN LÝ CỬA HÀNG VĂN PHÒNG PHẨM";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.personal_difficult;
+            this.pictureBox1.Image = global::management_store.Properties.Resources._7df8b5dfcc84f1180a6261fdbf648b17;
             this.pictureBox1.Location = new System.Drawing.Point(12, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(534, 386);
@@ -173,26 +248,26 @@ namespace management_store
             this.txtMatKhau.Modified = false;
             this.txtMatKhau.Multiline = false;
             this.txtMatKhau.Name = "txtMatKhau";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMatKhau.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtMatKhau.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMatKhau.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMatKhau.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMatKhau.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnIdleState = stateProperties12;
             this.txtMatKhau.Padding = new System.Windows.Forms.Padding(3);
             this.txtMatKhau.PasswordChar = '\0';
             this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -248,26 +323,26 @@ namespace management_store
             this.txtTenTaiKhoan.Modified = false;
             this.txtTenTaiKhoan.Multiline = false;
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTenTaiKhoan.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTenTaiKhoan.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTenTaiKhoan.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTenTaiKhoan.OnIdleState = stateProperties8;
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTenTaiKhoan.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTenTaiKhoan.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTenTaiKhoan.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTenTaiKhoan.OnIdleState = stateProperties16;
             this.txtTenTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
             this.txtTenTaiKhoan.PasswordChar = '\0';
             this.txtTenTaiKhoan.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -308,11 +383,11 @@ namespace management_store
             this.btnDangNhap.ColorContrastOnClick = 45;
             this.btnDangNhap.ColorContrastOnHover = 45;
             this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnDangNhap.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnDangNhap.CustomizableEdges = borderEdges2;
             this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDangNhap.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDangNhap.DisabledFillColor = System.Drawing.Color.Empty;
@@ -383,10 +458,10 @@ namespace management_store
             // 
             // picBoxLogin
             // 
-            this.picBoxLogin.Image = global::management_store.Properties.Resources.staff_icon_6;
-            this.picBoxLogin.Location = new System.Drawing.Point(729, 31);
+            this.picBoxLogin.Image = global::management_store.Properties.Resources.img_337531;
+            this.picBoxLogin.Location = new System.Drawing.Point(729, 30);
             this.picBoxLogin.Name = "picBoxLogin";
-            this.picBoxLogin.Size = new System.Drawing.Size(174, 101);
+            this.picBoxLogin.Size = new System.Drawing.Size(174, 93);
             this.picBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxLogin.TabIndex = 6;
             this.picBoxLogin.TabStop = false;
@@ -410,80 +485,6 @@ namespace management_store
             this.picBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxUsername.TabIndex = 5;
             this.picBoxUsername.TabStop = false;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(36, 25);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(485, 35);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "QUẢN LÝ CỬA HÀNG VĂN PHÒNG PHẨM";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // rdbNhanVien
-            // 
-            this.rdbNhanVien.AllowBindingControlLocation = false;
-            this.rdbNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.rdbNhanVien.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.rdbNhanVien.BorderThickness = 1;
-            this.rdbNhanVien.Checked = false;
-            this.rdbNhanVien.Location = new System.Drawing.Point(62, 8);
-            this.rdbNhanVien.Name = "rdbNhanVien";
-            this.rdbNhanVien.OutlineColor = System.Drawing.Color.White;
-            this.rdbNhanVien.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rdbNhanVien.OutlineColorUnchecked = System.Drawing.Color.White;
-            this.rdbNhanVien.RadioColor = System.Drawing.Color.White;
-            this.rdbNhanVien.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rdbNhanVien.Size = new System.Drawing.Size(21, 21);
-            this.rdbNhanVien.TabIndex = 11;
-            this.rdbNhanVien.Text = null;
-            // 
-            // rdbAdmin
-            // 
-            this.rdbAdmin.AllowBindingControlLocation = false;
-            this.rdbAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.rdbAdmin.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.rdbAdmin.BorderThickness = 1;
-            this.rdbAdmin.Checked = true;
-            this.rdbAdmin.Location = new System.Drawing.Point(219, 8);
-            this.rdbAdmin.Name = "rdbAdmin";
-            this.rdbAdmin.OutlineColor = System.Drawing.Color.White;
-            this.rdbAdmin.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rdbAdmin.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.rdbAdmin.RadioColor = System.Drawing.Color.White;
-            this.rdbAdmin.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rdbAdmin.Size = new System.Drawing.Size(21, 21);
-            this.rdbAdmin.TabIndex = 11;
-            this.rdbAdmin.Text = null;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(89, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "NHÂN VIÊN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(246, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ADMIN";
             // 
             // frmDangNhap
             // 

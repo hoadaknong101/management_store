@@ -14,7 +14,7 @@ namespace management_store
         private DataTable dt;
         static UCDashboard _obj;
         private int ID_NhanVien;
-        
+        public static int maNhanVien;
         public static UCDashboard Instance
         {
             get
