@@ -102,7 +102,7 @@ namespace management_store
         public DataTable ThongTinSanPham()
         {
             string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
             return dal.GetDataToDataTable(sql);
         }
         public DataTable ThongTinSanPhamConHang()
@@ -142,12 +142,12 @@ namespace management_store
             if(loai == "Tất cả")
             {
                 sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
             }
             else
             {
                 sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham where LoaiSanPham like " +
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham where LoaiSanPham like " +
                 "N'%" + loai + "%'";
             }
             return dal.GetDataToDataTable(sql);
@@ -283,17 +283,17 @@ namespace management_store
         #endregion
 
         #region PhieuNhapHang
-        public void ThemChiTietPhieuNhapHang(int maPhieuNhapHang, int maSanPham, float donGia, int soLuong)
+        public void ThemChiTietPhieuNhapHang(string maPhieuNhapHang, int maSanPham, float donGia, int soLuong)
         {
-            dal.ExcuteNonQuery("sp_ThemChiTietPhieuNhapHang", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_ThemChiTietPhieuNhapHang", CommandType.StoredProcedure,
                 new SqlParameter("@maPhieuNhapHang", maPhieuNhapHang),
                 new SqlParameter("@MaSanPham", maSanPham),
                 new SqlParameter("@DonGia", donGia),
                 new SqlParameter("@SoLuong", soLuong));
         }
-        public void ThemPhieuNhapHang(int maPhieuNhapHang, DateTime ngayTao, int maNhanVien, float tongTien)
+        public void ThemPhieuNhapHang(string maPhieuNhapHang, DateTime ngayTao, int maNhanVien, float tongTien)
         {
-            dal.ExcuteNonQuery("sp_ThemPhieuNhapHang", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_ThemPhieuNhapHang", CommandType.StoredProcedure,
                 new SqlParameter("@maPhieuNhapHang", maPhieuNhapHang),
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@NgayTao", ngayTao),

@@ -65,7 +65,7 @@ namespace management_store
             {
                 throw new Exception();
             }
-            
+
         }
 
         public DataTable ExecuteQueryDataTable(string strSql, CommandType ct, params SqlParameter[] param)

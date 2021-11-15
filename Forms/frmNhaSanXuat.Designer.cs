@@ -223,7 +223,6 @@ namespace management_store
             this.dgvNhaSanXuat.EnableHeadersVisualStyles = false;
             this.dgvNhaSanXuat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvNhaSanXuat.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvNhaSanXuat.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvNhaSanXuat.HeaderForeColor = System.Drawing.Color.White;
             this.dgvNhaSanXuat.Location = new System.Drawing.Point(18, 252);
             this.dgvNhaSanXuat.Name = "dgvNhaSanXuat";

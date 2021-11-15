@@ -33,8 +33,8 @@ namespace management_store
         {
             lblNhanVien.Text = bll.SoLuongNhanVien().ToString();
             lblHoaDon.Text = bll.SoLuongHoaDon().ToString();
-            lblChiTieu.Text = "Tổng chi tiêu : " + bll.TongChiTieu().ToString("N", CultureInfo.InvariantCulture);
-            lblThuNhap.Text = "Tổng thu nhập : " + bll.TongThuNhap().ToString("N", CultureInfo.InvariantCulture);
+            lblChiTieu.Text = "Tổng chi tiêu : " + bll.TongChiTieu().ToString("N", CultureInfo.InvariantCulture) + " VNĐ";
+            lblThuNhap.Text = "Tổng thu nhập : " + bll.TongThuNhap().ToString("N", CultureInfo.InvariantCulture) + " VNĐ";
             lbl_spDaBan.Text = bll.SoLuongSanPhamDaBan().ToString();
             lbl_spTrongKho.Text = bll.SoLuongSanPhamTrongKho().ToString();
         }
