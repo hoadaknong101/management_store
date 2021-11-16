@@ -51,7 +51,7 @@ namespace management_store
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
-        {
+        {            
             chartThongKe.Series["Thu nhập"].Points.AddXY("8", 33);
             chartThongKe.Series["Thu nhập"].Points.AddXY("9", 45);
             chartThongKe.Series["Thu nhập"].Points.AddXY("10", 26);

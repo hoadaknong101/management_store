@@ -49,6 +49,7 @@ namespace management_store
         {
             try
             {
+                this.SoLuong = int.Parse(txtSoLuong.Text.Trim());
                 this.ThanhTien = this.DonGia * int.Parse(txtSoLuong.Text.Trim());
                 this.capNhatTongTien.Invoke();
                 lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);

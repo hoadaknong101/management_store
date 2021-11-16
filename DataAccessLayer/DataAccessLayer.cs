@@ -57,14 +57,7 @@ namespace management_store
             {
                 cmd.Parameters.Add(a);
             }
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                throw new Exception();
-            }
+            cmd.ExecuteNonQuery();
 
         }
 

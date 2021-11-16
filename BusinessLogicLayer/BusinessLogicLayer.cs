@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -215,13 +216,32 @@ namespace management_store
         #region HoaDon
         public void ThemChiTietHoaDon(long maHoaDon, int maSanPham, int soLuong, float thanhTien)
         {
-            string sql = "sp_ThemChiTietHoaDon";
-            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
-                new SqlParameter("@MaHoaDon", maHoaDon + ""),
-                new SqlParameter("@MaSanPham", maSanPham),
-                new SqlParameter("@SoLuong", soLuong),
-                new SqlParameter("@thanhTien", thanhTien));
+            //try
+            //{
+                string sql = "sp_ThemChiTietHoaDon";
+                dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                    new SqlParameter("@MaHoaDon", maHoaDon + ""),
+                    new SqlParameter("@MaSanPham", maSanPham),
+                    new SqlParameter("@SoLuong", soLuong),
+                    new SqlParameter("@thanhTien", thanhTien));
+            //}
+            //catch
+            //{
+            //    throw new Exception();
+            //}
         }
+
+        public bool KiemTraSoLuongHangBanRa(string maSP, int soLuong)
+        {
+            string sql = "select TenSanPham, SoLuongTrongKho from SanPham where MaSanPham = " + maSP;
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (soLuong > int.Parse(dt.Rows[0][1].ToString()))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
         {
             string sql = "sp_ThemHoaDon";

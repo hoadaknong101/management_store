@@ -50,7 +50,7 @@ namespace management_store
         }
 
         #region Chuc_nang
-        private void SettingSanPham()
+        public void SettingSanPham()
         {
             dtb = func.ThongTinSanPham();
             dgvSanPham.DataSource = dtb;
