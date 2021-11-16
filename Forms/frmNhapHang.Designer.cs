@@ -440,7 +440,7 @@ namespace management_store
             this.btnLuu.IdleIconLeftImage = global::management_store.Properties.Resources.icons8_save_48;
             this.btnLuu.IdleIconRightImage = null;
             this.btnLuu.IndicateFocus = false;
-            this.btnLuu.Location = new System.Drawing.Point(813, 570);
+            this.btnLuu.Location = new System.Drawing.Point(813, 571);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuu.OnDisabledState.BorderRadius = 1;
@@ -532,7 +532,7 @@ namespace management_store
             this.btnTaoMoi.IdleIconLeftImage = global::management_store.Properties.Resources.icons8_new_copy_50px;
             this.btnTaoMoi.IdleIconRightImage = null;
             this.btnTaoMoi.IndicateFocus = false;
-            this.btnTaoMoi.Location = new System.Drawing.Point(995, 570);
+            this.btnTaoMoi.Location = new System.Drawing.Point(995, 571);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnTaoMoi.OnDisabledState.BorderRadius = 1;
@@ -624,7 +624,7 @@ namespace management_store
             this.btnIn.IdleIconLeftImage = global::management_store.Properties.Resources.icons8_print_50px;
             this.btnIn.IdleIconRightImage = null;
             this.btnIn.IndicateFocus = false;
-            this.btnIn.Location = new System.Drawing.Point(813, 621);
+            this.btnIn.Location = new System.Drawing.Point(813, 622);
             this.btnIn.Name = "btnIn";
             this.btnIn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnIn.OnDisabledState.BorderRadius = 1;
@@ -715,7 +715,7 @@ namespace management_store
             this.btnDong.IdleIconLeftImage = global::management_store.Properties.Resources.icons8_close_window_50px;
             this.btnDong.IdleIconRightImage = null;
             this.btnDong.IndicateFocus = false;
-            this.btnDong.Location = new System.Drawing.Point(995, 621);
+            this.btnDong.Location = new System.Drawing.Point(995, 622);
             this.btnDong.Name = "btnDong";
             this.btnDong.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDong.OnDisabledState.BorderRadius = 1;

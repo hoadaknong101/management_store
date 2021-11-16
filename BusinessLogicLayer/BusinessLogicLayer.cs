@@ -216,19 +216,12 @@ namespace management_store
         #region HoaDon
         public void ThemChiTietHoaDon(long maHoaDon, int maSanPham, int soLuong, float thanhTien)
         {
-            //try
-            //{
-                string sql = "sp_ThemChiTietHoaDon";
-                dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
-                    new SqlParameter("@MaHoaDon", maHoaDon + ""),
-                    new SqlParameter("@MaSanPham", maSanPham),
-                    new SqlParameter("@SoLuong", soLuong),
-                    new SqlParameter("@thanhTien", thanhTien));
-            //}
-            //catch
-            //{
-            //    throw new Exception();
-            //}
+            string sql = "sp_ThemChiTietHoaDon";
+            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaHoaDon", maHoaDon + ""),
+                new SqlParameter("@MaSanPham", maSanPham),
+                new SqlParameter("@SoLuong", soLuong),
+                new SqlParameter("@thanhTien", thanhTien));
         }
 
         public bool KiemTraSoLuongHangBanRa(string maSP, int soLuong)
@@ -255,6 +248,15 @@ namespace management_store
         {
             string sql = "select MaHoaDon as N'Mã HĐ', NgayTao as N'Ngày tạo', TongTien as N'TT' from HoaDon";
             return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
+        }
+        public DataTable ChiTietHoaDon(string maHoaDon)
+        {
+            string sql = "select c.MaHoaDon N'Mã HĐ',s.TenSanPham N'Sản phẩm',c.SoLuong N'Số lượng',h.TongTien N'Tổng tiền',h.NgayTao N'Ngày tạo'" +
+                "from SanPham s, ChiTietHoaDon c, HoaDon h " +
+                "where s.MaSanPham = c.MaSanPham and" +
+                " c.MaHoaDon = '" + maHoaDon + "' and" +
+                " h.MaHoaDon = '" + maHoaDon + "'";
+            return dal.GetDataToDataTable(sql);
         }
         #endregion
 

@@ -100,7 +100,8 @@ namespace management_store
                             int soLuong = int.Parse(dgvChiTietPhieuNhap.Rows[i].Cells[3].Value.ToString());
                             BusinessLogicLayer.Instance().ThemChiTietPhieuNhapHang(maPhieuNhap + "", maSanPham, donGia, soLuong);
                         }
-                        MessageBox.Show("Thêm thành công!\nVui lòng nhập lại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Thêm thành công!\n", "Thông báo", MessageBoxButtons.OK);
+                        UCSanPham.Instance.SettingSanPham();
                     }
                     catch
                     {

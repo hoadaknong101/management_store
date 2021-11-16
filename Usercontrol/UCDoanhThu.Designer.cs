@@ -75,6 +75,7 @@ namespace management_store
             this.gbDuLieu = new System.Windows.Forms.GroupBox();
             this.chbChiTieu = new System.Windows.Forms.CheckBox();
             this.chbThuNhap = new System.Windows.Forms.CheckBox();
+            this.btnLichSuBanHang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -596,6 +597,19 @@ namespace management_store
             this.chbThuNhap.Text = "Thu nhập";
             this.chbThuNhap.UseVisualStyleBackColor = true;
             // 
+            // btnLichSuBanHang
+            // 
+            this.btnLichSuBanHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLichSuBanHang.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSuBanHang.ForeColor = System.Drawing.Color.White;
+            this.btnLichSuBanHang.Location = new System.Drawing.Point(24, 520);
+            this.btnLichSuBanHang.Name = "btnLichSuBanHang";
+            this.btnLichSuBanHang.Size = new System.Drawing.Size(209, 59);
+            this.btnLichSuBanHang.TabIndex = 12;
+            this.btnLichSuBanHang.Text = "Lịch sử bán hàng";
+            this.btnLichSuBanHang.UseVisualStyleBackColor = false;
+            this.btnLichSuBanHang.Click += new System.EventHandler(this.btnLichSuBanHang_Click);
+            // 
             // UCDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -604,6 +618,7 @@ namespace management_store
             this.Controls.Add(this.gbDuLieu);
             this.Controls.Add(this.gbThoiGian);
             this.Controls.Add(this.btnBaoCao);
+            this.Controls.Add(this.btnLichSuBanHang);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.chartThongKe);
@@ -677,5 +692,6 @@ namespace management_store
         private System.Windows.Forms.CheckBox chbThuNhap;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvHoaDon;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvPhieuNhap;
+        private System.Windows.Forms.Button btnLichSuBanHang;
     }
 }

@@ -206,6 +206,18 @@
     <Compile Include="Forms\frmThemNhaSanXuat.Designer.cs">
       <DependentUpon>frmThemNhaSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChiTietHoaDon.Designer.cs">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLichSuaBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLichSuaBanHang.Designer.cs">
+      <DependentUpon>frmLichSuaBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -283,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmThemNhaSanXuat.resx">
       <DependentUpon>frmThemNhaSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChiTietHoaDon.resx">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLichSuaBanHang.resx">
+      <DependentUpon>frmLichSuaBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
