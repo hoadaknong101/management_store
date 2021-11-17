@@ -62,6 +62,10 @@ namespace management_store
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.txtLienHe = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtGioiTinh = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -83,6 +87,10 @@ namespace management_store
             this.dgvNhanVien = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txtMatKhau = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.cbbChucVu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -127,7 +135,7 @@ namespace management_store
             this.txtLienHe.IconRight = null;
             this.txtLienHe.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLienHe.Lines = new string[0];
-            this.txtLienHe.Location = new System.Drawing.Point(899, 133);
+            this.txtLienHe.Location = new System.Drawing.Point(651, 133);
             this.txtLienHe.MaxLength = 32767;
             this.txtLienHe.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLienHe.Modified = false;
@@ -202,7 +210,7 @@ namespace management_store
             this.txtGioiTinh.IconRight = null;
             this.txtGioiTinh.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGioiTinh.Lines = new string[0];
-            this.txtGioiTinh.Location = new System.Drawing.Point(899, 76);
+            this.txtGioiTinh.Location = new System.Drawing.Point(651, 76);
             this.txtGioiTinh.MaxLength = 32767;
             this.txtGioiTinh.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtGioiTinh.Modified = false;
@@ -277,7 +285,7 @@ namespace management_store
             this.txtHoTen.IconRight = null;
             this.txtHoTen.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoTen.Lines = new string[0];
-            this.txtHoTen.Location = new System.Drawing.Point(388, 76);
+            this.txtHoTen.Location = new System.Drawing.Point(325, 76);
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtHoTen.Modified = false;
@@ -313,7 +321,7 @@ namespace management_store
             this.txtHoTen.SelectionLength = 0;
             this.txtHoTen.SelectionStart = 0;
             this.txtHoTen.ShortcutsEnabled = true;
-            this.txtHoTen.Size = new System.Drawing.Size(402, 39);
+            this.txtHoTen.Size = new System.Drawing.Size(222, 39);
             this.txtHoTen.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtHoTen.TabIndex = 31;
             this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -388,7 +396,7 @@ namespace management_store
             this.txtCCCD.SelectionLength = 0;
             this.txtCCCD.SelectionStart = 0;
             this.txtCCCD.ShortcutsEnabled = true;
-            this.txtCCCD.Size = new System.Drawing.Size(151, 39);
+            this.txtCCCD.Size = new System.Drawing.Size(106, 39);
             this.txtCCCD.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCCCD.TabIndex = 30;
             this.txtCCCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -427,7 +435,7 @@ namespace management_store
             this.txtDiaChi.IconRight = null;
             this.txtDiaChi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaChi.Lines = new string[0];
-            this.txtDiaChi.Location = new System.Drawing.Point(388, 133);
+            this.txtDiaChi.Location = new System.Drawing.Point(325, 133);
             this.txtDiaChi.MaxLength = 32767;
             this.txtDiaChi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDiaChi.Modified = false;
@@ -463,7 +471,7 @@ namespace management_store
             this.txtDiaChi.SelectionLength = 0;
             this.txtDiaChi.SelectionStart = 0;
             this.txtDiaChi.ShortcutsEnabled = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(402, 39);
+            this.txtDiaChi.Size = new System.Drawing.Size(222, 39);
             this.txtDiaChi.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDiaChi.TabIndex = 29;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -538,7 +546,7 @@ namespace management_store
             this.txtMaNV.SelectionLength = 0;
             this.txtMaNV.SelectionStart = 0;
             this.txtMaNV.ShortcutsEnabled = true;
-            this.txtMaNV.Size = new System.Drawing.Size(151, 39);
+            this.txtMaNV.Size = new System.Drawing.Size(106, 39);
             this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMaNV.TabIndex = 28;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -691,7 +699,7 @@ namespace management_store
             this.btnXoaNhanVien.IdleIconLeftImage = null;
             this.btnXoaNhanVien.IdleIconRightImage = null;
             this.btnXoaNhanVien.IndicateFocus = false;
-            this.btnXoaNhanVien.Location = new System.Drawing.Point(640, 603);
+            this.btnXoaNhanVien.Location = new System.Drawing.Point(658, 604);
             this.btnXoaNhanVien.Name = "btnXoaNhanVien";
             this.btnXoaNhanVien.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoaNhanVien.OnDisabledState.BorderRadius = 1;
@@ -784,7 +792,7 @@ namespace management_store
             this.btnHuy.IdleIconLeftImage = null;
             this.btnHuy.IdleIconRightImage = null;
             this.btnHuy.IndicateFocus = false;
-            this.btnHuy.Location = new System.Drawing.Point(437, 603);
+            this.btnHuy.Location = new System.Drawing.Point(454, 604);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHuy.OnDisabledState.BorderRadius = 1;
@@ -877,7 +885,7 @@ namespace management_store
             this.btnLuuNhanVien.IdleIconLeftImage = null;
             this.btnLuuNhanVien.IdleIconRightImage = null;
             this.btnLuuNhanVien.IndicateFocus = false;
-            this.btnLuuNhanVien.Location = new System.Drawing.Point(238, 603);
+            this.btnLuuNhanVien.Location = new System.Drawing.Point(245, 604);
             this.btnLuuNhanVien.Name = "btnLuuNhanVien";
             this.btnLuuNhanVien.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuuNhanVien.OnDisabledState.BorderRadius = 1;
@@ -969,7 +977,7 @@ namespace management_store
             this.btnThemNhanVien.IdleIconLeftImage = null;
             this.btnThemNhanVien.IdleIconRightImage = null;
             this.btnThemNhanVien.IndicateFocus = false;
-            this.btnThemNhanVien.Location = new System.Drawing.Point(37, 603);
+            this.btnThemNhanVien.Location = new System.Drawing.Point(37, 604);
             this.btnThemNhanVien.Name = "btnThemNhanVien";
             this.btnThemNhanVien.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThemNhanVien.OnDisabledState.BorderRadius = 1;
@@ -1018,7 +1026,7 @@ namespace management_store
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.Location = new System.Drawing.Point(308, 140);
+            this.bunifuLabel6.Location = new System.Drawing.Point(249, 141);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(59, 23);
@@ -1033,7 +1041,7 @@ namespace management_store
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.Location = new System.Drawing.Point(39, 142);
+            this.bunifuLabel5.Location = new System.Drawing.Point(39, 141);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(50, 23);
@@ -1048,7 +1056,7 @@ namespace management_store
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(821, 142);
+            this.bunifuLabel4.Location = new System.Drawing.Point(573, 141);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(62, 23);
@@ -1063,7 +1071,7 @@ namespace management_store
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(821, 83);
+            this.bunifuLabel3.Location = new System.Drawing.Point(573, 82);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(72, 23);
@@ -1078,7 +1086,7 @@ namespace management_store
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(306, 85);
+            this.bunifuLabel2.Location = new System.Drawing.Point(249, 82);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(59, 23);
@@ -1149,17 +1157,19 @@ namespace management_store
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvNhanVien.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvNhanVien.EnableHeadersVisualStyles = false;
             this.dgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvNhanVien.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvNhanVien.HeaderForeColor = System.Drawing.Color.White;
             this.dgvNhanVien.Location = new System.Drawing.Point(37, 185);
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 40;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhanVien.Size = new System.Drawing.Size(753, 407);
+            this.dgvNhanVien.Size = new System.Drawing.Size(771, 407);
             this.dgvNhanVien.TabIndex = 14;
             this.dgvNhanVien.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
@@ -1185,12 +1195,131 @@ namespace management_store
             this.pictureBox11.TabIndex = 35;
             this.pictureBox11.TabStop = false;
             // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel7.Location = new System.Drawing.Point(829, 82);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(69, 23);
+            this.bunifuLabel7.TabIndex = 17;
+            this.bunifuLabel7.Text = "Chức vụ :";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel8.Location = new System.Drawing.Point(829, 141);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(78, 23);
+            this.bunifuLabel8.TabIndex = 18;
+            this.bunifuLabel8.Text = "Mật khẩu :";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.AcceptsReturn = false;
+            this.txtMatKhau.AcceptsTab = false;
+            this.txtMatKhau.AnimationSpeed = 200;
+            this.txtMatKhau.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtMatKhau.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtMatKhau.AutoSizeHeight = true;
+            this.txtMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.txtMatKhau.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtMatKhau.BackgroundImage")));
+            this.txtMatKhau.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtMatKhau.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtMatKhau.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtMatKhau.BorderRadius = 1;
+            this.txtMatKhau.BorderThickness = 1;
+            this.txtMatKhau.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtMatKhau.DefaultText = "";
+            this.txtMatKhau.FillColor = System.Drawing.Color.White;
+            this.txtMatKhau.HideSelection = true;
+            this.txtMatKhau.IconLeft = null;
+            this.txtMatKhau.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.IconPadding = 10;
+            this.txtMatKhau.IconRight = null;
+            this.txtMatKhau.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.Lines = new string[0];
+            this.txtMatKhau.Location = new System.Drawing.Point(913, 133);
+            this.txtMatKhau.MaxLength = 32767;
+            this.txtMatKhau.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtMatKhau.Modified = false;
+            this.txtMatKhau.Multiline = false;
+            this.txtMatKhau.Name = "txtMatKhau";
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMatKhau.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMatKhau.OnIdleState = stateProperties28;
+            this.txtMatKhau.Padding = new System.Windows.Forms.Padding(3);
+            this.txtMatKhau.PasswordChar = '•';
+            this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtMatKhau.PlaceholderText = "";
+            this.txtMatKhau.ReadOnly = false;
+            this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.SelectionLength = 0;
+            this.txtMatKhau.SelectionStart = 0;
+            this.txtMatKhau.ShortcutsEnabled = true;
+            this.txtMatKhau.Size = new System.Drawing.Size(157, 39);
+            this.txtMatKhau.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtMatKhau.TabIndex = 33;
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMatKhau.TextMarginBottom = 0;
+            this.txtMatKhau.TextMarginLeft = 3;
+            this.txtMatKhau.TextMarginTop = 1;
+            this.txtMatKhau.TextPlaceholder = "";
+            this.txtMatKhau.UseSystemPasswordChar = false;
+            this.txtMatKhau.WordWrap = true;
+            // 
+            // cbbChucVu
+            // 
+            this.cbbChucVu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbChucVu.FormattingEnabled = true;
+            this.cbbChucVu.Items.AddRange(new object[] {
+            "Nhân viên",
+            "Admin"});
+            this.cbbChucVu.Location = new System.Drawing.Point(913, 78);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.Size = new System.Drawing.Size(157, 33);
+            this.cbbChucVu.TabIndex = 36;
+            // 
             // UCNhanVien
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+            this.Controls.Add(this.cbbChucVu);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.picImage);
+            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtLienHe);
             this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtHoTen);
@@ -1203,7 +1332,9 @@ namespace management_store
             this.Controls.Add(this.btnLuuNhanVien);
             this.Controls.Add(this.btnThemNhanVien);
             this.Controls.Add(this.bunifuLabel6);
+            this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.bunifuLabel5);
+            this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
@@ -1246,5 +1377,9 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuDataGridView dgvNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
+        private Bunifu.UI.WinForms.BunifuTextBox txtMatKhau;
+        private System.Windows.Forms.ComboBox cbbChucVu;
     }
 }

@@ -293,6 +293,16 @@ namespace management_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_dashboard_layout {
+            get {
+                object obj = ResourceManager.GetObject("icons8_dashboard_layout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_sign_filled_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_sign_filled_32", resourceCulture);

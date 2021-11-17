@@ -29,6 +29,7 @@ namespace management_store
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +40,7 @@ namespace management_store
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDoanhThu));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,17 +67,16 @@ namespace management_store
             this.lblChiTieu = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnBaoCao = new System.Windows.Forms.Button();
             this.gbThoiGian = new System.Windows.Forms.GroupBox();
-            this.radQuy = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
             this.radThang = new System.Windows.Forms.RadioButton();
-            this.radTuan = new System.Windows.Forms.RadioButton();
-            this.gbDuLieu = new System.Windows.Forms.GroupBox();
-            this.chbChiTieu = new System.Windows.Forms.CheckBox();
-            this.chbThuNhap = new System.Windows.Forms.CheckBox();
+            this.radNgay = new System.Windows.Forms.RadioButton();
             this.btnLichSuBanHang = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.printDocumentDoanhThu = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialogDoanhThu = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnLichSuNhapHang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -89,7 +90,6 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.gbThoiGian.SuspendLayout();
-            this.gbDuLieu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +105,6 @@ namespace management_store
             // 
             // pictureBox23
             // 
-            this.pictureBox23.Image = global::management_store.Properties.Resources.icons8_statistics_48;
             this.pictureBox23.Location = new System.Drawing.Point(434, 12);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(54, 39);
@@ -190,7 +189,7 @@ namespace management_store
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::management_store.Properties.Resources.Book_Shelf_100px;
+            this.pictureBox5.Image = global::management_store.Properties.Resources.book_shelf_96px2;
             this.pictureBox5.Location = new System.Drawing.Point(15, 135);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 41);
@@ -250,7 +249,7 @@ namespace management_store
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_64;
+            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_48;
             this.pictureBox2.Location = new System.Drawing.Point(15, 48);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 41);
@@ -285,9 +284,9 @@ namespace management_store
             this.pnlHoaDon.Controls.Add(this.dgvHoaDon);
             this.pnlHoaDon.Controls.Add(this.lblThuNhap);
             this.pnlHoaDon.Controls.Add(this.label11);
-            this.pnlHoaDon.Location = new System.Drawing.Point(278, 70);
+            this.pnlHoaDon.Location = new System.Drawing.Point(254, 70);
             this.pnlHoaDon.Name = "pnlHoaDon";
-            this.pnlHoaDon.Size = new System.Drawing.Size(400, 298);
+            this.pnlHoaDon.Size = new System.Drawing.Size(424, 298);
             this.pnlHoaDon.TabIndex = 8;
             // 
             // dgvHoaDon
@@ -346,7 +345,7 @@ namespace management_store
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowTemplate.Height = 40;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(394, 231);
+            this.dgvHoaDon.Size = new System.Drawing.Size(418, 231);
             this.dgvHoaDon.TabIndex = 13;
             this.dgvHoaDon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -471,131 +470,88 @@ namespace management_store
             this.chartThongKe.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartThongKe.Legends.Add(legend1);
-            this.chartThongKe.Location = new System.Drawing.Point(281, 380);
+            this.chartThongKe.Location = new System.Drawing.Point(254, 380);
             this.chartThongKe.Name = "chartThongKe";
+            this.chartThongKe.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.LabelBorderWidth = 3;
             series1.LabelForeColor = System.Drawing.Color.Red;
             series1.Legend = "Legend1";
             series1.Name = "Thu nhập";
+            series2.BorderWidth = 3;
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.LabelBorderWidth = 3;
             series2.Legend = "Legend1";
             series2.Name = "Chi tiêu";
             this.chartThongKe.Series.Add(series1);
             this.chartThongKe.Series.Add(series2);
-            this.chartThongKe.Size = new System.Drawing.Size(394, 257);
+            this.chartThongKe.Size = new System.Drawing.Size(642, 264);
             this.chartThongKe.TabIndex = 10;
             this.chartThongKe.Text = "chart1";
-            // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.Info;
-            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(688, 380);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(374, 26);
-            this.dateTimePicker.TabIndex = 11;
             // 
             // btnThongKe
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnThongKe.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(690, 595);
+            this.btnThongKe.Location = new System.Drawing.Point(902, 585);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(169, 42);
+            this.btnThongKe.Size = new System.Drawing.Size(163, 59);
             this.btnThongKe.TabIndex = 12;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // btnBaoCao
-            // 
-            this.btnBaoCao.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBaoCao.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCao.Location = new System.Drawing.Point(895, 595);
-            this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(169, 42);
-            this.btnBaoCao.TabIndex = 13;
-            this.btnBaoCao.Text = "In báo cáo";
-            this.btnBaoCao.UseVisualStyleBackColor = false;
-            // 
             // gbThoiGian
             // 
-            this.gbThoiGian.Controls.Add(this.radQuy);
+            this.gbThoiGian.Controls.Add(this.radNam);
             this.gbThoiGian.Controls.Add(this.radThang);
-            this.gbThoiGian.Controls.Add(this.radTuan);
+            this.gbThoiGian.Controls.Add(this.radNgay);
             this.gbThoiGian.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbThoiGian.Location = new System.Drawing.Point(690, 412);
+            this.gbThoiGian.Location = new System.Drawing.Point(902, 380);
             this.gbThoiGian.Name = "gbThoiGian";
-            this.gbThoiGian.Size = new System.Drawing.Size(167, 167);
+            this.gbThoiGian.Size = new System.Drawing.Size(160, 199);
             this.gbThoiGian.TabIndex = 14;
             this.gbThoiGian.TabStop = false;
             this.gbThoiGian.Text = "Thời gian";
             // 
-            // radQuy
+            // radNam
             // 
-            this.radQuy.AutoSize = true;
-            this.radQuy.Location = new System.Drawing.Point(20, 101);
-            this.radQuy.Name = "radQuy";
-            this.radQuy.Size = new System.Drawing.Size(98, 27);
-            this.radQuy.TabIndex = 2;
-            this.radQuy.Text = "Theo quý";
-            this.radQuy.UseVisualStyleBackColor = true;
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(32, 126);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(104, 27);
+            this.radNam.TabIndex = 2;
+            this.radNam.Text = "Theo năm";
+            this.toolTip.SetToolTip(this.radNam, "Thống kê 4 năm gần đây");
+            this.radNam.UseVisualStyleBackColor = true;
             // 
             // radThang
             // 
             this.radThang.AutoSize = true;
-            this.radThang.Location = new System.Drawing.Point(21, 68);
+            this.radThang.Location = new System.Drawing.Point(33, 93);
             this.radThang.Name = "radThang";
             this.radThang.Size = new System.Drawing.Size(114, 27);
             this.radThang.TabIndex = 1;
             this.radThang.Text = "Theo tháng";
+            this.toolTip.SetToolTip(this.radThang, "Thống kê 6 tháng gần nhất");
             this.radThang.UseVisualStyleBackColor = true;
             // 
-            // radTuan
+            // radNgay
             // 
-            this.radTuan.AutoSize = true;
-            this.radTuan.Checked = true;
-            this.radTuan.Location = new System.Drawing.Point(21, 35);
-            this.radTuan.Name = "radTuan";
-            this.radTuan.Size = new System.Drawing.Size(105, 27);
-            this.radTuan.TabIndex = 0;
-            this.radTuan.TabStop = true;
-            this.radTuan.Text = "Theo tuần";
-            this.radTuan.UseVisualStyleBackColor = true;
-            // 
-            // gbDuLieu
-            // 
-            this.gbDuLieu.Controls.Add(this.chbChiTieu);
-            this.gbDuLieu.Controls.Add(this.chbThuNhap);
-            this.gbDuLieu.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDuLieu.Location = new System.Drawing.Point(895, 412);
-            this.gbDuLieu.Name = "gbDuLieu";
-            this.gbDuLieu.Size = new System.Drawing.Size(167, 167);
-            this.gbDuLieu.TabIndex = 15;
-            this.gbDuLieu.TabStop = false;
-            this.gbDuLieu.Text = "Loại dữ liệu";
-            // 
-            // chbChiTieu
-            // 
-            this.chbChiTieu.AutoSize = true;
-            this.chbChiTieu.Location = new System.Drawing.Point(21, 68);
-            this.chbChiTieu.Name = "chbChiTieu";
-            this.chbChiTieu.Size = new System.Drawing.Size(86, 27);
-            this.chbChiTieu.TabIndex = 1;
-            this.chbChiTieu.Text = "Chi tiêu";
-            this.chbChiTieu.UseVisualStyleBackColor = true;
-            // 
-            // chbThuNhap
-            // 
-            this.chbThuNhap.AutoSize = true;
-            this.chbThuNhap.Location = new System.Drawing.Point(21, 35);
-            this.chbThuNhap.Name = "chbThuNhap";
-            this.chbThuNhap.Size = new System.Drawing.Size(101, 27);
-            this.chbThuNhap.TabIndex = 0;
-            this.chbThuNhap.Text = "Thu nhập";
-            this.chbThuNhap.UseVisualStyleBackColor = true;
+            this.radNgay.AutoSize = true;
+            this.radNgay.Checked = true;
+            this.radNgay.Location = new System.Drawing.Point(33, 60);
+            this.radNgay.Name = "radNgay";
+            this.radNgay.Size = new System.Drawing.Size(106, 27);
+            this.radNgay.TabIndex = 0;
+            this.radNgay.TabStop = true;
+            this.radNgay.Text = "Theo ngày";
+            this.toolTip.SetToolTip(this.radNgay, "Thống kê 7 ngày gần nhất");
+            this.radNgay.UseVisualStyleBackColor = true;
             // 
             // btnLichSuBanHang
             // 
@@ -610,17 +566,43 @@ namespace management_store
             this.btnLichSuBanHang.UseVisualStyleBackColor = false;
             this.btnLichSuBanHang.Click += new System.EventHandler(this.btnLichSuBanHang_Click);
             // 
+            // printDocumentDoanhThu
+            // 
+            this.printDocumentDoanhThu.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentDoanhThu_PrintPage);
+            // 
+            // printPreviewDialogDoanhThu
+            // 
+            this.printPreviewDialogDoanhThu.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialogDoanhThu.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialogDoanhThu.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialogDoanhThu.Document = this.printDocumentDoanhThu;
+            this.printPreviewDialogDoanhThu.Enabled = true;
+            this.printPreviewDialogDoanhThu.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogDoanhThu.Icon")));
+            this.printPreviewDialogDoanhThu.Name = "printPreviewDialogDoanhThu";
+            this.printPreviewDialogDoanhThu.Visible = false;
+            // 
+            // btnLichSuNhapHang
+            // 
+            this.btnLichSuNhapHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLichSuNhapHang.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSuNhapHang.ForeColor = System.Drawing.Color.White;
+            this.btnLichSuNhapHang.Location = new System.Drawing.Point(24, 585);
+            this.btnLichSuNhapHang.Name = "btnLichSuNhapHang";
+            this.btnLichSuNhapHang.Size = new System.Drawing.Size(209, 59);
+            this.btnLichSuNhapHang.TabIndex = 12;
+            this.btnLichSuNhapHang.Text = "Lịch sử nhập hàng";
+            this.btnLichSuNhapHang.UseVisualStyleBackColor = false;
+            this.btnLichSuNhapHang.Click += new System.EventHandler(this.btnLichSuBanHang_Click);
+            // 
             // UCDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gbDuLieu);
             this.Controls.Add(this.gbThoiGian);
-            this.Controls.Add(this.btnBaoCao);
+            this.Controls.Add(this.btnLichSuNhapHang);
             this.Controls.Add(this.btnLichSuBanHang);
             this.Controls.Add(this.btnThongKe);
-            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.chartThongKe);
             this.Controls.Add(this.pnlPhieuNhap);
             this.Controls.Add(this.pnlHoaDon);
@@ -647,8 +629,6 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.gbThoiGian.ResumeLayout(false);
             this.gbThoiGian.PerformLayout();
-            this.gbDuLieu.ResumeLayout(false);
-            this.gbDuLieu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,18 +660,17 @@ namespace management_store
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel pnlInfor;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.GroupBox gbThoiGian;
-        private System.Windows.Forms.RadioButton radQuy;
+        private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.RadioButton radThang;
-        private System.Windows.Forms.RadioButton radTuan;
-        private System.Windows.Forms.GroupBox gbDuLieu;
-        private System.Windows.Forms.CheckBox chbChiTieu;
-        private System.Windows.Forms.CheckBox chbThuNhap;
+        private System.Windows.Forms.RadioButton radNgay;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvHoaDon;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvPhieuNhap;
         private System.Windows.Forms.Button btnLichSuBanHang;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Drawing.Printing.PrintDocument printDocumentDoanhThu;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialogDoanhThu;
+        private System.Windows.Forms.Button btnLichSuNhapHang;
     }
 }

@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -15,7 +19,7 @@ namespace management_store
         {
             get
             {
-                if(_obj == null)
+                if (_obj == null)
                 {
                     _obj = new UCDoanhThu();
                 }
@@ -50,24 +54,128 @@ namespace management_store
             pnlInfor.Visible = !pnlInfor.Visible;
         }
 
+        public IEnumerable<DateTime> EachDay(DateTime from, DateTime thru)
+        {
+            for (var day = from.Date; day.Date <= thru.Date; day = day.AddDays(1))
+                yield return day;
+        }
         private void btnThongKe_Click(object sender, EventArgs e)
-        {            
-            chartThongKe.Series["Thu nhập"].Points.AddXY("8", 33);
-            chartThongKe.Series["Thu nhập"].Points.AddXY("9", 45);
-            chartThongKe.Series["Thu nhập"].Points.AddXY("10", 26);
-            chartThongKe.Series["Thu nhập"].Points.AddXY("11", 77);
-            chartThongKe.Series["Thu nhập"].Points.AddXY("12", 80);
-            chartThongKe.Series["Chi tiêu"].Points.AddXY("8", 30);
-            chartThongKe.Series["Chi tiêu"].Points.AddXY("9", 41);
-            chartThongKe.Series["Chi tiêu"].Points.AddXY("10", 16);
-            chartThongKe.Series["Chi tiêu"].Points.AddXY("11", 76);
-            chartThongKe.Series["Chi tiêu"].Points.AddXY("12", 82);
+        {
+            chartThongKe.Series["Thu nhập"].Points.Clear();
+            chartThongKe.Series["Chi tiêu"].Points.Clear();
+
+            if (radNgay.Checked)
+            {
+                DateTime toDay = DateTime.Now;
+                DateTime weekBefore = DateTime.Now.AddDays(-7);
+                float valueThuNhap;
+                float valueChiTieu;
+                foreach (DateTime day in EachDay(weekBefore, toDay))
+                {
+                    valueThuNhap = BusinessLogicLayer.Instance().TongGiaTriTheoNgay(day);
+                    valueChiTieu = BusinessLogicLayer.Instance().TongChiTieuTheoNgay(day);
+                    chartThongKe.Series["Thu nhập"].Points.AddXY(day.Day + "/" + day.Month, valueThuNhap);
+                    chartThongKe.Series["Chi tiêu"].Points.AddXY(day.Day + "/" + day.Month, valueChiTieu);
+                }
+            }
+            if (radThang.Checked)
+            {
+                DateTime target = DateTime.Now.AddMonths(-6);
+                float valueThuNhap;
+                float valueChiTieu;
+                while (target < DateTime.Now)
+                {
+                    valueThuNhap = BusinessLogicLayer.Instance().TongGiaTriTheoThang(target);
+                    valueChiTieu = BusinessLogicLayer.Instance().TongChiTieuTheoThang(target);
+                    chartThongKe.Series["Thu nhập"].Points.AddXY(target.Month + "/" + target.Year, valueThuNhap);
+                    chartThongKe.Series["Chi tiêu"].Points.AddXY(target.Month + "/" + target.Year, valueChiTieu);
+                    target = target.AddMonths(1);
+                }
+            }
+            if (radNam.Checked)
+            {
+                DateTime target = DateTime.Now.AddYears(-4);
+                float valueThuNhap;
+                float valueChiTieu;
+                while (target < DateTime.Now)
+                {
+                    valueThuNhap = BusinessLogicLayer.Instance().TongGiaTriTheoNam(target);
+                    valueChiTieu = BusinessLogicLayer.Instance().TongChiTieuTheoNam(target);
+                    chartThongKe.Series["Thu nhập"].Points.AddXY(target.Year, valueThuNhap);
+                    chartThongKe.Series["Chi tiêu"].Points.AddXY(target.Year, valueChiTieu);
+                    target = target.AddYears(1);
+                }
+            }
         }
 
         private void btnLichSuBanHang_Click(object sender, EventArgs e)
         {
             frmLichSuaBanHang frm = new frmLichSuaBanHang();
             frm.ShowDialog();
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            PrinterSettings ps = new PrinterSettings();
+            printDocumentDoanhThu.PrinterSettings = ps;
+
+            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
+            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4);
+            printDocumentDoanhThu.DefaultPageSettings.PaperSize = new PaperSize();
+            printDocumentDoanhThu.DefaultPageSettings.PaperSize = sizeA4;
+
+            printPreviewDialogDoanhThu.ShowDialog();
+        }
+        private void DoanhThu(DateTime start, DateTime end)
+        {
+
+        }
+
+        private void printDocumentDoanhThu_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //List<HoaDon> listHoaDon = BusinessLogicLayer.Instance().DanhSachHoaDon(dtpStart.Value, dtpEnd.Value);
+            //List<PhieuNhapHang> listPhieuNhapHang = BusinessLogicLayer.Instance().DanhSachPhieuThu(dtpStart.Value, dtpEnd.Value);
+
+            List<HoaDon> listHoaDon = BusinessLogicLayer.Instance().DanhSachHoaDon(new DateTime(2021,11,09), new DateTime(2021, 11, 11));
+            //List<PhieuNhapHang> listPhieuNhapHang = BusinessLogicLayer.Instance().DanhSachPhieuThu(dtpStart.Value, dtpEnd.Value);
+            PrinterSettings ps = new PrinterSettings();
+            printDocumentDoanhThu.PrinterSettings = ps;
+
+            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
+            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4);
+            printDocumentDoanhThu.DefaultPageSettings.PaperSize = new PaperSize();
+            printDocumentDoanhThu.DefaultPageSettings.PaperSize = sizeA4;
+
+            int stt = 1;
+            int pos = 0;
+            int theLastPos = 0;
+            int leftMargin = 22;
+            int topMargin = 120;
+            int halfWidthPage = printDocumentDoanhThu.DefaultPageSettings.PaperSize.Width / 2;
+            Font fontTieuDe = new Font("Times New Roman", 14, FontStyle.Bold);
+            Font fontNoiDung = new Font("Times New Roman", 14, FontStyle.Bold);
+
+
+            e.Graphics.DrawString("BÁO CÁO DOANH THU", new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new Point(halfWidthPage - 110, 60));
+            //In phần tiêu đề hóa đơn
+            e.Graphics.DrawString("STT", fontTieuDe, Brushes.Black, new Point(leftMargin, topMargin));
+            e.Graphics.DrawString("Mã HĐ", fontTieuDe, Brushes.Black, new Point(leftMargin + 100, topMargin));
+            e.Graphics.DrawString("Ngày tạo", fontTieuDe, Brushes.Black, new Point(leftMargin + 200, topMargin));
+            e.Graphics.DrawString("Mã nhân viên", fontTieuDe, Brushes.Black, new Point(leftMargin + 300, topMargin));
+            e.Graphics.DrawString("Tổng tiền", fontTieuDe, Brushes.Black, new Point(leftMargin + 400, topMargin));
+
+            foreach(HoaDon x in listHoaDon)
+            {
+                e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin, topMargin + 10 + pos));
+                e.Graphics.DrawString(x.MaHoaDon , fontNoiDung, Brushes.Black, new Point(leftMargin + 100, topMargin + 10 + pos));
+                e.Graphics.DrawString(x.NgayTao.ToString("dd/MM/yyyy"), fontNoiDung, Brushes.Black, new Point(leftMargin + 200, topMargin + 10 + pos));
+                e.Graphics.DrawString(x.MaNhanVien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 300, topMargin + 10 + pos));
+                e.Graphics.DrawString(x.TongTien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 400, topMargin + 10 + pos));
+                
+                theLastPos = topMargin + 10 + pos;
+                pos += 10;
+                stt++;
+            }
         }
     }
 }

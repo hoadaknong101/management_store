@@ -45,6 +45,7 @@ namespace management_store
             dgvNhanVien.Columns[3].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[5].HeaderText = "Giới tính";
             dgvNhanVien.Columns[6].HeaderText = "CCCD";
+            dgvNhanVien.Columns[8].HeaderText = "Chức vụ";
         }
         private void ClearContent()
         {
@@ -187,7 +188,7 @@ namespace management_store
                     //Thêm nhân viên
                     try
                     {
-                        bll.ThemNhanVien(txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, picImage.Image, txtGioiTinh.Text, txtCCCD.Text);
+                        bll.ThemNhanVien(txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, picImage.Image, txtGioiTinh.Text, txtCCCD.Text, cbbChucVu.Text, txtMatKhau.Text);
                         MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
                     }
                     catch
@@ -195,12 +196,9 @@ namespace management_store
                         MessageBox.Show("Có vấn đề khi thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    finally
-                    {
-                        dgvNhanVien.Controls.Clear();
-                        SettingData();
-                        DisableOnControl();
-                    }
+                    dgvNhanVien.Controls.Clear();
+                    SettingData();
+                    DisableOnControl();
                 }
                 ClearContent();
                 btnThemNhanVien.Enabled = true;

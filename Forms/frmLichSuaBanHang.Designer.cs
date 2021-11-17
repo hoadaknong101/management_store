@@ -114,7 +114,6 @@ namespace management_store
             this.dgvDanhSachHoaDon.EnableHeadersVisualStyles = false;
             this.dgvDanhSachHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDanhSachHoaDon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvDanhSachHoaDon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDanhSachHoaDon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDanhSachHoaDon.Location = new System.Drawing.Point(12, 82);
             this.dgvDanhSachHoaDon.Name = "dgvDanhSachHoaDon";

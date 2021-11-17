@@ -268,9 +268,9 @@ namespace management_store
         }
         public DataTable ThongTinToanBoNhanVien()
         {
-            return dal.GetDataToDataTable("select * from NhanVien");
+            return dal.GetDataToDataTable("select * from NhanVien where ChucVu != N'Admin'");
         }
-        public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
+        public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd,string chucVu,string matKhau)
         {
             dal.ExcuteNonQuery("sp_ThemNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@HoTen", hoTen),
@@ -278,7 +278,9 @@ namespace management_store
                 new SqlParameter("@DiaChi", diaChi),
                 new SqlParameter("@HinhAnh", ImageToByteArray(hinhAnh)),
                 new SqlParameter("@GioiTinh", gioiTinh),
-                new SqlParameter("@CCCD", cccd));
+                new SqlParameter("@CCCD", cccd),
+                new SqlParameter("@MatKhau", matKhau),
+                new SqlParameter("@ChucVu", chucVu));
         }
         public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
         {
@@ -304,7 +306,8 @@ namespace management_store
         }
         #endregion
 
-        #region PhieuNhapHang
+        #region PhieuNhapHang        
+        
         public void ThemChiTietPhieuNhapHang(string maPhieuNhapHang, int maSanPham, float donGia, int soLuong)
         {
             dal.ExcuteNonQuery("sp_ThemChiTietPhieuNhapHang", CommandType.StoredProcedure,
@@ -325,6 +328,139 @@ namespace management_store
         {
             string sql = "select MaPhieuNhapHang as N'Mã phiếu', NgayNhapHang as N'Ngày nhập', TongGiaTri as N'TT', MaNhanVien as N'Mã NV' from PhieuNhapHang";
             return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
+        }
+        #endregion
+        
+        #region ThongKe
+        public float TongGiaTriTheoNgay(DateTime ngay)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongTien) " +
+                "FROM HoaDon " +
+                "WHERE CAST(NgayTao as DATE) = '" + ngay.Month + "-" + ngay.Day + "-" + ngay.Year + "'";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+        public float TongChiTieuTheoNgay(DateTime ngay)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongGiaTri) " +
+                "FROM PhieuNhapHang " +
+                "WHERE CAST(NgayNhapHang as DATE) = '" + ngay.Month + "-" + ngay.Day + "-" + ngay.Year + "'";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+        public float TongGiaTriTheoThang(DateTime date)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongTien) " +
+                "FROM HoaDon " +
+                "WHERE MONTH(NgayTao) = MONTH('" + date.Month + "-" + date.Day + "-" + date.Year + "') and " +
+                "YEAR(NgayTao) = YEAR('" + date.Month + "-" + date.Day + "-" + date.Year + "')";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+
+        public float TongChiTieuTheoThang(DateTime date)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongGiaTri) " +
+                "FROM PhieuNhapHang " +
+                "WHERE MONTH(NgayNhapHang) = MONTH('" + date.Month + "-" + date.Day + "-" + date.Year + "') and " +
+                "YEAR(NgayNhapHang) = YEAR('" + date.Month + "-" + date.Day + "-" + date.Year + "')";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+        public float TongGiaTriTheoNam(DateTime date)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongTien) " +
+                "FROM HoaDon " +
+                "WHERE YEAR(NgayTao) = YEAR('" + date.Month + "-" + date.Day + "-" + date.Year + "')";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+        public float TongChiTieuTheoNam(DateTime date)
+        {
+            float value = 0;
+            string sql = "SELECT SUM(TongGiaTri) " +
+                "FROM PhieuNhapHang " +
+                "WHERE YEAR(NgayNhapHang) = YEAR('" + date.Month + "-" + date.Day + "-" + date.Year + "')";
+            DataTable dt = dal.GetDataToDataTable(sql);
+            if (dt.Rows[0][0].ToString().Trim() != "")
+            {
+                value = float.Parse(dt.Rows[0][0].ToString());
+            }
+            return value;
+        }
+        public List<HoaDon> DanhSachHoaDon(DateTime start, DateTime end)
+        {
+            List<HoaDon> tmp = new List<HoaDon>();
+            string sql;
+            while(start <= end)
+            {
+                sql = "select * from HoaDon where cast(NgayTao as DATE) = '" + start.Month + "-" + start.Day + "-" + start.Year + "'";
+                DataTable dt = dal.GetDataToDataTable(sql);
+                if(dt.Rows.Count == 0)
+                {
+                    continue;
+                }
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+                    
+                    tmp.Add(new HoaDon()
+                    {
+                        MaHoaDon = dt.Rows[i][0].ToString(),
+                        MaNhanVien = int.Parse(dt.Rows[i][2].ToString()),
+                        NgayTao = DateTime.Parse(dt.Rows[i][1].ToString()),
+                        TongTien = float.Parse(dt.Rows[i][3].ToString())
+                    });
+                }
+                start = start.AddDays(1);
+            }
+            return tmp;
+        }
+        public List<PhieuNhapHang> DanhSachPhieuThu(DateTime start, DateTime end)
+        {
+            List<PhieuNhapHang> tmp = new List<PhieuNhapHang>();
+            string sql;
+            while (start <= end)
+            {
+                sql = "select * from PhieuNhapHang where cast(NgayNhapHang as DATE) = '" + start.Month + "-" + start.Day + "-" + start.Year + "'";
+                DataTable dt = dal.GetDataToDataTable(sql);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    tmp.Add(new PhieuNhapHang()
+                    {
+                        MaPhieuNhapHang = dt.Rows[i][0].ToString(),
+                        MaNhanVien = int.Parse(dt.Rows[i][1].ToString()),
+                        NgayNhapHang = DateTime.Parse(dt.Rows[i][2].ToString()),
+                        TongGiaTri = float.Parse(dt.Rows[i][3].ToString())
+                    });
+                }
+                start = start.AddDays(1);
+            }
+            return tmp;
         }
         #endregion
 

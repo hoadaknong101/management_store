@@ -193,7 +193,7 @@ namespace management_store
             this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.Image = global::management_store.Properties.Resources.icons8_bar_chart_32;
+            this.btnTrangChu.Image = global::management_store.Properties.Resources.icons8_dashboard_layout;
             this.btnTrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrangChu.Location = new System.Drawing.Point(0, 153);
             this.btnTrangChu.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
