@@ -192,6 +192,7 @@ namespace management_store
                         dgvSanPham.Controls.Clear();
                         SettingSanPham();
                         DisableOnControl();
+                        LoadComboBox();
                     }
                 }
                 else
@@ -213,6 +214,7 @@ namespace management_store
                         dgvSanPham.Controls.Clear();
                         SettingSanPham();
                         DisableOnControl();
+                        LoadComboBox();
                     }
                 }
                 ClearContent();
@@ -248,6 +250,7 @@ namespace management_store
                 btnLuuSP.Enabled = false;
                 btnHuy.Enabled = false;
                 DisableOnControl();
+                LoadComboBox();
             }
         }
 

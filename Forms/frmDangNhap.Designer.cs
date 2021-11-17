@@ -42,8 +42,8 @@ namespace management_store
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnPower = new System.Windows.Forms.Button();
             this.pnlRoles = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.lblNhanVien = new System.Windows.Forms.Label();
             this.rdbAdmin = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rdbNhanVien = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.loaderDangNhap = new Bunifu.UI.WinForms.BunifuLoader();
@@ -83,8 +83,8 @@ namespace management_store
             // 
             // pnlRoles
             // 
-            this.pnlRoles.Controls.Add(this.label2);
-            this.pnlRoles.Controls.Add(this.label1);
+            this.pnlRoles.Controls.Add(this.lblAdmin);
+            this.pnlRoles.Controls.Add(this.lblNhanVien);
             this.pnlRoles.Controls.Add(this.rdbAdmin);
             this.pnlRoles.Controls.Add(this.rdbNhanVien);
             this.pnlRoles.Location = new System.Drawing.Point(621, 303);
@@ -92,27 +92,29 @@ namespace management_store
             this.pnlRoles.Size = new System.Drawing.Size(367, 38);
             this.pnlRoles.TabIndex = 0;
             // 
-            // label2
+            // lblAdmin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(246, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ADMIN";
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.White;
+            this.lblAdmin.Location = new System.Drawing.Point(246, 8);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(62, 22);
+            this.lblAdmin.TabIndex = 12;
+            this.lblAdmin.Text = "ADMIN";
+            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
             // 
-            // label1
+            // lblNhanVien
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(89, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "NHÂN VIÊN";
+            this.lblNhanVien.AutoSize = true;
+            this.lblNhanVien.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhanVien.ForeColor = System.Drawing.Color.White;
+            this.lblNhanVien.Location = new System.Drawing.Point(89, 8);
+            this.lblNhanVien.Name = "lblNhanVien";
+            this.lblNhanVien.Size = new System.Drawing.Size(94, 22);
+            this.lblNhanVien.TabIndex = 12;
+            this.lblNhanVien.Text = "NHÂN VIÊN";
+            this.lblNhanVien.Click += new System.EventHandler(this.lblNhanVien_Click);
             // 
             // rdbAdmin
             // 
@@ -125,7 +127,7 @@ namespace management_store
             this.rdbAdmin.Name = "rdbAdmin";
             this.rdbAdmin.OutlineColor = System.Drawing.Color.White;
             this.rdbAdmin.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rdbAdmin.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.rdbAdmin.OutlineColorUnchecked = System.Drawing.Color.White;
             this.rdbAdmin.RadioColor = System.Drawing.Color.White;
             this.rdbAdmin.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.rdbAdmin.Size = new System.Drawing.Size(21, 21);
@@ -139,7 +141,7 @@ namespace management_store
             this.rdbNhanVien.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.rdbNhanVien.BorderThickness = 1;
             this.rdbNhanVien.Checked = true;
-            this.rdbNhanVien.Location = new System.Drawing.Point(62, 8);
+            this.rdbNhanVien.Location = new System.Drawing.Point(62, 9);
             this.rdbNhanVien.Name = "rdbNhanVien";
             this.rdbNhanVien.OutlineColor = System.Drawing.Color.White;
             this.rdbNhanVien.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -232,7 +234,7 @@ namespace management_store
             this.txtMatKhau.BorderThickness = 1;
             this.txtMatKhau.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMatKhau.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtMatKhau.DefaultFont = new System.Drawing.Font("Open Sans ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.DefaultText = "";
             this.txtMatKhau.FillColor = System.Drawing.Color.White;
             this.txtMatKhau.HideSelection = true;
@@ -269,7 +271,7 @@ namespace management_store
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMatKhau.OnIdleState = stateProperties12;
             this.txtMatKhau.Padding = new System.Windows.Forms.Padding(3);
-            this.txtMatKhau.PasswordChar = '\0';
+            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMatKhau.PlaceholderText = "Mật khẩu";
             this.txtMatKhau.ReadOnly = false;
@@ -533,8 +535,8 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuTextBox txtMatKhau;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Label lblNhanVien;
         private Bunifu.UI.WinForms.BunifuRadioButton rdbAdmin;
         private Bunifu.UI.WinForms.BunifuRadioButton rdbNhanVien;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;

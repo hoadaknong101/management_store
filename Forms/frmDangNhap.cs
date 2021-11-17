@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -142,6 +143,26 @@ namespace management_store
                 return false;
             }
             return true;
+        }
+
+        private void lblNhanVien_Click(object sender, EventArgs e)
+        {
+            if (rdbNhanVien.Checked == false)
+            {
+                rdbNhanVien.Checked = true;
+                rdbAdmin.Checked = false;
+                rdbAdmin.OutlineColorUnchecked = System.Drawing.Color.White;
+            }
+        }
+
+        private void lblAdmin_Click(object sender, EventArgs e)
+        {
+            if (rdbAdmin.Checked == false)
+            {
+                rdbAdmin.Checked = true;
+                rdbNhanVien.Checked = false;
+                rdbNhanVien.OutlineColorUnchecked = System.Drawing.Color.White;
+            }
         }
     }
 }

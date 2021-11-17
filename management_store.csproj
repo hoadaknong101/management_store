@@ -169,11 +169,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessLogicLayer.cs" />
+    <Compile Include="Forms\frmChiTietPhieuNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChiTietPhieuNhapHang.Designer.cs">
+      <DependentUpon>frmChiTietPhieuNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLichSuNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLichSuNhapHang.Designer.cs">
+      <DependentUpon>frmLichSuNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTimSP.cs">
       <SubType>Form</SubType>
@@ -239,7 +251,6 @@
     <Compile Include="ItemEqualityComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Usercontrol\UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,11 +299,17 @@
     <Compile Include="Usercontrol\UCTitleBar.Designer.cs">
       <DependentUpon>UCTitleBar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmChiTietPhieuNhapHang.resx">
+      <DependentUpon>frmChiTietPhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDoiThongTinCaNhan.resx">
       <DependentUpon>frmDoiThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLichSuNhapHang.resx">
+      <DependentUpon>frmLichSuNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTimSP.resx">
       <DependentUpon>frmTimSP.cs</DependentUpon>
@@ -549,19 +566,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_dashboard_layout.ico" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

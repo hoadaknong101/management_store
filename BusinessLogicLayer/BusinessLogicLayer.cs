@@ -329,6 +329,14 @@ namespace management_store
             string sql = "select MaPhieuNhapHang as N'Mã phiếu', NgayNhapHang as N'Ngày nhập', TongGiaTri as N'TT', MaNhanVien as N'Mã NV' from PhieuNhapHang";
             return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
         }
+
+        public DataTable ChiTietPhieuNhap(string maPhieuNhap)
+        {
+            string sql = "select c.MaPhieuNhapHang as N'Mã phiếu', s.TenSanPham as N'Sản phẩm', c.DonGia as N'Đơn giá', c.SoLuong as N'Số lượng' " +
+                "from ChiTietPhieuNhapHang c, SanPham s " +
+                "where c.MaSanPham = s.MaSanPham and c.MaPhieuNhapHang = '" + maPhieuNhap + "'";
+            return dal.GetDataToDataTable(sql);
+        }
         #endregion
         
         #region ThongKe
@@ -412,55 +420,6 @@ namespace management_store
                 value = float.Parse(dt.Rows[0][0].ToString());
             }
             return value;
-        }
-        public List<HoaDon> DanhSachHoaDon(DateTime start, DateTime end)
-        {
-            List<HoaDon> tmp = new List<HoaDon>();
-            string sql;
-            while(start <= end)
-            {
-                sql = "select * from HoaDon where cast(NgayTao as DATE) = '" + start.Month + "-" + start.Day + "-" + start.Year + "'";
-                DataTable dt = dal.GetDataToDataTable(sql);
-                if(dt.Rows.Count == 0)
-                {
-                    continue;
-                }
-                for(int i = 0; i < dt.Rows.Count; i++)
-                {
-                    
-                    tmp.Add(new HoaDon()
-                    {
-                        MaHoaDon = dt.Rows[i][0].ToString(),
-                        MaNhanVien = int.Parse(dt.Rows[i][2].ToString()),
-                        NgayTao = DateTime.Parse(dt.Rows[i][1].ToString()),
-                        TongTien = float.Parse(dt.Rows[i][3].ToString())
-                    });
-                }
-                start = start.AddDays(1);
-            }
-            return tmp;
-        }
-        public List<PhieuNhapHang> DanhSachPhieuThu(DateTime start, DateTime end)
-        {
-            List<PhieuNhapHang> tmp = new List<PhieuNhapHang>();
-            string sql;
-            while (start <= end)
-            {
-                sql = "select * from PhieuNhapHang where cast(NgayNhapHang as DATE) = '" + start.Month + "-" + start.Day + "-" + start.Year + "'";
-                DataTable dt = dal.GetDataToDataTable(sql);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    tmp.Add(new PhieuNhapHang()
-                    {
-                        MaPhieuNhapHang = dt.Rows[i][0].ToString(),
-                        MaNhanVien = int.Parse(dt.Rows[i][1].ToString()),
-                        NgayNhapHang = DateTime.Parse(dt.Rows[i][2].ToString()),
-                        TongGiaTri = float.Parse(dt.Rows[i][3].ToString())
-                    });
-                }
-                start = start.AddDays(1);
-            }
-            return tmp;
         }
         #endregion
 

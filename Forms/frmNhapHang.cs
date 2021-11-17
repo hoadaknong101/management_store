@@ -99,6 +99,7 @@ namespace management_store
                             float donGia = float.Parse(dgvChiTietPhieuNhap.Rows[i].Cells[2].Value.ToString());
                             int soLuong = int.Parse(dgvChiTietPhieuNhap.Rows[i].Cells[3].Value.ToString());
                             BusinessLogicLayer.Instance().ThemChiTietPhieuNhapHang(maPhieuNhap + "", maSanPham, donGia, soLuong);
+                            UCDoanhThu.Instance.TakeInfor();
                         }
                         MessageBox.Show("Thêm thành công!\n", "Thông báo", MessageBoxButtons.OK);
                         UCSanPham.Instance.SettingSanPham();

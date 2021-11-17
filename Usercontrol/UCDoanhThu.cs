@@ -1,4 +1,5 @@
-﻿using System;
+﻿using management_store.Forms;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -113,69 +114,15 @@ namespace management_store
             frmLichSuaBanHang frm = new frmLichSuaBanHang();
             frm.ShowDialog();
         }
-
-        private void btnBaoCao_Click(object sender, EventArgs e)
-        {
-            PrinterSettings ps = new PrinterSettings();
-            printDocumentDoanhThu.PrinterSettings = ps;
-
-            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
-            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4);
-            printDocumentDoanhThu.DefaultPageSettings.PaperSize = new PaperSize();
-            printDocumentDoanhThu.DefaultPageSettings.PaperSize = sizeA4;
-
-            printPreviewDialogDoanhThu.ShowDialog();
-        }
         private void DoanhThu(DateTime start, DateTime end)
         {
 
         }
 
-        private void printDocumentDoanhThu_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void btnLichSuNhapHang_Click(object sender, EventArgs e)
         {
-            //List<HoaDon> listHoaDon = BusinessLogicLayer.Instance().DanhSachHoaDon(dtpStart.Value, dtpEnd.Value);
-            //List<PhieuNhapHang> listPhieuNhapHang = BusinessLogicLayer.Instance().DanhSachPhieuThu(dtpStart.Value, dtpEnd.Value);
-
-            List<HoaDon> listHoaDon = BusinessLogicLayer.Instance().DanhSachHoaDon(new DateTime(2021,11,09), new DateTime(2021, 11, 11));
-            //List<PhieuNhapHang> listPhieuNhapHang = BusinessLogicLayer.Instance().DanhSachPhieuThu(dtpStart.Value, dtpEnd.Value);
-            PrinterSettings ps = new PrinterSettings();
-            printDocumentDoanhThu.PrinterSettings = ps;
-
-            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
-            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4);
-            printDocumentDoanhThu.DefaultPageSettings.PaperSize = new PaperSize();
-            printDocumentDoanhThu.DefaultPageSettings.PaperSize = sizeA4;
-
-            int stt = 1;
-            int pos = 0;
-            int theLastPos = 0;
-            int leftMargin = 22;
-            int topMargin = 120;
-            int halfWidthPage = printDocumentDoanhThu.DefaultPageSettings.PaperSize.Width / 2;
-            Font fontTieuDe = new Font("Times New Roman", 14, FontStyle.Bold);
-            Font fontNoiDung = new Font("Times New Roman", 14, FontStyle.Bold);
-
-
-            e.Graphics.DrawString("BÁO CÁO DOANH THU", new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new Point(halfWidthPage - 110, 60));
-            //In phần tiêu đề hóa đơn
-            e.Graphics.DrawString("STT", fontTieuDe, Brushes.Black, new Point(leftMargin, topMargin));
-            e.Graphics.DrawString("Mã HĐ", fontTieuDe, Brushes.Black, new Point(leftMargin + 100, topMargin));
-            e.Graphics.DrawString("Ngày tạo", fontTieuDe, Brushes.Black, new Point(leftMargin + 200, topMargin));
-            e.Graphics.DrawString("Mã nhân viên", fontTieuDe, Brushes.Black, new Point(leftMargin + 300, topMargin));
-            e.Graphics.DrawString("Tổng tiền", fontTieuDe, Brushes.Black, new Point(leftMargin + 400, topMargin));
-
-            foreach(HoaDon x in listHoaDon)
-            {
-                e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin, topMargin + 10 + pos));
-                e.Graphics.DrawString(x.MaHoaDon , fontNoiDung, Brushes.Black, new Point(leftMargin + 100, topMargin + 10 + pos));
-                e.Graphics.DrawString(x.NgayTao.ToString("dd/MM/yyyy"), fontNoiDung, Brushes.Black, new Point(leftMargin + 200, topMargin + 10 + pos));
-                e.Graphics.DrawString(x.MaNhanVien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 300, topMargin + 10 + pos));
-                e.Graphics.DrawString(x.TongTien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 400, topMargin + 10 + pos));
-                
-                theLastPos = topMargin + 10 + pos;
-                pos += 10;
-                stt++;
-            }
+            frmLichSuNhapHang frm = new frmLichSuNhapHang();
+            frm.ShowDialog();
         }
     }
 }
