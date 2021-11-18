@@ -266,9 +266,10 @@ namespace management_store
             return dal.ExecuteQueryDataTable("dbo.sp_ThongTinNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
-        public DataTable ThongTinToanBoNhanVien()
+        public DataTable ThongTinToanBoNhanVien(int maNhanVien)
         {
-            return dal.GetDataToDataTable("select * from NhanVien where ChucVu != N'Admin'");
+            return dal.ExecuteQueryDataTable("dbo.sp_ThongTinToanBoNhanVien", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
         }
         public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd,string chucVu,string matKhau)
         {
@@ -282,9 +283,22 @@ namespace management_store
                 new SqlParameter("@MatKhau", matKhau),
                 new SqlParameter("@ChucVu", chucVu));
         }
-        public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
+        public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd, string chucVu, string matKhau)
         {
             dal.ExcuteNonQuery("sp_CapNhatNhanVien", System.Data.CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@HoTen", hoTen),
+                new SqlParameter("@LienHe", lienHe),
+                new SqlParameter("@DiaChi", diaChi),
+                new SqlParameter("@HinhAnh", ImageToByteArray(hinhAnh)),
+                new SqlParameter("@GioiTinh", gioiTinh),
+                new SqlParameter("@CCCD", cccd),
+                new SqlParameter("@MatKhau", matKhau),
+                new SqlParameter("@ChucVu", chucVu));
+        }
+        public void CapNhatThongTinNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
+        {
+            dal.ExcuteNonQuery("sp_CapNhatThongTinNhanVien", System.Data.CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),

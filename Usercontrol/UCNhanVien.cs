@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace management_store
         #region ChucNang
         private void SettingData()
         {
-            dtb = bll.ThongTinToanBoNhanVien();
+            dtb = bll.ThongTinToanBoNhanVien(UCDashboard.Instance.IDNhanVien);
             dgvNhanVien.DataSource = dtb;
 
             dgvNhanVien.Columns[4].Visible = false; //Hình ảnh
@@ -55,6 +56,8 @@ namespace management_store
             txtDiaChi.Clear();
             txtGioiTinh.Clear();
             txtCCCD.Clear();
+            txtMatKhau.Clear();
+            cbbChucVu.Text = "";
             picImage.Image = null;
         }
         private void DisableOnControl()
@@ -129,8 +132,17 @@ namespace management_store
                 txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
                 txtGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
                 txtCCCD.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-                picImage.Image = null;
-                picImage.Image = (ByteArrayToImage((byte[]) dgvNhanVien.CurrentRow.Cells[4].Value));
+                cbbChucVu.Text= dgvNhanVien.CurrentRow.Cells[8].Value.ToString();
+                txtMatKhau.Text= dgvNhanVien.CurrentRow.Cells[7].Value.ToString();
+                if (dgvNhanVien.CurrentRow.Cells[4].Value != null)
+                {
+                    picImage.Image = (ByteArrayToImage((byte[])dgvNhanVien.CurrentRow.Cells[4].Value));
+                }
+                else
+                {
+                    picImage.Image = null;
+                }
+                
             }
             catch
             {
@@ -168,11 +180,12 @@ namespace management_store
                     //Cập nhật nhân viên
                     try
                     {
-                        bll.CapNhatNhanVien(int.Parse(txtMaNV.Text),txtHoTen.Text,txtLienHe.Text,txtDiaChi.Text,picImage.Image,txtGioiTinh.Text,txtCCCD.Text);
+                        bll.CapNhatNhanVien(int.Parse(txtMaNV.Text),txtHoTen.Text,txtLienHe.Text,txtDiaChi.Text,picImage.Image,txtGioiTinh.Text,txtCCCD.Text, cbbChucVu.Text, txtMatKhau.Text);
                         MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo");
                     }
                     catch
                     {
+                        
                         MessageBox.Show("Không thể cập nhật nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
