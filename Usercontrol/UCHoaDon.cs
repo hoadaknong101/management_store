@@ -11,24 +11,21 @@ namespace management_store
 {
     public partial class UCHoaDon : UserControl
     {
+        #region Properties
         public delegate void delCapNhatTongTien();
         public delegate void delXoaSanPham(UCSanPhamBar sanPham);
         public delegate void delThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh);
+
         private int ID_NhanVien;
-        private DataTable ds = new DataTable();
+        private DataTable dt = new DataTable();
         private BusinessLogicLayer bll = new BusinessLogicLayer();
-        #region Properties
-        BusinessLogicLayer func; //query
+        
         public List<UCSanPhamBar> lstSanPham;
         public float tongTien = 0;
+        frmTimSP themSP;
+        private int width_bill = 148;
 
         static UCHoaDon _obj;
-
-        frmTimSP themSP;
-        DateTime now = DateTime.Now;
-        int width_bill = 148;
-        #endregion
-
         public static UCHoaDon Instance
         {
             get
@@ -40,6 +37,7 @@ namespace management_store
                 return _obj;
             }
         }
+        #endregion
 
         public UCHoaDon()
         {
@@ -49,7 +47,6 @@ namespace management_store
             lblNgayTao.Text = "Ngày tạo : " + (DateTime.Now).ToString("dd/MM/yyyy");
             ThemSanPham();
             CapNhatTongTienHoaDon();
-            func = new BusinessLogicLayer();
         }
         public int IDNhanVien
         {
@@ -57,6 +54,7 @@ namespace management_store
             set { ID_NhanVien = value; }
         }
 
+        #region SanPham
         public void ThemSanPhamVaoHoaDon(int maSP, string tenSP, float donGia, Image hinhAnh)
         {
             lstSanPham.Add(new UCSanPhamBar(maSP, hinhAnh, tenSP, donGia, 1, CapNhatTongTienHoaDon, XoaSanPham));
@@ -100,7 +98,9 @@ namespace management_store
         {
             themSP.Show();
         }
+        #endregion
 
+        #region HoaDon
         private void btnHuyHoaDon_Click(object sender, EventArgs e)
         {
             fpnlSanPham.Controls.Clear();
@@ -113,7 +113,7 @@ namespace management_store
             var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
             foreach (var x in distinct)
             {
-                if (func.KiemTraSoLuongHangBanRa(x.MaSP + "", x.SoLuong) == false)
+                if (bll.KiemTraSoLuongHangBanRa(x.MaSP + "", x.SoLuong) == false)
                 {
                     MessageBox.Show(x.TenSP + " không đủ số lượng trong kho để bán!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -123,11 +123,11 @@ namespace management_store
             long maHoaDon = TaoMaHoaDon(now);
             if (KiemTraXuatHoaDon())
             {
-                func.ThemHoaDon(maHoaDon, now, IDNhanVien, tongTien);
+                bll.ThemHoaDon(maHoaDon, now, IDNhanVien, tongTien, txtHoTenKH.Text);
 
                 foreach (UCSanPhamBar x in distinct)
                 {
-                    func.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
+                    bll.ThemChiTietHoaDon(maHoaDon, x.MaSP, x.SoLuong, x.ThanhTien);
                 }
                 printBill.DefaultPageSettings.PaperSize = new PaperSize("HÓA ĐƠN", width_bill, distinct.ToList().Count * 10 + 100);
                 printPreviewDialogBill.ShowDialog();
@@ -146,6 +146,7 @@ namespace management_store
         {
             UCDashboard.Instance.LoadData();
             UCDoanhThu.Instance.TakeInfor();
+            UCDoanhThu.Instance.LoadData();
             UCSanPham.Instance.SettingSanPham();
         }
 
@@ -153,14 +154,14 @@ namespace management_store
         {
             if (txtHoTenKH.Text.Trim() == "")
             {
-                MessageBox.Show("Vui lòng nhập họ tên khác hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập họ tên khách hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtHoTenKH.Focus();
                 return false;
             }
-            if (txtMaNV.Text.Trim() == "")
+            if (txtTenNV.Text.Trim() == "")
             {
-                MessageBox.Show("Vui lòng nhập mã nhân viên!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMaNV.Focus();
+                MessageBox.Show("Vui lòng nhập tên nhân viên!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenNV.Focus();
                 return false;
             }
             if (lstSanPham.Count == 0)
@@ -183,6 +184,8 @@ namespace management_store
             long maHoaDon = maNgay + maThang + maNam + maGio + maPhut + maGiay;
             return maHoaDon;
         }
+        #endregion
+
         private void printBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             var distinct = lstSanPham.Distinct(new ItemEqualityComparer());
@@ -226,26 +229,16 @@ namespace management_store
                 Brushes.Black, new Point(leftMargin, theLastPos + 20));
             e.Graphics.DrawString("Ngày bán : " + DateTime.Now.ToString("dd-MM-yyyy"), fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 30));
-            e.Graphics.DrawString("Người bán hàng : " + ds.Rows[0][1].ToString(), fontTieuDe,
+            e.Graphics.DrawString("Người bán hàng : " + dt.Rows[0][1].ToString(), fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 40));
             e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
                 new Point(leftMargin + 21, theLastPos + 60));
         }
 
-        private void fpnlSanPham_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void UCHoaDon_Load(object sender, EventArgs e)
         {
-            ds = bll.ThongTinNhanVien(IDNhanVien);
-            txtMaNV.Text = ds.Rows[0][1].ToString();
-        }
-
-        private void txtMaNV_TextChanged(object sender, EventArgs e)
-        {
-
+            dt = bll.ThongTinNhanVien(IDNhanVien);
+            txtTenNV.Text = dt.Rows[0][1].ToString();
         }
     }
 }

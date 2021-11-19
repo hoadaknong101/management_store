@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-using System.Windows.Forms;
 
 namespace management_store
 {
     public class BusinessLogicLayer
     {
         DataAccessLayer dal = new DataAccessLayer();
+
         private static BusinessLogicLayer obj;
         public static BusinessLogicLayer Instance()
         {
@@ -21,6 +20,7 @@ namespace management_store
             }
             return obj;
         }
+
         public BusinessLogicLayer()
         {
 
@@ -235,18 +235,19 @@ namespace management_store
             return true;
         }
 
-        public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien)
+        public void ThemHoaDon(long maHoaDon, DateTime ngayTao, int maNhanVien, float tongTien, string tenKH)
         {
             string sql = "sp_ThemHoaDon";
-            dal.ExcuteNonQuery(sql, System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
                 new SqlParameter("@MaHoaDon", maHoaDon + ""),
                 new SqlParameter("@NgayTao", ngayTao),
                 new SqlParameter("@MaNhanVien", maNhanVien),
-                new SqlParameter("@TongTien", tongTien));
+                new SqlParameter("@TongTien", tongTien),
+                new SqlParameter("@TenKhachHang", tenKH));
         }
         public DataTable ThongTinToanBoHoaDon()
         {
-            string sql = "select MaHoaDon as N'Mã HĐ', NgayTao as N'Ngày tạo', TongTien as N'TT' from HoaDon";
+            string sql = "select MaHoaDon as N'Mã HĐ', TenKhachHang as N'Khách hàng', NgayTao as N'Ngày tạo', TongTien as N'TT' from HoaDon";
             return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
         }
         public DataTable ChiTietHoaDon(string maHoaDon)
@@ -261,19 +262,19 @@ namespace management_store
         #endregion
 
         #region NhanVien
-        public DataTable ThongTinNhanVien(int maNhanVien)
+        public DataTable ThongTinNhanVien(int maNhanVien) // Lấy thông tin cá nhân
         {
             return dal.ExecuteQueryDataTable("dbo.sp_ThongTinNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
-        public DataTable ThongTinToanBoNhanVien(int maNhanVien)
+        public DataTable ThongTinToanBoNhanVien(int maNhanVien) // Lấy thông tin toàn bộ nhân viên (trừ admin đăng nhập)
         {
             return dal.ExecuteQueryDataTable("dbo.sp_ThongTinToanBoNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
         public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd,string chucVu,string matKhau)
         {
-            dal.ExcuteNonQuery("sp_ThemNhanVien", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_ThemNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),
                 new SqlParameter("@DiaChi", diaChi),
@@ -283,9 +284,10 @@ namespace management_store
                 new SqlParameter("@MatKhau", matKhau),
                 new SqlParameter("@ChucVu", chucVu));
         }
-        public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd, string chucVu, string matKhau)
+        public void CapNhatNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, 
+            string gioiTinh, string cccd, string chucVu, string matKhau)
         {
-            dal.ExcuteNonQuery("sp_CapNhatNhanVien", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_CapNhatNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),
@@ -296,9 +298,10 @@ namespace management_store
                 new SqlParameter("@MatKhau", matKhau),
                 new SqlParameter("@ChucVu", chucVu));
         }
-        public void CapNhatThongTinNhanVien(int maNhanVien, string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd)
+        public void CapNhatThongTinNhanVien(int maNhanVien, string hoTen, string lienHe, 
+            string diaChi, Image hinhAnh, string gioiTinh, string cccd) // Cập nhật thông tin cá nhân
         {
-            dal.ExcuteNonQuery("sp_CapNhatThongTinNhanVien", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_CapNhatThongTinNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@HoTen", hoTen),
                 new SqlParameter("@LienHe", lienHe),
@@ -309,12 +312,12 @@ namespace management_store
         }
         public void XoaNhanVien(int maNhanVien)
         {
-            dal.ExcuteNonQuery("sp_XoaNhanVien", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_XoaNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
         public void DoiMatKhau(int maNhanVien, string MatKhau)
         {
-            dal.ExcuteNonQuery("sp_DoiMatKhau", System.Data.CommandType.StoredProcedure,
+            dal.ExcuteNonQuery("sp_DoiMatKhau", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien),
                 new SqlParameter("@MatKhau", MatKhau));
         }

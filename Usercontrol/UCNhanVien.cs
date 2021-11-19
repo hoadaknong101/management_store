@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -9,8 +8,11 @@ namespace management_store
 {
     public partial class UCNhanVien : UserControl
     {
+        #region Properties
+
         public DataTable dtb = new DataTable();
         BusinessLogicLayer bll = new BusinessLogicLayer();
+        bool flagThem = false;
         private static UCNhanVien _obj;
         public static UCNhanVien Instance
         {
@@ -24,17 +26,19 @@ namespace management_store
             }
         }
 
+        #endregion
+
         public UCNhanVien()
         {
             InitializeComponent();
             SettingData();
-            txtMaNV.Enabled = false;
-            DisableOnControl();
+            txtMaNV.ReadOnly = true;
         }
 
         #region ChucNang
         private void SettingData()
         {
+            dgvNhanVien.Controls.Clear();
             dtb = bll.ThongTinToanBoNhanVien(UCDashboard.Instance.IDNhanVien);
             dgvNhanVien.DataSource = dtb;
 
@@ -60,22 +64,37 @@ namespace management_store
             cbbChucVu.Text = "";
             picImage.Image = null;
         }
-        private void DisableOnControl()
+        private void DisableControl()
         {
+            ClearContent();
+            btnThemNhanVien.Enabled = true;
+            btnXoaNhanVien.Enabled = false;
+            btnLuuNhanVien.Enabled = false;
+            btnHuy.Enabled = false;
+
             txtHoTen.Enabled = false;
             txtGioiTinh.Enabled = false;
             txtCCCD.Enabled = false;
             txtDiaChi.Enabled = false;
             txtLienHe.Enabled = false;
-            btnChonHinhAnh.Enabled = false;
-        }
-        private void EnabledOnControl()
+            cbbChucVu.Enabled = false;
+            txtMatKhau.Enabled = false;
+            btnChonHinhAnh.Enabled = true;
+        } // Kết thúc việc tác động thông tin
+        private void EnabledControl() // Dùng khi thêm, sửa
         {
+            btnThemNhanVien.Enabled = false;
+            btnXoaNhanVien.Enabled = true;
+            btnLuuNhanVien.Enabled = true;
+            btnHuy.Enabled = true;
+
             txtHoTen.Enabled = true;
             txtGioiTinh.Enabled = true;
             txtCCCD.Enabled = true;
             txtDiaChi.Enabled = true;
             txtLienHe.Enabled = true;
+            cbbChucVu.Enabled = true;
+            txtMatKhau.Enabled = true;
             btnChonHinhAnh.Enabled = true;
         }
         private bool KiemTraDauVao()
@@ -120,7 +139,6 @@ namespace management_store
                 picImage.Image = Image.FromFile(pathImage);
             }
         }
-        #endregion
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -134,36 +152,33 @@ namespace management_store
                 txtCCCD.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
                 cbbChucVu.Text= dgvNhanVien.CurrentRow.Cells[8].Value.ToString();
                 txtMatKhau.Text= dgvNhanVien.CurrentRow.Cells[7].Value.ToString();
-                if (dgvNhanVien.CurrentRow.Cells[4].Value != null)
-                {
-                    picImage.Image = (ByteArrayToImage((byte[])dgvNhanVien.CurrentRow.Cells[4].Value));
-                }
-                else
+                
+                if (DBNull.Value.Equals(dgvNhanVien.CurrentRow.Cells[4].Value))
                 {
                     picImage.Image = null;
                 }
-                
+                else
+                {
+                    picImage.Image = ByteArrayToImage((byte[])dgvNhanVien.CurrentRow.Cells[4].Value);
+                }
+
+                EnabledControl();
             }
             catch
             {
-            }
-            finally
-            {
-                EnabledOnControl();
-                btnThemNhanVien.Enabled = false;
-                btnLuuNhanVien.Enabled = true;
-                btnXoaNhanVien.Enabled = true;
-                btnHuy.Enabled = true;
-            }
+                MessageBox.Show("Không thể hiển thị thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }   
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
+            flagThem = true;
             ClearContent();
+            EnabledControl();
+            dgvNhanVien.Enabled = false;
+            btnXoaNhanVien.Enabled = false;
             txtHoTen.Focus();
-            btnLuuNhanVien.Enabled = true;
-            btnHuy.Enabled = true;
-            EnabledOnControl();
         }
 
         private void btnLuuNhanVien_Click(object sender, EventArgs e)
@@ -175,25 +190,23 @@ namespace management_store
             }
             else
             {
-                if (!btnThemNhanVien.Enabled)
+                if (flagThem == false)
                 {
                     //Cập nhật nhân viên
                     try
                     {
-                        bll.CapNhatNhanVien(int.Parse(txtMaNV.Text),txtHoTen.Text,txtLienHe.Text,txtDiaChi.Text,picImage.Image,txtGioiTinh.Text,txtCCCD.Text, cbbChucVu.Text, txtMatKhau.Text);
+                        bll.CapNhatNhanVien(int.Parse(txtMaNV.Text), txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, 
+                            picImage.Image, txtGioiTinh.Text, txtCCCD.Text, cbbChucVu.Text, txtMatKhau.Text);
                         MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo");
+                        SettingData();
+                        DisableControl();
+                        dgvNhanVien.Enabled = true;
                     }
                     catch
                     {
                         
                         MessageBox.Show("Không thể cập nhật nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
-                    finally
-                    {
-                        dgvNhanVien.Controls.Clear();
-                        SettingData();
-                        DisableOnControl();
                     }
                 }
                 else
@@ -203,32 +216,25 @@ namespace management_store
                     {
                         bll.ThemNhanVien(txtHoTen.Text, txtLienHe.Text, txtDiaChi.Text, picImage.Image, txtGioiTinh.Text, txtCCCD.Text, cbbChucVu.Text, txtMatKhau.Text);
                         MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
+                        SettingData();
+                        DisableControl();
+                        dgvNhanVien.Enabled = true;
+                        flagThem = false;
                     }
                     catch
                     {
                         MessageBox.Show("Có vấn đề khi thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    dgvNhanVien.Controls.Clear();
-                    SettingData();
-                    DisableOnControl();
                 }
-                ClearContent();
-                btnThemNhanVien.Enabled = true;
-                btnXoaNhanVien.Enabled = false;
-                btnLuuNhanVien.Enabled = false;
-                btnHuy.Enabled = false;
             }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            ClearContent();
-            btnThemNhanVien.Enabled = true;
-            btnXoaNhanVien.Enabled = false;
-            btnLuuNhanVien.Enabled = false;
-            btnHuy.Enabled = false;
-            DisableOnControl();
+            flagThem = false;
+            DisableControl();
+            dgvNhanVien.Enabled = true;
         }
 
         private void btnXoaNhanVien_Click(object sender, EventArgs e)
@@ -239,7 +245,10 @@ namespace management_store
                 {
                     bll.XoaNhanVien(int.Parse(txtMaNV.Text));
                     MessageBox.Show("Đã xóa thông tin nhân viên!", "Thông báo");
-                    DisableOnControl();
+                    SettingData();
+                    DisableControl();
+                    dgvNhanVien.Enabled = true;
+                    flagThem = false;
                 }
             }
             catch
@@ -247,16 +256,7 @@ namespace management_store
                 MessageBox.Show("Có lỗi trong khi xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            finally
-            {
-                dgvNhanVien.Controls.Clear();
-                SettingData();
-                ClearContent();
-                btnThemNhanVien.Enabled = true;
-                btnXoaNhanVien.Enabled = false;
-                btnLuuNhanVien.Enabled = false;
-                btnHuy.Enabled = false;
-            }
         }
+        #endregion
     }
 }

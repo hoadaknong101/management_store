@@ -4,7 +4,6 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using static management_store.BusinessLogicLayer;
 
 namespace management_store
 {
@@ -13,6 +12,7 @@ namespace management_store
         #region Properties
         private DataTable dtb;
         static UCSanPham _obj;
+        private bool flagThem = false;
         BusinessLogicLayer func = new BusinessLogicLayer();
         
         public static UCSanPham Instance
@@ -33,8 +33,8 @@ namespace management_store
         {
             InitializeComponent();
             SettingSanPham();
-            txtMaSP.Enabled = false;
-            DisableOnControl();
+            txtMaSP.ReadOnly = true;
+            DisableControl();
             LoadComboBox();
         }
         private void LoadComboBox()
@@ -52,6 +52,7 @@ namespace management_store
         #region Chuc_nang
         public void SettingSanPham()
         {
+            dgvSanPham.Controls.Clear();
             dtb = func.ThongTinSanPham();
             dgvSanPham.DataSource = dtb;
             dgvSanPham.Columns[0].Width = 55;
@@ -84,16 +85,22 @@ namespace management_store
             }
             return true;
         }
-        private void DisableOnControl()
+        private void DisableControl()
         {
+            ClearContent();
             txtTenSanPham.Enabled = false;
             txtDonGia.Enabled = false;
             txtSoLuong.Enabled = false;
             txtLoaiSP.Enabled = false;
             txtMaNSX.Enabled = false;
             btnChonHinhAnh.Enabled = false;
+
+            btnThemSanPham.Enabled = true;
+            btnLuuSP.Enabled = false;
+            btnHuy.Enabled = false;
+            btnXoaSP.Enabled = false;
         }
-        private void EnabledOnControl()
+        private void EnabledControl()
         {
             txtTenSanPham.Enabled = true;
             txtDonGia.Enabled = true;
@@ -101,6 +108,11 @@ namespace management_store
             txtLoaiSP.Enabled = true;
             txtMaNSX.Enabled = true;
             btnChonHinhAnh.Enabled = true;
+
+            btnThemSanPham.Enabled = false;
+            btnLuuSP.Enabled = true;
+            btnHuy.Enabled = true;
+            btnXoaSP.Enabled = true;
         }
         #endregion
 
@@ -134,30 +146,31 @@ namespace management_store
                 txtLoaiSP.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();
                 txtMaNSX.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
-                picImage.Image = ByteArrayToImage((byte[]) dgvSanPham.CurrentRow.Cells[4].Value);
-                
+                if (DBNull.Value.Equals(dgvSanPham.CurrentRow.Cells[4].Value))
+                {
+                    picImage.Image = null;
+                }
+                else
+                {
+                    picImage.Image = ByteArrayToImage((byte[])dgvSanPham.CurrentRow.Cells[4].Value);
+                }
+                EnabledControl();
             }
             catch
             {
+                MessageBox.Show("Không thể hiển thị thông tin sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-            finally
-            {
-                btnThemSanPham.Enabled = false;
-                btnLuuSP.Enabled = true;
-                btnXoaSP.Enabled = true;
-                btnHuy.Enabled = true;
-                EnabledOnControl();
             }
         }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
             ClearContent();
+            flagThem = true;
             txtTenSanPham.Focus();
-            btnLuuSP.Enabled = true;
-            btnHuy.Enabled = true;
-            EnabledOnControl();
+            EnabledControl();
+            dgvSanPham.Enabled = false;
+            btnXoaSP.Enabled = false;
         }
 
         private void btnLuuSP_Click(object sender, EventArgs e)
@@ -169,7 +182,7 @@ namespace management_store
             }
             else
             {
-                if (!btnThemSanPham.Enabled)
+                if (flagThem == false)
                 {
                     //Cập nhật sản phẩm
                     try
@@ -181,18 +194,15 @@ namespace management_store
                             int.Parse(txtMaNSX.Text),
                             int.Parse(txtSoLuong.Text));
                         MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo");
+                        SettingSanPham();
+                        LoadComboBox();
+                        DisableControl();
+                        dgvSanPham.Enabled = true;
                     }
                     catch
                     {
                         MessageBox.Show("Không thể cập nhật sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
-                    finally
-                    {
-                        dgvSanPham.Controls.Clear();
-                        SettingSanPham();
-                        DisableOnControl();
-                        LoadComboBox();
                     }
                 }
                 else
@@ -203,25 +213,18 @@ namespace management_store
                         func.ThemSanPham(txtTenSanPham.Text, txtLoaiSP.Text, float.Parse(txtDonGia.Text), 
                             picImage.Image, int.Parse(txtMaNSX.Text), int.Parse(txtSoLuong.Text));
                         MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo");
+                        SettingSanPham();
+                        LoadComboBox();
+                        DisableControl();
+                        dgvSanPham.Enabled = true;
+                        flagThem = false;
                     }
                     catch
                     {
                         MessageBox.Show("Có vấn đề khi thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    finally
-                    {
-                        dgvSanPham.Controls.Clear();
-                        SettingSanPham();
-                        DisableOnControl();
-                        LoadComboBox();
-                    }
                 }
-                ClearContent();
-                btnThemSanPham.Enabled = true;
-                btnXoaSP.Enabled = false;
-                btnLuuSP.Enabled = false;
-                btnHuy.Enabled = false;
             }
         }
 
@@ -233,6 +236,12 @@ namespace management_store
                 {
                     func.XoaSanPham(int.Parse(txtMaSP.Text));
                     MessageBox.Show("Đã xóa thông tin sản phẩm!", "Thông báo");
+                    
+                    SettingSanPham();
+                    LoadComboBox();
+                    DisableControl();
+                    dgvSanPham.Enabled = true;
+                    flagThem = false;
                 }
             }
             catch
@@ -240,28 +249,14 @@ namespace management_store
                 MessageBox.Show("Có lỗi trong khi xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            finally
-            {
-                dgvSanPham.Controls.Clear();
-                SettingSanPham();
-                ClearContent();
-                btnThemSanPham.Enabled = true;
-                btnXoaSP.Enabled = false;
-                btnLuuSP.Enabled = false;
-                btnHuy.Enabled = false;
-                DisableOnControl();
-                LoadComboBox();
-            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             ClearContent();
-            btnThemSanPham.Enabled = true;
-            btnXoaSP.Enabled = false;
-            btnLuuSP.Enabled = false;
-            btnHuy.Enabled = false;
-            DisableOnControl();
+            DisableControl();
+            dgvSanPham.Enabled = true;
+            flagThem = false;
         }
 
         private void btnChonHinhAnh_Click(object sender, EventArgs e)
@@ -274,28 +269,21 @@ namespace management_store
                 picImage.Image = Image.FromFile(pathImage);
             }
         }
-        #endregion
-
-        private void btnThemSanPham_EnabledChanged(object sender, EventArgs e)
-        {
-            btnLuuSP.Text = btnThemSanPham.Enabled ? "Lưu" : "Cập nhật";
-        }
-
+        
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            frmNhapHang frm = new frmNhapHang();
-            frm.ShowDialog();
+            new frmNhapHang().Show();
         }
 
         private void btnNhaSanXuat_Click(object sender, EventArgs e)
         {
-            frmNhaSanXuat frm = new frmNhaSanXuat();
-            frm.ShowDialog();
+            new frmNhaSanXuat().ShowDialog();
         }
 
         private void cbbPhanLoai_TextChanged(object sender, EventArgs e)
         {
             dgvSanPham.DataSource = BusinessLogicLayer.Instance().DanhSachSanPhamTheoLoai(cbbPhanLoai.Text.Trim());
         }
+        #endregion
     }
 }

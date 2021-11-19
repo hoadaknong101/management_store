@@ -1,13 +1,8 @@
 ﻿using management_store.Forms;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
 using System.Globalization;
-using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace management_store
 {
@@ -48,11 +43,6 @@ namespace management_store
         {
             dgvHoaDon.DataSource = bll.ThongTinToanBoHoaDon();
             dgvPhieuNhap.DataSource = bll.ThongTinToanBoPhieuNhap();
-        }
-
-        private void picVisible_Click(object sender, EventArgs e)
-        {
-            pnlInfor.Visible = !pnlInfor.Visible;
         }
 
         public IEnumerable<DateTime> EachDay(DateTime from, DateTime thru)
@@ -113,10 +103,6 @@ namespace management_store
         {
             frmLichSuaBanHang frm = new frmLichSuaBanHang();
             frm.ShowDialog();
-        }
-        private void DoanhThu(DateTime start, DateTime end)
-        {
-
         }
 
         private void btnLichSuNhapHang_Click(object sender, EventArgs e)

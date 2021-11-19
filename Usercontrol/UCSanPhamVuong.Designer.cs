@@ -169,7 +169,6 @@ namespace management_store
             this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinhAnh.TabIndex = 0;
             this.picHinhAnh.TabStop = false;
-            this.picHinhAnh.Click += new System.EventHandler(this.picHinhAnh_Click);
             // 
             // UCSanPhamVuong
             // 

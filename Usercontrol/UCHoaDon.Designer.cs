@@ -40,7 +40,7 @@ namespace management_store
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -111,7 +111,6 @@ namespace management_store
             this.fpnlSanPham.Name = "fpnlSanPham";
             this.fpnlSanPham.Size = new System.Drawing.Size(1017, 353);
             this.fpnlSanPham.TabIndex = 6;
-            this.fpnlSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.fpnlSanPham_Paint);
             // 
             // label4
             // 
@@ -158,25 +157,24 @@ namespace management_store
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txtMaNV);
+            this.panel3.Controls.Add(this.txtTenNV);
             this.panel3.Location = new System.Drawing.Point(215, 116);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(239, 39);
             this.panel3.TabIndex = 8;
             // 
-            // txtMaNV
+            // txtTenNV
             // 
-            this.txtMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMaNV.BackColor = System.Drawing.Color.White;
-            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaNV.Location = new System.Drawing.Point(3, 4);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.ReadOnly = true;
-            this.txtMaNV.Size = new System.Drawing.Size(231, 28);
-            this.txtMaNV.TabIndex = 3;
-            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
+            this.txtTenNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenNV.BackColor = System.Drawing.Color.White;
+            this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenNV.Location = new System.Drawing.Point(3, 4);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.ReadOnly = true;
+            this.txtTenNV.Size = new System.Drawing.Size(231, 28);
+            this.txtTenNV.TabIndex = 3;
             // 
             // panel4
             // 
@@ -343,7 +341,7 @@ namespace management_store
         private System.Windows.Forms.Button btnThemSp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Panel panel2;

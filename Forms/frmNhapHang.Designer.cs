@@ -87,10 +87,6 @@ namespace management_store
             this.cbbMaNhaSanXuat = new System.Windows.Forms.ComboBox();
             this.dragControlPanel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dgvChiTietPhieuNhap = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -113,6 +109,9 @@ namespace management_store
             this.dragControlLabel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragControlImage = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.lblTongTien = new System.Windows.Forms.Label();
+            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPhieuNhap)).BeginInit();
@@ -280,7 +279,6 @@ namespace management_store
             this.dgvChiTietPhieuNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvChiTietPhieuNhap.ColumnHeadersHeight = 40;
             this.dgvChiTietPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
             this.MaSanPham,
             this.DonGia,
             this.SoLuong});
@@ -324,26 +322,6 @@ namespace management_store
             this.dgvChiTietPhieuNhap.TabIndex = 6;
             this.dgvChiTietPhieuNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvChiTietPhieuNhap.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietPhieuNhap_CellValidated);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaSanPham
-            // 
-            this.MaSanPham.HeaderText = "Mã SP";
-            this.MaSanPham.Name = "MaSanPham";
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
             // 
             // label9
             // 
@@ -1421,6 +1399,21 @@ namespace management_store
             this.lblTongTien.TabIndex = 0;
             this.lblTongTien.Text = "Tổng tiền : ";
             // 
+            // MaSanPham
+            // 
+            this.MaSanPham.HeaderText = "Mã SP";
+            this.MaSanPham.Name = "MaSanPham";
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1492,10 +1485,6 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuDragControl dragControlPanel;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvChiTietPhieuNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDong;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTaoMoi;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLuu;
@@ -1513,5 +1502,8 @@ namespace management_store
         private Bunifu.Framework.UI.BunifuDragControl dragControlLabel;
         private Bunifu.Framework.UI.BunifuDragControl dragControlImage;
         private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }

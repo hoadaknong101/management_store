@@ -37,10 +37,5 @@ namespace management_store
         {
             them.Invoke(maSP, tenSP, donGia, hinhAnh);
         }
-
-        private void picHinhAnh_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
