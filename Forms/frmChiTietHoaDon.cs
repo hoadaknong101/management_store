@@ -24,5 +24,25 @@ namespace management_store
         {
             this.Close();
         }
+
+        private void dgvChiTietHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtMaHoaDon.Text = dgvChiTietHoaDon.CurrentRow.Cells[0].Value.ToString();
+                txtMaSanPham.Text = dgvChiTietHoaDon.CurrentRow.Cells[1].Value.ToString();
+                txtSoLuong.Text = dgvChiTietHoaDon.CurrentRow.Cells[3].Value.ToString();
+                txtThanhTien.Text = dgvChiTietHoaDon.CurrentRow.Cells[4].Value.ToString();
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

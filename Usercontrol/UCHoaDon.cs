@@ -240,5 +240,11 @@ namespace management_store
             dt = bll.ThongTinNhanVien(IDNhanVien);
             txtTenNV.Text = dt.Rows[0][1].ToString();
         }
+
+        private void btnLichSuBanHang_Click(object sender, EventArgs e)
+        {
+            frmLichSuaBanHang frm = new frmLichSuaBanHang();
+            frm.ShowDialog();
+        }
     }
 }

@@ -252,7 +252,7 @@ namespace management_store
         }
         public DataTable ChiTietHoaDon(string maHoaDon)
         {
-            string sql = "select c.MaHoaDon N'Mã HĐ',s.TenSanPham N'Sản phẩm',c.SoLuong N'Số lượng',h.TongTien N'Tổng tiền',h.NgayTao N'Ngày tạo'" +
+            string sql = "select c.MaHoaDon N'Mã HĐ',s.MaSanPham as N'Mã SP',s.TenSanPham N'Sản phẩm',c.SoLuong N'Số lượng',h.TongTien N'Tổng tiền',h.NgayTao N'Ngày tạo'" +
                 "from SanPham s, ChiTietHoaDon c, HoaDon h " +
                 "where s.MaSanPham = c.MaSanPham and" +
                 " c.MaHoaDon = '" + maHoaDon + "' and" +
@@ -447,6 +447,17 @@ namespace management_store
             img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             return ms.ToArray();
         }
+        #endregion
+
+        #region ChiTietHoaDon
+        public void XoaChiTietHoaDon(string maHoaDon, int maSanPham)
+        {
+            string sql = "dbo.sp_XoaChiTietSanPham";
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
+                new SqlParameter("@MaHoaDon", maHoaDon),
+                new SqlParameter("@MaSanPham", maSanPham));
+        }
+
         #endregion
     }
 }

@@ -50,6 +50,7 @@ namespace management_store
             this.printBill = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialogBill = new System.Windows.Forms.PrintPreviewDialog();
             this.ucTitleBar1 = new management_store.UCTitleBar();
+            this.btnLichSuBanHang = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -218,10 +219,10 @@ namespace management_store
             this.btnHuyHoaDon.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnHuyHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnHuyHoaDon.Image = global::management_store.Properties.Resources.icons8_cancel_2_48;
-            this.btnHuyHoaDon.Location = new System.Drawing.Point(617, 574);
+            this.btnHuyHoaDon.Location = new System.Drawing.Point(623, 574);
             this.btnHuyHoaDon.Name = "btnHuyHoaDon";
             this.btnHuyHoaDon.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnHuyHoaDon.Size = new System.Drawing.Size(212, 64);
+            this.btnHuyHoaDon.Size = new System.Drawing.Size(206, 64);
             this.btnHuyHoaDon.TabIndex = 7;
             this.btnHuyHoaDon.Text = "  Hủy HĐ";
             this.btnHuyHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -289,11 +290,25 @@ namespace management_store
             this.ucTitleBar1.Size = new System.Drawing.Size(1017, 40);
             this.ucTitleBar1.TabIndex = 9;
             // 
+            // btnLichSuBanHang
+            // 
+            this.btnLichSuBanHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLichSuBanHang.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSuBanHang.ForeColor = System.Drawing.Color.White;
+            this.btnLichSuBanHang.Location = new System.Drawing.Point(403, 575);
+            this.btnLichSuBanHang.Name = "btnLichSuBanHang";
+            this.btnLichSuBanHang.Size = new System.Drawing.Size(193, 64);
+            this.btnLichSuBanHang.TabIndex = 13;
+            this.btnLichSuBanHang.Text = "Lịch sử bán hàng";
+            this.btnLichSuBanHang.UseVisualStyleBackColor = false;
+            this.btnLichSuBanHang.Click += new System.EventHandler(this.btnLichSuBanHang_Click);
+            // 
             // UCHoaDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnLichSuBanHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ucTitleBar1);
             this.Controls.Add(this.panel3);
@@ -349,5 +364,6 @@ namespace management_store
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Drawing.Printing.PrintDocument printBill;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogBill;
+        private System.Windows.Forms.Button btnLichSuBanHang;
     }
 }
