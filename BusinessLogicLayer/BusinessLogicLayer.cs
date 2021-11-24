@@ -252,12 +252,18 @@ namespace management_store
         }
         public DataTable ChiTietHoaDon(string maHoaDon)
         {
-            string sql = "select c.MaHoaDon N'Mã HĐ',s.MaSanPham as N'Mã SP',s.TenSanPham N'Sản phẩm',c.SoLuong N'Số lượng',h.TongTien N'Tổng tiền',h.NgayTao N'Ngày tạo'" +
+            string sql = "select c.MaHoaDon as N'Mã HĐ',s.MaSanPham as N'Mã SP',s.TenSanPham as N'Sản phẩm',c.SoLuong as N'Số lượng',c.ThanhTien as N'Thành tiền',h.NgayTao as N'Ngày tạo'" +
                 "from SanPham s, ChiTietHoaDon c, HoaDon h " +
                 "where s.MaSanPham = c.MaSanPham and" +
                 " c.MaHoaDon = '" + maHoaDon + "' and" +
                 " h.MaHoaDon = '" + maHoaDon + "'";
             return dal.GetDataToDataTable(sql);
+        }
+
+        public void XoaHoaDon(string maHoaDon)
+        {
+            string sql = "sp_XoaHoaDon";
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure, new SqlParameter("@MaHoaDon", maHoaDon));
         }
         #endregion
 
@@ -452,10 +458,19 @@ namespace management_store
         #region ChiTietHoaDon
         public void XoaChiTietHoaDon(string maHoaDon, int maSanPham)
         {
-            string sql = "dbo.sp_XoaChiTietSanPham";
+            string sql = "sp_XoaChiTietHoaDon";
             dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
                 new SqlParameter("@MaHoaDon", maHoaDon),
                 new SqlParameter("@MaSanPham", maSanPham));
+        }
+
+        public void CapNhatChiTietHoaDon(string maHoaDon, int maSanPham, int soLuong)
+        {
+            string sql = "sp_CapNhatChiTietHoaDon";
+            dal.ExcuteNonQuery(sql, CommandType.StoredProcedure,
+                new SqlParameter("@MaHoaDon", maHoaDon),
+                new SqlParameter("@MaSanPham", maSanPham),
+                new SqlParameter("@SoLuong", soLuong));
         }
 
         #endregion

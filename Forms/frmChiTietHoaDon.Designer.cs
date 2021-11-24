@@ -318,7 +318,7 @@ namespace management_store
             this.txtMaHoaDon.PasswordChar = '\0';
             this.txtMaHoaDon.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMaHoaDon.PlaceholderText = "Enter text";
-            this.txtMaHoaDon.ReadOnly = false;
+            this.txtMaHoaDon.ReadOnly = true;
             this.txtMaHoaDon.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMaHoaDon.SelectedText = "";
             this.txtMaHoaDon.SelectionLength = 0;
@@ -404,7 +404,7 @@ namespace management_store
             this.txtMaSanPham.PasswordChar = '\0';
             this.txtMaSanPham.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMaSanPham.PlaceholderText = "Enter text";
-            this.txtMaSanPham.ReadOnly = false;
+            this.txtMaSanPham.ReadOnly = true;
             this.txtMaSanPham.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMaSanPham.SelectedText = "";
             this.txtMaSanPham.SelectionLength = 0;
@@ -576,7 +576,7 @@ namespace management_store
             this.txtThanhTien.PasswordChar = '\0';
             this.txtThanhTien.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtThanhTien.PlaceholderText = "Enter text";
-            this.txtThanhTien.ReadOnly = false;
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtThanhTien.SelectedText = "";
             this.txtThanhTien.SelectionLength = 0;
@@ -786,6 +786,7 @@ namespace management_store
             this.btnXoa.TextMarginLeft = 0;
             this.btnXoa.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnXoa.UseDefaultRadiusAndThickness = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // frmChiTietHoaDon
             // 

@@ -41,8 +41,20 @@ namespace management_store
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
-        {
+        {          
+            BusinessLogicLayer.Instance().CapNhatChiTietHoaDon(txtMaHoaDon.Text.Trim(), int.Parse(txtMaSanPham.Text.Trim()), int.Parse(txtSoLuong.Text.Trim()));
+            MessageBox.Show("Cập nhật thành công!", "Cập nhật chi tiết hóa đơn");
+            dgvChiTietHoaDon.DataSource = BusinessLogicLayer.Instance().ChiTietHoaDon(this.maHoaDon);
+        }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn xóa sản phẩm này?","Xóa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                BusinessLogicLayer.Instance().XoaChiTietHoaDon(this.maHoaDon, int.Parse(txtMaSanPham.Text.Trim()));
+                MessageBox.Show("Đã xóa sản phẩm\nTrả hàng thành công!", "Trả hàng");
+                dgvChiTietHoaDon.DataSource = BusinessLogicLayer.Instance().ChiTietHoaDon(this.maHoaDon);
+            }            
         }
     }
 }
