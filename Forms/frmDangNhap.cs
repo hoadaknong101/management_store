@@ -96,7 +96,8 @@ namespace management_store
                     if (vaiTro == "Admin")
                     {
                         this.Hide();
-                        new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim())).ShowDialog();                       
+                        frmAdmin form = new frmAdmin(int.Parse(txtTenTaiKhoan.Text.Trim()));
+                        form.ShowDialog();
                         txtTenTaiKhoan.Clear();
                         txtMatKhau.Clear();                        
                         this.Show();

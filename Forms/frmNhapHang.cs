@@ -123,6 +123,7 @@ namespace management_store
                         UCDoanhThu.Instance.TakeInfor();
                         UCDoanhThu.Instance.LoadData();
                         UCSanPham.Instance.SettingSanPham();
+                        Hide();
                     }
                     catch (SqlException)
                     {

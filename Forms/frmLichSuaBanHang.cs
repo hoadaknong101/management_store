@@ -33,6 +33,9 @@ namespace management_store
             {
                 frmChiTietHoaDon frm = new frmChiTietHoaDon(dgvDanhSachHoaDon.CurrentRow.Cells[0].Value.ToString());
                 frm.ShowDialog();
+                LoadData();
+                UCDoanhThu.Instance.LoadData();
+                UCDoanhThu.Instance.TakeInfor();
             }
             catch
             {

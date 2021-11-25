@@ -155,6 +155,7 @@ namespace management_store
             this.dgvSanPham.EnableHeadersVisualStyles = false;
             this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvSanPham.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvSanPham.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvSanPham.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(25, 216);
             this.dgvSanPham.Name = "dgvSanPham";
@@ -640,7 +641,7 @@ namespace management_store
             this.txtSoLuong.PasswordChar = '\0';
             this.txtSoLuong.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSoLuong.PlaceholderText = "Số lượng sản phẩm";
-            this.txtSoLuong.ReadOnly = false;
+            this.txtSoLuong.ReadOnly = true;
             this.txtSoLuong.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSoLuong.SelectedText = "";
             this.txtSoLuong.SelectionLength = 0;

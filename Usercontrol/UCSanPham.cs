@@ -104,7 +104,6 @@ namespace management_store
         {
             txtTenSanPham.Enabled = true;
             txtDonGia.Enabled = true;
-            txtSoLuong.Enabled = true;
             txtLoaiSP.Enabled = true;
             txtMaNSX.Enabled = true;
             btnChonHinhAnh.Enabled = true;
@@ -166,6 +165,7 @@ namespace management_store
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
             ClearContent();
+            txtSoLuong.Text = "0";
             flagThem = true;
             txtTenSanPham.Focus();
             EnabledControl();
