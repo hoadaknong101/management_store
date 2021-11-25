@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
+using ExcelEngine;
+using ClosedXML.Excel;
 
 namespace management_store
 {
@@ -109,6 +111,35 @@ namespace management_store
         {
             frmLichSuNhapHang frm = new frmLichSuNhapHang();
             frm.ShowDialog();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Wordbook | *.xlsx"})
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add(bll.ThongTinToanBoHoaDon(), "Hóa đơn");
+                            workbook.Worksheets.Add(bll.ThongTinToanBoPhieuNhap(), "Nhập hàng");
+                            workbook.Worksheets.Add(bll.DanhSachNhanVienKhongHinhAnh(), "Nhân viên");
+                            workbook.Worksheets.Add(bll.DanhSachSanPhamKhongHinhAnh(), "Sản phẩm");
+                            workbook.Worksheets.Add(bll.DanhSachChiTietHoaDon(), "CTHĐ");
+                            workbook.Worksheets.Add(bll.DanhSachChiTietPhieuNhapHang(), "CP phiếu nhập");
+                            workbook.Worksheets.Add(bll.DanhSachNhaSanXuat(), "Nhà cung cấp");
+                            workbook.SaveAs(sfd.FileName);
+                            MessageBox.Show("Xuất file thành công!", "Xuất Excel",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+            }
         }
     }
 }

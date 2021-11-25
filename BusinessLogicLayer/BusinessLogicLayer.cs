@@ -106,6 +106,12 @@ namespace management_store
                 "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
             return dal.GetDataToDataTable(sql);
         }
+        public DataTable DanhSachSanPhamKhongHinhAnh()
+        {
+            string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
+                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+            return dal.GetDataToDataTable(sql);
+        }
         public DataTable ThongTinSanPhamConHang()
         {
             string sql = "SELECT * FROM SanPham WHERE SoLuongTrongKho > 1";
@@ -278,6 +284,13 @@ namespace management_store
             return dal.ExecuteQueryDataTable("dbo.sp_ThongTinToanBoNhanVien", CommandType.StoredProcedure,
                 new SqlParameter("@MaNhanVien", maNhanVien));
         }
+        public DataTable DanhSachNhanVienKhongHinhAnh()
+        {
+            string sql = "select MaNhanVien as N'Mã NV', HoTen as N'Họ và tên', LienHe as N'Liên hệ', DiaChi as N'Địa chỉ', " +
+                "GioiTinh as N'Giới tính', CCCD as N'CMND/CCCD' " +
+                "from NhanVien";
+            return dal.GetDataToDataTable(sql);
+        }
         public void ThemNhanVien(string hoTen, string lienHe, string diaChi, Image hinhAnh, string gioiTinh, string cccd,string chucVu,string matKhau)
         {
             dal.ExcuteNonQuery("sp_ThemNhanVien", CommandType.StoredProcedure,
@@ -330,7 +343,12 @@ namespace management_store
         #endregion
 
         #region PhieuNhapHang        
-        
+        public DataTable DanhSachChiTietPhieuNhapHang()
+        {
+            string sql = "select MaPhieuNhapHang as N'Mã phiếu', MaSanPham as N'Mã SP', DonGia as N'Đơn giá', SoLuong as N'Số lượng' from ChiTietPhieuNhapHang";
+            return dal.GetDataToDataTable(sql);
+        }
+
         public void ThemChiTietPhieuNhapHang(string maPhieuNhapHang, int maSanPham, float donGia, int soLuong)
         {
             dal.ExcuteNonQuery("sp_ThemChiTietPhieuNhapHang", CommandType.StoredProcedure,
@@ -456,6 +474,11 @@ namespace management_store
         #endregion
 
         #region ChiTietHoaDon
+        public DataTable DanhSachChiTietHoaDon()
+        {
+            string sql = "select MaHoaDon as N'Mã HĐ', MaSanPham as N'Mã SP', SoLuong as N'Số lượng', ThanhTien as N'Thành tiền' from ChiTietHoaDon";
+            return dal.GetDataToDataTable(sql);
+        }
         public void XoaChiTietHoaDon(string maHoaDon, int maSanPham)
         {
             string sql = "sp_XoaChiTietHoaDon";

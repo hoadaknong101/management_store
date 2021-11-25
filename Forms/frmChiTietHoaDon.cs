@@ -18,6 +18,7 @@ namespace management_store
             InitializeComponent();
             this.maHoaDon = maHoaDon;
             dgvChiTietHoaDon.DataSource = BusinessLogicLayer.Instance().ChiTietHoaDon(this.maHoaDon);
+            btnXoa.Enabled = false;
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -33,11 +34,19 @@ namespace management_store
                 txtMaSanPham.Text = dgvChiTietHoaDon.CurrentRow.Cells[1].Value.ToString();
                 txtSoLuong.Text = dgvChiTietHoaDon.CurrentRow.Cells[3].Value.ToString();
                 txtThanhTien.Text = dgvChiTietHoaDon.CurrentRow.Cells[4].Value.ToString();
+                btnXoa.Enabled = true;
             }
             catch
             {
                 return;
             }
+        }
+        private void ClearContentTextBox()
+        {
+            txtMaHoaDon.Clear();
+            txtMaSanPham.Clear();
+            txtSoLuong.Clear();
+            txtThanhTien.Clear();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -45,6 +54,8 @@ namespace management_store
             BusinessLogicLayer.Instance().CapNhatChiTietHoaDon(txtMaHoaDon.Text.Trim(), int.Parse(txtMaSanPham.Text.Trim()), int.Parse(txtSoLuong.Text.Trim()));
             MessageBox.Show("Cập nhật thành công!", "Cập nhật chi tiết hóa đơn");
             dgvChiTietHoaDon.DataSource = BusinessLogicLayer.Instance().ChiTietHoaDon(this.maHoaDon);
+            ClearContentTextBox();
+            btnXoa.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -54,6 +65,8 @@ namespace management_store
                 BusinessLogicLayer.Instance().XoaChiTietHoaDon(this.maHoaDon, int.Parse(txtMaSanPham.Text.Trim()));
                 MessageBox.Show("Đã xóa sản phẩm\nTrả hàng thành công!", "Trả hàng");
                 dgvChiTietHoaDon.DataSource = BusinessLogicLayer.Instance().ChiTietHoaDon(this.maHoaDon);
+                ClearContentTextBox();
+                btnXoa.Enabled = false;
             }            
         }
     }

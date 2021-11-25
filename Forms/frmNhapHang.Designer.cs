@@ -311,7 +311,6 @@ namespace management_store
             this.dgvChiTietPhieuNhap.EnableHeadersVisualStyles = false;
             this.dgvChiTietPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvChiTietPhieuNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvChiTietPhieuNhap.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChiTietPhieuNhap.HeaderForeColor = System.Drawing.Color.White;
             this.dgvChiTietPhieuNhap.Location = new System.Drawing.Point(446, 86);
             this.dgvChiTietPhieuNhap.Name = "dgvChiTietPhieuNhap";

@@ -126,7 +126,6 @@ namespace management_store.Forms
             this.dgvChiTietPhieuNhapHang.EnableHeadersVisualStyles = false;
             this.dgvChiTietPhieuNhapHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvChiTietPhieuNhapHang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvChiTietPhieuNhapHang.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChiTietPhieuNhapHang.HeaderForeColor = System.Drawing.Color.White;
             this.dgvChiTietPhieuNhapHang.Location = new System.Drawing.Point(12, 71);
             this.dgvChiTietPhieuNhapHang.Name = "dgvChiTietPhieuNhapHang";

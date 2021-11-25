@@ -113,7 +113,6 @@ namespace management_store.Forms
             this.dgvPhieuNhapHang.EnableHeadersVisualStyles = false;
             this.dgvPhieuNhapHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvPhieuNhapHang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvPhieuNhapHang.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvPhieuNhapHang.HeaderForeColor = System.Drawing.Color.White;
             this.dgvPhieuNhapHang.Location = new System.Drawing.Point(12, 72);
             this.dgvPhieuNhapHang.Name = "dgvPhieuNhapHang";

@@ -1168,7 +1168,6 @@ namespace management_store
             this.dgvNhanVien.EnableHeadersVisualStyles = false;
             this.dgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvNhanVien.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvNhanVien.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvNhanVien.HeaderForeColor = System.Drawing.Color.White;
             this.dgvNhanVien.Location = new System.Drawing.Point(37, 185);
             this.dgvNhanVien.Name = "dgvNhanVien";
