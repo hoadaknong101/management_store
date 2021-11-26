@@ -70,18 +70,12 @@ namespace management_store
 
         private void txtTimKiem_TextChange(object sender, EventArgs e)
         {
-            if(txtTimKiem.Text.Trim() == "")
-            {
-                string sql = "SELECT * FROM SanPham where SoLuongTrongKho > 0";
-                dtSP = func.GetDataToDataTable(sql);
-                fpnlMain.Controls.Clear();
-                LoadSP();
-            }
+
         }
 
         private void picTim_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE N'%" + txtTimKiem.Text.Trim() + "%' and where SoLuongTrongKho > 0";
+            string sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE N'%" + txtTimKiem.Text.Trim() + "%' and SoLuongTrongKho > 0";
             dtSP = func.GetDataToDataTable(sql);
             fpnlMain.Controls.Clear();
             LoadSP();
