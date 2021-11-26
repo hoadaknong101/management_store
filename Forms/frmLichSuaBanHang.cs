@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace management_store
@@ -13,10 +6,12 @@ namespace management_store
     public partial class frmLichSuaBanHang : Form
     {
         private string maHoaDon;
-        public frmLichSuaBanHang()
+        private bool flag;
+        public frmLichSuaBanHang(bool flag)
         {
             InitializeComponent();
             LoadData();
+            this.flag = flag;
         }
         private void LoadData()
         {
@@ -29,17 +24,20 @@ namespace management_store
 
         private void dgvDanhSachHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (flag)
             {
-                frmChiTietHoaDon frm = new frmChiTietHoaDon(dgvDanhSachHoaDon.CurrentRow.Cells[0].Value.ToString());
-                frm.ShowDialog();
-                LoadData();
-                UCDoanhThu.Instance.LoadData();
-                UCDoanhThu.Instance.TakeInfor();
-            }
-            catch
-            {
-                return;
+                try
+                {
+                    frmChiTietHoaDon frm = new frmChiTietHoaDon(dgvDanhSachHoaDon.CurrentRow.Cells[0].Value.ToString());
+                    frm.ShowDialog();
+                    LoadData();
+                    UCDoanhThu.Instance.LoadData();
+                    UCDoanhThu.Instance.TakeInfor();
+                }
+                catch
+                {
+                    return;
+                }
             }
         }
 
