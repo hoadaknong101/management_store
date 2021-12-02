@@ -103,13 +103,17 @@ namespace management_store
         public DataTable ThongTinSanPham()
         {
             string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',NhaSanXuat.TenNhaSanXuat as N'NSX', SoLuongTrongKho as N'Số lượng' " +
+                "from SanPham, NhaSanXuat " +
+                "where SanPham.MaNhaSanXuat = NhaSanXuat.MaNhaSanXuat";
             return dal.GetDataToDataTable(sql);
         }
         public DataTable DanhSachSanPhamKhongHinhAnh()
         {
             string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+                "DonGia as N'Đơn giá',NhaSanXuat.TenNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' " +
+                "from SanPham, NhaSanXuat " +
+                "where NhaSanXuat.MaNhaSanXuat = SanPham.MaNhaSanXuat";
             return dal.GetDataToDataTable(sql);
         }
         public DataTable ThongTinSanPhamConHang()
@@ -149,13 +153,16 @@ namespace management_store
             if(loai == "Tất cả")
             {
                 sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham";
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',TenNhaSanXuat as N'NSX', SoLuongTrongKho as N'Số lượng' " +
+                "from SanPham, NhaSanXuat " +
+                "where SanPham.MaNhaSanXuat = NhaSanXuat.MaNhaSanXuat";
             }
             else
             {
                 sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',MaNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' from SanPham where LoaiSanPham like " +
-                "N'%" + loai + "%'";
+                "DonGia as N'Đơn giá',HinhAnh as N'Hình ảnh',TenNhaSanXuat as N'NSX', SoLuongTrongKho as N'Số lượng' " +
+                "from SanPham, NhaSanXuat " +
+                "where LoaiSanPham like N'%" + loai + "%' and NhaSanXuat.MaNhaSanXuat = SanPham.MaNhaSanXuat";
             }
             return dal.GetDataToDataTable(sql);
         }
@@ -367,7 +374,7 @@ namespace management_store
         }
         public DataTable ThongTinToanBoPhieuNhap()
         {
-            string sql = "select MaPhieuNhapHang as N'Mã phiếu', NgayNhapHang as N'Ngày nhập', TongGiaTri as N'TT', MaNhanVien as N'Mã NV' from PhieuNhapHang";
+            string sql = "select MaPhieuNhapHang as N'Mã phiếu', NgayNhapHang as N'Ngày nhập', TongGiaTri as N'Tổng tiền', MaNhanVien as N'Mã NV' from PhieuNhapHang";
             return dal.ExecuteQueryDataTable(sql, CommandType.Text, null);
         }
 

@@ -35,9 +35,9 @@ namespace management_store
             lblMaSP.Text = maSP + "";
             lblTenSP.Text = tenSP;
             ptbImage.Image = hinhAnh;
-            lblDonGia.Text = donGia.ToString("N", CultureInfo.InvariantCulture); // comment?
+            lblDonGia.Text = donGia.ToString("0,000"); // comment?
             txtSoLuong.Text = SoLuong + "";
-            lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);
+            lblThanhTien.Text = ThanhTien.ToString("0,000");
         }
 
         private void btnXoaSP_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace management_store
                 this.SoLuong = int.Parse(txtSoLuong.Text.Trim());
                 this.ThanhTien = this.DonGia * int.Parse(txtSoLuong.Text.Trim());
                 this.capNhatTongTien.Invoke();
-                lblThanhTien.Text = ThanhTien.ToString("N", CultureInfo.InvariantCulture);
+                lblThanhTien.Text = ThanhTien.ToString("0,000");
             }
             catch
             {

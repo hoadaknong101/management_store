@@ -51,6 +51,7 @@ namespace management_store
             this.printPreviewDialogBill = new System.Windows.Forms.PrintPreviewDialog();
             this.ucTitleBar1 = new management_store.UCTitleBar();
             this.btnLichSuBanHang = new System.Windows.Forms.Button();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -62,7 +63,7 @@ namespace management_store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(509, 10);
+            this.label1.Location = new System.Drawing.Point(529, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 39);
             this.label1.TabIndex = 1;
@@ -203,7 +204,7 @@ namespace management_store
             // pictureBox1
             // 
             this.pictureBox1.Image = global::management_store.Properties.Resources.icons8_receipt_641;
-            this.pictureBox1.Location = new System.Drawing.Point(442, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,11 +304,27 @@ namespace management_store
             this.btnLichSuBanHang.UseVisualStyleBackColor = false;
             this.btnLichSuBanHang.Click += new System.EventHandler(this.btnLichSuBanHang_Click);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(508, 8);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 45);
+            this.bunifuSeparator1.TabIndex = 14;
+            // 
             // UCHoaDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.btnLichSuBanHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ucTitleBar1);
@@ -365,5 +382,6 @@ namespace management_store
         private System.Drawing.Printing.PrintDocument printBill;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogBill;
         private System.Windows.Forms.Button btnLichSuBanHang;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
     }
 }

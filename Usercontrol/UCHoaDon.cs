@@ -21,8 +21,9 @@ namespace management_store
         private BusinessLogicLayer bll = new BusinessLogicLayer();
         
         public List<UCSanPhamBar> lstSanPham;
+        private long maHoaDon;
         public float tongTien = 0;
-        frmTimSP themSP;
+        private frmTimSP themSP;
         private int width_bill = 148;
 
         static UCHoaDon _obj;
@@ -70,7 +71,7 @@ namespace management_store
             {
                 tongTien += sp.ThanhTien;
             }
-            lblTongTien.Text = "Tổng tiền : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ";
+            lblTongTien.Text = "Tổng tiền : " + tongTien.ToString("0,000") + " VNĐ";
         }
 
         private void XoaSanPham(UCSanPhamBar sanPham)
@@ -105,7 +106,7 @@ namespace management_store
         {
             fpnlSanPham.Controls.Clear();
             lstSanPham.Clear();
-            lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
+            lblTongTien.Text = "Tổng tiền : 0 VNĐ";
         }
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
@@ -120,7 +121,7 @@ namespace management_store
                 }
             }
             DateTime now = DateTime.Now;
-            long maHoaDon = TaoMaHoaDon(now);
+            maHoaDon = TaoMaHoaDon(now);
             if (KiemTraXuatHoaDon())
             {
                 bll.ThemHoaDon(maHoaDon, now, IDNhanVien, tongTien, txtHoTenKH.Text);
@@ -133,7 +134,7 @@ namespace management_store
                 printPreviewDialogBill.ShowDialog();
                 fpnlSanPham.Controls.Clear();
                 lstSanPham.Clear();
-                lblTongTien.Text = "Tổng tiền : 0.00 VNĐ";
+                lblTongTien.Text = "Tổng tiền : 0 VNĐ";
                 CapNhatSauKhiXuatHoaDon();
             }
             else
@@ -216,7 +217,7 @@ namespace management_store
                 e.Graphics.DrawString(stt + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 1, topMargin + 10 + pos));
                 e.Graphics.DrawString(x.TenSP + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 10, topMargin + 10 + pos));
                 e.Graphics.DrawString(x.SoLuong + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 56, topMargin + 10 + pos));
-                e.Graphics.DrawString(x.ThanhTien + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 85, topMargin + 10 + pos));
+                e.Graphics.DrawString(x.ThanhTien.ToString("0,000") + "", fontNoiDung, Brushes.Black, new Point(leftMargin + 85, topMargin + 10 + pos));
 
                 theLastPos = topMargin + 10 + pos;
                 pos += 10;
@@ -225,14 +226,16 @@ namespace management_store
 
             e.Graphics.DrawString("==========================================", fontNoiDung,
                 Brushes.Black, new Point(leftMargin, theLastPos + 10));
-            e.Graphics.DrawString("Total : " + tongTien.ToString("N", CultureInfo.InvariantCulture) + " VNĐ", fontTieuDe,
+            e.Graphics.DrawString("Tổng : " + tongTien.ToString("0,000") + " VNĐ", fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 20));
             e.Graphics.DrawString("Ngày bán : " + DateTime.Now.ToString("dd-MM-yyyy"), fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 30));
             e.Graphics.DrawString("Người bán hàng : " + dt.Rows[0][1].ToString(), fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 40));
+            e.Graphics.DrawString("Mã hóa đơn : " + maHoaDon + "", fontTieuDe,
+                Brushes.Black, new Point(leftMargin, theLastPos + 50));
             e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
-                new Point(leftMargin + 21, theLastPos + 60));
+                new Point(leftMargin + 21, theLastPos + 65));
         }
 
         private void UCHoaDon_Load(object sender, EventArgs e)

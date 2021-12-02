@@ -141,7 +141,7 @@ namespace management_store
             {
                 txtMaSP.Text = dgvSanPham.CurrentRow.Cells[0].Value.ToString();
                 txtTenSanPham.Text = dgvSanPham.CurrentRow.Cells[1].Value.ToString();
-                txtDonGia.Text = dgvSanPham.CurrentRow.Cells[3].Value.ToString();
+                txtDonGia.Text = float.Parse(dgvSanPham.CurrentRow.Cells[3].Value.ToString()).ToString("0,000");
                 txtLoaiSP.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();
                 txtMaNSX.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();

@@ -41,22 +41,21 @@ namespace management_store
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblNhanVien = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblHoaDon = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_spTrongKho = new System.Windows.Forms.Label();
             this.pnlTongHop = new System.Windows.Forms.Panel();
             this.pnlInfor = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_spDaBan = new System.Windows.Forms.Label();
+            this.lblLoiNhuanHienTai = new System.Windows.Forms.Label();
             this.pnlHoaDon = new System.Windows.Forms.Panel();
             this.dgvHoaDon = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lblThuNhap = new System.Windows.Forms.Label();
@@ -75,12 +74,12 @@ namespace management_store
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.btnLichSuNhapHang = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pnlTongHop.SuspendLayout();
+            this.pnlInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.pnlTongHop.SuspendLayout();
-            this.pnlInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -88,6 +87,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.gbThoiGian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,42 +101,23 @@ namespace management_store
             this.label1.TabIndex = 2;
             this.label1.Text = "DOANH THU";
             // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Location = new System.Drawing.Point(434, 12);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(54, 39);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 3;
-            this.pictureBox23.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(18, 70);
+            this.label2.Location = new System.Drawing.Point(8, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Thống kê tổng quát";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::management_store.Properties.Resources.icons8_group_64;
-            this.pictureBox11.Location = new System.Drawing.Point(13, 323);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 1;
-            this.pictureBox11.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(11, 291);
+            this.label8.Location = new System.Drawing.Point(7, 291);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 0;
@@ -147,28 +128,18 @@ namespace management_store
             this.lblNhanVien.AutoSize = true;
             this.lblNhanVien.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNhanVien.ForeColor = System.Drawing.Color.White;
-            this.lblNhanVien.Location = new System.Drawing.Point(71, 323);
+            this.lblNhanVien.Location = new System.Drawing.Point(67, 323);
             this.lblNhanVien.Name = "lblNhanVien";
             this.lblNhanVien.Size = new System.Drawing.Size(32, 39);
             this.lblNhanVien.TabIndex = 0;
             this.lblNhanVien.Text = "0";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::management_store.Properties.Resources.icons8_receipt_64;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 229);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(11, 195);
+            this.label6.Location = new System.Drawing.Point(7, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 0;
@@ -179,28 +150,18 @@ namespace management_store
             this.lblHoaDon.AutoSize = true;
             this.lblHoaDon.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoaDon.ForeColor = System.Drawing.Color.White;
-            this.lblHoaDon.Location = new System.Drawing.Point(71, 229);
+            this.lblHoaDon.Location = new System.Drawing.Point(67, 229);
             this.lblHoaDon.Name = "lblHoaDon";
             this.lblHoaDon.Size = new System.Drawing.Size(32, 39);
             this.lblHoaDon.TabIndex = 0;
             this.lblHoaDon.Text = "0";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::management_store.Properties.Resources.book_shelf_96px2;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 135);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 102);
+            this.label4.Location = new System.Drawing.Point(5, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 20);
             this.label4.TabIndex = 0;
@@ -211,7 +172,7 @@ namespace management_store
             this.lbl_spTrongKho.AutoSize = true;
             this.lbl_spTrongKho.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_spTrongKho.ForeColor = System.Drawing.Color.White;
-            this.lbl_spTrongKho.Location = new System.Drawing.Point(71, 135);
+            this.lbl_spTrongKho.Location = new System.Drawing.Point(67, 135);
             this.lbl_spTrongKho.Name = "lbl_spTrongKho";
             this.lbl_spTrongKho.Size = new System.Drawing.Size(32, 39);
             this.lbl_spTrongKho.TabIndex = 0;
@@ -221,9 +182,9 @@ namespace management_store
             // 
             this.pnlTongHop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
             this.pnlTongHop.Controls.Add(this.pnlInfor);
-            this.pnlTongHop.Location = new System.Drawing.Point(24, 115);
+            this.pnlTongHop.Location = new System.Drawing.Point(14, 115);
             this.pnlTongHop.Name = "pnlTongHop";
-            this.pnlTongHop.Size = new System.Drawing.Size(209, 399);
+            this.pnlTongHop.Size = new System.Drawing.Size(234, 399);
             this.pnlTongHop.TabIndex = 7;
             // 
             // pnlInfor
@@ -239,16 +200,46 @@ namespace management_store
             this.pnlInfor.Controls.Add(this.label4);
             this.pnlInfor.Controls.Add(this.lbl_spTrongKho);
             this.pnlInfor.Controls.Add(this.label3);
-            this.pnlInfor.Controls.Add(this.lbl_spDaBan);
+            this.pnlInfor.Controls.Add(this.lblLoiNhuanHienTai);
             this.pnlInfor.Location = new System.Drawing.Point(0, 2);
             this.pnlInfor.Name = "pnlInfor";
-            this.pnlInfor.Size = new System.Drawing.Size(209, 391);
+            this.pnlInfor.Size = new System.Drawing.Size(231, 391);
             this.pnlInfor.TabIndex = 2;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::management_store.Properties.Resources.icons8_group_64;
+            this.pictureBox11.Location = new System.Drawing.Point(9, 323);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 41);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 1;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::management_store.Properties.Resources.icons8_receipt_64;
+            this.pictureBox8.Location = new System.Drawing.Point(9, 229);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 41);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::management_store.Properties.Resources.book_shelf_96px2;
+            this.pictureBox5.Location = new System.Drawing.Point(11, 135);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 41);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_product_48;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 48);
+            this.pictureBox2.Image = global::management_store.Properties.Resources.icons8_profit_128px;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,22 +251,22 @@ namespace management_store
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 14);
+            this.label3.Location = new System.Drawing.Point(5, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.Size = new System.Drawing.Size(152, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Sản phẩm đã bán";
+            this.label3.Text = "Lợi nhuận hiện tại";
             // 
-            // lbl_spDaBan
+            // lblLoiNhuanHienTai
             // 
-            this.lbl_spDaBan.AutoSize = true;
-            this.lbl_spDaBan.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_spDaBan.ForeColor = System.Drawing.Color.White;
-            this.lbl_spDaBan.Location = new System.Drawing.Point(71, 48);
-            this.lbl_spDaBan.Name = "lbl_spDaBan";
-            this.lbl_spDaBan.Size = new System.Drawing.Size(32, 39);
-            this.lbl_spDaBan.TabIndex = 0;
-            this.lbl_spDaBan.Text = "0";
+            this.lblLoiNhuanHienTai.AutoSize = true;
+            this.lblLoiNhuanHienTai.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoiNhuanHienTai.ForeColor = System.Drawing.Color.White;
+            this.lblLoiNhuanHienTai.Location = new System.Drawing.Point(67, 48);
+            this.lblLoiNhuanHienTai.Name = "lblLoiNhuanHienTai";
+            this.lblLoiNhuanHienTai.Size = new System.Drawing.Size(32, 39);
+            this.lblLoiNhuanHienTai.TabIndex = 0;
+            this.lblLoiNhuanHienTai.Text = "0";
             // 
             // pnlHoaDon
             // 
@@ -335,6 +326,7 @@ namespace management_store
             this.dgvHoaDon.EnableHeadersVisualStyles = false;
             this.dgvHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvHoaDon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvHoaDon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvHoaDon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvHoaDon.Location = new System.Drawing.Point(3, 34);
             this.dgvHoaDon.Name = "dgvHoaDon";
@@ -426,6 +418,7 @@ namespace management_store
             this.dgvPhieuNhap.EnableHeadersVisualStyles = false;
             this.dgvPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvPhieuNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvPhieuNhap.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvPhieuNhap.HeaderForeColor = System.Drawing.Color.White;
             this.dgvPhieuNhap.Location = new System.Drawing.Point(3, 34);
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
@@ -554,9 +547,9 @@ namespace management_store
             this.btnLichSuBanHang.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLichSuBanHang.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLichSuBanHang.ForeColor = System.Drawing.Color.White;
-            this.btnLichSuBanHang.Location = new System.Drawing.Point(24, 520);
+            this.btnLichSuBanHang.Location = new System.Drawing.Point(14, 520);
             this.btnLichSuBanHang.Name = "btnLichSuBanHang";
-            this.btnLichSuBanHang.Size = new System.Drawing.Size(209, 59);
+            this.btnLichSuBanHang.Size = new System.Drawing.Size(234, 59);
             this.btnLichSuBanHang.TabIndex = 12;
             this.btnLichSuBanHang.Text = "Lịch sử bán hàng";
             this.btnLichSuBanHang.UseVisualStyleBackColor = false;
@@ -567,9 +560,9 @@ namespace management_store
             this.btnLichSuNhapHang.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLichSuNhapHang.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLichSuNhapHang.ForeColor = System.Drawing.Color.White;
-            this.btnLichSuNhapHang.Location = new System.Drawing.Point(24, 585);
+            this.btnLichSuNhapHang.Location = new System.Drawing.Point(14, 585);
             this.btnLichSuNhapHang.Name = "btnLichSuNhapHang";
-            this.btnLichSuNhapHang.Size = new System.Drawing.Size(209, 59);
+            this.btnLichSuNhapHang.Size = new System.Drawing.Size(234, 59);
             this.btnLichSuNhapHang.TabIndex = 12;
             this.btnLichSuNhapHang.Text = "Lịch sử nhập hàng";
             this.btnLichSuNhapHang.UseVisualStyleBackColor = false;
@@ -587,6 +580,15 @@ namespace management_store
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Location = new System.Drawing.Point(434, 12);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(54, 39);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 3;
+            this.pictureBox23.TabStop = false;
             // 
             // UCDoanhThu
             // 
@@ -607,13 +609,12 @@ namespace management_store
             this.Controls.Add(this.label1);
             this.Name = "UCDoanhThu";
             this.Size = new System.Drawing.Size(1104, 661);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlTongHop.ResumeLayout(false);
             this.pnlInfor.ResumeLayout(false);
             this.pnlInfor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlHoaDon.ResumeLayout(false);
             this.pnlHoaDon.PerformLayout();
@@ -624,6 +625,7 @@ namespace management_store
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.gbThoiGian.ResumeLayout(false);
             this.gbThoiGian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,7 +648,7 @@ namespace management_store
         private System.Windows.Forms.Panel pnlTongHop;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_spDaBan;
+        private System.Windows.Forms.Label lblLoiNhuanHienTai;
         private System.Windows.Forms.Panel pnlHoaDon;
         private System.Windows.Forms.Label lblThuNhap;
         private System.Windows.Forms.Label label11;

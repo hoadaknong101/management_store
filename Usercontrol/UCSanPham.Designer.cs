@@ -90,6 +90,10 @@ namespace management_store
             this.btnNhaSanXuat = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.cbbPhanLoai = new System.Windows.Forms.ComboBox();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -162,7 +166,7 @@ namespace management_store
             this.dgvSanPham.RowHeadersVisible = false;
             this.dgvSanPham.RowTemplate.Height = 40;
             this.dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSanPham.Size = new System.Drawing.Size(753, 377);
+            this.dgvSanPham.Size = new System.Drawing.Size(753, 367);
             this.dgvSanPham.TabIndex = 4;
             this.dgvSanPham.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
@@ -222,9 +226,9 @@ namespace management_store
             this.bunifuLabel4.Location = new System.Drawing.Point(558, 133);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(65, 23);
+            this.bunifuLabel4.Size = new System.Drawing.Size(38, 23);
             this.bunifuLabel4.TabIndex = 7;
-            this.bunifuLabel4.Text = "Mã NSX :";
+            this.bunifuLabel4.Text = "NSX :";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -276,9 +280,9 @@ namespace management_store
             // picImage
             // 
             this.picImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picImage.Location = new System.Drawing.Point(833, 251);
+            this.picImage.Location = new System.Drawing.Point(833, 262);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(211, 252);
+            this.picImage.Size = new System.Drawing.Size(211, 241);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImage.TabIndex = 11;
             this.picImage.TabStop = false;
@@ -875,7 +879,7 @@ namespace management_store
             this.btnXoaSP.IdleIconLeftImage = null;
             this.btnXoaSP.IdleIconRightImage = null;
             this.btnXoaSP.IndicateFocus = false;
-            this.btnXoaSP.Location = new System.Drawing.Point(628, 604);
+            this.btnXoaSP.Location = new System.Drawing.Point(628, 608);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoaSP.OnDisabledState.BorderRadius = 1;
@@ -968,7 +972,7 @@ namespace management_store
             this.btnHuy.IdleIconLeftImage = null;
             this.btnHuy.IdleIconRightImage = null;
             this.btnHuy.IndicateFocus = false;
-            this.btnHuy.Location = new System.Drawing.Point(427, 604);
+            this.btnHuy.Location = new System.Drawing.Point(427, 608);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHuy.OnDisabledState.BorderRadius = 1;
@@ -1061,7 +1065,7 @@ namespace management_store
             this.btnLuuSP.IdleIconLeftImage = null;
             this.btnLuuSP.IdleIconRightImage = null;
             this.btnLuuSP.IndicateFocus = false;
-            this.btnLuuSP.Location = new System.Drawing.Point(228, 604);
+            this.btnLuuSP.Location = new System.Drawing.Point(228, 608);
             this.btnLuuSP.Name = "btnLuuSP";
             this.btnLuuSP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuuSP.OnDisabledState.BorderRadius = 1;
@@ -1153,7 +1157,7 @@ namespace management_store
             this.btnThemSanPham.IdleIconLeftImage = null;
             this.btnThemSanPham.IdleIconRightImage = null;
             this.btnThemSanPham.IndicateFocus = false;
-            this.btnThemSanPham.Location = new System.Drawing.Point(25, 604);
+            this.btnThemSanPham.Location = new System.Drawing.Point(25, 608);
             this.btnThemSanPham.Name = "btnThemSanPham";
             this.btnThemSanPham.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThemSanPham.OnDisabledState.BorderRadius = 1;
@@ -1199,7 +1203,7 @@ namespace management_store
             // pictureBox23
             // 
             this.pictureBox23.Image = global::management_store.Properties.Resources.icons8_product_64;
-            this.pictureBox23.Location = new System.Drawing.Point(441, 13);
+            this.pictureBox23.Location = new System.Drawing.Point(417, 13);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(54, 39);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1392,6 +1396,7 @@ namespace management_store
             // 
             // cbbPhanLoai
             // 
+            this.cbbPhanLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPhanLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbPhanLoai.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPhanLoai.FormattingEnabled = true;
@@ -1416,10 +1421,78 @@ namespace management_store
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(24, 589);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(752, 14);
+            this.bunifuSeparator1.TabIndex = 13;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(792, 67);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(12, 17, 12, 17);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(16, 582);
+            this.bunifuSeparator2.TabIndex = 13;
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
+            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator3.LineThickness = 1;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(480, 12);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator3.Size = new System.Drawing.Size(14, 43);
+            this.bunifuSeparator3.TabIndex = 14;
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator4.BackgroundImage")));
+            this.bunifuSeparator4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator4.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(899, 235);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(12, 17, 12, 17);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator4.Size = new System.Drawing.Size(75, 10);
+            this.bunifuSeparator4.TabIndex = 15;
+            // 
             // UCSanPham
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.bunifuSeparator4);
+            this.Controls.Add(this.bunifuSeparator3);
+            this.Controls.Add(this.bunifuSeparator2);
+            this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.cbbPhanLoai);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.txtMaNSX);
@@ -1485,5 +1558,9 @@ namespace management_store
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnNhaSanXuat;
         private System.Windows.Forms.ComboBox cbbPhanLoai;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
     }
 }
