@@ -111,7 +111,7 @@ namespace management_store
         public DataTable DanhSachSanPhamKhongHinhAnh()
         {
             string sql = "select MaSanPham as N'ID',TenSanPham as N'Tên SP', LoaiSanPham as N'Loại SP'," +
-                "DonGia as N'Đơn giá',NhaSanXuat.TenNhaSanXuat as N'Mã NSX', SoLuongTrongKho as N'Số lượng' " +
+                "DonGia as N'Đơn giá',NhaSanXuat.TenNhaSanXuat as N'NSX', SoLuongTrongKho as N'Số lượng' " +
                 "from SanPham, NhaSanXuat " +
                 "where NhaSanXuat.MaNhaSanXuat = SanPham.MaNhaSanXuat";
             return dal.GetDataToDataTable(sql);
