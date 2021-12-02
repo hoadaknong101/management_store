@@ -36,14 +36,15 @@ namespace management_store
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.fpnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picTim = new System.Windows.Forms.PictureBox();
+            this.btnTaiLai = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtTimKiem = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.picTim = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // fpnlMain
@@ -68,16 +69,6 @@ namespace management_store
             this.panel1.TabIndex = 5;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::management_store.Properties.Resources.search_96px;
-            this.pictureBox1.Location = new System.Drawing.Point(414, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -88,6 +79,33 @@ namespace management_store
             this.label1.Size = new System.Drawing.Size(152, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "TÌM SẢN PHẨM";
+            // 
+            // picTim
+            // 
+            this.picTim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picTim.Image = global::management_store.Properties.Resources.search_96px;
+            this.picTim.Location = new System.Drawing.Point(852, 69);
+            this.picTim.Name = "picTim";
+            this.picTim.Size = new System.Drawing.Size(44, 39);
+            this.picTim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTim.TabIndex = 1;
+            this.picTim.TabStop = false;
+            this.picTim.Click += new System.EventHandler(this.picTim_Click);
+            // 
+            // btnTaiLai
+            // 
+            this.btnTaiLai.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTaiLai.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiLai.ForeColor = System.Drawing.Color.White;
+            this.btnTaiLai.Image = global::management_store.Properties.Resources.icons8_reset;
+            this.btnTaiLai.Location = new System.Drawing.Point(852, 180);
+            this.btnTaiLai.Name = "btnTaiLai";
+            this.btnTaiLai.Size = new System.Drawing.Size(202, 60);
+            this.btnTaiLai.TabIndex = 8;
+            this.btnTaiLai.Text = "   Tải lại";
+            this.btnTaiLai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTaiLai.UseVisualStyleBackColor = false;
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // btnLuu
             // 
@@ -180,17 +198,15 @@ namespace management_store
             this.txtTimKiem.WordWrap = true;
             this.txtTimKiem.TextChange += new System.EventHandler(this.txtTimKiem_TextChange);
             // 
-            // picTim
+            // pictureBox1
             // 
-            this.picTim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picTim.Image = global::management_store.Properties.Resources.search_96px;
-            this.picTim.Location = new System.Drawing.Point(852, 69);
-            this.picTim.Name = "picTim";
-            this.picTim.Size = new System.Drawing.Size(44, 39);
-            this.picTim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTim.TabIndex = 1;
-            this.picTim.TabStop = false;
-            this.picTim.Click += new System.EventHandler(this.picTim_Click);
+            this.pictureBox1.Image = global::management_store.Properties.Resources.search_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(414, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmTimSP
             // 
@@ -199,6 +215,7 @@ namespace management_store
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1066, 606);
             this.Controls.Add(this.picTim);
+            this.Controls.Add(this.btnTaiLai);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.fpnlMain);
             this.Controls.Add(this.txtTimKiem);
@@ -209,8 +226,8 @@ namespace management_store
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +240,6 @@ namespace management_store
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.PictureBox picTim;
+        private System.Windows.Forms.Button btnTaiLai;
     }
 }

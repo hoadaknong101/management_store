@@ -583,6 +583,7 @@ namespace management_store
             // 
             // pictureBox23
             // 
+            this.pictureBox23.Image = global::management_store.Properties.Resources.icons8_bar_chart_321;
             this.pictureBox23.Location = new System.Drawing.Point(434, 12);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(54, 39);

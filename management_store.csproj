@@ -282,10 +282,10 @@
     <Compile Include="Forms\frmLichSuBanHang.Designer.cs">
       <DependentUpon>frmLichSuBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChiTietBanHang.cs">
+    <Compile Include="Forms\frmChiTietBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChiTietBanHang.Designer.cs">
+    <Compile Include="Forms\frmChiTietBanHang.Designer.cs">
       <DependentUpon>frmChiTietBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemEqualityComparer.cs" />
@@ -381,7 +381,7 @@
     <EmbeddedResource Include="Forms\frmLichSuBanHang.resx">
       <DependentUpon>frmLichSuBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChiTietBanHang.resx">
+    <EmbeddedResource Include="Forms\frmChiTietBanHang.resx">
       <DependentUpon>frmChiTietBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -647,6 +647,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_profit_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -85,5 +85,13 @@ namespace management_store
         {
 
         }
+
+        private void btnTaiLai_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM SanPham WHERE SoLuongTrongKho > 0";
+            dtSP = func.GetDataToDataTable(sql);
+            fpnlMain.Controls.Clear();
+            LoadSP();
+        }
     }
 }
