@@ -235,7 +235,7 @@ namespace management_store
             e.Graphics.DrawString("Mã hóa đơn : " + maHoaDon + "", fontTieuDe,
                 Brushes.Black, new Point(leftMargin, theLastPos + 50));
             e.Graphics.DrawString("- HẸN GẶP LẠI QUÝ KHÁCH - ", fontTieuDe, Brushes.Black,
-                new Point(leftMargin + 21, theLastPos + 65));
+                new Point(leftMargin + 21, theLastPos + 60));
         }
 
         private void UCHoaDon_Load(object sender, EventArgs e)
