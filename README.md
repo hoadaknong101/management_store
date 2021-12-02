@@ -10,7 +10,7 @@
 - IDE: Microsoft Visual Studio 2019
 - CSDL: Microsoft SQL Server
 - Công nghệ: ADO.NET (Three Layers: GUI - BLL - DAL)
-
+- Package: BunifuUI(cracked), ClosedXML
 # Link đính kèm:
 - Đặc tả: https://docs.google.com/document/d/1z8bZIy-XBpOBuq6BouTABAZHublsBtUz7zYVs2BbiQc/edit
 - Report: https://docs.google.com/document/d/1cLUthIV5x4XaU2ip_90hBgaWmPDmM9G2EB83lGj5Xzc/edit?fbclid=IwAR1vkcLNqKrnsTtTCCtYkFmFp_S5rjaOToNSrbnctgz2ej76-QQZqNURrEs
