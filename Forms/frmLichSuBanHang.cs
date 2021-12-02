@@ -39,6 +39,18 @@ namespace management_store
                     return;
                 }
             }
+            else
+            {
+                try
+                {
+                    frmLichSuChiTietHoaDon frm = new frmLichSuChiTietHoaDon(dgvDanhSachHoaDon.CurrentRow.Cells[0].Value.ToString());
+                    frm.ShowDialog();
+                }
+                catch
+                {
+                    return;
+                }
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

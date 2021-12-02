@@ -142,6 +142,7 @@ namespace management_store
             this.dgvChiTietHoaDon.EnableHeadersVisualStyles = false;
             this.dgvChiTietHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvChiTietHoaDon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvChiTietHoaDon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChiTietHoaDon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(12, 197);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
